@@ -1,6 +1,6 @@
 # Versakit
 
-<img src="./assets/ankr.png" >
+<img src="./assets/ankr.png" center >
 
 ## 一、简介
 

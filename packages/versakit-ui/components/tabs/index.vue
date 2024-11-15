@@ -1,0 +1,124 @@
+<template>
+  <div class="tab-container">
+    <div class="tab-header">
+      <div v-for="(tab, index) in tabList" :key="tab.id" :class="['tab-item', { 'active-tab': currentTabIndex === index }]" @click="switchTab(index)">
+        <span class="text-zinc"> {{ tab.label }}</span>
+      </div>
+    </div>
+    <div class="tab-content" :key="`tab-content-${tabList[currentTabIndex].name}`">
+      <slot :name="tabList[currentTabIndex].name" />
+    </div>
+  </div>
+</template>
+
+<script setup lang="ts">
+import { ref } from "vue";
+
+// 定义tab的类型
+interface Tab {
+  id: string;
+  label: string;
+  name: string;
+}
+
+// 通过props接收tab列表
+const props = defineProps<{
+  tabList: Tab[];
+}>();
+
+// 当前激活的tab索引
+const currentTabIndex = ref(0);
+
+// 切换tab的方法
+const switchTab = (index: number) => {
+  currentTabIndex.value = index;
+};
+</script>
+
+<style scoped>
+.tab-container {
+  width: 100%;
+}
+
+.tab-header {
+  display: flex;
+  justify-content: space-around;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #f4f4f4;
+
+  @apply dark:bg-zinc-700;
+}
+
+.tab-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  padding: 5px 10px;
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  overflow: hidden;
+}
+
+.active-tab {
+  position: relative;
+  border-radius: 5px;
+  z-index: 1;
+  background-color: #fff;
+}
+
+.active-tab::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  z-index: -1;
+
+  @apply dark:bg-zinc-900;
+}
+
+.tab-content {
+  padding: 20px;
+}
+
+/* 过渡动画样式 */
+.tab-slide-enter-active,
+.tab-slide-leave-active {
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.tab-slide-enter {
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+.tab-slide-leave-to {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+
+/* tab-item切换为active-tab时的滑动进入效果 */
+.active-tab-enter-active {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.active-tab-enter {
+  transform: translateX(-100%);
+}
+
+/* tab-item从active-tab切换走时的滑动离开效果 */
+.active-tab-leave-active {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.active-tab-leave-to {
+  transform: translateX(100%);
+}
+
+

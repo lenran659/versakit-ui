@@ -1,0 +1,15 @@
+@use "../../color/index.scss" as *;
+
+@mixin t-alert-type($type, $color, $bg) {
+  .t-alert-#{$type} {
+    color: $color;
+    background-color: $bg;
+  }
+}
+
+@mixin t-alert-type-effect($type, $bg) {
+  .t-alert-#{$type}.is-dark {
+    color: $t-color-white;
+    background-color: $bg;
+  }
+}

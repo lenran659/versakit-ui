@@ -1,0 +1,30 @@
+.t-message {
+  position: fixed;
+  z-index: 9999;
+  left: 50%;
+  top: 25px;
+  transform: translateX(-50%);
+  height: auto;
+  display: flex;
+  align-items: center;
+  min-height: 45px;
+  padding: 5px 25px;
+  border-radius: 4px;
+  user-select: none;
+  .text {
+    vertical-align: middle;
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
+.down-enter-active,
+.down-leave-active {
+  transition: all 0.5s;
+}
+
+.down-enter-from,
+.down-leave-to {
+  opacity: 0;
+  transform: translate3d(-50%, -100px, 0);
+}

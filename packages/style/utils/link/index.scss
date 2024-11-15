@@ -1,0 +1,16 @@
+@use "../../color/index.scss" as *;
+
+@mixin ver-link-type($type, $color, $hover) {
+  .ver-link-#{$type} {
+    color: $color;
+    &:hover {
+      color: $hover;
+    }
+  }
+}
+
+@mixin ver-link-disable($type, $color5) {
+  .ver-link-#{$type}.is-disable {
+    color: $color5;
+  }
+}

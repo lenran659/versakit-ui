@@ -1,0 +1,35 @@
+@use "../../../style/color/index.scss" as *;
+@use "../../../style/utils/alert/index.scss" as *;
+
+.t-alert {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 8px 16px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  opacity: 1;
+  transition: opacity 0.2s;
+}
+
+.t-alert_inner {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .t-alert_closebtn {
+    cursor: pointer;
+  }
+}
+
+/* type */
+@include t-alert-type("success", $t-color-success, $t-color-success-light-9);
+@include t-alert-type("info", $t-color-info, $t-color-info-light-9);
+@include t-alert-type("warning", $t-color-warning, $t-color-warning-light-9);
+@include t-alert-type("danger", $t-color-danger, $t-color-danger-light-9);
+
+/* effect */
+@include t-alert-type-effect("success", $t-color-success);
+@include t-alert-type-effect("info", $t-color-info);
+@include t-alert-type-effect("warning", $t-color-warning);
+@include t-alert-type-effect("danger", $t-color-danger);

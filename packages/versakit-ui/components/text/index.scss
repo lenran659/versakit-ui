@@ -1,0 +1,33 @@
+@use "../../../style/color/index.scss" as *;
+@use "../../../style/utils/text/index.scss" as *;
+
+.t-text {
+  align-self: center;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  color: #606266;
+  word-break: break-all;
+}
+
+@include text-color("primary", $t-color-primary);
+@include text-color("success", $t-color-success);
+@include text-color("info", $t-color-info);
+@include text-color("warning", $t-color-warning);
+@include text-color("danger", $t-color-danger);
+
+.t-text-large {
+  font-size: 16px;
+}
+
+.t-text-small {
+  font-size: 12px;
+}
+
+.t-text.is-truncated {
+  display: inline-block;
+  max-width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}

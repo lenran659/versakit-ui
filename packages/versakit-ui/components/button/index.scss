@@ -1,0 +1,104 @@
+@use "../../../style/color/index.scss" as *;
+@use "../../../style/utils/button/index.scss" as *;
+
+.t-btn {
+  display: inline-block;
+  line-height: 1;
+  white-space: nowrap;
+  cursor: pointer;
+  background: $t-color-white;
+  border: 1px solid #dcdfe6;
+  color: #606266;
+  appearance: none;
+  -webkit-appearance: none;
+  text-align: center;
+  box-sizing: border-box;
+  outline: none;
+  margin: 0;
+  transition: 0.1s;
+  font-weight: 500;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  padding: 12px 20px;
+  font-size: 14px;
+  border-radius: 4px;
+
+  &:hover {
+    color: $t-color-primary;
+    border-color: $t-color-primary-light-7;
+    background-color: $t-color-primary-light-9;
+  }
+
+  &:active {
+    transform: scale(0.9);
+  }
+}
+
+@include t-btn-type("primary", $t-color-white, $t-color-primary, $t-color-primary-light-3);
+
+@include t-btn-type("success", $t-color-white, $t-color-success, $t-color-success-light-3);
+
+@include t-btn-type("info", $t-color-white, $t-color-info, $t-color-info-light-3);
+
+@include t-btn-type("warning", $t-color-white, $t-color-warning, $t-color-warning-light-3);
+
+@include t-btn-type("danger", $t-color-white, $t-color-danger, $t-color-danger-light-3);
+
+/* 朴素按钮 */
+@include t-btn-plain(null, $t-color-white, $t-color-primary, null, null);
+
+@include t-btn-plain("primary", $t-color-white, $t-color-primary, $t-color-primary-light-5, $t-color-primary-light-9);
+
+@include t-btn-plain("success", $t-color-white, $t-color-success, $t-color-success-light-5, $t-color-success-light-9);
+
+@include t-btn-plain("info", $t-color-white, $t-color-info, $t-color-info-light-5, $t-color-info-light-9);
+
+@include t-btn-plain("warning", $t-color-white, $t-color-warning, $t-color-warning-light-5, $t-color-warning-light-9);
+
+@include t-btn-plain("danger", $t-color-white, $t-color-danger, $t-color-danger-light-5, $t-color-danger-light-9);
+
+/* round属性 */
+.t-btn.is-round {
+  border-radius: 20px;
+  padding: 12px 23px;
+}
+
+/* 禁止状态 */
+.t-btn.is-disable {
+  color: #a8abb2;
+  cursor: not-allowed;
+  background-image: none;
+  background-color: $t-color-white;
+
+  &:active {
+    transform: none;
+  }
+}
+
+@include t-btn-disable("primary", $t-color-primary-light-5);
+@include t-btn-disable("success", $t-color-success-light-5);
+@include t-btn-disable("info", $t-color-info-light-5);
+@include t-btn-disable("warning", $t-color-warning-light-5);
+@include t-btn-disable("danger", $t-color-danger-light-5);
+
+/* 朴素按钮禁止状态 */
+.t-btn.is-plain.is-disable {
+  color: #a8abb2;
+  cursor: not-allowed;
+  background-image: none;
+  background-color: $t-color-white;
+  border-color: #e4e7ed;
+}
+
+@include t-btn-plain-disable("primary", $t-color-primary-light-5, $t-color-primary-light-8, $t-color-primary-light-9);
+
+@include t-btn-plain-disable("success", $t-color-success-light-5, $t-color-success-light-8, $t-color-success-light-9);
+
+@include t-btn-plain-disable("info", $t-color-info-light-5, $t-color-info-light-8, $t-color-info-light-9);
+
+@include t-btn-plain-disable("warning", $t-color-warning-light-5, $t-color-warning-light-8, $t-color-warning-light-9);
+
+@include t-btn-plain-disable("danger", $t-color-danger-light-5, $t-color-danger-light-8, $t-color-danger-light-9);

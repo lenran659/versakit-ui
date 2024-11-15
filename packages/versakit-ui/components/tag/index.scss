@@ -1,0 +1,53 @@
+@use "../../../style/color/index.scss" as *;
+@use "../../../style/utils/tag/index.scss" as *;
+
+.ver-tag {
+  color: $t-color-primary;
+  background-color: $t-color-primary-light-9;
+  border-color: $t-color-primary-light-8;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
+  height: 24px;
+  padding: 0 9px;
+  border-width: 1px;
+  line-height: 1;
+  font-size: 12px;
+  box-sizing: border-box;
+  border-style: solid;
+  border-radius: 4px;
+}
+/* round */
+.ver-tag.is-round {
+  border-radius: 50px;
+}
+
+.ver-tag.is-dark {
+  color: $t-color-white;
+  background-color: $t-color-primary;
+}
+
+.ver-tag.is-plain {
+  border-color: $t-color-primary-light-5;
+  background-color: $t-color-white;
+}
+/* type */
+@include ver-tag-type("success", $t-color-success, $t-color-success-light-9, $t-color-success-light-8);
+
+@include ver-tag-type("info", $t-color-info, $t-color-info-light-9, $t-color-info-light-8);
+
+@include ver-tag-type("warning", $t-color-warning, $t-color-warning-light-9, $t-color-warning-light-8);
+
+@include ver-tag-type("danger", $t-color-danger, $t-color-danger-light-9, $t-color-danger-light-8);
+/* Dark */
+@include ver-tag-type-dark("success", $t-color-white, $t-color-success);
+@include ver-tag-type-dark("info", $t-color-white, $t-color-info);
+@include ver-tag-type-dark("warning", $t-color-white, $t-color-warning);
+@include ver-tag-type-dark("danger", $t-color-white, $t-color-danger);
+/* Plain */
+@include ver-tag-type-plain("success", $t-color-success, $t-color-success-light-5);
+@include ver-tag-type-plain("info", $t-color-info, $t-color-info-light-5);
+@include ver-tag-type-plain("warning", $t-color-warning, $t-color-warning-light-5);
+
+@include ver-tag-type-plain("danger", $t-color-danger, $t-color-danger-light-5);

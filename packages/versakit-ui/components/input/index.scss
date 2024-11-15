@@ -1,0 +1,35 @@
+@use "../../../style/color/index.scss" as *;
+
+.ver-input {
+  margin: 0;
+  width: 100%;
+  height: 35px;
+  border: 1px solid #dcdfe6;
+  overflow: hidden;
+  font-size: 14px;
+  text-indent: 20px;
+  border-radius: 4px;
+  line-height: 35px;
+  outline: none;
+  transition: all 0.2s ease;
+  position: relative;
+  box-sizing: border-box;
+  color: #606266;
+  input {
+    width: 100%;
+  }
+  &:hover,
+  &:focus {
+    border-color: $t-color-primary;
+  }
+}
+
+.ver-input.is-disabled {
+  cursor: not-allowed;
+  color: #a8abb2;
+  background-color: #f5f7fa;
+  border: 1px solid #dcdfe6;
+  input {
+    cursor: not-allowed;
+  }
+}

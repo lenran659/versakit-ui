@@ -1,0 +1,40 @@
+@use "../../../style/color/index.scss" as *;
+@use "../../../style/utils/link/index.scss" as *;
+
+.ver-link {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  position: relative;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: #606266;
+  &:hover {
+    color: $t-color-primary;
+  }
+}
+
+@include ver-link-type("primary", $t-color-primary, $t-color-primary-light-3);
+@include ver-link-type("success", $t-color-success, $t-color-success-light-3);
+@include ver-link-type("info", $t-color-info, $t-color-info-light-3);
+@include ver-link-type("warning", $t-color-warning, $t-color-warning-light-3);
+@include ver-link-type("danger", $t-color-danger, $t-color-danger-light-3);
+
+/* 禁用状态 */
+.ver-link.is-disable {
+  cursor: not-allowed;
+  color: #a8abb2;
+  text-decoration: none;
+}
+
+@include ver-link-disable("primary", $t-color-primary-light-5);
+@include ver-link-disable("success", $t-color-success-light-5);
+@include ver-link-disable("info", $t-color-info-light-5);
+@include ver-link-disable("warning", $t-color-warning-light-5);
+@include ver-link-disable("danger", $t-color-danger-light-5);

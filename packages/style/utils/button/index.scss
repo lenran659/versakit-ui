@@ -1,0 +1,50 @@
+@use "../../color/index.scss" as *;
+
+/* 按钮类型 */
+@mixin t-btn-type($type, $text-color, $main-color, $sec-color) {
+  .t-btn-#{$type} {
+    color: $text-color;
+    background-color: $main-color;
+    border-color: $main-color;
+    &:hover,
+    &:focus {
+      color: $t-color-white;
+      border-color: $sec-color;
+      background-color: $sec-color;
+      outline: none;
+    }
+  }
+}
+
+/* 朴素按钮 */
+@mixin t-btn-plain($type, $text-color, $main-color, $border-color, $sec-color) {
+  .t-btn-#{$type}.is-plain {
+    color: $main-color;
+    border-color: $border-color;
+    background: $sec-color;
+    &:hover,
+    &:focus {
+      color: $text-color;
+      background-color: $main-color;
+      border-color: $main-color;
+    }
+  }
+}
+
+/* disable属性 */
+@mixin t-btn-disable($type, $main-color) {
+  .t-btn-#{$type}.is-disable {
+    color: $t-color-white;
+    border-color: $main-color;
+    background-color: $main-color;
+  }
+}
+
+/* 朴素按钮 disable属性 */
+@mixin t-btn-plain-disable($type, $color5, $color8, $color9) {
+  .t-btn-#{$type}.is-plain.is-disable {
+    color: $color5;
+    border-color: $color8;
+    background-color: $color9;
+  }
+}

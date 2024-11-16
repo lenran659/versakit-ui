@@ -1,10 +1,10 @@
 <template>
-  <div :class="tClass">
-    <div class="t-card_header" v-if="$slots.header">
+  <div :class="VerClass">
+    <div class="ver-card-header" v-if="$slots.header">
       <slot name="header"></slot>
     </div>
 
-    <div class="t-card_body">
+    <div class="ver-card-body">
       <slot></slot>
     </div>
   </div>
@@ -17,19 +17,27 @@ const props = defineProps({
   shadow: { type: String, default: "always" },
 });
 
-const tClass = computed(() => {
+const VerClass = computed(() => {
   return ["ver-card", props.shadow == "always" ? "is-shadow-always" : props.shadow == "hover" ? "is-shadow-hover" : "is-shadow-never"];
 });
 </script>
 
 <style lang="scss" scoped>
+@use "../../../style/color/index.scss" as *;
+
 .ver-card {
   border-radius: 4px;
   padding: 20px;
-  border: 1px solid #e4e7ed;
-  background-color: #fff;
+  border: 1px solid $ver-zinc-3;
+  background-color: $ver-zinc-1;
   overflow: hidden;
   transition: 0.3s;
+
+  .dark & {
+    color: $ver-zinc-1;
+    background-color: $ver-zinc-9;
+    border-color: $ver-zinc-6;
+  }
 }
 
 .ver-card.is-shadow-always {
@@ -46,12 +54,12 @@ const tClass = computed(() => {
   }
 }
 
-.t-card_header {
+.ver-card-header {
   padding: calc(20px - 2px) 20px;
   border-bottom: 1px solid #e4e7ed;
 }
 
-.t-card_body {
+.ver-card-body {
   padding: 20px;
 }
 </style>

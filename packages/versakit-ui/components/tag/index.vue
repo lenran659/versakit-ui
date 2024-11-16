@@ -27,7 +27,7 @@ const tClass = computed(() => {
     "ver-tag",
     props.type == "" ? "" : `ver-tag-${props.type}`,
     props.round == false ? "" : "is-round",
-    props.effect == "light" ? "is-light" : props.effect == "dark" ? "is-dark" : "is-plain",
+    props.effect == "light" ? "is-light" : "is-plain",
   ];
 });
 </script>

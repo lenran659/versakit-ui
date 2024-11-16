@@ -2,25 +2,18 @@
 
 /* 标签类型 */
 
-@mixin ver-tag-type($type, $color, $color9, $color8) {
+@mixin ver-tag-type($type, $color6, $color5) {
   .ver-tag-#{$type} {
-    color: $color;
-    background-color: $color9;
-    border-color: $color8;
+    color: $ver-zinc-1;
+    background-color: $color6;
+    border-color: $color5;
   }
 }
 
-@mixin ver-tag-type-dark($type, $textcolor, $bgcolor) {
-  .ver-tag-#{$type}.is-dark {
-    color: $textcolor;
-    background-color: $bgcolor;
-  }
-}
-
-@mixin ver-tag-type-plain($type, $textcolor, $borderColor) {
+@mixin ver-tag-type-plain($type, $color5) {
   .ver-tag-#{$type}.is-plain {
-    color: $textcolor;
-    border-color: $borderColor;
+    color: $color5;
+    border-color: $color5;
     background-color: transparent;
   }
 }

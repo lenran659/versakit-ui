@@ -1,15 +1,5 @@
 <template>
   <div class="box">
-    <span>Dark:</span>
-    <div class="mx-4">
-      <VerTag effect="dark">Tag 1</VerTag>
-      <VerTag effect="dark" type="success">Tag 2</VerTag>
-      <VerTag effect="dark" type="info">Tag 3</VerTag>
-      <VerTag effect="dark" type="warning">Tag 4</VerTag>
-      <VerTag effect="dark" type="danger">Tag 5</VerTag>
-    </div>
-  </div>
-  <div class="box">
     <span>Light:</span>
     <div class="mx-4">
       <VerTag>Tag 1</VerTag>
@@ -19,6 +9,7 @@
       <VerTag type="danger">Tag 5</VerTag>
     </div>
   </div>
+
   <div class="box">
     <span>Plain:</span>
     <div class="mx-4">
@@ -36,15 +27,7 @@ import { VerTag } from "../../../packages/versakit-ui/index";
 </script>
 
 <style lang="scss" scoped>
-.VerTag + .VerTag {
-  margin-left: 10px;
-}
-.box {
-  display: flex;
-  margin: 15px 0;
-  .mx-4 {
-    margin-left: 1rem;
-    margin-right: 1rem;
-  }
+.ver-tag + .ver-tag {
+  margin: 0px 10px;
 }
 </style>

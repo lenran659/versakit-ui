@@ -9,3 +9,9 @@
 <script lang="ts" setup>
 import { VerTag } from "../../../packages/versakit-ui/index";
 </script>
+
+<style scoped>
+.ver-tag + .ver-tag {
+  margin: 0px 10px;
+}
+</style>

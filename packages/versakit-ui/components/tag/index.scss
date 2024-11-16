@@ -2,6 +2,7 @@
 @use "../../../style/utils/tag/index.scss" as *;
 
 .ver-tag {
+  color: $ver-zinc-1;
   background-color: $ver-violet-6;
   border-color: $ver-violet-5;
   display: inline-flex;
@@ -22,32 +23,19 @@
   border-radius: 50px;
 }
 
-.ver-tag.is-dark {
-  color: $ver-zinc-1;
-  background-color: $ver-violet-6;
-}
-
 .ver-tag.is-plain {
+  color: $ver-violet-5;
   border-color: $ver-violet-6;
-  background-color: $ver-zinc-1;
+  background-color: transparent;
 }
 /* type */
-// @include ver-tag-type("success", $t-color-success, $t-color-success-light-9, $t-color-success-light-8);
-
-// @include ver-tag-type("info", $t-color-info, $t-color-info-light-9, $t-color-info-light-8);
-
-// @include ver-tag-type("warning", $t-color-warning, $t-color-warning-light-9, $t-color-warning-light-8);
-
-// @include ver-tag-type("danger", $t-color-danger, $t-color-danger-light-9, $t-color-danger-light-8);
-
-/* Dark */
-// @include ver-tag-type-dark("success", $ver-zinc-1, $t-color-success);
-// @include ver-tag-type-dark("info", $ver-zinc-1, $t-color-info);
-// @include ver-tag-type-dark("warning", $ver-zinc-1, $t-color-warning);
-// @include ver-tag-type-dark("danger", $ver-zinc-1, $t-color-danger);
+@include ver-tag-type("success", $ver-green-6, $ver-green-5);
+@include ver-tag-type("info", $ver-zinc-6, $ver-zinc-5);
+@include ver-tag-type("warning", $ver-orange-6, $ver-orange-5);
+@include ver-tag-type("danger", $ver-red-6, $ver-red-5);
 
 /* Plain */
-// @include ver-tag-type-plain("success", $t-color-success, $t-color-success-light-5);
-// @include ver-tag-type-plain("info", $t-color-info, $t-color-info-light-5);
-// @include ver-tag-type-plain("warning", $t-color-warning, $t-color-warning-light-5);
-// @include ver-tag-type-plain("danger", $t-color-danger, $t-color-danger-light-5);
+@include ver-tag-type-plain("success", $ver-green-5);
+@include ver-tag-type-plain("info", $ver-zinc-5);
+@include ver-tag-type-plain("warning", $ver-orange-5);
+@include ver-tag-type-plain("danger", $ver-red-5);

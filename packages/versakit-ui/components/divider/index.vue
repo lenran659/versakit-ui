@@ -21,7 +21,6 @@ const props = defineProps({
     :class="{ 'ver-vertical': direction === 'vertical' }"
     :style="{
       'justify-content': position,
-      'border-top': `1px ${line} #dcdfe6`,
     }"
   >
     <div class="ver-divider-title" v-if="position">
@@ -42,6 +41,11 @@ const props = defineProps({
   align-items: center;
   padding: 0 20px;
   box-sizing: border-box;
+  border-top: 1px solid $ver-zinc-3;
+
+  .dark & {
+    border-top: 1px solid $ver-zinc-7;
+  }
 }
 
 .ver-vertical {
@@ -50,8 +54,12 @@ const props = defineProps({
   height: 1em;
   margin: 0 8px;
   border-top: none;
-  border-left: 1px solid #dcdfe6;
+  border-left: 1px solid $ver-zinc-3;
   padding: 0;
+
+  .dark & {
+    border-left: 1px solid $ver-zinc-7;
+  }
 }
 
 .ver-divider-title {

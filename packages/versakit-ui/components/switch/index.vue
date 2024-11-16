@@ -1,7 +1,7 @@
 <template>
-  <label :class="tClass" @click="handClick">
-    <span class="t-switch_core" ref="core">
-      <span class="t-switch_button"></span>
+  <label :class="VerClass" @click="handClick">
+    <span class="ver-switch-core" ref="core">
+      <span class="ver-switch-button"></span>
     </span>
   </label>
 </template>
@@ -16,8 +16,8 @@ const props = defineProps({
   },
 });
 
-const tClass = computed(() => {
-  return ["t-switch", props.modelValue == false ? "" : "is-checked"];
+const VerClass = computed(() => {
+  return ["ver-switch", props.modelValue == false ? "" : "is-checked"];
 });
 
 const handClick = () => {
@@ -27,27 +27,35 @@ const handClick = () => {
 </script>
 
 <style lang="scss" scoped>
-.t-switch {
+@use "../../../style/color/index.scss" as *;
+
+.ver-switch {
   display: inline-block;
   align-items: center;
   position: relative;
   font-size: 14px;
   line-height: 20px;
   vertical-align: middle;
-  &_core {
+  &-core {
     margin: 0;
     display: inline-block;
     width: 40px;
     height: 20px;
-    border: 1px solid #dcdfe6;
+    border: 1px solid $ver-zinc-3;
     outline: none;
     border-radius: 10px;
     box-sizing: border-box;
-    background-color: #dcdfe6;
+    background-color: $ver-zinc-3;
     cursor: pointer;
     transition: border-color 0.3s, background-color 0.3s;
     vertical-align: middle;
-    .t-switch_button {
+
+    .dark & {
+      border-color: $ver-zinc-7;
+      background-color: $ver-zinc-7;
+    }
+
+    .ver-switch-button {
       position: absolute;
       top: 2.5px;
       left: 1.5px;
@@ -55,16 +63,16 @@ const handClick = () => {
       transition: all 0.3s;
       width: 16px;
       height: 16px;
-      background-color: #fff;
+      background-color: $ver-zinc-1;
     }
   }
 }
 
 .is-checked {
-  .t-switch_core {
-    border-color: #409eff;
-    background-color: #409eff;
-    .t-switch_button {
+  .ver-switch-core {
+    border-color: $ver-violet-6;
+    background-color: $ver-violet-6;
+    .ver-switch-button {
       transform: translateX(20px);
     }
   }

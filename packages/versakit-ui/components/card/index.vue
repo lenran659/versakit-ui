@@ -56,7 +56,11 @@ const VerClass = computed(() => {
 
 .ver-card-header {
   padding: calc(20px - 2px) 20px;
-  border-bottom: 1px solid #e4e7ed;
+  border-bottom: 1px solid $ver-zinc-3;
+
+  .dark & {
+    border-color: $ver-zinc-7;
+  }
 }
 
 .ver-card-body {

@@ -1,7 +1,7 @@
-import tDivider from "./index.vue";
+import VerDivider from "./index.vue";
 
-tDivider.install = (app) => {
-  app.component(tDivider.name, tDivider);
+VerDivider.install = (app) => {
+  app.component("VerDivider", VerDivider);
 };
 
-export default tDivider;
+export default VerDivider;

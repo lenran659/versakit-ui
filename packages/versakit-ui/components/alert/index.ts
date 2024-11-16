@@ -1,7 +1,7 @@
 import VerAlert from "./index.vue";
 
 VerAlert.install = (app) => {
-  app.component(VerAlert.name, VerAlert);
+  app.component("VerAlert", VerAlert);
 };
 
 export default VerAlert;

@@ -1,7 +1,7 @@
-import tTextarea from "./index.vue";
+import VerTextarea from "./index.vue";
 
-tTextarea.install = (app) => {
-  app.component(tTextarea.name, tTextarea);
+VerTextarea.install = (app) => {
+  app.component("VerTextarea", VerTextarea);
 };
 
-export default tTextarea;
+export default VerTextarea;

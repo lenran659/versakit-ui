@@ -1,7 +1,7 @@
-import tHeader from "./index.vue";
+import VerHeader from "./index.vue";
 
-tHeader.install = (app) => {
-  app.component(tHeader.name, tHeader);
+VerHeader.install = (app) => {
+  app.component("VerHeader", VerHeader);
 };
 
-export default tHeader;
+export default VerHeader;

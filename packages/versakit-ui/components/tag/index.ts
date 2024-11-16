@@ -1,7 +1,7 @@
-import tTag from "./index.vue";
+import VerTag from "./index.vue";
 
-tTag.install = (app) => {
-  app.component(tTag.name, tTag);
+VerTag.install = (app) => {
+  app.component("VerTag", VerTag);
 };
 
-export default tTag;
+export default VerTag;

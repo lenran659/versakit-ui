@@ -1,14 +1,12 @@
 @use "../../../style/color/index.scss" as *;
 @use "../../../style/utils/button/index.scss" as *;
 
-.t-btn {
+.ver-btn {
   display: inline-block;
   line-height: 1;
   white-space: nowrap;
   cursor: pointer;
-  background: $t-color-white;
-  border: 1px solid #dcdfe6;
-  color: #606266;
+  background: $ver-zinc-1;
   appearance: none;
   -webkit-appearance: none;
   text-align: center;
@@ -26,79 +24,73 @@
   font-size: 14px;
   border-radius: 4px;
 
-  &:hover {
-    color: $t-color-primary;
-    border-color: $t-color-primary-light-7;
-    background-color: $t-color-primary-light-9;
+  .dark & {
+    border: 1px solid $ver-zinc-7;
+    background-color: $ver-zinc-9;
   }
 
   &:active {
     transform: scale(0.9);
   }
 }
-
-@include t-btn-type("primary", $t-color-white, $t-color-primary, $t-color-primary-light-3);
-
-@include t-btn-type("success", $t-color-white, $t-color-success, $t-color-success-light-3);
-
-@include t-btn-type("info", $t-color-white, $t-color-info, $t-color-info-light-3);
-
-@include t-btn-type("warning", $t-color-white, $t-color-warning, $t-color-warning-light-3);
-
-@include t-btn-type("danger", $t-color-white, $t-color-danger, $t-color-danger-light-3);
+@include VerBtnType("primary", $ver-violet-6);
+@include VerBtnType("success", $ver-green-6);
+@include VerBtnType("info", $ver-zinc-6);
+@include VerBtnType("warning", $ver-orange-6);
+@include VerBtnType("danger", $ver-red-6);
 
 /* 朴素按钮 */
-@include t-btn-plain(null, $t-color-white, $t-color-primary, null, null);
-
-@include t-btn-plain("primary", $t-color-white, $t-color-primary, $t-color-primary-light-5, $t-color-primary-light-9);
-
-@include t-btn-plain("success", $t-color-white, $t-color-success, $t-color-success-light-5, $t-color-success-light-9);
-
-@include t-btn-plain("info", $t-color-white, $t-color-info, $t-color-info-light-5, $t-color-info-light-9);
-
-@include t-btn-plain("warning", $t-color-white, $t-color-warning, $t-color-warning-light-5, $t-color-warning-light-9);
-
-@include t-btn-plain("danger", $t-color-white, $t-color-danger, $t-color-danger-light-5, $t-color-danger-light-9);
+@include VerBtnPlain(null, $ver-zinc-6, $ver-zinc-5);
+@include VerBtnPlain("primary", $ver-violet-6, $ver-violet-5);
+@include VerBtnPlain("success", $ver-green-6, $ver-green-5);
+@include VerBtnPlain("info", $ver-zinc-6, $ver-zinc-5);
+@include VerBtnPlain("warning", $ver-orange-6, $ver-orange-5);
+@include VerBtnPlain("danger", $ver-red-6, $ver-red-5);
 
 /* round属性 */
-.t-btn.is-round {
+.ver-btn.is-round {
   border-radius: 20px;
   padding: 12px 23px;
 }
 
 /* 禁止状态 */
-.t-btn.is-disable {
+.ver-btn.is-disable {
   color: #a8abb2;
   cursor: not-allowed;
   background-image: none;
-  background-color: $t-color-white;
+  background-color: $ver-zinc-1;
+
+  .dark & {
+    border: 1px solid $ver-zinc-7;
+    background-color: $ver-zinc-9;
+  }
 
   &:active {
     transform: none;
   }
 }
-
-@include t-btn-disable("primary", $t-color-primary-light-5);
-@include t-btn-disable("success", $t-color-success-light-5);
-@include t-btn-disable("info", $t-color-info-light-5);
-@include t-btn-disable("warning", $t-color-warning-light-5);
-@include t-btn-disable("danger", $t-color-danger-light-5);
+@include VerBtnDisable("primary", $ver-violet-8, $ver-violet-9);
+@include VerBtnDisable("success", $ver-green-8, $ver-green-9);
+@include VerBtnDisable("info", $ver-zinc-8, $ver-zinc-9);
+@include VerBtnDisable("warning", $ver-orange-8, $ver-orange-9);
+@include VerBtnDisable("danger", $ver-red-8, $ver-red-9);
 
 /* 朴素按钮禁止状态 */
-.t-btn.is-plain.is-disable {
+.ver-btn.is-plain.is-disable {
   color: #a8abb2;
   cursor: not-allowed;
   background-image: none;
-  background-color: $t-color-white;
   border-color: #e4e7ed;
+  background-color: $ver-zinc-1;
+
+  .dark & {
+    border: 1px solid $ver-zinc-7;
+    background-color: $ver-zinc-9;
+  }
 }
 
-@include t-btn-plain-disable("primary", $t-color-primary-light-5, $t-color-primary-light-8, $t-color-primary-light-9);
-
-@include t-btn-plain-disable("success", $t-color-success-light-5, $t-color-success-light-8, $t-color-success-light-9);
-
-@include t-btn-plain-disable("info", $t-color-info-light-5, $t-color-info-light-8, $t-color-info-light-9);
-
-@include t-btn-plain-disable("warning", $t-color-warning-light-5, $t-color-warning-light-8, $t-color-warning-light-9);
-
-@include t-btn-plain-disable("danger", $t-color-danger-light-5, $t-color-danger-light-8, $t-color-danger-light-9);
+@include VerBtnDisablePlain("primary", $ver-violet-6, $ver-violet-3, $ver-violet-4);
+@include VerBtnDisablePlain("success", $ver-green-6, $ver-green-3, $ver-green-4);
+@include VerBtnDisablePlain("info", $ver-zinc-6, $ver-zinc-3, $ver-zinc-4);
+@include VerBtnDisablePlain("warning", $ver-orange-6, $ver-orange-3, $ver-orange-4);
+@include VerBtnDisablePlain("danger", $ver-red-6, $ver-red-3, $ver-red-4);

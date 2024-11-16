@@ -1,7 +1,7 @@
-import tDialog from "./index.vue";
+import VerDialog from "./index.vue";
 
-tDialog.install = (app) => {
-  app.component(tDialog.name, tDialog);
+VerDialog.install = (app) => {
+  app.component("VerDialog", VerDialog);
 };
 
-export default tDialog;
+export default VerDialog;

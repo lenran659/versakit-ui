@@ -2,9 +2,8 @@
 @use "../../../style/utils/tag/index.scss" as *;
 
 .ver-tag {
-  color: $t-color-primary;
-  background-color: $t-color-primary-light-9;
-  border-color: $t-color-primary-light-8;
+  background-color: $ver-violet-6;
+  border-color: $ver-violet-5;
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -24,30 +23,31 @@
 }
 
 .ver-tag.is-dark {
-  color: $t-color-white;
-  background-color: $t-color-primary;
+  color: $ver-zinc-1;
+  background-color: $ver-violet-6;
 }
 
 .ver-tag.is-plain {
-  border-color: $t-color-primary-light-5;
-  background-color: $t-color-white;
+  border-color: $ver-violet-6;
+  background-color: $ver-zinc-1;
 }
 /* type */
-@include ver-tag-type("success", $t-color-success, $t-color-success-light-9, $t-color-success-light-8);
+// @include ver-tag-type("success", $t-color-success, $t-color-success-light-9, $t-color-success-light-8);
 
-@include ver-tag-type("info", $t-color-info, $t-color-info-light-9, $t-color-info-light-8);
+// @include ver-tag-type("info", $t-color-info, $t-color-info-light-9, $t-color-info-light-8);
 
-@include ver-tag-type("warning", $t-color-warning, $t-color-warning-light-9, $t-color-warning-light-8);
+// @include ver-tag-type("warning", $t-color-warning, $t-color-warning-light-9, $t-color-warning-light-8);
 
-@include ver-tag-type("danger", $t-color-danger, $t-color-danger-light-9, $t-color-danger-light-8);
+// @include ver-tag-type("danger", $t-color-danger, $t-color-danger-light-9, $t-color-danger-light-8);
+
 /* Dark */
-@include ver-tag-type-dark("success", $t-color-white, $t-color-success);
-@include ver-tag-type-dark("info", $t-color-white, $t-color-info);
-@include ver-tag-type-dark("warning", $t-color-white, $t-color-warning);
-@include ver-tag-type-dark("danger", $t-color-white, $t-color-danger);
-/* Plain */
-@include ver-tag-type-plain("success", $t-color-success, $t-color-success-light-5);
-@include ver-tag-type-plain("info", $t-color-info, $t-color-info-light-5);
-@include ver-tag-type-plain("warning", $t-color-warning, $t-color-warning-light-5);
+// @include ver-tag-type-dark("success", $ver-zinc-1, $t-color-success);
+// @include ver-tag-type-dark("info", $ver-zinc-1, $t-color-info);
+// @include ver-tag-type-dark("warning", $ver-zinc-1, $t-color-warning);
+// @include ver-tag-type-dark("danger", $ver-zinc-1, $t-color-danger);
 
-@include ver-tag-type-plain("danger", $t-color-danger, $t-color-danger-light-5);
+/* Plain */
+// @include ver-tag-type-plain("success", $t-color-success, $t-color-success-light-5);
+// @include ver-tag-type-plain("info", $t-color-info, $t-color-info-light-5);
+// @include ver-tag-type-plain("warning", $t-color-warning, $t-color-warning-light-5);
+// @include ver-tag-type-plain("danger", $t-color-danger, $t-color-danger-light-5);

@@ -1,7 +1,7 @@
-import tFormItem from "./index.vue";
+import VerFormItem from "./index.vue";
 
-tFormItem.install = (app) => {
-  app.component(tFormItem.name, tFormItem);
+VerFormItem.install = (app) => {
+  app.component("VerFormItem", VerFormItem);
 };
 
-export default tFormItem;
+export default VerFormItem;

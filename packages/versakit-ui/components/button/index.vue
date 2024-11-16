@@ -1,5 +1,5 @@
 <template>
-  <button :class="tClass" :disabled="disable">
+  <button :class="Verclass" :disabled="disable">
     <span>
       <slot></slot>
     </span>
@@ -28,10 +28,10 @@ const props = defineProps({
   },
 });
 
-const tClass = computed(() => {
+const Verclass = computed(() => {
   return [
-    "t-btn",
-    props.type == "" ? "" : `t-btn-${props.type}`,
+    "ver-btn",
+    props.type == "" ? "" : `ver-btn-${props.type}`,
     props.plain == false ? "" : "is-plain",
     props.round == false ? "" : "is-round",
     props.disable == false ? "" : "is-disable",

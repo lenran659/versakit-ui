@@ -54,10 +54,10 @@ const tClass = computed(() => {
     &:focus,
     &:active,
     &:focus-visible {
-      border: 1px solid $t-color-primary;
+      border: 1px solid $ver-violet-6;
     }
     &:focus-visible {
-      border: 1px solid $t-color-primary;
+      border: 1px solid $ver-violet-6;
     }
   }
 }

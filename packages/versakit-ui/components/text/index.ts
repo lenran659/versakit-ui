@@ -1,7 +1,7 @@
 import VerText from "./index.vue";
 
 VerText.install = (app) => {
-  app.component(VerText.name, VerText);
+  app.component("VerText", VerText);
 };
 
 export default VerText;

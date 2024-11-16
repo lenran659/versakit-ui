@@ -10,11 +10,11 @@
   word-break: break-all;
 }
 
-@include text-color("primary", $t-color-primary);
-@include text-color("success", $t-color-success);
-@include text-color("info", $t-color-info);
-@include text-color("warning", $t-color-warning);
-@include text-color("danger", $t-color-danger);
+// @include text-color("primary", $t-color-primary);
+// @include text-color("success", $t-color-success);
+// @include text-color("info", $t-color-info);
+// @include text-color("warning", $t-color-warning);
+// @include text-color("danger", $t-color-danger);
 
 .t-text-large {
   font-size: 16px;

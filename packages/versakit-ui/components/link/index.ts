@@ -1,7 +1,7 @@
-import tLink from "./index.vue";
+import VerLink from "./index.vue";
 
-tLink.install = (app) => {
-  app.component(tLink.name, tLink);
+VerLink.install = (app) => {
+  app.component("VerLink", VerLink);
 };
 
-export default tLink;
+export default VerLink;

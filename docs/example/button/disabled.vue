@@ -25,7 +25,7 @@ import { VerButton, VerRow } from "../../../packages/versakit-ui/index";
 .mb-4 {
   margin-bottom: 1rem;
 }
-.t-btn + .t-btn {
+.ver-btn + .ver-btn {
   margin: 0px 10px;
 }
 </style>

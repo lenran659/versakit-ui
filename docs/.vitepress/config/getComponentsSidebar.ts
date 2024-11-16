@@ -1,6 +1,6 @@
 import { DefaultTheme } from "vitepress";
 
-export const getSidebar = (): DefaultTheme.Sidebar => {
+export const getComponentsSidebar = (): DefaultTheme.Sidebar => {
   return [
     {
       text: "Layout 布局组件",

@@ -1,50 +1,53 @@
 @use "../../color/index.scss" as *;
 
 /* 按钮类型 */
-@mixin t-btn-type($type, $text-color, $main-color, $sec-color) {
-  .t-btn-#{$type} {
-    color: $text-color;
-    background-color: $main-color;
-    border-color: $main-color;
-    &:hover,
-    &:focus {
-      color: $t-color-white;
-      border-color: $sec-color;
-      background-color: $sec-color;
-      outline: none;
+@mixin VerBtnType($type, $color6) {
+  .ver-btn-#{$type} {
+    color: $ver-zinc-1;
+    background-color: $color6;
+
+    .dark & {
+      color: $ver-zinc-1;
+      background-color: $color6;
     }
   }
 }
 
 /* 朴素按钮 */
-@mixin t-btn-plain($type, $text-color, $main-color, $border-color, $sec-color) {
-  .t-btn-#{$type}.is-plain {
-    color: $main-color;
-    border-color: $border-color;
-    background: $sec-color;
-    &:hover,
-    &:focus {
-      color: $text-color;
-      background-color: $main-color;
-      border-color: $main-color;
-    }
+@mixin VerBtnPlain($type, $color6, $color5) {
+  .ver-btn-#{$type}.is-plain {
+    color: $color6;
+    border: 1px solid $color5;
+    background-color: transparent;
   }
 }
 
 /* disable属性 */
-@mixin t-btn-disable($type, $main-color) {
-  .t-btn-#{$type}.is-disable {
-    color: $t-color-white;
-    border-color: $main-color;
-    background-color: $main-color;
+@mixin VerBtnDisable($type, $color8, $color9) {
+  .ver-btn-#{$type}.is-disable {
+    color: $ver-zinc-1;
+    border-color: $color8;
+    background-color: $color9;
+
+    .dark & {
+      color: $ver-zinc-1;
+      border-color: $color8;
+      background-color: $color9;
+    }
   }
 }
 
 /* 朴素按钮 disable属性 */
-@mixin t-btn-plain-disable($type, $color5, $color8, $color9) {
-  .t-btn-#{$type}.is-plain.is-disable {
-    color: $color5;
-    border-color: $color8;
-    background-color: $color9;
+@mixin VerBtnDisablePlain($type, $color6, $color3, $color4) {
+  .ver-btn-#{$type}.is-plain.is-disable {
+    color: $color6;
+    border-color: $color3;
+    background-color: $color4;
+
+    .dark & {
+      color: $color6;
+      border-color: $color3;
+      background-color: $color4;
+    }
   }
 }

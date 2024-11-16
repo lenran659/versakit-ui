@@ -1,7 +1,8 @@
+import { App } from "vue";
 import VerButton from "./index.vue";
 
-VerButton.install = (app) => {
-  app.component(VerButton.name, VerButton);
+VerButton.install = (app: App) => {
+  app.component("VerButton", VerButton);
 };
 
 export default VerButton;

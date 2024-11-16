@@ -1,7 +1,8 @@
 import { defineConfig } from "vitepress";
 import { getNav } from "./config/nav";
-import { getSidebar } from "./config/sidebar";
+import { getComponentsSidebar } from "./config/getComponentsSidebar";
 import { vitepressDemoPlugin } from "vitepress-demo-plugin";
+import { getGuideSidebar } from "./config/getGuideSidebar";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -10,7 +11,10 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: getNav(),
 
-    sidebar: getSidebar(),
+    sidebar: {
+      "/guide/": getGuideSidebar(),
+      "/components/": getComponentsSidebar(),
+    },
 
     socialLinks: [{ icon: "github", link: "https://github.com/vuejs/vitepress" }],
   },

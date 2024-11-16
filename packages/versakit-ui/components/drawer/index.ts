@@ -1,7 +1,7 @@
-import tDrawer from "./index.vue";
+import VerDrawer from "./index.vue";
 
-tDrawer.insatll = (app) => {
-  app.component(tDrawer.name, tDrawer);
+VerDrawer.insatll = (app) => {
+  app.component("VerDrawer", VerDrawer);
 };
 
-export default tDrawer;
+export default VerDrawer;

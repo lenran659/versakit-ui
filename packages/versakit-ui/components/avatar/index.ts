@@ -1,7 +1,7 @@
 import VerAvatar from "./index.vue";
 
 VerAvatar.install = (app) => {
-  app.component(VerAvatar.name, VerAvatar);
+  app.component("VerAvatar", VerAvatar);
 };
 
 export default VerAvatar;

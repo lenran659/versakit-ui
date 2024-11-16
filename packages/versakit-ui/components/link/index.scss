@@ -15,16 +15,13 @@
   font-size: 14px;
   font-weight: 500;
   color: #606266;
-  &:hover {
-    color: $t-color-primary;
-  }
 }
 
-@include ver-link-type("primary", $t-color-primary, $t-color-primary-light-3);
-@include ver-link-type("success", $t-color-success, $t-color-success-light-3);
-@include ver-link-type("info", $t-color-info, $t-color-info-light-3);
-@include ver-link-type("warning", $t-color-warning, $t-color-warning-light-3);
-@include ver-link-type("danger", $t-color-danger, $t-color-danger-light-3);
+// @include ver-link-type("primary", $t-color-primary, $t-color-primary-light-3);
+// @include ver-link-type("success", $t-color-success, $t-color-success-light-3);
+// @include ver-link-type("info", $t-color-info, $t-color-info-light-3);
+// @include ver-link-type("warning", $t-color-warning, $t-color-warning-light-3);
+// @include ver-link-type("danger", $t-color-danger, $t-color-danger-light-3);
 
 /* 禁用状态 */
 .ver-link.is-disable {
@@ -33,8 +30,8 @@
   text-decoration: none;
 }
 
-@include ver-link-disable("primary", $t-color-primary-light-5);
-@include ver-link-disable("success", $t-color-success-light-5);
-@include ver-link-disable("info", $t-color-info-light-5);
-@include ver-link-disable("warning", $t-color-warning-light-5);
-@include ver-link-disable("danger", $t-color-danger-light-5);
+// @include ver-link-disable("primary", $t-color-primary-light-5);
+// @include ver-link-disable("success", $t-color-success-light-5);
+// @include ver-link-disable("info", $t-color-info-light-5);
+// @include ver-link-disable("warning", $t-color-warning-light-5);
+// @include ver-link-disable("danger", $t-color-danger-light-5);

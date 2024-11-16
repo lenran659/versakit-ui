@@ -1,7 +1,7 @@
-import tRadio from "./index.vue";
+import VerRadio from "./index.vue";
 
-tRadio.install = (app) => {
-  app.component(tRadio.name, tRadio);
+VerRadio.install = (app) => {
+  app.component("VerRadio", VerRadio);
 };
 
-export default tRadio;
+export default VerRadio;

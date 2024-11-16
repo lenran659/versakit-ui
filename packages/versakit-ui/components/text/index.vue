@@ -1,5 +1,5 @@
 <template>
-  <span :class="tClass">
+  <span :class="VerClass">
     <slot></slot>
   </span>
 </template>
@@ -22,11 +22,11 @@ const props = defineProps({
   },
 });
 
-const tClass = computed(() => {
+const VerClass = computed(() => {
   return [
-    "t-text",
-    props.type == "" ? "" : `t-text-${props.type}`,
-    props.size == "" ? "" : `t-text-${props.size}`,
+    "ver-text",
+    props.type == "" ? "" : `ver-text-${props.type}`,
+    props.size == "" ? "" : `ver-text-${props.size}`,
     props.truncated == false ? "" : "is-truncated",
   ];
 });

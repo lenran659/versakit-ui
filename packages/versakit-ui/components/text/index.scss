@@ -1,30 +1,34 @@
 @use "../../../style/color/index.scss" as *;
 @use "../../../style/utils/text/index.scss" as *;
 
-.t-text {
+.ver-text {
   align-self: center;
   margin: 0;
   padding: 0;
   font-size: 14px;
   color: #606266;
   word-break: break-all;
+
+  .dark & {
+    color: $ver-zinc-1;
+  }
 }
 
-// @include text-color("primary", $t-color-primary);
-// @include text-color("success", $t-color-success);
-// @include text-color("info", $t-color-info);
-// @include text-color("warning", $t-color-warning);
-// @include text-color("danger", $t-color-danger);
+@include text-color("primary", $ver-violet-6);
+@include text-color("success", $ver-green-6);
+@include text-color("info", $ver-zinc-6);
+@include text-color("warning", $ver-orange-6);
+@include text-color("danger", $ver-red-6);
 
-.t-text-large {
+.ver-text-large {
   font-size: 16px;
 }
 
-.t-text-small {
+.ver-text-small {
   font-size: 12px;
 }
 
-.t-text.is-truncated {
+.ver-text.is-truncated {
   display: inline-block;
   max-width: 100%;
   text-overflow: ellipsis;

@@ -1,7 +1,11 @@
 @use "../../color/index.scss" as *;
 
-@mixin text-color($type, $color) {
-  .t-text-#{$type} {
-    color: $color;
+@mixin text-color($type, $color6) {
+  .ver-text-#{$type} {
+    color: $color6;
+
+    .dark & {
+      color: $color6;
+    }
   }
 }

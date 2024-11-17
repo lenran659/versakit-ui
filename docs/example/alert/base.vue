@@ -10,7 +10,7 @@ import { VerAlert } from "../../../packages/versakit-ui/index";
 </script>
 
 <style scoped>
-.t-alert + .t-alert {
+.ver-alert + .ver-alert {
   margin: 10px 0;
 }
 </style>

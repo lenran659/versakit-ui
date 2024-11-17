@@ -1,21 +1,21 @@
 <template>
   <transition name="fade">
-    <div class="t-dialog_wrapper" v-show="visible" @click.self="close">
-      <div class="t-dialog" :style="{ width: width, marginTop: top }">
-        <div class="t-dialog_header">
+    <div class="ver-dialog_wrapper" v-show="modelValue" @click.self="close">
+      <div class="ver-dialog" :style="{ width: width, marginTop: top }">
+        <div class="ver-dialog_header">
           <slot name="title">
-            <span class="t-dialog_title">
+            <span class="ver-dialog_title">
               {{ title }}
             </span>
           </slot>
-          <button class="t-dialog_headerbtn" @click="close">
+          <button class="ver-dialog_headerbtn" @click="close">
             <t-icon name="cross"></t-icon>
           </button>
         </div>
-        <div class="t-dialog_body">
+        <div class="ver-dialog_body">
           <slot></slot>
         </div>
-        <div class="t-dialog_footer" v-if="$slots.footer">
+        <div class="ver-dialog_footer" v-if="$slots.footer">
           <slot name="footer"> </slot>
         </div>
       </div>
@@ -24,13 +24,14 @@
 </template>
 
 <script lang="ts" setup>
-const emit = defineEmits(["update:visible"]);
-const props = defineProps({
+const emit = defineEmits(["update:modelValue"]);
+
+defineProps({
   title: {
     type: String,
     default: "标题",
   },
-  visible: {
+  modelValue: {
     type: Boolean,
     default: false,
   },
@@ -45,7 +46,7 @@ const props = defineProps({
 });
 
 const close = () => {
-  emit("update:visible", false);
+  emit("update:modelValue", false);
 };
 </script>
 

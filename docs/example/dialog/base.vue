@@ -2,7 +2,7 @@
   <div>
     <ver-button @click="dialogVisible = true">点击打开对话框</ver-button>
 
-    <ver-dialog v-model:visible="dialogVisible">
+    <ver-dialog v-model="dialogVisible">
       <span>这是一段信息</span>
       <template #footer>
         <ver-button>取消</ver-button>
@@ -21,7 +21,7 @@ const dialogVisible = ref(false);
 </script>
 
 <style lang="scss" scoped>
-.t-dialog_footer .t-btn {
+.ver-dialog_footer .ver-btn {
   margin-right: 20px;
 }
 </style>

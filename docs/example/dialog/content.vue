@@ -3,17 +3,17 @@
     <ver-button @click="dialogVisible = true">点击打开对话框</ver-button>
     <ver-button @click="dialogFromVisible = true">点击打开对话框</ver-button>
     <!-- 普通 -->
-    <ver-dialog v-model:visible="dialogVisible" title="测试">
+    <ver-dialog v-model="dialogVisible" title="测试">
       <p>这是一个信息</p>
     </ver-dialog>
     <!-- 表单 -->
-    <ver-dialog v-model:visible="dialogFromVisible" title="表单">
+    <ver-dialog v-model="dialogFromVisible" title="表单">
       <div>
         <ver-input />
       </div>
       <template #footer>
         <ver-button>取消</ver-button>
-        <ver-button type="primary" @click="dialogVisible = false"> 确定 </ver-button>
+        <ver-button type="primary" @click="dialogFromVisible = false"> 确定 </ver-button>
       </template>
     </ver-dialog>
   </ver-row>

@@ -2,7 +2,7 @@
   <ver-row>
     <ver-button @click="dialogVisible = true">点击打开对话框</ver-button>
 
-    <VerDialog v-model:visible="dialogVisible">
+    <VerDialog v-model="dialogVisible">
       <template #title>
         <div class="title">
           <h4>This is a custom header!</h4>

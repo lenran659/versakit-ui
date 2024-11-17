@@ -1,4 +1,6 @@
-.t-dialog_wrapper {
+@use "../../../style/color/index.scss" as *;
+
+.ver-dialog_wrapper {
   position: fixed;
   top: 0;
   right: 0;
@@ -8,22 +10,31 @@
   margin: 0;
   z-index: 2001;
   background-color: rgba($color: #000000, $alpha: 0.5);
-  .t-dialog {
+  .ver-dialog {
     position: relative;
     width: 30%;
     margin: 15vh auto 50px;
-    background-color: #fff;
+    background-color: $ver-zinc-1;
     border-radius: 2px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
     box-sizing: border-box;
+
+    .dark & {
+      background-color: $ver-zinc-8;
+    }
+
     &_header {
       padding: 20px 20px 10px;
-      .t-dialog_title {
+      .ver-dialog_title {
         line-height: 24px;
         font-size: 18px;
         color: #303133;
+
+        .dark & {
+          color: $ver-zinc-1;
+        }
       }
-      .t-dialog_headerbtn {
+      .ver-dialog_headerbtn {
         position: absolute;
         top: 20px;
         right: 20px;
@@ -33,9 +44,6 @@
         outline: none;
         cursor: pointer;
         font-size: 16px;
-        .t-icon-close {
-          color: #909399;
-        }
       }
     }
     &_body {
@@ -43,6 +51,10 @@
       color: #606266;
       font-size: 14px;
       word-break: break-all;
+
+      .dark & {
+        color: $ver-zinc-1;
+      }
     }
     &_footer {
       padding: 10px 20px 20px;

@@ -1,10 +1,10 @@
 <template>
-  <label :class="['t-radio', { 'is-checked': label == modelValue, 'is-disabled': disabled }]">
-    <span class="t-radio_input">
-      <span class="t-radio_inner"></span>
-      <input :disabled="disabled" ref="radio" class="t-radio_original" :name="name" v-model="modelValue" :value="label" type="radio" />
+  <label :class="['ver-radio', { 'is-checked': label == modelValue, 'is-disabled': disabled }]">
+    <span class="ver-radio_input">
+      <span class="ver-radio_inner"></span>
+      <input :disabled="disabled" ref="radio" class="ver-radio_original" :name="name" v-model="modelValue" :value="label" type="radio" />
     </span>
-    <span class="t-radio_label">
+    <span class="ver-radio_label">
       <slot></slot>
       <template v-if="!$slots.default">{{ label }}</template>
     </span>
@@ -40,7 +40,9 @@ const modelValue = computed({
 </script>
 
 <style lang="scss" scoped>
-.t-radio {
+@use "../../../style/color/index.scss" as *;
+
+.ver-radio {
   color: #606266;
   font-weight: 500;
   line-height: 1;
@@ -54,7 +56,7 @@ const modelValue = computed({
   user-select: none;
   -moz-user-select: none;
   -webkit-user-select: none;
-  .t-radio_input {
+  .ver-radio_input {
     white-space: nowrap;
     cursor: pointer;
     outline: none;
@@ -62,7 +64,7 @@ const modelValue = computed({
     line-height: 1;
     position: relative;
     vertical-align: middle;
-    .t-radio_inner {
+    .ver-radio_inner {
       border: 1px solid #dcdfe6;
       border-radius: 100%;
       width: 14px;
@@ -85,7 +87,7 @@ const modelValue = computed({
         transition: transform 0.15s ease-in;
       }
     }
-    .t-radio_original {
+    .ver-radio_original {
       opacity: 0;
       outline: none;
       position: absolute;
@@ -99,33 +101,33 @@ const modelValue = computed({
   }
 }
 
-.t-radio_label {
+.ver-radio_label {
   font-size: 14px;
   padding-left: 10px;
 }
 
 /* 选中样式 */
-.t-radio.is-checked {
-  .t-radio_input {
-    .t-radio_inner {
-      border-color: #409eff;
-      background-color: #409eff;
+.ver-radio.is-checked {
+  .ver-radio_input {
+    .ver-radio_inner {
+      border-color: $ver-violet-6;
+      background-color: $ver-violet-6;
       &:after {
         transform: translate(-50%, -50%) scale(1);
       }
     }
   }
-  .t-radio_label {
-    color: #409eff;
+  .ver-radio_label {
+    color: $ver-violet-6;
   }
 }
 
 /* 禁止状态 */
-.t-radio.is-disabled {
+.ver-radio.is-disabled {
   cursor: not-allowed;
-  .t-radio_input {
+  .ver-radio_input {
     cursor: not-allowed;
-    .t-radio_inner {
+    .ver-radio_inner {
       border-color: #f5f5fa;
       background-color: #e4e7ed;
       &:after {
@@ -133,7 +135,7 @@ const modelValue = computed({
         transform: translate(-50%, -50%) scale(1);
       }
     }
-    & + .t-radio_label {
+    & + .ver-radio_label {
       color: #a8abb2;
     }
   }

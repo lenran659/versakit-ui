@@ -43,7 +43,7 @@ const tClass = computed(() => {
     height: 100%;
     padding: 0;
     outline: none;
-    border: 1px solid #dcdfe6f6;
+    border: 1px solid $ver-zinc-3;
     transition: all 0.2s ease;
     border-radius: 3px;
     padding: 8px 8px 10px 8px;
@@ -58,6 +58,20 @@ const tClass = computed(() => {
     }
     &:focus-visible {
       border: 1px solid $ver-violet-6;
+    }
+
+    .dark & {
+      color: $ver-zinc-1;
+      border-color: $ver-zinc-9;
+
+      &:focus,
+      &:active,
+      &:focus-visible {
+        border: 1px solid $ver-violet-6;
+      }
+      &:focus-visible {
+        border: 1px solid $ver-violet-6;
+      }
     }
   }
 }

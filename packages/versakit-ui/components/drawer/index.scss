@@ -1,4 +1,6 @@
-.t-drawer_wrapper {
+@use "../../../style/color/index.scss" as *;
+
+.ver-drawer_wrapper {
   position: fixed;
   top: 0;
   right: 0;
@@ -8,24 +10,34 @@
   margin: 0;
   z-index: 2001;
   background-color: rgba($color: #000000, $alpha: 0.5);
-  .t-drawer {
+  .ver-drawer {
     position: relative;
     width: 30%;
     height: 100vh;
-    background-color: #fff;
+    background-color: $ver-zinc-1;
+
+    .dark & {
+      background-color: $ver-zinc-8;
+    }
+
     &_header {
       display: flex;
       align-items: center;
       margin-bottom: 32px;
       padding: 20px;
       padding-bottom: 0;
-      color: #72767b;
-      .t-drawer_title {
+      color: $ver-zinc-5;
+
+      .dark & {
+        color: $ver-zinc-1;
+      }
+
+      .ver-drawer_title {
         margin: 0;
         line-height: inherit;
         font-size: 1rem;
       }
-      .t-drawer_headerbtn {
+      .ver-drawer_headerbtn {
         position: absolute;
         top: 20px;
         right: 20px;
@@ -35,9 +47,6 @@
         outline: none;
         cursor: pointer;
         font-size: 16px;
-        .t-icon-close {
-          color: #909399;
-        }
       }
     }
     &_body {

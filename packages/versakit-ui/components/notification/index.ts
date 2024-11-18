@@ -11,8 +11,8 @@ export default ({ title, content, duration = 3000 }: Options) => {
   /**
    * 动画结束时的回调
    */
+  // 3. VerNotification 销毁
   const onDestroy = () => {
-    // 3. VerNotification 销毁
     render(null, document.body);
   };
 
@@ -23,6 +23,7 @@ export default ({ title, content, duration = 3000 }: Options) => {
     duration,
     destroy: onDestroy,
   });
+
   // 2. render
   render(vnode, document.body);
 };

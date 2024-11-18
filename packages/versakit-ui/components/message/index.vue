@@ -1,6 +1,6 @@
 <template>
   <transition name="down" @after-leave="destroy">
-    <div :class="['t-message']" :style="style[type]" v-show="isVisable">
+    <div :class="['ver-message']" :style="style[type]" v-show="isVisable">
       <span class="text">{{ content }}</span>
     </div>
   </transition>

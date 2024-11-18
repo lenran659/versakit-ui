@@ -1,11 +1,11 @@
 <template>
   <transition name="slide-fade" @after-leave="destroy">
-    <div class="t-notification" v-show="isVisable">
-      <h2 class="t-notification-title">{{ title }}</h2>
-      <div class="t-notification-content">
+    <div class="ver-notification" v-show="isVisable">
+      <h2 class="ver-notification-title">{{ title }}</h2>
+      <div class="ver-notification-content">
         <span>{{ content }}</span>
       </div>
-      <div class="t-notification-closebtn" @click="handClose">X</div>
+      <div class="ver-notification-closebtn" @click="handClose">X</div>
     </div>
   </transition>
 </template>
@@ -57,19 +57,27 @@ onMounted(() => {
 </script>
 
 <style lang="scss" scoped>
-.t-notification {
+@use "../../../style/color/index.scss" as *;
+
+.ver-notification {
   position: fixed;
   top: 16px;
   right: 16px;
   width: 330px;
   padding: 14px 26px 14px 13px;
   border-radius: 8px;
-  border: 1px solid #ebeef5;
+  border: 1px solid $ver-zinc-1;
   box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.12);
-  background-color: #fff;
+  background-color: $ver-zinc-1;
   overflow: hidden;
   overflow-wrap: anywhere;
   z-index: 2010;
+  .dark & {
+    border: 1px solid $ver-zinc-7;
+    background-color: $ver-zinc-8;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.12);
+  }
+
   &-title {
     font-weight: 700;
     font-size: 16px;
@@ -78,6 +86,10 @@ onMounted(() => {
     margin: 0;
     border: none;
     padding: 0;
+
+    .dark & {
+      color: $ver-zinc-1;
+    }
   }
   &-content {
     margin-top: 6px 0 0;
@@ -85,6 +97,10 @@ onMounted(() => {
     line-height: 24px;
     color: #606266;
     text-align: justify;
+
+    .dark & {
+      color: $ver-zinc-1;
+    }
   }
   &-closebtn {
     position: absolute;

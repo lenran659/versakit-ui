@@ -25,6 +25,9 @@ export default ({ type, content, duration = 3000 }: Options) => {
     duration,
     destroy: onDestroy,
   });
+
+  console.trace("render........");
+
   // 2. render
   render(vnode, document.body);
 };

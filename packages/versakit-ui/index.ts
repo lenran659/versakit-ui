@@ -14,11 +14,13 @@ import VerDrawer from "./components/drawer/index";
 import VerSwitch from "./components/switch/index";
 import VerRadio from "./components/radio/index";
 import VerMessage from "./components/message/index";
+import VerMessageVue from "./components/message/index.vue";
 import VerTextarea from "./components/textarea/index";
 import VerContainer from "./components/container/index";
 import VerHeader from "./components/header/index";
 import VerMain from "./components/main/index";
 import VerNotification from "./components/notification/index";
+import VerNotificationVue from "./components/notification/index.vue";
 import VerAlert from "./components/alert/index";
 import VerForm from "./components/form/index";
 import VerFormItem from "./components/formitem/index";
@@ -39,12 +41,12 @@ const components = [
   VerDrawer,
   VerSwitch,
   VerRadio,
-  VerMessage,
+  VerMessageVue,
   VerTextarea,
   VerContainer,
   VerHeader,
   VerMain,
-  VerNotification,
+  VerNotificationVue,
   VerAlert,
   VerForm,
   VerFormItem,

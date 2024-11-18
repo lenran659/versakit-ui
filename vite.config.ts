@@ -1,7 +1,10 @@
 import { fileURLToPath, URL } from "node:url";
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
+import path from "path";
 import dts from "vite-plugin-dts";
+
+console.log("--------------", path.resolve(__dirname, "./packages/versakit-ui/components"));
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -18,6 +21,11 @@ export default defineConfig({
       },
     },
   },
+  resolve: {
+    alias: {
+      "@components": path.resolve(__dirname, "./packages/versakit-ui/components"),
+    },
+  },
   build: {
     minify: true,
     sourcemap: true,
@@ -27,6 +35,7 @@ export default defineConfig({
         globals: {
           vue: "Vue",
         },
+        preserveModules: false,
       },
     },
     lib: {

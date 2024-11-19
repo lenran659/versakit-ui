@@ -42,14 +42,13 @@ pnpm add versakit-ui
 ```vue
 <template>
   <div>
-    <VersakitButton @click="handleButtonClick">Click me</VersakitButton>
+    <VerButton @click="handleButtonClick">Click me</VerButton>
   </div>
 </template>
 
 <script setup>
 import { ref } from "vue";
-import { Button as VersakitButton } from "versakit";
-import "./styles.css";
+import { VerButton } from "versakit";
 
 const handleButtonClick = () => {
   console.log("Button clicked!");
@@ -59,9 +58,9 @@ const handleButtonClick = () => {
 
 在上述示例中，`Button`组件没有自带样式，我们可以在`styles.css`文件中定义它的外观。
 
-## 五、NPM 地址
+## 五、文档地址
 
-[Npm 地址](https://www.npmjs.com/package/versakit-ui)
+[文档]("https://lenran659.github.io/versakit-docs/")
 
 ## 六、贡献
 

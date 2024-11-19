@@ -5,8 +5,9 @@ export const getGuideSidebar = (): DefaultTheme.Sidebar => {
     {
       text: "指南",
       items: [
-        { text: "Log 更新日志", link: "/guide/log/" },
-        { text: "Dark 暗黑模式", link: "/guide/dark/" },
+        { text: "安装", link: "/guide/installation/" },
+        { text: "更新日志", link: "/guide/log/" },
+        { text: "暗黑模式", link: "/guide/dark/" },
       ],
     },
   ];

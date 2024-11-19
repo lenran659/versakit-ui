@@ -4,26 +4,19 @@ import vue from "@vitejs/plugin-vue";
 import path from "path";
 import dts from "vite-plugin-dts";
 
-console.log("--------------", path.resolve(__dirname, "./packages/versakit-ui/components"));
-
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [
     vue(),
-    // dts({
-    //   include: ["./packages/**"],
-    // }),
+    dts({
+      include: ["./packages/**"],
+    }),
   ],
   css: {
     preprocessorOptions: {
       scss: {
         api: "modern-compiler",
       },
-    },
-  },
-  resolve: {
-    alias: {
-      "@components": path.resolve(__dirname, "./packages/versakit-ui/components"),
     },
   },
   build: {

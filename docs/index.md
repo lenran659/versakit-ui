@@ -11,7 +11,7 @@ hero:
   actions:
     - theme: brand
       text: 开始使用
-      link: /guide/dark/
+      link: /guide/installation/
     - theme: alt
       text: 在 Gitee 上查看
       link: https://gitee.com/dragon_water/tui

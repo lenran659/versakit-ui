@@ -8,8 +8,11 @@
 </template>
 
 <script lang="ts" setup>
-import { computed, ref } from "vue";
-const isShow = ref(true);
+import { computed, ref, PropType, ComputedRef } from "vue";
+// 定义type的允许取值类型
+type AlertType = "success" | "error" | "warning";
+
+const isShow = ref<boolean>(true);
 
 const props = defineProps({
   title: {
@@ -17,12 +20,12 @@ const props = defineProps({
     default: "",
   },
   type: {
-    type: String,
+    type: String as PropType<AlertType>,
     default: "",
   },
 });
 
-const VerClass = computed(() => {
+const VerClass: ComputedRef<string[]> = computed(() => {
   return ["ver-alert", `ver-alert-${props.type}`];
 });
 

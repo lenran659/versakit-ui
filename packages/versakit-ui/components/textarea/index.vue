@@ -10,6 +10,7 @@
 <script lang="ts" setup>
 import { computed, ref } from "vue";
 const emit = defineEmits(["update:modelValue", "input"]);
+
 const props = defineProps({
   disabled: Boolean,
   placeholder: String,

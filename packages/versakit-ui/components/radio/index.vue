@@ -2,7 +2,7 @@
   <label :class="['ver-radio', { 'is-checked': label == modelValue, 'is-disabled': disabled }]">
     <span class="ver-radio_input">
       <span class="ver-radio_inner"></span>
-      <input :disabled="disabled" ref="radio" class="ver-radio_original" :name="name" v-model="modelValue" :value="label" type="radio" />
+      <input :disabled="disabled" ref="radio" class="ver-radio_original" :name="name" v-model="modelValue" :value="props.label" type="radio" />
     </span>
     <span class="ver-radio_label">
       <slot></slot>
@@ -15,6 +15,7 @@
 import { computed, ref } from "vue";
 const radio = ref();
 const emit = defineEmits(["update:modelValue"]);
+
 const props = defineProps({
   label: {
     type: [String, Number, Boolean],

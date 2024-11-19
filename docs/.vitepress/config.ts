@@ -6,6 +6,17 @@ import { getGuideSidebar } from "./config/getGuideSidebar";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  base: "/versakit/",
+  head: [
+    [
+      "link",
+      {
+        rel: "icon",
+        type: "image/svg+xml",
+        href: "../logo.png",
+      },
+    ],
+  ],
   title: "Versakit",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config

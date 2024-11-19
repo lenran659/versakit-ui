@@ -23,6 +23,7 @@
   padding: 12px 20px;
   font-size: 14px;
   border-radius: 4px;
+  border: none;
 
   .dark & {
     border: 1px solid $ver-zinc-7;
@@ -33,6 +34,7 @@
     transform: scale(0.9);
   }
 }
+
 @include VerBtnType("primary", $ver-violet-6);
 @include VerBtnType("success", $ver-green-6);
 @include VerBtnType("info", $ver-zinc-6);
@@ -69,6 +71,7 @@
     transform: none;
   }
 }
+
 @include VerBtnDisable("primary", $ver-violet-8, $ver-violet-9);
 @include VerBtnDisable("success", $ver-green-8, $ver-green-9);
 @include VerBtnDisable("info", $ver-zinc-8, $ver-zinc-9);

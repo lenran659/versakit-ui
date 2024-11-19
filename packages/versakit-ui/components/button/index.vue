@@ -1,5 +1,5 @@
 <template>
-  <button :class="Verclass" :disabled="disable">
+  <button :class="Verclass" :disabled="props.disable">
     <span>
       <slot></slot>
     </span>
@@ -28,7 +28,7 @@ const props = defineProps({
   },
 });
 
-const Verclass = computed(() => {
+const Verclass: any = computed(() => {
   return [
     "ver-btn",
     props.type == "" ? "" : `ver-btn-${props.type}`,

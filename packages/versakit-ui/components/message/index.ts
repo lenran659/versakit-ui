@@ -10,9 +10,6 @@ interface Options {
 type typeEnum = "success" | "error" | "warning" | "info";
 
 export default ({ type, content, duration = 3000 }: Options) => {
-  /**
-   * 动画结束时的回调
-   */
   const onDestroy = () => {
     // 3. message 销毁
     render(null, document.body);
@@ -25,8 +22,6 @@ export default ({ type, content, duration = 3000 }: Options) => {
     duration,
     destroy: onDestroy,
   });
-
-  console.trace("render........");
 
   // 2. render
   render(vnode, document.body);

@@ -1,4 +1,18 @@
-<script setup>
+<template>
+  <div
+    class="ver-divider"
+    :class="{ 'ver-vertical': direction === 'vertical' }"
+    :style="{
+      'justify-content': position,
+    }"
+  >
+    <div class="ver-divider-title" v-if="position">
+      <slot></slot>
+    </div>
+  </div>
+</template>
+
+<script lang="ts" setup>
 const props = defineProps({
   position: {
     type: String,
@@ -14,20 +28,6 @@ const props = defineProps({
   },
 });
 </script>
-
-<template>
-  <div
-    class="ver-divider"
-    :class="{ 'ver-vertical': direction === 'vertical' }"
-    :style="{
-      'justify-content': position,
-    }"
-  >
-    <div class="ver-divider-title" v-if="position">
-      <slot></slot>
-    </div>
-  </div>
-</template>
 
 <style lang="scss" scoped>
 @use "../../../style/color/index.scss" as *;

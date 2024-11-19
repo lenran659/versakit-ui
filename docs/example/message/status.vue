@@ -32,14 +32,14 @@ const info = () => {
 
 const error = () => {
   VerMessage({
-    type: "error",
+    type: "danger",
     content: "这是一条消息",
   });
 };
 </script>
 
 <style scoped>
-.t-btn {
+.ver-btn {
   margin: 0px 10px;
 }
 </style>

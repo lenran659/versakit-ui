@@ -6,7 +6,7 @@ import { getGuideSidebar } from "./config/getGuideSidebar";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  base: "/versakit/",
+  base: "/versakit-ui/",
   head: [
     [
       "link",

@@ -1,6 +1,7 @@
+import type { App } from "vue";
 import VerAvatar from "./index.vue";
 
-VerAvatar.install = (app) => {
+VerAvatar.install = (app: App) => {
   app.component("VerAvatar", VerAvatar);
 };
 

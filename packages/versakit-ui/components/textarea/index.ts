@@ -1,6 +1,7 @@
+import type { App } from "vue";
 import VerTextarea from "./index.vue";
 
-VerTextarea.install = (app) => {
+VerTextarea.install = (app: App) => {
   app.component("VerTextarea", VerTextarea);
 };
 

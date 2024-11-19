@@ -1,6 +1,7 @@
+import type { App } from "vue";
 import VerText from "./index.vue";
 
-VerText.install = (app) => {
+VerText.install = (app: App) => {
   app.component("VerText", VerText);
 };
 

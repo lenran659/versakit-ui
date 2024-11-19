@@ -1,5 +1,7 @@
 # Versakit
 
+<img src="./assets/ankr.png" center >
+
 ## 一、简介
 
 Versakit 是一个精心设计的 Vue3 组件库，旨在为开发者提供高度可定制的组件解决方案。它允许你在不依赖特定视觉样式的情况下构建用户界面，赋予你完全掌控组件外观和行为的能力。
@@ -58,11 +60,18 @@ const handleButtonClick = () => {
 
 ## 五、文档地址
 
-[组件库文档](https://lenran659.github.io/versakit-docs/)
+[文档]("https://lenran659.github.io/versakit-docs/")
 
-[github](https://github.com/lenran659/versakit-ui)
+## 六、贡献
 
-[gitee](https://gitee.com/dragon_water/versakit-ui#/dragon_water/versakit-ui/blob/master/%22https:/lenran659.github.io/versakit-docs/%22)
+我们欢迎社区的贡献！如果你有新的组件想法、发现了 bug 或者想要改进现有的组件，请按照以下步骤进行：
+
+1. Fork 这个仓库。
+2. 创建一个新的分支（`git checkout -b my-feature-branch`）。
+3. 进行你的修改和添加。
+4. 提交你的更改（`git commit -am 'Add some feature'`）。
+5. 将分支推送到你的 fork（`git push origin my-feature-branch`）。
+6. 创建一个新的 Pull Request。
 
 ## 七、许可证
 

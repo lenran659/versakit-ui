@@ -1,4 +1,4 @@
-import { App } from "vue";
+import type { App } from "vue";
 import VerButton from "./index.vue";
 
 VerButton.install = (app: App) => {

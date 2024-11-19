@@ -1,3 +1,4 @@
+import type { App } from "vue";
 /* 组件 */
 import VerButton from "./components/button/index";
 import VerText from "./components/text/index";
@@ -23,7 +24,7 @@ import VerNotification from "./components/notification/index";
 import VerNotificationVue from "./components/notification/index.vue";
 import VerAlert from "./components/alert/index";
 import VerForm from "./components/form/index";
-import VerFormItem from "./components/formitem/index";
+import VerFormItem from "./components/formItem/index";
 
 // 组件注册
 const components = [
@@ -53,7 +54,7 @@ const components = [
 ];
 
 /* 统一注册 */
-const install = (app) => {
+const install = (app: App) => {
   components.forEach((i: any) => {
     app.use(i);
   });

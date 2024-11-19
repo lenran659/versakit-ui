@@ -1,5 +1,5 @@
 <template>
-  <transition name="slide-fade" @after-leave="destroy">
+  <transition name="slide-fade" @after-leave="props.destroy">
     <div class="ver-notification" v-show="isVisable">
       <h2 class="ver-notification-title">{{ title }}</h2>
       <div class="ver-notification-content">
@@ -12,6 +12,10 @@
 
 <script lang="ts" setup>
 import { ref, onMounted } from "vue";
+import type { PropType } from "vue";
+
+// @ts-ignore
+import { Hook } from "vue/dist/vue.runtime.global.prod.js";
 
 const isVisable = ref(false);
 
@@ -24,17 +28,12 @@ const props = defineProps({
     type: String,
     required: true,
   },
-  /**
-   * 展示时长
-   */
   duration: {
     type: Number,
   },
-  /**
-   * 关闭时的回调
-   */
   destroy: {
-    type: Function,
+    type: Function as PropType<Hook<(el: Element) => void> | (() => void)>,
+    default: () => () => {},
   },
 });
 

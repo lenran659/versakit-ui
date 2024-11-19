@@ -25,8 +25,9 @@ const props = defineProps({
   },
 });
 
-const input = (e) => {
-  emit("update:modelValue", e.target.value);
+const input = (e: Event) => {
+  const target = e.target as HTMLInputElement;
+  emit("update:modelValue", target.value);
 };
 
 const tClass = computed(() => {

@@ -1,6 +1,7 @@
+import type { App } from "vue";
 import VerFormItem from "./index.vue";
 
-VerFormItem.install = (app) => {
+VerFormItem.install = (app: App) => {
   app.component("VerFormItem", VerFormItem);
 };
 

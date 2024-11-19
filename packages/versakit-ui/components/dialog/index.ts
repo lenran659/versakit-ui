@@ -1,6 +1,7 @@
+import type { App } from "vue";
 import VerDialog from "./index.vue";
 
-VerDialog.install = (app) => {
+VerDialog.install = (app: App) => {
   app.component("VerDialog", VerDialog);
 };
 

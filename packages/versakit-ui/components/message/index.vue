@@ -1,13 +1,16 @@
 <template>
   <transition name="down" @after-leave="destroy">
-    <div :class="['ver-message']" :style="style[type]" v-show="isVisable">
+    <div :class="VerClass" v-show="isVisable">
       <span class="text">{{ content }}</span>
     </div>
   </transition>
 </template>
 
 <script setup lang="ts">
-import { onMounted, ref, reactive } from "vue";
+import { onMounted, ref, computed } from "vue";
+import type { PropType } from "vue";
+// @ts-ignore
+import { Hook } from "vue/dist/vue.runtime.global.prod.js";
 
 const isVisable = ref(false);
 
@@ -24,40 +27,15 @@ const props = defineProps({
   duration: {
     type: Number,
   },
-  /**
-   * 关闭时的回调
-   */
   destroy: {
-    type: Function,
+    type: Function as PropType<Hook<(el: Element) => void> | (() => void)>,
+    default: () => () => {},
   },
 });
 
-const state = reactive({
-  style: {
-    info: {
-      color: "#909399",
-      backgroundColor: "#f4f4f5", //9
-      borderColor: "#c8c9cc", // 5
-    },
-    warning: {
-      color: "#e6a23c",
-      backgroundColor: "#fdf6ec",
-      borderColor: "#f3d19e",
-    },
-    error: {
-      color: "#ec3437",
-      backgroundColor: "#fef0f0",
-      borderColor: "#fab6b6",
-    },
-    success: {
-      color: "#67c23a",
-      backgroundColor: "#f0f9eb",
-      borderColor: "#b3e19d",
-    },
-  },
+const VerClass = computed(() => {
+  return ["ver-message", props.type == "" ? "" : `ver-message-${props.type}`];
 });
-
-const { style } = state;
 
 /**
  * 保证动画展示，需要在 mounted 之后进行展示

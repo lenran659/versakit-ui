@@ -1,3 +1,6 @@
+@use "../../../style/color/index.scss" as *;
+@use "../../../style/utils/message/index.scss" as *;
+
 .ver-message {
   position: fixed;
   z-index: 9999;
@@ -17,6 +20,11 @@
     line-height: 22px;
   }
 }
+
+@include VerMessageType("success", $ver-green-7, $ver-green-3);
+@include VerMessageType("info", $ver-zinc-7, $ver-zinc-3);
+@include VerMessageType("warning", $ver-orange-7, $ver-orange-3);
+@include VerMessageType("danger", $ver-red-7, $ver-red-3);
 
 .down-enter-active,
 .down-leave-active {

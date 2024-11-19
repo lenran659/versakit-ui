@@ -1,6 +1,7 @@
+import type { App } from "vue";
 import VerInput from "./index.vue";
 
-VerInput.install = (app) => {
+VerInput.install = (app: App) => {
   app.component("VerInput", VerInput);
 };
 

@@ -1,7 +1,8 @@
-import tForm from "./index.vue";
+import type { App } from "vue";
+import VerForm from "./index.vue";
 
-tForm.insatll = (app) => {
-  app.component(tForm.name, tForm);
+VerForm.insatll = (app: App) => {
+  app.component("VerForm", VerForm);
 };
 
-export default tForm;
+export default VerForm;

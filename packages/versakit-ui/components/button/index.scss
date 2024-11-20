@@ -1,5 +1,5 @@
-@use "../../../style/color/index.scss" as *;
-@use "../../../style/utils/button/index.scss" as *;
+@use '../../../style/color/index.scss' as *;
+@use '../../../style/utils/button/index.scss' as *;
 
 .ver-btn {
   display: inline-block;
@@ -35,19 +35,19 @@
   }
 }
 
-@include VerBtnType("primary", $ver-violet-6);
-@include VerBtnType("success", $ver-green-6);
-@include VerBtnType("info", $ver-zinc-6);
-@include VerBtnType("warning", $ver-orange-6);
-@include VerBtnType("danger", $ver-red-6);
+@include VerBtnType('primary', $ver-violet-6);
+@include VerBtnType('success', $ver-green-6);
+@include VerBtnType('info', $ver-zinc-6);
+@include VerBtnType('warning', $ver-orange-6);
+@include VerBtnType('danger', $ver-red-6);
 
 /* 朴素按钮 */
 @include VerBtnPlain(null, $ver-zinc-6, $ver-zinc-5);
-@include VerBtnPlain("primary", $ver-violet-6, $ver-violet-5);
-@include VerBtnPlain("success", $ver-green-6, $ver-green-5);
-@include VerBtnPlain("info", $ver-zinc-6, $ver-zinc-5);
-@include VerBtnPlain("warning", $ver-orange-6, $ver-orange-5);
-@include VerBtnPlain("danger", $ver-red-6, $ver-red-5);
+@include VerBtnPlain('primary', $ver-violet-6, $ver-violet-5);
+@include VerBtnPlain('success', $ver-green-6, $ver-green-5);
+@include VerBtnPlain('info', $ver-zinc-6, $ver-zinc-5);
+@include VerBtnPlain('warning', $ver-orange-6, $ver-orange-5);
+@include VerBtnPlain('danger', $ver-red-6, $ver-red-5);
 
 /* round属性 */
 .ver-btn.is-round {
@@ -72,11 +72,11 @@
   }
 }
 
-@include VerBtnDisable("primary", $ver-violet-8, $ver-violet-9);
-@include VerBtnDisable("success", $ver-green-8, $ver-green-9);
-@include VerBtnDisable("info", $ver-zinc-8, $ver-zinc-9);
-@include VerBtnDisable("warning", $ver-orange-8, $ver-orange-9);
-@include VerBtnDisable("danger", $ver-red-8, $ver-red-9);
+@include VerBtnDisable('primary', $ver-violet-8, $ver-violet-9);
+@include VerBtnDisable('success', $ver-green-8, $ver-green-9);
+@include VerBtnDisable('info', $ver-zinc-8, $ver-zinc-9);
+@include VerBtnDisable('warning', $ver-orange-8, $ver-orange-9);
+@include VerBtnDisable('danger', $ver-red-8, $ver-red-9);
 
 /* 朴素按钮禁止状态 */
 .ver-btn.is-plain.is-disable {
@@ -92,8 +92,23 @@
   }
 }
 
-@include VerBtnDisablePlain("primary", $ver-violet-6, $ver-violet-3, $ver-violet-4);
-@include VerBtnDisablePlain("success", $ver-green-6, $ver-green-3, $ver-green-4);
-@include VerBtnDisablePlain("info", $ver-zinc-6, $ver-zinc-3, $ver-zinc-4);
-@include VerBtnDisablePlain("warning", $ver-orange-6, $ver-orange-3, $ver-orange-4);
-@include VerBtnDisablePlain("danger", $ver-red-6, $ver-red-3, $ver-red-4);
+@include VerBtnDisablePlain(
+  'primary',
+  $ver-violet-6,
+  $ver-violet-3,
+  $ver-violet-4
+);
+@include VerBtnDisablePlain(
+  'success',
+  $ver-green-6,
+  $ver-green-3,
+  $ver-green-4
+);
+@include VerBtnDisablePlain('info', $ver-zinc-6, $ver-zinc-3, $ver-zinc-4);
+@include VerBtnDisablePlain(
+  'warning',
+  $ver-orange-6,
+  $ver-orange-3,
+  $ver-orange-4
+);
+@include VerBtnDisablePlain('danger', $ver-red-6, $ver-red-3, $ver-red-4);

@@ -10,20 +10,19 @@
     "dist/*"
   ],
   "scripts": {
-    "dev": "vitepress dev docs",
+    "dev": "vite",
     "build": "run-p type-check \"build-only {@}\" --",
     "preview": "vite preview",
     "build-only": "vite build",
     "type-check": "vue-tsc --build --force",
-    "docs:build": "vitepress build docs",
-    "docs:preview": "vitepress preview docs",
     "lint": "eslint packages",
     "fix": "eslint packages --fix",
     "format": "prettier --write \"./**/*.{html,vue,ts,js,json,md}\"",
     "lint:eslint": "eslint packages/**/*.{ts,vue} --cache --fix",
     "prepare": "husky install",
     "lint-staged": "lint-staged",
-    "commitlint": "commitlint --config commitlint.config.cjs -e -V"
+    "commitlint": "commitlint --config commitlint.config.cjs -e -V",
+    "test": "vitest"
   },
   "lint-staged": {
     "**/*.{js,jsx,ts,tsx,vue}": [
@@ -67,6 +66,7 @@
     "vite-plugin-dts": "^4.3.0",
     "vitepress": "^1.5.0",
     "vitepress-demo-plugin": "^1.1.1",
+    "vitest": "^2.1.5",
     "vue-tsc": "^2.1.10"
   }
 }

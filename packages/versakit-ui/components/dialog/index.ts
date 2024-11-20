@@ -1,8 +1,8 @@
-import type { App } from "vue";
-import VerDialog from "./index.vue";
+import type { App } from 'vue'
+import VerDialog from './index.vue'
 
 VerDialog.install = (app: App) => {
-  app.component("VerDialog", VerDialog);
-};
+  app.component('VerDialog', VerDialog)
+}
 
-export default VerDialog;
+export default VerDialog

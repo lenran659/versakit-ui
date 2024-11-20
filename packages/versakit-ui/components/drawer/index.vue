@@ -15,22 +15,22 @@
 </template>
 
 <script lang="ts" setup>
-const props = defineProps({
+defineProps({
   title: {
     type: String,
-    default: "标题",
+    default: '标题',
   },
   visible: {
     type: Boolean,
     default: false,
   },
-});
+})
 
-const emit = defineEmits(["update:visible"]);
+const emit = defineEmits(['update:visible'])
 
 const handleClose = () => {
-  emit("update:visible", false);
-};
+  emit('update:visible', false)
+}
 </script>
 
 <style src="./index.scss" lang="scss" scoped></style>

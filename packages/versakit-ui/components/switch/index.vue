@@ -7,27 +7,27 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from "vue";
-const emit = defineEmits(["input", "update:modelValue"]);
+import { computed } from 'vue'
+const emit = defineEmits(['input', 'update:modelValue'])
 const props = defineProps({
   modelValue: {
     type: Boolean,
     default: false,
   },
-});
+})
 
 const VerClass = computed(() => {
-  return ["ver-switch", props.modelValue == false ? "" : "is-checked"];
-});
+  return ['ver-switch', props.modelValue == false ? '' : 'is-checked']
+})
 
 const handClick = () => {
-  emit("input", !props.modelValue);
-  emit("update:modelValue", !props.modelValue);
-};
+  emit('input', !props.modelValue)
+  emit('update:modelValue', !props.modelValue)
+}
 </script>
 
 <style lang="scss" scoped>
-@use "../../../style/color/index.scss" as *;
+@use '../../../style/color/index.scss' as *;
 
 .ver-switch {
   display: inline-block;
@@ -47,7 +47,9 @@ const handClick = () => {
     box-sizing: border-box;
     background-color: $ver-zinc-3;
     cursor: pointer;
-    transition: border-color 0.3s, background-color 0.3s;
+    transition:
+      border-color 0.3s,
+      background-color 0.3s;
     vertical-align: middle;
 
     .dark & {

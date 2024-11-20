@@ -16,20 +16,53 @@
     "build-only": "vite build",
     "type-check": "vue-tsc --build --force",
     "docs:build": "vitepress build docs",
-    "docs:preview": "vitepress preview docs"
+    "docs:preview": "vitepress preview docs",
+    "lint": "eslint packages",
+    "fix": "eslint packages --fix",
+    "format": "prettier --write \"./**/*.{html,vue,ts,js,json,md}\"",
+    "lint:eslint": "eslint packages/**/*.{ts,vue} --cache --fix",
+    "prepare": "husky install",
+    "lint-staged": "lint-staged",
+    "commitlint": "commitlint --config commitlint.config.cjs -e -V"
+  },
+  "lint-staged": {
+    "**/*.{js,jsx,ts,tsx,vue}": [
+      "eslint --fix",
+      "prettier --write",
+      "git add"
+    ],
+    "*.{scss,less,styl,html}": [
+      "prettier --write"
+    ]
   },
   "dependencies": {
-    "@types/sass": "^1.45.0",
-    "sass": "^1.80.6",
     "vue": "^3.5.12"
   },
   "devDependencies": {
+    "@babel/eslint-parser": "^7.25.9",
+    "@commitlint/cli": "^19.6.0",
+    "@commitlint/config-conventional": "^19.6.0",
+    "@eslint/js": "^9.15.0",
     "@tsconfig/node22": "^22.0.0",
     "@types/node": "^22.9.0",
+    "@types/sass": "^1.45.0",
+    "@typescript-eslint/parser": "^8.15.0",
     "@vitejs/plugin-vue": "^5.1.4",
     "@vue/tsconfig": "^0.5.1",
+    "eslint": "^8.57.1",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "eslint-plugin-vue": "^9.31.0",
+    "globals": "^15.12.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.2.10",
     "npm-run-all2": "^7.0.1",
+    "prettier": "^3.3.3",
+    "sass": "^1.80.6",
     "typescript": "~5.6.3",
+    "typescript-eslint": "^8.15.0",
     "vite": "^5.4.10",
     "vite-plugin-dts": "^4.3.0",
     "vitepress": "^1.5.0",

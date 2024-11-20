@@ -1,6 +1,13 @@
 <template>
   <div :class="tClass">
-    <textarea ref="textareaRef" :disabled="props.disabled" :placeholder="placeholder" :maxlength="maxlength" :value="modelValue" @input="input" />
+    <textarea
+      ref="textareaRef"
+      :disabled="props.disabled"
+      :placeholder="placeholder"
+      :maxlength="maxlength"
+      :value="modelValue"
+      @input="input"
+    />
     <div class="maxlength-box" v-if="maxlength != undefined && maxlength > 0">
       {{ `${n}/${maxlength}` }}
     </div>
@@ -8,30 +15,30 @@
 </template>
 
 <script lang="ts" setup>
-import { computed, ref } from "vue";
-const emit = defineEmits(["update:modelValue", "input"]);
+import { computed, ref } from 'vue'
+const emit = defineEmits(['update:modelValue', 'input'])
 
 const props = defineProps({
   disabled: Boolean,
   placeholder: String,
   modelValue: String,
   maxlength: Number,
-});
+})
 
-const n = ref(props.modelValue?.length || 0);
-const textareaRef = ref();
+const n = ref(props.modelValue?.length || 0)
+const textareaRef = ref()
 const input = () => {
-  emit("update:modelValue", textareaRef.value.value);
-  n.value = textareaRef.value.value.length;
-};
+  emit('update:modelValue', textareaRef.value.value)
+  n.value = textareaRef.value.value.length
+}
 
 const tClass = computed(() => {
-  return ["t-textarea", props.disabled == false ? "" : "is-disable"];
-});
+  return ['t-textarea', props.disabled == false ? '' : 'is-disable']
+})
 </script>
 
 <style lang="scss" scoped>
-@use "../../../style/color/index.scss" as *;
+@use '../../../style/color/index.scss' as *;
 
 .t-textarea {
   width: auto;

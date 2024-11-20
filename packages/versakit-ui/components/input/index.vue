@@ -1,18 +1,24 @@
 <template>
   <div :class="tClass">
-    <input :disabled="disabled" :value="modelValue" :type="type" :placeholder="placeholder" @input="input" />
+    <input
+      :disabled="disabled"
+      :value="modelValue"
+      :type="type"
+      :placeholder="placeholder"
+      @input="input"
+    />
   </div>
 </template>
 
 <script lang="ts" setup>
-import { computed } from "vue";
+import { computed } from 'vue'
 
-const emit = defineEmits(["update:modelValue"]);
+const emit = defineEmits(['update:modelValue'])
 
 const props = defineProps({
   placeholder: {
     type: String,
-    default: "",
+    default: '',
   },
   modelValue: String || Number,
   disabled: {
@@ -21,18 +27,18 @@ const props = defineProps({
   },
   type: {
     type: String,
-    default: "text",
+    default: 'text',
   },
-});
+})
 
 const input = (e: Event) => {
-  const target = e.target as HTMLInputElement;
-  emit("update:modelValue", target.value);
-};
+  const target = e.target as HTMLInputElement
+  emit('update:modelValue', target.value)
+}
 
 const tClass = computed(() => {
-  return ["ver-input", props.disabled == false ? "" : "is-disabled"];
-});
+  return ['ver-input', props.disabled == false ? '' : 'is-disabled']
+})
 </script>
 
 <style src="./index.scss" lang="scss" scoped></style>

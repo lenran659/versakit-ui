@@ -7,12 +7,12 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from "vue";
+import { computed } from 'vue'
 
 const props = defineProps({
   type: {
     type: String,
-    default: "",
+    default: '',
   },
   plain: {
     type: Boolean,
@@ -26,17 +26,17 @@ const props = defineProps({
     type: Boolean,
     default: false,
   },
-});
+})
 
 const Verclass: any = computed(() => {
   return [
-    "ver-btn",
-    props.type == "" ? "" : `ver-btn-${props.type}`,
-    props.plain == false ? "" : "is-plain",
-    props.round == false ? "" : "is-round",
-    props.disable == false ? "" : "is-disable",
-  ];
-});
+    'ver-btn',
+    props.type == '' ? '' : `ver-btn-${props.type}`,
+    props.plain == false ? '' : 'is-plain',
+    props.round == false ? '' : 'is-round',
+    props.disable == false ? '' : 'is-disable',
+  ]
+})
 </script>
 
 <style src="./index.scss" lang="scss" scoped></style>

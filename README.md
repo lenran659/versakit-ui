@@ -39,18 +39,18 @@ pnpm add versakit-ui
 
 ```vue
 <template>
-  <div>
-    <VerButton @click="handleButtonClick">Click me</VerButton>
-  </div>
+	<div>
+		<VerButton @click="handleButtonClick">Click me</VerButton>
+	</div>
 </template>
 
 <script setup>
-import { ref } from "vue";
-import { VerButton } from "versakit";
+import { ref } from 'vue'
+import { VerButton } from 'versakit'
 
 const handleButtonClick = () => {
-  console.log("Button clicked!");
-};
+	console.log('Button clicked!')
+}
 </script>
 ```
 

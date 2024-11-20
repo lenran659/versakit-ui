@@ -1,8 +1,8 @@
-import type { App } from "vue";
-import VerDrawer from "./index.vue";
+import type { App } from 'vue'
+import VerDrawer from './index.vue'
 
 VerDrawer.insatll = (app: App) => {
-  app.component("VerDrawer", VerDrawer);
-};
+  app.component('VerDrawer', VerDrawer)
+}
 
-export default VerDrawer;
+export default VerDrawer

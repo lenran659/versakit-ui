@@ -1,0 +1,20 @@
+root = true
+charset = utf-8
+# 匹配所有文件
+[*]
+# 使用 Unix 风格的换行符
+end_of_line = lf
+# 文件末尾会插入一个空行
+insert_final_newline = true
+
+# 匹配 JavaScript 文件
+[*.js]
+# 使用空格缩进
+indent_style = space
+# 缩进大小为 4
+indent_size = 4
+
+# 匹配 Markdown 文件
+[*.md]
+# 使用制表符缩进
+indent_style = tab

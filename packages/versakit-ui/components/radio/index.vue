@@ -1,8 +1,21 @@
 <template>
-  <label :class="['ver-radio', { 'is-checked': label == modelValue, 'is-disabled': disabled }]">
+  <label
+    :class="[
+      'ver-radio',
+      { 'is-checked': label == modelValue, 'is-disabled': disabled },
+    ]"
+  >
     <span class="ver-radio_input">
       <span class="ver-radio_inner"></span>
-      <input :disabled="disabled" ref="radio" class="ver-radio_original" :name="name" v-model="modelValue" :value="props.label" type="radio" />
+      <input
+        :disabled="disabled"
+        ref="radio"
+        class="ver-radio_original"
+        :name="name"
+        v-model="modelValue"
+        :value="props.label"
+        type="radio"
+      />
     </span>
     <span class="ver-radio_label">
       <slot></slot>
@@ -12,36 +25,37 @@
 </template>
 
 <script lang="ts" setup>
-import { computed, ref } from "vue";
-const radio = ref();
-const emit = defineEmits(["update:modelValue"]);
+import { computed, ref } from 'vue'
+const radio = ref()
+const emit = defineEmits(['update:modelValue'])
 
 const props = defineProps({
   label: {
     type: [String, Number, Boolean],
-    default: "",
+    default: '',
   },
   modelValue: null,
   name: {
     type: String,
-    default: "",
+    default: '',
   },
   disabled: Boolean,
-});
+})
 
 const modelValue = computed({
   get: () => {
-    return props.modelValue;
+    return props.modelValue
   },
   set: (val) => {
-    emit("update:modelValue", val);
-    radio.value && (radio.value.checked == modelValue.value) == props.label;
+    emit('update:modelValue', val)
+    // eslint-disable-next-line
+    radio.value && (radio.value.checked == modelValue.value) == props.label
   },
-});
+})
 </script>
 
 <style lang="scss" scoped>
-@use "../../../style/color/index.scss" as *;
+@use '../../../style/color/index.scss' as *;
 
 .ver-radio {
   color: #606266;
@@ -80,7 +94,7 @@ const modelValue = computed({
         height: 4px;
         border-radius: 100%;
         background-color: #fff;
-        content: "";
+        content: '';
         position: absolute;
         left: 50%;
         top: 50%;

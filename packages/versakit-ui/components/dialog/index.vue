@@ -16,7 +16,7 @@
           <slot></slot>
         </div>
         <div class="ver-dialog_footer" v-if="$slots.footer">
-          <slot name="footer"> </slot>
+          <slot name="footer"></slot>
         </div>
       </div>
     </div>
@@ -24,12 +24,12 @@
 </template>
 
 <script lang="ts" setup>
-const emit = defineEmits(["update:modelValue"]);
+const emit = defineEmits(['update:modelValue'])
 
 defineProps({
   title: {
     type: String,
-    default: "标题",
+    default: '标题',
   },
   modelValue: {
     type: Boolean,
@@ -37,17 +37,17 @@ defineProps({
   },
   width: {
     type: String,
-    default: "30%",
+    default: '30%',
   },
   top: {
     type: String,
-    default: "15vh",
+    default: '15vh',
   },
-});
+})
 
 const close = () => {
-  emit("update:modelValue", false);
-};
+  emit('update:modelValue', false)
+}
 </script>
 
 <style src="./index.scss" lang="scss" scoped></style>

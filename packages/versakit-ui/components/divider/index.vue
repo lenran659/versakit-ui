@@ -13,24 +13,24 @@
 </template>
 
 <script lang="ts" setup>
-const props = defineProps({
+defineProps({
   position: {
     type: String,
-    default: "left",
+    default: 'left',
   },
   direction: {
     type: String,
-    default: "horizontal",
+    default: 'horizontal',
   },
   line: {
     type: String,
-    default: "solid",
+    default: 'solid',
   },
-});
+})
 </script>
 
 <style lang="scss" scoped>
-@use "../../../style/color/index.scss" as *;
+@use '../../../style/color/index.scss' as *;
 
 .ver-divider {
   width: 100%;

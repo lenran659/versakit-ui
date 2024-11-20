@@ -1,10 +1,10 @@
-import { render, h } from "vue";
-import VerNotification from "./index.vue";
+import { render, h } from 'vue'
+import VerNotification from './index.vue'
 
 interface Options {
-  title: string;
-  content: string;
-  duration?: number;
+  title: string
+  content: string
+  duration?: number
 }
 
 export default ({ title, content, duration = 3000 }: Options) => {
@@ -13,8 +13,8 @@ export default ({ title, content, duration = 3000 }: Options) => {
    */
   // 3. VerNotification 销毁
   const onDestroy = () => {
-    render(null, document.body);
-  };
+    render(null, document.body)
+  }
 
   // 1. 返回 vnode
   const vnode = h(VerNotification, {
@@ -22,8 +22,8 @@ export default ({ title, content, duration = 3000 }: Options) => {
     content,
     duration,
     destroy: onDestroy,
-  });
+  })
 
   // 2. render
-  render(vnode, document.body);
-};
+  render(vnode, document.body)
+}

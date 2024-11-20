@@ -1,33 +1,33 @@
 <template>
-  <div class="t-form-item">
-    <label :style="labelStyle" class="t-form-item_label">{{ label }}</label>
-    <div class="t-form-item_content">
+  <div class="ver-form-item">
+    <label :style="labelStyle" class="ver-form-item_label">{{ label }}</label>
+    <div class="ver-form-item_content">
       <slot></slot>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { inject, computed } from "vue";
-const props = defineProps({
+import { inject, computed } from 'vue'
+defineProps({
   label: {
     type: String,
-    default: "",
+    default: '',
   },
-});
+})
 
-const form = inject<any>("form");
+const form = inject<any>('form')
 const labelStyle = computed(() => {
   return {
     width: form.labelWidth,
-  };
-});
+  }
+})
 </script>
 
 <style lang="scss" scoped>
-.t-form-item {
+.ver-form-item {
   margin-bottom: 25px;
-  .t-form-item_label {
+  .ver-form-item_label {
     text-align: right;
     vertical-align: middle;
     float: left;
@@ -37,7 +37,7 @@ const labelStyle = computed(() => {
     padding: 0 12px 0 0;
     box-sizing: border-box;
   }
-  .t-form-item_content {
+  .ver-form-item_content {
     line-height: 40px;
     position: relative;
     font-size: 14px;

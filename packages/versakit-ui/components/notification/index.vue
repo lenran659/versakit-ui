@@ -11,18 +11,19 @@
 </template>
 
 <script lang="ts" setup>
-import { ref, onMounted } from "vue";
-import type { PropType } from "vue";
+import { ref, onMounted } from 'vue'
+import type { PropType } from 'vue'
 
-// @ts-ignore
-import { Hook } from "vue/dist/vue.runtime.global.prod.js";
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-expect-error
+import { Hook } from 'vue/dist/vue.runtime.global.prod.js'
 
-const isVisable = ref(false);
+const isVisable = ref(false)
 
 const props = defineProps({
   title: {
     type: String,
-    default: "",
+    default: '',
   },
   content: {
     type: String,
@@ -35,28 +36,28 @@ const props = defineProps({
     type: Function as PropType<Hook<(el: Element) => void> | (() => void)>,
     default: () => () => {},
   },
-});
+})
 
 const handClose = () => {
-  isVisable.value = false;
-};
+  isVisable.value = false
+}
 
 /**
  * 保证动画展示，需要在 mounted 之后进行展示
  */
 onMounted(() => {
-  isVisable.value = true;
+  isVisable.value = true
   /**
    * 延迟时间关闭
    */
   setTimeout(() => {
-    isVisable.value = false;
-  }, props.duration);
-});
+    isVisable.value = false
+  }, props.duration)
+})
 </script>
 
 <style lang="scss" scoped>
-@use "../../../style/color/index.scss" as *;
+@use '../../../style/color/index.scss' as *;
 
 .ver-notification {
   position: fixed;

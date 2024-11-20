@@ -1,8 +1,8 @@
-import type { App } from "vue";
-import VerSwitch from "./index.vue";
+import type { App } from 'vue'
+import VerSwitch from './index.vue'
 
 VerSwitch.insatll = (app: App) => {
-  app.component("VerSwitch", VerSwitch);
-};
+  app.component('VerSwitch', VerSwitch)
+}
 
-export default VerSwitch;
+export default VerSwitch

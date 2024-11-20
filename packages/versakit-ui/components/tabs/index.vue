@@ -1,41 +1,49 @@
 <template>
   <div class="tab-container">
     <div class="tab-header">
-      <div v-for="(tab, index) in tabList" :key="tab.id" :class="['tab-item', { 'active-tab': currentTabIndex === index }]" @click="switchTab(index)">
-        <span class="text-zinc"> {{ tab.label }}</span>
+      <div
+        v-for="(tab, index) in tabList"
+        :key="tab.id"
+        :class="['tab-item', { 'active-tab': currentTabIndex === index }]"
+        @click="switchTab(index)"
+      >
+        <span class="text-zinc">{{ tab.label }}</span>
       </div>
     </div>
-    <div class="tab-content" :key="`tab-content-${tabList[currentTabIndex].name}`">
+    <div
+      class="tab-content"
+      :key="`tab-content-${tabList[currentTabIndex].name}`"
+    >
       <slot :name="tabList[currentTabIndex].name" />
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
+import { ref } from 'vue'
 
 // 定义tab的类型
 interface Tab {
-  id: string;
-  label: string;
-  name: string;
+  id: string
+  label: string
+  name: string
 }
 
 // 通过props接收tab列表
-const props = defineProps<{
-  tabList: Tab[];
-}>();
+defineProps<{
+  tabList: Tab[]
+}>()
 
 // 当前激活的tab索引
-const currentTabIndex = ref(0);
+const currentTabIndex = ref(0)
 
 // 切换tab的方法
 const switchTab = (index: number) => {
-  currentTabIndex.value = index;
-};
+  currentTabIndex.value = index
+}
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .tab-container {
   width: 100%;
 }
@@ -59,7 +67,9 @@ const switchTab = (index: number) => {
   position: relative;
   width: 100%;
   box-sizing: border-box;
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
   overflow: hidden;
 }
 
@@ -71,7 +81,7 @@ const switchTab = (index: number) => {
 }
 
 .active-tab::before {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
@@ -120,5 +130,4 @@ const switchTab = (index: number) => {
 .active-tab-leave-to {
   transform: translateX(100%);
 }
-
-
+</style>

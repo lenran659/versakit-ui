@@ -5,28 +5,28 @@
 </template>
 
 <script lang="ts" setup>
-import { computed } from "vue";
+import { computed } from 'vue'
 
 const props = defineProps({
   shape: {
     type: String,
-    default: "circle",
+    default: 'circle',
   },
   src: {
     type: String,
-    default: "",
+    default: '',
   },
   size: {
     type: Number,
     default: 50,
   },
-});
+})
 
-const size = props.size + "px";
+const size = props.size + 'px'
 
 const tClass = computed(() => {
-  return ["t-avatar", props.shape == "circle" ? "is-circle" : "is-square"];
-});
+  return ['t-avatar', props.shape == 'circle' ? 'is-circle' : 'is-square']
+})
 </script>
 
 <style lang="scss" scoped>

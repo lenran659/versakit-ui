@@ -11,19 +11,26 @@
 </template>
 
 <script lang="ts" setup>
-import { computed } from "vue";
+import { computed } from 'vue'
 
 const props = defineProps({
-  shadow: { type: String, default: "always" },
-});
+  shadow: { type: String, default: 'always' },
+})
 
 const VerClass = computed(() => {
-  return ["ver-card", props.shadow == "always" ? "is-shadow-always" : props.shadow == "hover" ? "is-shadow-hover" : "is-shadow-never"];
-});
+  return [
+    'ver-card',
+    props.shadow == 'always'
+      ? 'is-shadow-always'
+      : props.shadow == 'hover'
+        ? 'is-shadow-hover'
+        : 'is-shadow-never',
+  ]
+})
 </script>
 
 <style lang="scss" scoped>
-@use "../../../style/color/index.scss" as *;
+@use '../../../style/color/index.scss' as *;
 
 .ver-card {
   border-radius: 4px;

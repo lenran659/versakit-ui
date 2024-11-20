@@ -7,12 +7,12 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from "vue";
+import { computed } from 'vue'
 
 const props = defineProps({
   type: {
     type: String,
-    default: "",
+    default: '',
   },
   disable: {
     type: Boolean,
@@ -20,13 +20,17 @@ const props = defineProps({
   },
   href: {
     type: String,
-    default: "",
+    default: '',
   },
-});
+})
 
 const tClass = computed(() => {
-  return ["ver-link", props.type == "" ? "" : `ver-link-${props.type}`, props.disable == false ? "" : "is-disable"];
-});
+  return [
+    'ver-link',
+    props.type == '' ? '' : `ver-link-${props.type}`,
+    props.disable == false ? '' : 'is-disable',
+  ]
+})
 </script>
 
 <style src="./index.scss" lang="scss" scoped></style>

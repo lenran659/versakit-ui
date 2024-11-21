@@ -1,5 +1,5 @@
 import type { App } from 'vue'
-import VerCol from './index.vue'
+import VerCol from './src/index.vue'
 
 VerCol.install = (app: App) => {
   app.component('VerCol', VerCol)

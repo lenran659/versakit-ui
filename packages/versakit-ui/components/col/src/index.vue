@@ -6,16 +6,11 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue'
+import { ColProps } from './type'
 
-const props = defineProps({
-  span: {
-    type: Number,
-    default: 24,
-  },
-  offset: {
-    type: Number,
-    default: 0,
-  },
+const props = withDefaults(defineProps<ColProps>(), {
+  span: 24,
+  offset: 0,
 })
 
 const width = ref(

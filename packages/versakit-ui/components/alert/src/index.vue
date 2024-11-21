@@ -9,20 +9,13 @@
 
 <script lang="ts" setup>
 import { computed, ref } from 'vue'
-// 定义type的允许取值类型
-type AlertType = 'success' | 'error' | 'warning'
+import { AlertProps } from './type'
 
 const isShow = ref<boolean>(true)
 
-const props = defineProps({
-  title: {
-    type: String,
-    default: '',
-  },
-  type: {
-    type: String as () => AlertType,
-    default: '',
-  },
+const props = withDefaults(defineProps<AlertProps>(), {
+  title: '',
+  type: 'info',
 })
 
 const VerClass = computed(() => {

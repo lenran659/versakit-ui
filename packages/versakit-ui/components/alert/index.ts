@@ -1,5 +1,5 @@
 import type { App } from 'vue'
-import VerAlert from './index.vue'
+import VerAlert from './src/index.vue'
 
 VerAlert.install = (app: App) => {
   app.component('VerAlert', VerAlert)

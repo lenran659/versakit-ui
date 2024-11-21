@@ -6,20 +6,12 @@
 
 <script lang="ts" setup>
 import { computed } from 'vue'
+import { AvatarProps } from './type'
 
-const props = defineProps({
-  shape: {
-    type: String,
-    default: 'circle',
-  },
-  src: {
-    type: String,
-    default: '',
-  },
-  size: {
-    type: Number,
-    default: 50,
-  },
+const props = withDefaults(defineProps<AvatarProps>(), {
+  src: '',
+  size: 32,
+  shape: 'circle',
 })
 
 const size = props.size + 'px'

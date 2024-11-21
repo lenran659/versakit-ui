@@ -1,5 +1,5 @@
 import type { App } from 'vue'
-import VerButton from './index.vue'
+import VerButton from './src/index.vue'
 
 VerButton.install = (app: App) => {
   app.component('VerButton', VerButton)

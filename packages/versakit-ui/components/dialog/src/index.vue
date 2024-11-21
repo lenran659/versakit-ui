@@ -1,16 +1,21 @@
 <template>
   <transition name="fade">
-    <div class="ver-dialog_wrapper" v-show="modelValue" @click.self="close">
-      <div class="ver-dialog" :style="{ width: width, marginTop: top }">
+    <div
+      class="ver-dialog_wrapper"
+      v-show="props.modelValue"
+      @click.self="close"
+    >
+      <div
+        class="ver-dialog"
+        :style="{ width: props.width, marginTop: props.top }"
+      >
         <div class="ver-dialog_header">
           <slot name="title">
             <span class="ver-dialog_title">
-              {{ title }}
+              {{ props.title }}
             </span>
           </slot>
-          <button class="ver-dialog_headerbtn" @click="close">
-            <t-icon name="cross"></t-icon>
-          </button>
+          <button class="ver-dialog_headerbtn" @click="close">X</button>
         </div>
         <div class="ver-dialog_body">
           <slot></slot>
@@ -24,25 +29,15 @@
 </template>
 
 <script lang="ts" setup>
+import { DiaLogProps } from './type'
+
 const emit = defineEmits(['update:modelValue'])
 
-defineProps({
-  title: {
-    type: String,
-    default: '标题',
-  },
-  modelValue: {
-    type: Boolean,
-    default: false,
-  },
-  width: {
-    type: String,
-    default: '30%',
-  },
-  top: {
-    type: String,
-    default: '15vh',
-  },
+const props = withDefaults(defineProps<DiaLogProps>(), {
+  title: '标题',
+  modelValue: false,
+  width: '30%',
+  top: '15vh',
 })
 
 const close = () => {

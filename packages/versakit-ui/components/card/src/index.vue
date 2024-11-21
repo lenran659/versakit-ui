@@ -12,9 +12,10 @@
 
 <script lang="ts" setup>
 import { computed } from 'vue'
+import { CardProps } from './type'
 
-const props = defineProps({
-  shadow: { type: String, default: 'always' },
+const props = withDefaults(defineProps<CardProps>(), {
+  shadow: 'always',
 })
 
 const VerClass = computed(() => {

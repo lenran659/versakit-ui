@@ -1,5 +1,5 @@
 import type { App } from 'vue'
-import VerRadio from './index.vue'
+import VerRadio from './src/index.vue'
 
 VerRadio.install = (app: App) => {
   app.component('VerRadio', VerRadio)

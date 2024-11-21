@@ -29,9 +29,7 @@
 </template>
 
 <script lang="ts" setup>
-import { DiaLogProps } from './type'
-
-const emit = defineEmits(['update:modelValue'])
+import type { DiaLogProps } from './type'
 
 const props = withDefaults(defineProps<DiaLogProps>(), {
   title: '标题',
@@ -39,6 +37,8 @@ const props = withDefaults(defineProps<DiaLogProps>(), {
   width: '30%',
   top: '15vh',
 })
+
+const emit = defineEmits(['update:modelValue'])
 
 const close = () => {
   emit('update:modelValue', false)

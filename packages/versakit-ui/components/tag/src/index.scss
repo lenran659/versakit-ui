@@ -1,5 +1,5 @@
-@use '../../style/color/index.scss' as *;
-@use '../../style/utils/tag/index.scss' as *;
+@use '../../../style/color/index.scss' as *;
+@use '../../../style/utils/tag/index.scss' as *;
 
 .ver-tag {
   color: $ver-zinc-1;

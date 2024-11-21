@@ -1,5 +1,5 @@
 import { h, render } from 'vue'
-import VerMessage from './index.vue'
+import VerMessage from './src/index.vue'
 
 interface Options {
   type: typeEnum

@@ -12,31 +12,16 @@
 
 <script lang="ts" setup>
 import { ref, onMounted } from 'vue'
-import type { PropType } from 'vue'
+import type { NotifivationProps } from './type'
 
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-expect-error
-import { Hook } from 'vue/dist/vue.runtime.global.prod.js'
+const props = withDefaults(defineProps<NotifivationProps>(), {
+  title: '',
+  content: '',
+  duration: 3000,
+  destroy: () => {},
+})
 
 const isVisable = ref(false)
-
-const props = defineProps({
-  title: {
-    type: String,
-    default: '',
-  },
-  content: {
-    type: String,
-    required: true,
-  },
-  duration: {
-    type: Number,
-  },
-  destroy: {
-    type: Function as PropType<Hook<(el: Element) => void> | (() => void)>,
-    default: () => () => {},
-  },
-})
 
 const handClose = () => {
   isVisable.value = false
@@ -57,7 +42,7 @@ onMounted(() => {
 </script>
 
 <style lang="scss" scoped>
-@use '../../style/color/index.scss' as *;
+@use '../../../style/color/index.scss' as *;
 
 .ver-notification {
   position: fixed;

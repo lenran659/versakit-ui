@@ -16,17 +16,19 @@
 
 <script lang="ts" setup>
 import { computed, ref } from 'vue'
-const emit = defineEmits(['update:modelValue', 'input'])
+import type { TextAreaProps } from './type'
 
-const props = defineProps({
-  disabled: Boolean,
-  placeholder: String,
-  modelValue: String,
-  maxlength: Number,
+const props = withDefaults(defineProps<TextAreaProps>(), {
+  disabled: false,
+  placeholder: '',
+  modelValue: '',
+  maxlength: 10,
 })
 
 const n = ref(props.modelValue?.length || 0)
 const textareaRef = ref()
+const emit = defineEmits(['update:modelValue', 'input'])
+
 const input = () => {
   emit('update:modelValue', textareaRef.value.value)
   n.value = textareaRef.value.value.length
@@ -38,7 +40,7 @@ const tClass = computed(() => {
 </script>
 
 <style lang="scss" scoped>
-@use '../../style/color/index.scss' as *;
+@use '../../../style/color/index.scss' as *;
 
 .t-textarea {
   width: auto;

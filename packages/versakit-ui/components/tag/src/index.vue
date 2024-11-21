@@ -6,16 +6,11 @@
 
 <script setup lang="ts">
 import { computed } from 'vue'
+import type { TagProps } from './type'
 
-const props = defineProps({
-  type: {
-    type: String,
-    default: '',
-  },
-  round: {
-    type: Boolean,
-    default: false, // round or not. Default to false.
-  },
+const props = withDefaults(defineProps<TagProps>(), {
+  type: '',
+  round: false,
 })
 
 const tClass = computed(() => {

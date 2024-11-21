@@ -1,21 +1,18 @@
 <template>
-  <div class="t-form">
+  <div class="ver-form">
     <slot></slot>
   </div>
 </template>
 
 <script setup lang="ts">
 import { provide, ref } from 'vue'
+import type { FormProps } from './type'
+
 const form = ref(null)
 provide('form', form)
-defineProps({
-  model: {
-    type: Object,
-    required: true,
-  },
-  labelWidth: {
-    type: String,
-    default: '80px',
-  },
+
+withDefaults(defineProps<FormProps>(), {
+  module: {},
+  labelWidth: '80px',
 })
 </script>

@@ -26,20 +26,15 @@
 
 <script lang="ts" setup>
 import { computed, ref } from 'vue'
+import type { RadioProps } from './type'
 const radio = ref()
 const emit = defineEmits(['update:modelValue'])
 
-const props = defineProps({
-  label: {
-    type: [String, Number, Boolean],
-    default: '',
-  },
+const props = withDefaults(defineProps<RadioProps>(), {
+  label: '',
   modelValue: null,
-  name: {
-    type: String,
-    default: '',
-  },
-  disabled: Boolean,
+  name: '',
+  disabled: false,
 })
 
 const modelValue = computed({
@@ -55,7 +50,7 @@ const modelValue = computed({
 </script>
 
 <style lang="scss" scoped>
-@use '../../style/color/index.scss' as *;
+@use '../../../style/color/index.scss' as *;
 
 .ver-radio {
   color: #606266;

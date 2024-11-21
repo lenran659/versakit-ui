@@ -9,7 +9,7 @@
 
 <script lang="ts" setup>
 import { computed, ref } from 'vue'
-import { AlertProps } from './type'
+import type { AlertProps } from './type'
 
 const isShow = ref<boolean>(true)
 

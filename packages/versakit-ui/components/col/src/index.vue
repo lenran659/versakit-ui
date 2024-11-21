@@ -6,7 +6,7 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue'
-import { ColProps } from './type'
+import type { ColProps } from './type'
 
 const props = withDefaults(defineProps<ColProps>(), {
   span: 24,

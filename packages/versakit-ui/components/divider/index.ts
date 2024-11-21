@@ -1,5 +1,5 @@
 import type { App } from 'vue'
-import VerDivider from './index.vue'
+import VerDivider from './src/index.vue'
 
 VerDivider.install = (app: App) => {
   app.component('VerDivider', VerDivider)

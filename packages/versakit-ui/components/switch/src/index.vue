@@ -8,13 +8,13 @@
 
 <script setup lang="ts">
 import { computed } from 'vue'
-const emit = defineEmits(['input', 'update:modelValue'])
-const props = defineProps({
-  modelValue: {
-    type: Boolean,
-    default: false,
-  },
+import type { SwitchPrpops } from './type'
+
+const props = withDefaults(defineProps<SwitchPrpops>(), {
+  modelValue: false,
 })
+
+const emit = defineEmits(['input', 'update:modelValue'])
 
 const VerClass = computed(() => {
   return ['ver-switch', props.modelValue == false ? '' : 'is-checked']
@@ -27,7 +27,7 @@ const handClick = () => {
 </script>
 
 <style lang="scss" scoped>
-@use '../../style/color/index.scss' as *;
+@use '../../../style/color/index.scss' as *;
 
 .ver-switch {
   display: inline-block;

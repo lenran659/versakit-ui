@@ -1,5 +1,5 @@
 import { render, h } from 'vue'
-import VerNotification from './index.vue'
+import VerNotification from './src/index.vue'
 
 interface Options {
   title: string

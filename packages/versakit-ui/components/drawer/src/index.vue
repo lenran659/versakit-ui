@@ -1,9 +1,13 @@
 <template>
   <transition name="fade">
-    <div class="ver-drawer_wrapper" v-show="visible" @click.self="handleClose">
+    <div
+      class="ver-drawer_wrapper"
+      v-show="props.modelValue"
+      @click.self="handleClose"
+    >
       <div class="ver-drawer">
         <div class="ver-drawer_header">
-          <span class="ver-drawer_title">{{ title }}</span>
+          <span class="ver-drawer_title">{{ props.title }}</span>
           <button class="ver-drawer_headerbtn" @click="handleClose">X</button>
         </div>
         <div class="ver-drawer_body">
@@ -15,21 +19,16 @@
 </template>
 
 <script lang="ts" setup>
-defineProps({
-  title: {
-    type: String,
-    default: '标题',
-  },
-  visible: {
-    type: Boolean,
-    default: false,
-  },
+import type { DrawerProps } from './type'
+
+const props = withDefaults(defineProps<DrawerProps>(), {
+  modelValue: false,
 })
 
-const emit = defineEmits(['update:visible'])
+const emit = defineEmits(['update:modelValue'])
 
 const handleClose = () => {
-  emit('update:visible', false)
+  emit('update:modelValue', false)
 }
 </script>
 

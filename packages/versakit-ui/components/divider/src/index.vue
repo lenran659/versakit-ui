@@ -1,36 +1,28 @@
 <template>
   <div
     class="ver-divider"
-    :class="{ 'ver-vertical': direction === 'vertical' }"
+    :class="{ 'ver-vertical': props.direction === 'vertical' }"
     :style="{
-      'justify-content': position,
+      'justify-content': props.position,
     }"
   >
-    <div class="ver-divider-title" v-if="position">
+    <div class="ver-divider-title" v-if="props.position">
       <slot></slot>
     </div>
   </div>
 </template>
 
 <script lang="ts" setup>
-defineProps({
-  position: {
-    type: String,
-    default: 'left',
-  },
-  direction: {
-    type: String,
-    default: 'horizontal',
-  },
-  line: {
-    type: String,
-    default: 'solid',
-  },
+import type { DividerProps } from './type'
+
+const props = withDefaults(defineProps<DividerProps>(), {
+  position: 'left',
+  direction: 'horizontal',
 })
 </script>
 
 <style lang="scss" scoped>
-@use '../../style/color/index.scss' as *;
+@use '../../../style/color/index.scss' as *;
 
 .ver-divider {
   width: 100%;

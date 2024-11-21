@@ -6,7 +6,7 @@
 
 <script lang="ts" setup>
 import { computed } from 'vue'
-import { AvatarProps } from './type'
+import type { AvatarProps } from './type'
 
 const props = withDefaults(defineProps<AvatarProps>(), {
   src: '',

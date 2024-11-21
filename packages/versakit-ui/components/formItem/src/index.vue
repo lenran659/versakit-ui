@@ -1,6 +1,8 @@
 <template>
   <div class="ver-form-item">
-    <label :style="labelStyle" class="ver-form-item_label">{{ label }}</label>
+    <label :style="labelStyle" class="ver-form-item_label">
+      {{ props.label }}
+    </label>
     <div class="ver-form-item_content">
       <slot></slot>
     </div>
@@ -9,11 +11,10 @@
 
 <script setup lang="ts">
 import { inject, computed } from 'vue'
-defineProps({
-  label: {
-    type: String,
-    default: '',
-  },
+import type { FormItemProps } from './type'
+
+const props = withDefaults(defineProps<FormItemProps>(), {
+  label: '',
 })
 
 const form = inject<any>('form')

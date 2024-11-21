@@ -12,7 +12,7 @@
 
 <script lang="ts" setup>
 import { computed } from 'vue'
-import { CardProps } from './type'
+import type { CardProps } from './type'
 
 const props = withDefaults(defineProps<CardProps>(), {
   shadow: 'always',
@@ -31,7 +31,7 @@ const VerClass = computed(() => {
 </script>
 
 <style lang="scss" scoped>
-@use '../../style/color/index.scss' as *;
+@use '../../../style/color/index.scss' as *;
 
 .ver-card {
   border-radius: 4px;

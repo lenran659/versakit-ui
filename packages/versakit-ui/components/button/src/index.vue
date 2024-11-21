@@ -8,7 +8,7 @@
 
 <script setup lang="ts">
 import { computed } from 'vue'
-import { ButtonProps } from './type'
+import type { ButtonProps } from './type'
 
 const props = withDefaults(defineProps<ButtonProps>(), {
   type: '',

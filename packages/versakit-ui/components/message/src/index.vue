@@ -8,30 +8,15 @@
 
 <script setup lang="ts">
 import { onMounted, ref, computed } from 'vue'
-import type { PropType } from 'vue'
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-expect-error
-import { Hook } from 'vue/dist/vue.runtime.global.prod.js'
+import type { MessageProps } from './type'
 
 const isVisable = ref(false)
 
-const props = defineProps({
-  type: {
-    type: String,
-    default: 'info',
-  },
-  content: {
-    type: String,
-    required: true,
-  },
-
-  duration: {
-    type: Number,
-  },
-  destroy: {
-    type: Function as PropType<Hook<(el: Element) => void> | (() => void)>,
-    default: () => () => {},
-  },
+const props = withDefaults(defineProps<MessageProps>(), {
+  type: 'info',
+  content: '',
+  duration: 0,
+  destroy: () => {},
 })
 
 const VerClass = computed(() => {

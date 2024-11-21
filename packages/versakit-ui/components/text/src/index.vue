@@ -6,20 +6,12 @@
 
 <script setup lang="ts">
 import { computed } from 'vue'
+import type { TextProps } from './type'
 
-const props = defineProps({
-  type: {
-    type: String,
-    default: '',
-  },
-  size: {
-    type: String,
-    default: '',
-  },
-  truncated: {
-    type: Boolean,
-    default: false,
-  },
+const props = withDefaults(defineProps<TextProps>(), {
+  type: '',
+  size: '',
+  truncated: false,
 })
 
 const VerClass = computed(() => {

@@ -35,14 +35,14 @@ const input = () => {
 }
 
 const tClass = computed(() => {
-  return ['t-textarea', props.disabled == false ? '' : 'is-disable']
+  return ['ver-textarea', props.disabled == false ? '' : 'is-disable']
 })
 </script>
 
 <style lang="scss" scoped>
 @use '../../../style/color/index.scss' as *;
 
-.t-textarea {
+.ver-textarea {
   width: auto;
   height: auto;
   display: inline-block;
@@ -99,7 +99,7 @@ textarea::placeholder {
   font-size: 12px;
 }
 
-.t-textarea.is-disable {
+.ver-textarea.is-disable {
   textarea {
     cursor: not-allowed;
     color: #c3bfbf;

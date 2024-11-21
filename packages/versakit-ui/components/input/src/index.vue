@@ -1,5 +1,5 @@
 <template>
-  <div :class="tClass">
+  <div :class="VerClass">
     <input
       :disabled="disabled"
       :value="modelValue"
@@ -28,7 +28,7 @@ const input = (e: Event) => {
   emit('update:modelValue', target.value)
 }
 
-const tClass = computed(() => {
+const VerClass = computed(() => {
   return ['ver-input', props.disabled == false ? '' : 'is-disabled']
 })
 </script>

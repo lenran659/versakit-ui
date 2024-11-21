@@ -1,5 +1,5 @@
 <template>
-  <div class="t-main">
+  <div class="ver-main">
     <slot></slot>
   </div>
 </template>
@@ -7,7 +7,7 @@
 <script lang="ts" setup></script>
 
 <style lang="scss" scoped>
-.t-main {
+.ver-main {
   padding: 20px;
   display: block;
   flex: 1;

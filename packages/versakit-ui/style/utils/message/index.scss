@@ -1,4 +1,4 @@
-@use "../../color/index.scss" as *;
+@use '../../color/index.scss' as *;
 
 @mixin VerMessageType($type, $color7, $color3) {
   .ver-message-#{$type} {

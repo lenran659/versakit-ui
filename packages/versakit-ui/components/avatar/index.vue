@@ -25,12 +25,12 @@ const props = defineProps({
 const size = props.size + 'px'
 
 const tClass = computed(() => {
-  return ['t-avatar', props.shape == 'circle' ? 'is-circle' : 'is-square']
+  return ['ver-avatar', props.shape == 'circle' ? 'is-circle' : 'is-square']
 })
 </script>
 
 <style lang="scss" scoped>
-.t-avatar {
+.ver-avatar {
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -51,11 +51,11 @@ const tClass = computed(() => {
   }
 }
 
-.t-avatar.is-circle {
+.ver-avatar.is-circle {
   border-radius: 50%;
 }
 
-.t-avatar.is-square {
+.ver-avatar.is-square {
   border-radius: 4px;
 }
 </style>

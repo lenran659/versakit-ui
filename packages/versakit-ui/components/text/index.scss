@@ -1,5 +1,5 @@
-@use "../../../style/color/index.scss" as *;
-@use "../../../style/utils/text/index.scss" as *;
+@use '../../style/color/index.scss' as *;
+@use '../../style/utils/tag/index.scss' as *;
 
 .ver-text {
   align-self: center;
@@ -14,11 +14,11 @@
   }
 }
 
-@include text-color("primary", $ver-violet-6);
-@include text-color("success", $ver-green-6);
-@include text-color("info", $ver-zinc-6);
-@include text-color("warning", $ver-orange-6);
-@include text-color("danger", $ver-red-6);
+@include text-color('primary', $ver-violet-6);
+@include text-color('success', $ver-green-6);
+@include text-color('info', $ver-zinc-6);
+@include text-color('warning', $ver-orange-6);
+@include text-color('danger', $ver-red-6);
 
 .ver-text-large {
   font-size: 16px;

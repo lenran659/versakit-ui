@@ -1,4 +1,4 @@
-@use "../../color/index.scss" as *;
+@use '../../color/index.scss' as *;
 
 /* 按钮类型 */
 @mixin VerBtnType($type, $color6) {
@@ -39,7 +39,7 @@
 
 /* 朴素按钮 disable属性 */
 @mixin VerBtnDisablePlain($type, $color6, $color3, $color4) {
-  .ver-btn-#{$type}.is-plain.is-disable {
+  .ver-btn-#{$type}.is-plain.is-disabled {
     color: $color6;
     border-color: $color3;
     background-color: $color4;

@@ -30,7 +30,7 @@ defineProps({
 </script>
 
 <style lang="scss" scoped>
-@use '../../../style/color/index.scss' as *;
+@use '../../style/color/index.scss' as *;
 
 .ver-divider {
   width: 100%;

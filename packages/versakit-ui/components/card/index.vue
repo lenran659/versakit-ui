@@ -30,7 +30,7 @@ const VerClass = computed(() => {
 </script>
 
 <style lang="scss" scoped>
-@use '../../../style/color/index.scss' as *;
+@use '../../style/color/index.scss' as *;
 
 .ver-card {
   border-radius: 4px;

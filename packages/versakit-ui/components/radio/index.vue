@@ -55,7 +55,7 @@ const modelValue = computed({
 </script>
 
 <style lang="scss" scoped>
-@use '../../../style/color/index.scss' as *;
+@use '../../style/color/index.scss' as *;
 
 .ver-radio {
   color: #606266;

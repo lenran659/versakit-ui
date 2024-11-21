@@ -1,5 +1,5 @@
 <template>
-  <button :class="Verclass" :disabled="props.disable">
+  <button :class="Verclass" :disabled="props.disabled">
     <span>
       <slot></slot>
     </span>
@@ -8,24 +8,13 @@
 
 <script setup lang="ts">
 import { computed } from 'vue'
+import { ButtonProps } from './type'
 
-const props = defineProps({
-  type: {
-    type: String,
-    default: '',
-  },
-  plain: {
-    type: Boolean,
-    default: false,
-  },
-  round: {
-    type: Boolean,
-    default: false,
-  },
-  disable: {
-    type: Boolean,
-    default: false,
-  },
+const props = withDefaults(defineProps<ButtonProps>(), {
+  type: '',
+  plain: false,
+  round: false,
+  disabled: false,
 })
 
 const Verclass: any = computed(() => {
@@ -34,7 +23,7 @@ const Verclass: any = computed(() => {
     props.type == '' ? '' : `ver-btn-${props.type}`,
     props.plain == false ? '' : 'is-plain',
     props.round == false ? '' : 'is-round',
-    props.disable == false ? '' : 'is-disable',
+    props.disabled == false ? '' : 'is-disable',
   ]
 })
 </script>

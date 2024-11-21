@@ -1,5 +1,5 @@
-@use "../../../style/color/index.scss" as *;
-@use "../../../style/utils/link/index.scss" as *;
+@use '../../style/color/index.scss' as *;
+@use '../../style/utils/link/index.scss' as *;
 
 .ver-link {
   display: inline-flex;
@@ -21,11 +21,11 @@
   }
 }
 
-@include ver-link-type("primary", $ver-violet-5, $ver-violet-6);
-@include ver-link-type("success", $ver-green-5, $ver-green-6);
-@include ver-link-type("info", $ver-zinc-5, $ver-zinc-6);
-@include ver-link-type("warning", $ver-orange-5, $ver-orange-6);
-@include ver-link-type("danger", $ver-red-5, $ver-red-6);
+@include ver-link-type('primary', $ver-violet-5, $ver-violet-6);
+@include ver-link-type('success', $ver-green-5, $ver-green-6);
+@include ver-link-type('info', $ver-zinc-5, $ver-zinc-6);
+@include ver-link-type('warning', $ver-orange-5, $ver-orange-6);
+@include ver-link-type('danger', $ver-red-5, $ver-red-6);
 
 /* 禁用状态 */
 .ver-link.is-disable {
@@ -38,8 +38,8 @@
   }
 }
 
-@include ver-link-disable("primary", $ver-violet-7);
-@include ver-link-disable("success", $ver-green-7);
-@include ver-link-disable("info", $ver-zinc-7);
-@include ver-link-disable("warning", $ver-orange-7);
-@include ver-link-disable("danger", $ver-red-7);
+@include ver-link-disable('primary', $ver-violet-7);
+@include ver-link-disable('success', $ver-green-7);
+@include ver-link-disable('info', $ver-zinc-7);
+@include ver-link-disable('warning', $ver-orange-7);
+@include ver-link-disable('danger', $ver-red-7);

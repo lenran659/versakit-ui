@@ -1,5 +1,5 @@
 <template>
-  <div class="t-header">
+  <div class="ver-header">
     <slot></slot>
   </div>
 </template>
@@ -7,7 +7,7 @@
 <script lang="ts" setup></script>
 
 <style lang="scss" scoped>
-.t-header {
+.ver-header {
   width: 100%;
   padding: 0 20px;
   height: 60px;

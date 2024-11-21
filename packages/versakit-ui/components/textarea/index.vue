@@ -38,7 +38,7 @@ const tClass = computed(() => {
 </script>
 
 <style lang="scss" scoped>
-@use '../../../style/color/index.scss' as *;
+@use '../../style/color/index.scss' as *;
 
 .t-textarea {
   width: auto;

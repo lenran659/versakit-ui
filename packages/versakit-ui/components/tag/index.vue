@@ -12,10 +12,6 @@ const props = defineProps({
     type: String,
     default: '',
   },
-  effect: {
-    type: String,
-    default: 'light',
-  },
   round: {
     type: Boolean,
     default: false, // round or not. Default to false.
@@ -27,7 +23,6 @@ const tClass = computed(() => {
     'ver-tag',
     props.type == '' ? '' : `ver-tag-${props.type}`,
     props.round == false ? '' : 'is-round',
-    props.effect == 'light' ? 'is-light' : 'is-plain',
   ]
 })
 </script>

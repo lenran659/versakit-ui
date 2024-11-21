@@ -33,30 +33,7 @@ yarn add versakit-ui
 pnpm add versakit-ui
 ```
 
-## 四、使用示例
-
-以下是一个简单的示例，展示如何使用 Versakit 中的一个按钮组件：
-
-```vue
-<template>
-	<div>
-		<VerButton @click="handleButtonClick">Click me</VerButton>
-	</div>
-</template>
-
-<script setup>
-import { ref } from 'vue'
-import { VerButton } from 'versakit'
-
-const handleButtonClick = () => {
-	console.log('Button clicked!')
-}
-</script>
-```
-
-在上述示例中，`Button`组件没有自带样式，我们可以在`styles.css`文件中定义它的外观。
-
-## 五、文档地址
+## 四、文档地址
 
 [组件库文档](https://lenran659.github.io/versakit-docs/)
 
@@ -64,7 +41,7 @@ const handleButtonClick = () => {
 
 [gitee](https://gitee.com/dragon_water/versakit-ui#/dragon_water/versakit-ui/blob/master/%22https:/lenran659.github.io/versakit-docs/%22)
 
-## 七、许可证
+## 五、许可证
 
 Versakit 是在 [MIT] 许可证下发布的。详细信息请查看项目根目录下的`LICENSE`文件。
 

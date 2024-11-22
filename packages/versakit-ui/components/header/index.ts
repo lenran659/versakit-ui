@@ -1,8 +1,6 @@
-import type { App } from 'vue'
-import VerHeader from './index.vue'
+import Header from './src/index.vue'
+import { withInstall } from '../../utils/withinstall'
 
-VerHeader.install = (app: App) => {
-  app.component('VerHeader', VerHeader)
-}
+const VerHeader = withInstall(Header)
 
 export default VerHeader

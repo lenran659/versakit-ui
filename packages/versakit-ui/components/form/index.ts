@@ -1,8 +1,6 @@
-import type { App } from 'vue'
-import VerForm from './src/index.vue'
+import Form from './src/index.vue'
+import { withInstall } from '../../utils/withinstall'
 
-VerForm.insatll = (app: App) => {
-  app.component('VerForm', VerForm)
-}
+const VerForm = withInstall(Form)
 
 export default VerForm

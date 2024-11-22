@@ -1,8 +1,6 @@
-import type { App } from 'vue'
-import VerTextarea from './src/index.vue'
+import Textarea from './src/index.vue'
+import { withInstall } from '../../utils/withinstall'
 
-VerTextarea.install = (app: App) => {
-  app.component('VerTextarea', VerTextarea)
-}
+const VerTextarea = withInstall(Textarea)
 
 export default VerTextarea

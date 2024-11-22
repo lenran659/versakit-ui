@@ -1,8 +1,6 @@
-import type { App } from 'vue'
-import VerDivider from './src/index.vue'
+import Divider from './src/index.vue'
+import { withInstall } from '../../utils/withinstall'
 
-VerDivider.install = (app: App) => {
-  app.component('VerDivider', VerDivider)
-}
+const VerDivider = withInstall(Divider)
 
 export default VerDivider

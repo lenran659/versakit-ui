@@ -1,8 +1,6 @@
-import type { App } from 'vue'
-import VerButton from './src/index.vue'
+import { withInstall } from '../../utils/withinstall'
+import Button from './src/index.vue'
 
-VerButton.install = (app: App) => {
-  app.component('VerButton', VerButton)
-}
+const VerButton = withInstall(Button)
 
 export default VerButton

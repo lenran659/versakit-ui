@@ -1,8 +1,6 @@
-import type { App } from 'vue'
-import VerLink from './src/index.vue'
+import Link from './src/index.vue'
+import { withInstall } from '../../utils/withinstall'
 
-VerLink.install = (app: App) => {
-  app.component('VerLink', VerLink)
-}
+const VerLink = withInstall(Link)
 
 export default VerLink

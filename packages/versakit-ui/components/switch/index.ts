@@ -1,8 +1,6 @@
-import type { App } from 'vue'
-import VerSwitch from './src/index.vue'
+import { withInstall } from '../../utils/withinstall'
+import Switch from './src/index.vue'
 
-VerSwitch.insatll = (app: App) => {
-  app.component('VerSwitch', VerSwitch)
-}
+const VerSwitch = withInstall(Switch)
 
 export default VerSwitch

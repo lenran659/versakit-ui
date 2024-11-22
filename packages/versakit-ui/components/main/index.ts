@@ -1,8 +1,6 @@
-import type { App } from 'vue'
-import VerMain from './index.vue'
+import Main from './src/index.vue'
+import { withInstall } from '../../utils/withinstall'
 
-VerMain.install = (app: App) => {
-  app.component('VerMain', VerMain)
-}
+const VerMain = withInstall(Main)
 
 export default VerMain

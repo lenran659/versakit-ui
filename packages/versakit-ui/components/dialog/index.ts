@@ -1,8 +1,6 @@
-import type { App } from 'vue'
-import VerDialog from './src/index.vue'
+import Dialog from './src/index.vue'
+import { withInstall } from '../../utils/withinstall'
 
-VerDialog.install = (app: App) => {
-  app.component('VerDialog', VerDialog)
-}
+const VerDialog = withInstall(Dialog)
 
 export default VerDialog

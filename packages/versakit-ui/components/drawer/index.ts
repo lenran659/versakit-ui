@@ -1,8 +1,6 @@
-import type { App } from 'vue'
-import VerDrawer from './src/index.vue'
+import Drawer from './src/index.vue'
+import { withInstall } from '../../utils/withinstall'
 
-VerDrawer.insatll = (app: App) => {
-  app.component('VerDrawer', VerDrawer)
-}
+const VerDrawer = withInstall(Drawer)
 
 export default VerDrawer

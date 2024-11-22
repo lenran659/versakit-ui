@@ -1,8 +1,6 @@
-import type { App } from 'vue'
-import VerText from './src/index.vue'
+import Text from './src/index.vue'
+import { withInstall } from '../../utils/withinstall'
 
-VerText.install = (app: App) => {
-  app.component('VerText', VerText)
-}
+const VerText = withInstall(Text)
 
 export default VerText

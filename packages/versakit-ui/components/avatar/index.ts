@@ -1,8 +1,6 @@
-import type { App } from 'vue'
-import VerAvatar from './src/index.vue'
+import { withInstall } from '../../utils/withinstall'
+import Avatar from './src/index.vue'
 
-VerAvatar.install = (app: App) => {
-  app.component('VerAvatar', VerAvatar)
-}
+const VerAvatar = withInstall(Avatar)
 
 export default VerAvatar

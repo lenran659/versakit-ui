@@ -1,8 +1,6 @@
-import type { App } from 'vue'
-import VerAlert from './src/index.vue'
+import Alert from './src/index.vue'
+import { withInstall } from '../../utils/withinstall'
 
-VerAlert.install = (app: App) => {
-  app.component('VerAlert', VerAlert)
-}
+const VerAlert = withInstall(Alert)
 
 export default VerAlert

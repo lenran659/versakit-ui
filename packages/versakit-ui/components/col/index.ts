@@ -1,8 +1,6 @@
-import type { App } from 'vue'
-import VerCol from './src/index.vue'
+import Col from './src/index.vue'
+import { withInstall } from '../../utils/withinstall'
 
-VerCol.install = (app: App) => {
-  app.component('VerCol', VerCol)
-}
+const VerCol = withInstall(Col)
 
 export default VerCol

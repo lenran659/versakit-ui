@@ -1,8 +1,6 @@
-import type { App } from 'vue'
-import VerTag from './src/index.vue'
+import Tag from './src/index.vue'
+import { withInstall } from '../../utils/withinstall'
 
-VerTag.install = (app: App) => {
-  app.component('VerTag', VerTag)
-}
+const VerTag = withInstall(Tag)
 
 export default VerTag

@@ -1,8 +1,6 @@
-import type { App } from 'vue'
-import VerRadio from './src/index.vue'
+import Radio from './src/index.vue'
+import { withInstall } from '../../utils/withinstall'
 
-VerRadio.install = (app: App) => {
-  app.component('VerRadio', VerRadio)
-}
+const VerRadio = withInstall(Radio)
 
 export default VerRadio

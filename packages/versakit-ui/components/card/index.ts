@@ -1,8 +1,6 @@
-import type { App } from 'vue'
-import VerCard from './src/index.vue'
+import { withInstall } from '../../utils/withinstall'
+import Card from './src/index.vue'
 
-VerCard.intsall = (app: App) => {
-  app.component('VerCard', VerCard)
-}
+const VerCard = withInstall(Card)
 
 export default VerCard

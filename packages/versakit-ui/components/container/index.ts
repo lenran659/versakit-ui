@@ -1,8 +1,6 @@
-import type { App } from 'vue'
-import VerContainer from './src/index.vue'
+import Container from './src/index.vue'
+import { withInstall } from '../../utils/withinstall'
 
-VerContainer.install = (app: App) => {
-  app.component('VerContainer', VerContainer)
-}
+const VerContainer = withInstall(Container)
 
 export default VerContainer

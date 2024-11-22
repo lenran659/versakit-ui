@@ -1,8 +1,6 @@
-import type { App } from 'vue'
-import VerFormItem from './src/index.vue'
+import FormItem from './src/index.vue'
+import { withInstall } from '../../utils/withinstall'
 
-VerFormItem.install = (app: App) => {
-  app.component('VerFormItem', VerFormItem)
-}
+const VerFormItem = withInstall(FormItem)
 
 export default VerFormItem

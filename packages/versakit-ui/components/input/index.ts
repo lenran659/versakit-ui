@@ -1,8 +1,6 @@
-import type { App } from 'vue'
-import VerInput from './src/index.vue'
+import Input from './src/index.vue'
+import { withInstall } from '../../utils/withinstall'
 
-VerInput.install = (app: App) => {
-  app.component('VerInput', VerInput)
-}
+const VerInput = withInstall(Input)
 
 export default VerInput

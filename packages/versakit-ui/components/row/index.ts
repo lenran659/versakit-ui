@@ -1,8 +1,6 @@
-import type { App } from 'vue'
-import VerRow from './index.vue'
+import Row from './src/index.vue'
+import { withInstall } from '../../utils/withinstall'
 
-VerRow.install = (app: App) => {
-  app.component('VerRow', VerRow)
-}
+const VerRow = withInstall(Row)
 
 export default VerRow

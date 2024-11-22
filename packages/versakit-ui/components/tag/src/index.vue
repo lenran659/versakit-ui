@@ -10,6 +10,7 @@ import type { TagProps } from './type'
 
 const props = withDefaults(defineProps<TagProps>(), {
   type: '',
+  plain: false,
   round: false,
 })
 
@@ -18,6 +19,7 @@ const tClass = computed(() => {
     'ver-tag',
     props.type == '' ? '' : `ver-tag-${props.type}`,
     props.round == false ? '' : 'is-round',
+    props.plain == false ? '' : 'is-plain',
   ]
 })
 </script>

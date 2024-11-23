@@ -20,7 +20,7 @@ const VerClass = computed(() => {
   return [
     'ver-link',
     props.type == '' ? '' : `ver-link-${props.type}`,
-    props.disabled == false ? '' : 'is-disable',
+    props.disabled == false ? '' : 'is-disabled',
   ]
 })
 </script>

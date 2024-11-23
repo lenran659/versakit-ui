@@ -4,6 +4,7 @@
     :class="{ 'ver-vertical': props.direction === 'vertical' }"
     :style="{
       'justify-content': props.position,
+      'border-top': `1px ${props.line} #dcdfe6`,
     }"
   >
     <div class="ver-divider-title" v-if="props.position">
@@ -16,6 +17,7 @@
 import type { DividerProps } from './type'
 
 const props = withDefaults(defineProps<DividerProps>(), {
+  line: 'solid',
   position: 'left',
   direction: 'horizontal',
 })

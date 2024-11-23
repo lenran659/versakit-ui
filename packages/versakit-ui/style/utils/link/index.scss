@@ -16,8 +16,8 @@
   }
 }
 
-@mixin ver-link-disable($type, $color7) {
-  .ver-link-#{$type}.is-disable {
+@mixin ver-link-disabled($type, $color7) {
+  .ver-link-#{$type}.is-disabled {
     color: $color7;
 
     .dark & {

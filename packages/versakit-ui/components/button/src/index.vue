@@ -23,7 +23,7 @@ const Verclass: any = computed(() => {
     props.type == '' ? '' : `ver-btn-${props.type}`,
     props.plain == false ? '' : 'is-plain',
     props.round == false ? '' : 'is-round',
-    props.disabled == false ? '' : 'is-disable',
+    props.disabled == false ? '' : 'is-disabled',
   ]
 })
 </script>

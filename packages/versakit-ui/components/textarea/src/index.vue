@@ -22,7 +22,7 @@ const props = withDefaults(defineProps<TextAreaProps>(), {
   disabled: false,
   placeholder: '',
   modelValue: '',
-  maxlength: 10,
+  maxlength: undefined,
 })
 
 const n = ref(props.modelValue?.length || 0)

@@ -24,7 +24,7 @@
 
 /* disable属性 */
 @mixin VerBtnDisable($type, $color8, $color9) {
-  .ver-btn-#{$type}.is-disable {
+  .ver-btn-#{$type}.is-disabled {
     color: $ver-zinc-1;
     border-color: $color8;
     background-color: $color9;

@@ -10,7 +10,7 @@ import type { AvatarProps } from './type'
 
 const props = withDefaults(defineProps<AvatarProps>(), {
   src: '',
-  size: 32,
+  size: 50,
   shape: 'circle',
 })
 

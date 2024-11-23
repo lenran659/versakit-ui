@@ -38,9 +38,6 @@
   "dependencies": {
     "vue": "^3.5.12"
   },
-  "workspaces": [
-    "packages/*"
-  ],
   "devDependencies": {
     "@babel/eslint-parser": "^7.25.9",
     "@commitlint/cli": "^19.6.0",

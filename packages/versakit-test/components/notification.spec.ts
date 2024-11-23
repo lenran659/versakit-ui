@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { VerNotification } from '../versakit-ui/index'
+import { VerNotification } from '../../versakit-ui/index'
 
 describe('VerNotification', () => {
   // 应该能正确创建 vnode 并渲染组件

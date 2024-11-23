@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest'
 import { mount } from '@vue/test-utils'
-import { VerCard } from '../versakit-ui/index'
+import { VerCard } from '../../versakit-ui/index'
 
 describe('VerCard', () => {
   // 具名插槽 header 应能正确渲染内容

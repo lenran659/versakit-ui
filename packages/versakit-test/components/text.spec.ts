@@ -1,12 +1,12 @@
 import { describe, it, expect } from 'vitest'
 import { mount } from '@vue/test-utils'
-import { VerInput } from '../versakit-ui/index'
+import { VerText } from '../../versakit-ui/index'
 
-describe('VerInput', () => {
+describe('VerText', () => {
   // 组件应能正确挂载并渲染
   it('组件应能正确挂载并渲染', () => {
-    const wrapper = mount(VerInput)
+    const wrapper = mount(VerText)
     expect(wrapper.exists()).toBe(true)
-    expect(wrapper.find('.ver-input').exists()).toBe(true)
+    expect(wrapper.find('.ver-text').exists()).toBe(true)
   })
 })

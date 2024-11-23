@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest'
 import { mount } from '@vue/test-utils'
-import { VerAvatar } from '../versakit-ui/index'
+import { VerAvatar } from '../../versakit-ui/index'
 
 describe('VerAvatar', () => {
   // 传入不同 src 值时，img 标签的 src 属性应正确设置

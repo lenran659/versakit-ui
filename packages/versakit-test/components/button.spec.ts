@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest'
 import { mount } from '@vue/test-utils'
-import { VerButton } from '../versakit-ui/index'
+import { VerButton } from '../../versakit-ui/index'
 
 describe('VerButton', () => {
   it('测试按钮默认状态下的类名和禁用属性', () => {

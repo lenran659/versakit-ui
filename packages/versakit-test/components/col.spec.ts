@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest'
 import { mount } from '@vue/test-utils'
-import { VerCol } from '../versakit-ui/index'
+import { VerCol } from '../../versakit-ui/index'
 
 describe('VerCol', () => {
   it('应该挂载组件且初始时可见', () => {

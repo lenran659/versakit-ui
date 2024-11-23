@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest'
 import { mount } from '@vue/test-utils'
-import { VerAlert } from '../versakit-ui/index'
+import { VerAlert } from '../../versakit-ui/index'
 
 describe('VerAlert', () => {
   it('当 title 属性使用默认值（空字符串）时，组件标题显示应符合预期', () => {

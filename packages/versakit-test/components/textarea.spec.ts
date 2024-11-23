@@ -1,12 +1,12 @@
 import { describe, it, expect } from 'vitest'
 import { mount } from '@vue/test-utils'
-import { VerForm } from '../versakit-ui/index'
+import { VerTextarea } from '../../versakit-ui/index'
 
-describe('VerForm', () => {
+describe('VerTextarea', () => {
   // 组件应能正确挂载并渲染
   it('组件应能正确挂载并渲染', () => {
-    const wrapper = mount(VerForm)
+    const wrapper = mount(VerTextarea)
     expect(wrapper.exists()).toBe(true)
-    expect(wrapper.find('.ver-form').exists()).toBe(true)
+    expect(wrapper.find('.ver-textarea').exists()).toBe(true)
   })
 })

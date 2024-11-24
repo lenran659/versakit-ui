@@ -23,6 +23,14 @@ const router = createRouter({
           path: '/text',
           component: () => import('../views/text/index.vue'),
         },
+        {
+          path: '/link',
+          component: () => import('../views/link/index.vue'),
+        },
+        {
+          path: '/divider',
+          component: () => import('../views/divider/index.vue'),
+        },
       ],
     },
   ],

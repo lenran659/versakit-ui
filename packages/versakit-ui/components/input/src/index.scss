@@ -20,6 +20,11 @@ input {
   box-sizing: border-box;
   color: #606266;
 
+  input {
+    border: none;
+    outline: none;
+  }
+
   &:hover,
   &:focus {
     border-color: $ver-violet-6;

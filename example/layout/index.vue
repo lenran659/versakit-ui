@@ -15,6 +15,16 @@ const list = ref([
     title: 'Input 输入框',
     path: '/input',
   },
+  {
+    id: 3,
+    title: 'Tag 标签',
+    path: '/tag',
+  },
+  {
+    id: 4,
+    title: 'Text 文本',
+    path: '/text',
+  },
 ])
 
 const topath = (path: string) => {

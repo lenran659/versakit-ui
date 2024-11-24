@@ -15,6 +15,14 @@ const router = createRouter({
           path: '/input',
           component: () => import('../views/input/index.vue'),
         },
+        {
+          path: '/tag',
+          component: () => import('../views/tag/index.vue'),
+        },
+        {
+          path: '/text',
+          component: () => import('../views/text/index.vue'),
+        },
       ],
     },
   ],

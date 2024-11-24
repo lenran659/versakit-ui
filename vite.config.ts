@@ -12,9 +12,15 @@ export default defineConfig({
       },
     },
   },
+  resolve: {
+    alias: {
+      '@': '/packages/versakit-ui',
+    },
+  },
   server: {
     host: '0.0.0.0',
   },
+  // 打包配置
   build: {
     minify: true,
     sourcemap: true,

@@ -1,13 +1,13 @@
 import { h, render } from 'vue'
 import VerMessage from './src/index.vue'
 
+type typeEnum = 'success' | 'error' | 'warning' | 'info'
+
 interface Options {
-  type: typeEnum
-  content: string
+  type?: typeEnum
+  content?: string
   duration?: number
 }
-
-type typeEnum = 'success' | 'error' | 'warning' | 'info'
 
 export default ({ type, content, duration = 3000 }: Options) => {
   const onDestroy = () => {

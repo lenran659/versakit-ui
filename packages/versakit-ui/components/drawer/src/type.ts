@@ -1,4 +1,4 @@
 export interface DrawerProps {
-  title: string
-  modelValue: boolean
+  title?: string
+  modelValue?: boolean
 }

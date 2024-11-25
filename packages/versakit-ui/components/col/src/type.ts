@@ -1,4 +1,4 @@
 export interface ColProps {
-  span: number
-  offset: number
+  span?: number
+  offset?: number
 }

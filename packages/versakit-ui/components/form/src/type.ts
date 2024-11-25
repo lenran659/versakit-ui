@@ -1,4 +1,4 @@
 export interface FormProps {
-  model: object
-  labelWidth: string | number
+  model?: object
+  labelWidth?: string | number
 }

@@ -113,6 +113,7 @@ li {
   width: 25%;
   padding: 10px;
   border-right: 1px solid #c4c4c4;
+  overflow-y: scroll;
 }
 
 .right-section {

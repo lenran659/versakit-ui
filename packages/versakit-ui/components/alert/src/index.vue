@@ -11,6 +11,8 @@
 import { computed, ref } from 'vue'
 import type { AlertProps } from './type'
 
+defineOptions({ name: 'VerAlert' })
+
 const isShow = ref<boolean>(true)
 
 const props = withDefaults(defineProps<AlertProps>(), {

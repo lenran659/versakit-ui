@@ -14,6 +14,8 @@
 import { computed } from 'vue'
 import type { CardProps } from './type'
 
+defineOptions({ name: 'VerCard' })
+
 const props = withDefaults(defineProps<CardProps>(), {
   shadow: 'always',
 })

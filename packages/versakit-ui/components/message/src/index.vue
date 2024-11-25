@@ -10,6 +10,8 @@
 import { onMounted, ref, computed } from 'vue'
 import type { MessageProps } from './type'
 
+defineOptions({ name: 'VerMessage' })
+
 const isVisable = ref(false)
 
 const props = withDefaults(defineProps<MessageProps>(), {

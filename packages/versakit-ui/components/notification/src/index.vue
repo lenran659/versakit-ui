@@ -14,6 +14,8 @@
 import { ref, onMounted } from 'vue'
 import type { NotifivationProps } from './type'
 
+defineOptions({ name: 'VerNotifivation' })
+
 const props = withDefaults(defineProps<NotifivationProps>(), {
   title: '',
   content: '',

@@ -27,6 +27,9 @@
 <script lang="ts" setup>
 import { computed, ref } from 'vue'
 import type { RadioProps } from './type'
+
+defineOptions({ name: 'VerRadio' })
+
 const radio = ref()
 const emit = defineEmits(['update:modelValue'])
 

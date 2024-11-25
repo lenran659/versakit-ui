@@ -8,6 +8,8 @@
 import { computed } from 'vue'
 import type { TagProps } from './type'
 
+defineOptions({ name: 'VerTag' })
+
 const props = withDefaults(defineProps<TagProps>(), {
   type: '',
   plain: false,

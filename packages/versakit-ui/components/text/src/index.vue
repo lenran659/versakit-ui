@@ -8,6 +8,8 @@
 import { computed } from 'vue'
 import type { TextProps } from './type'
 
+defineOptions({ name: 'VerText' })
+
 const props = withDefaults(defineProps<TextProps>(), {
   type: '',
   size: '',

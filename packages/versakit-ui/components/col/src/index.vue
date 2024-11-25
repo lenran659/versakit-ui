@@ -8,6 +8,8 @@
 import { ref } from 'vue'
 import type { ColProps } from './type'
 
+defineOptions({ name: 'VerCol' })
+
 const props = withDefaults(defineProps<ColProps>(), {
   span: 24,
   offset: 0,

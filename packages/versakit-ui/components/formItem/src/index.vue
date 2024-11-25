@@ -13,6 +13,8 @@
 import { inject, computed } from 'vue'
 import type { FormItemProps } from './type'
 
+defineOptions({ name: 'VerFormItem' })
+
 const props = withDefaults(defineProps<FormItemProps>(), {
   label: '',
 })

@@ -4,7 +4,9 @@
   </div>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+defineOptions({ name: 'VerMain' })
+</script>
 
 <style lang="scss" scoped>
 .ver-main {

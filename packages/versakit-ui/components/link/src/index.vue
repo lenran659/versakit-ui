@@ -10,6 +10,8 @@
 import { computed } from 'vue'
 import type { LinkProps } from './type'
 
+defineOptions({ name: 'VerLink' })
+
 const props = withDefaults(defineProps<LinkProps>(), {
   type: '',
   disabled: false,

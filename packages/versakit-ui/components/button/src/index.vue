@@ -10,6 +10,8 @@
 import { computed } from 'vue'
 import type { ButtonProps } from './type'
 
+defineOptions({ name: 'VerButton' })
+
 const props = withDefaults(defineProps<ButtonProps>(), {
   type: '',
   plain: false,

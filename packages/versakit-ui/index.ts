@@ -1,4 +1,4 @@
-import type { App } from 'vue'
+import type { App, Component } from 'vue'
 /* 组件 */
 import VerButton from './components/button/index'
 import VerText from './components/text/index'
@@ -27,7 +27,7 @@ import VerForm from './components/form/index'
 import VerFormItem from './components/formItem/index'
 
 // 组件注册
-const components = [
+const components: Component = [
   VerButton,
   VerRow,
   VerText,
@@ -52,17 +52,6 @@ const components = [
   VerForm,
   VerFormItem,
 ]
-
-/* 统一注册 */
-const install = (app: App) => {
-  components.forEach((i: any) => {
-    app.use(i)
-  })
-}
-
-const VersakitUI = {
-  install,
-}
 
 export {
   VerButton,
@@ -89,5 +78,11 @@ export {
   VerForm,
   VerFormItem,
 }
-
-export default VersakitUI
+// 全局注册
+export default {
+  install: (app: App) => {
+    for (const c in components) {
+      app.component(c, components[c])
+    }
+  },
+}

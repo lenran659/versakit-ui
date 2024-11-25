@@ -31,6 +31,14 @@ const router = createRouter({
           path: '/divider',
           component: () => import('../views/divider/index.vue'),
         },
+        {
+          path: '/alert',
+          component: () => import('../views/alert/index.vue'),
+        },
+        {
+          path: '/avatar',
+          component: () => import('../views/avatar/index.vue'),
+        },
       ],
     },
   ],

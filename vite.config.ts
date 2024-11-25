@@ -15,6 +15,7 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': '/packages/versakit-ui',
+      '@examp': '/example',
     },
   },
   server: {

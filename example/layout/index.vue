@@ -35,6 +35,16 @@ const list = ref([
     title: 'Divider 分割线',
     path: '/divider',
   },
+  {
+    id: 7,
+    title: 'Alert 警报',
+    path: '/alert',
+  },
+  {
+    id: 8,
+    title: 'Avatar 头像',
+    path: '/avatar',
+  },
 ])
 
 const topath = (path: string) => {

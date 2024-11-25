@@ -4,6 +4,10 @@
   </div>
 </template>
 
+<script lang="ts" setup>
+defineOptions({ name: 'VerRow' })
+</script>
+
 <style scoped lang="scss">
 .ver-row {
   width: 100%;

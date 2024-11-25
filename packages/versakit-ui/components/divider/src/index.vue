@@ -16,6 +16,8 @@
 <script lang="ts" setup>
 import type { DividerProps } from './type'
 
+defineOptions({ name: 'VerDivider' })
+
 const props = withDefaults(defineProps<DividerProps>(), {
   line: 'solid',
   position: 'left',

@@ -8,6 +8,8 @@
 import { provide, ref } from 'vue'
 import type { FormProps } from './type'
 
+defineOptions({ name: 'VerForm' })
+
 const form = ref(null)
 provide('form', form)
 

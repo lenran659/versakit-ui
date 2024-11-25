@@ -69,8 +69,6 @@ const getPartFromPathBySplit = (path) => {
 
 onMounted(() => {
   list.value = route.matched[0].children
-
-  console.log(list.value)
 })
 </script>
 

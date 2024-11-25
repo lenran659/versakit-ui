@@ -8,6 +8,8 @@
 import { computed } from 'vue'
 import type { AvatarProps } from './type'
 
+defineOptions({ name: 'VerAvatar' })
+
 const props = withDefaults(defineProps<AvatarProps>(), {
   src: '',
   size: 50,

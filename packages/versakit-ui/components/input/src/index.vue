@@ -14,6 +14,8 @@
 import { computed } from 'vue'
 import type { InputProps } from './type'
 
+defineOptions({ name: 'VerInput' })
+
 const emit = defineEmits(['update:modelValue'])
 
 const props = withDefaults(defineProps<InputProps>(), {

@@ -18,6 +18,8 @@
 import { computed, ref } from 'vue'
 import type { TextAreaProps } from './type'
 
+defineOptions({ name: 'VerTextArea' })
+
 const props = withDefaults(defineProps<TextAreaProps>(), {
   disabled: false,
   placeholder: '',

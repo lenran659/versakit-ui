@@ -10,6 +10,8 @@
 import { computed } from 'vue'
 import type { SwitchPrpops } from './type'
 
+defineOptions({ name: 'VerSwitch' })
+
 const props = withDefaults(defineProps<SwitchPrpops>(), {
   modelValue: false,
 })

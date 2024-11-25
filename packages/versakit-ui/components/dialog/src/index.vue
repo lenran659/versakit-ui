@@ -31,6 +31,8 @@
 <script lang="ts" setup>
 import type { DiaLogProps } from './type'
 
+defineOptions({ name: 'VerDialog' })
+
 const props = withDefaults(defineProps<DiaLogProps>(), {
   title: '标题',
   modelValue: false,

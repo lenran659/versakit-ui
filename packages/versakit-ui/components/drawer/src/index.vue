@@ -21,6 +21,8 @@
 <script lang="ts" setup>
 import type { DrawerProps } from './type'
 
+defineOptions({ name: 'VerDrawer' })
+
 const props = withDefaults(defineProps<DrawerProps>(), {
   modelValue: false,
 })

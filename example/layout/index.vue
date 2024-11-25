@@ -1,41 +1,11 @@
 <script setup lang="ts">
-import { ref } from 'vue'
-import { useRouter } from 'vue-router'
+import { ref, onMounted } from 'vue'
+import { useRouter, useRoute } from 'vue-router'
 
 const router = useRouter()
+const route = useRoute()
 
-const list = ref([
-  {
-    id: 1,
-    title: 'Button 按钮',
-    path: '/',
-  },
-  {
-    id: 2,
-    title: 'Input 输入框',
-    path: '/input',
-  },
-  {
-    id: 3,
-    title: 'Tag 标签',
-    path: '/tag',
-  },
-  {
-    id: 4,
-    title: 'Text 文本',
-    path: '/text',
-  },
-  {
-    id: 5,
-    title: 'Link 链接',
-    path: '/link',
-  },
-  {
-    id: 6,
-    title: 'Divider 分割线',
-    path: '/divider',
-  },
-])
+const list = ref()
 
 const topath = (path: string) => {
   router.push(path)
@@ -56,6 +26,21 @@ const toggleDark = () => {
     document.body.classList.remove('dark')
   }
 }
+
+const getPartFromPathBySplit = (path) => {
+  const parts = path.split('/')
+  const filteredParts = parts.filter((part) => part !== '')
+  if (filteredParts.length > 0) {
+    return filteredParts[0]
+  }
+  return null
+}
+
+onMounted(() => {
+  list.value = route.matched[0].children
+
+  console.log(list.value)
+})
 </script>
 
 <template>
@@ -71,7 +56,7 @@ const toggleDark = () => {
       <div class="left-section">
         <ul>
           <li v-for="item in list" :key="item.id" @click="topath(item.path)">
-            <span>{{ item.title }}</span>
+            <span>{{ getPartFromPathBySplit(item.path) }}</span>
           </li>
         </ul>
       </div>

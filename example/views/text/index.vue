@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { VerText } from '../../../packages/versakit-ui/index.ts'
+import { VerText } from '@/index.ts'
 </script>
 
 <template>

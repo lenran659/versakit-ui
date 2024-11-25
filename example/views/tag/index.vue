@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { VerTag } from '../../../packages/versakit-ui/index.ts'
+import { VerTag } from '@/index.ts'
 </script>
 
 <template>

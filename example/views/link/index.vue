@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { VerRow, VerLink } from '../../../packages/versakit-ui/index'
+import { VerRow, VerLink } from '@/index.ts'
 </script>
 
 <template>

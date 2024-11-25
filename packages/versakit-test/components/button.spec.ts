@@ -50,7 +50,7 @@ describe('VerButton', () => {
       },
     })
     expect(wrapper.classes()).toContain('ver-btn')
-    expect(wrapper.classes()).toContain('is-disable')
+    expect(wrapper.classes()).toContain('is-disabled')
     expect(wrapper.props('disabled')).toBe(true)
   })
 })

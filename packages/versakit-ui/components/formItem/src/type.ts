@@ -1,3 +1,3 @@
 export interface FormItemProps {
-  label: string | number
+  label?: string | number
 }

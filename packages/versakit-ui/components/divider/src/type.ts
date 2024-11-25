@@ -10,7 +10,7 @@ type lineType =
   | 'outset'
 
 export interface DividerProps {
-  line: lineType
-  position: string
-  direction: directionType
+  line?: lineType
+  position?: string
+  direction?: directionType
 }

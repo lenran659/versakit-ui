@@ -1,3 +1,3 @@
 export interface SwitchPrpops {
-  modelValue: boolean
+  modelValue?: boolean
 }

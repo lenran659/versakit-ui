@@ -8,7 +8,7 @@ type LinkType =
   | ''
 
 export interface LinkProps {
-  type: LinkType
-  disabled: boolean
-  href: string
+  type?: LinkType
+  disabled?: boolean
+  href?: string
 }

@@ -16,8 +16,8 @@ type InputType =
   | 'color'
 
 export interface InputProps {
-  placeholder: string
-  modelValue: string | number
-  disabled: boolean
-  type: InputType
+  placeholder?: string
+  modelValue?: string | number
+  disabled?: boolean
+  type?: InputType
 }

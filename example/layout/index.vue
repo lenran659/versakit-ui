@@ -108,6 +108,7 @@ li {
   display: flex;
   height: 98vh;
 }
+
 .left-section {
   width: 25%;
   padding: 10px;

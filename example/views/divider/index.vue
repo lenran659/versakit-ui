@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { VerDivider } from '../../../packages/versakit-ui/index'
+import { VerDivider } from '@/index.ts'
 </script>
 
 <template>

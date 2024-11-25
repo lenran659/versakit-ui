@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import { VerInput } from '../../../packages/versakit-ui/index.ts'
+import { VerInput } from '@/index.ts'
 
 const value = ref('')
 </script>

@@ -1,8 +1,9 @@
 <script setup lang="ts">
-import { ref } from 'vue'
-import { useRouter } from 'vue-router'
+import { ref, onMounted } from 'vue'
+import { useRouter, useRoute } from 'vue-router'
 
 const router = useRouter()
+const route = useRoute()
 
 const list = ref([
   {
@@ -35,86 +36,6 @@ const list = ref([
     title: 'Divider 分割线',
     path: '/divider',
   },
-  {
-    id: 7,
-    title: 'Alert 警报',
-    path: '/alert',
-  },
-  {
-    id: 8,
-    title: 'Avatar 头像',
-    path: '/avatar',
-  },
-  {
-    id: 9,
-    title: 'Card 卡片',
-    path: '/card',
-  },
-  {
-    id: 10,
-    title: 'Col 行',
-    path: '/col',
-  },
-  {
-    id: 11,
-    title: 'Drawer ',
-    path: '/drawer',
-  },
-  {
-    id: 12,
-    title: 'Form 表单',
-    path: '/form',
-  },
-  {
-    id: 13,
-    title: 'FormItem',
-    path: '/formitem',
-  },
-  {
-    header: 14,
-    title: 'Header ',
-    path: '/header',
-  },
-  {
-    id: 15,
-    title: 'Main',
-    path: '/main',
-  },
-  {
-    id: 16,
-    title: 'Message',
-    path: '/message',
-  },
-  {
-    id: 17,
-    title: 'Notification',
-    path: '/notification',
-  },
-  {
-    id: 18,
-    title: 'Radio',
-    path: '/radio',
-  },
-  {
-    id: 19,
-    title: 'Row',
-    path: '/row',
-  },
-  {
-    id: 20,
-    title: 'Switch',
-    path: '/switch',
-  },
-  {
-    id: 21,
-    title: 'Tabs',
-    path: '/tabs',
-  },
-  {
-    id: 22,
-    title: 'Textarea',
-    path: '/textarea',
-  },
 ])
 
 const topath = (path: string) => {
@@ -136,6 +57,21 @@ const toggleDark = () => {
     document.body.classList.remove('dark')
   }
 }
+
+const getPartFromPathBySplit = (path) => {
+  const parts = path.split('/')
+  const filteredParts = parts.filter((part) => part !== '')
+  if (filteredParts.length > 0) {
+    return filteredParts[0]
+  }
+  return null
+}
+
+onMounted(() => {
+  list.value = route.matched[0].children
+
+  console.log(list.value)
+})
 </script>
 
 <template>
@@ -151,7 +87,7 @@ const toggleDark = () => {
       <div class="left-section">
         <ul>
           <li v-for="item in list" :key="item.id" @click="topath(item.path)">
-            <span>{{ item.title }}</span>
+            <span>{{ getPartFromPathBySplit(item.path) }}</span>
           </li>
         </ul>
       </div>

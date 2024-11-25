@@ -45,6 +45,76 @@ const list = ref([
     title: 'Avatar 头像',
     path: '/avatar',
   },
+  {
+    id: 9,
+    title: 'Card 卡片',
+    path: '/card',
+  },
+  {
+    id: 10,
+    title: 'Col 行',
+    path: '/col',
+  },
+  {
+    id: 11,
+    title: 'Drawer ',
+    path: '/drawer',
+  },
+  {
+    id: 12,
+    title: 'Form 表单',
+    path: '/form',
+  },
+  {
+    id: 13,
+    title: 'FormItem',
+    path: '/formitem',
+  },
+  {
+    header: 14,
+    title: 'Header ',
+    path: '/header',
+  },
+  {
+    id: 15,
+    title: 'Main',
+    path: '/main',
+  },
+  {
+    id: 16,
+    title: 'Message',
+    path: '/message',
+  },
+  {
+    id: 17,
+    title: 'Notification',
+    path: '/notification',
+  },
+  {
+    id: 18,
+    title: 'Radio',
+    path: '/radio',
+  },
+  {
+    id: 19,
+    title: 'Row',
+    path: '/row',
+  },
+  {
+    id: 20,
+    title: 'Switch',
+    path: '/switch',
+  },
+  {
+    id: 21,
+    title: 'Tabs',
+    path: '/tabs',
+  },
+  {
+    id: 22,
+    title: 'Textarea',
+    path: '/textarea',
+  },
 ])
 
 const topath = (path: string) => {

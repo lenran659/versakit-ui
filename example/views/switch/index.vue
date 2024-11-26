@@ -1,7 +1,10 @@
 <template>
-  <div></div>
+  <VerSwitch v-model="value" />
 </template>
 
-<script setup lang="ts"></script>
+<script lang="ts" setup>
+import { VerSwitch } from '@/index.ts'
+import { ref } from 'vue'
 
-<style scoped></style>
+const value = ref(false)
+</script>

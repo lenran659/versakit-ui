@@ -40,74 +40,68 @@
 @include VerBtnType('warning', $ver-orange-6);
 @include VerBtnType('danger', $ver-red-6);
 
-/* 朴素按钮 */
-@include VerBtnPlain(null, $ver-zinc-6, $ver-zinc-5);
-@include VerBtnPlain('primary', $ver-violet-6, $ver-violet-5);
-@include VerBtnPlain('success', $ver-green-6, $ver-green-5);
-@include VerBtnPlain('info', $ver-zinc-6, $ver-zinc-5);
-@include VerBtnPlain('warning', $ver-orange-6, $ver-orange-5);
-@include VerBtnPlain('danger', $ver-red-6, $ver-red-5);
+/* 灵魂按钮 */
+@include VerBtnGhost(null, $ver-zinc-6, $ver-zinc-5);
+@include VerBtnGhost('primary', $ver-violet-6, $ver-violet-5);
+@include VerBtnGhost('success', $ver-green-6, $ver-green-5);
+@include VerBtnGhost('info', $ver-zinc-6, $ver-zinc-5);
+@include VerBtnGhost('warning', $ver-orange-6, $ver-orange-5);
+@include VerBtnGhost('danger', $ver-red-6, $ver-red-5);
+
+.ver-btn.is-ghost {
+  padding: 12px 19px;
+}
 
 /* round属性 */
 .ver-btn.is-round {
   border-radius: 20px;
-  padding: 12px 23px;
+  padding: 12px 21px;
 }
+
+/* round属性 & ghost属性 */
+.ver-btn.is-round.is-ghost {
+  padding: 11px 20px;
+}
+
+/* plain属性 */
+@include VerBtnPlain(null, $ver-zinc-1, $ver-zinc-6);
+@include VerBtnPlain('primary', $ver-violet-1, $ver-violet-6);
+@include VerBtnPlain('success', $ver-green-1, $ver-green-6);
+@include VerBtnPlain('info', $ver-zinc-1, $ver-zinc-6);
+@include VerBtnPlain('warning', $ver-orange-1, $ver-orange-6);
+@include VerBtnPlain('danger', $ver-red-1, $ver-red-6);
+
+/* empty属性 */
+@include VerBtnEmpty(null, $ver-zinc-1, $ver-zinc-6);
+@include VerBtnEmpty('primary', $ver-violet-1, $ver-violet-6);
+@include VerBtnEmpty('success', $ver-green-1, $ver-green-6);
+@include VerBtnEmpty('info', $ver-zinc-1, $ver-zinc-6);
+@include VerBtnEmpty('warning', $ver-orange-1, $ver-orange-6);
+@include VerBtnEmpty('danger', $ver-red-1, $ver-red-6);
+
+/* line属性 */
+@include VerBtnLine(null, $ver-zinc-6);
+@include VerBtnLine('primary', $ver-violet-6);
+@include VerBtnLine('success', $ver-green-6);
+@include VerBtnLine('info', $ver-zinc-6);
+@include VerBtnLine('warning', $ver-orange-6);
+@include VerBtnLine('danger', $ver-red-6);
+
+/* 禁用属性 */
+@include VerBtnDisable($ver-violet-1, $ver-violet-6);
+// @include VerBtnDisable('success', $ver-green-1, $ver-green-6);
+// @include VerBtnDisable('info', $ver-zinc-1, $ver-zinc-6);
+// @include VerBtnDisable('warning', $ver-orange-1, $ver-orange-6);
+// @include VerBtnDisable('danger', $ver-red-1, $ver-red-6);
 
 /* 禁止状态 */
 .ver-btn.is-disabled {
-  color: #a8abb2;
+  opacity: 50%;
   cursor: not-allowed;
   background-image: none;
-  background-color: $ver-zinc-1;
-
-  .dark & {
-    border: 1px solid $ver-zinc-7;
-    background-color: $ver-zinc-9;
-  }
-
-  &:active {
-    transform: none;
-  }
-}
-
-@include VerBtnDisable('primary', $ver-violet-8, $ver-violet-9);
-@include VerBtnDisable('success', $ver-green-8, $ver-green-9);
-@include VerBtnDisable('info', $ver-zinc-8, $ver-zinc-9);
-@include VerBtnDisable('warning', $ver-orange-8, $ver-orange-9);
-@include VerBtnDisable('danger', $ver-red-8, $ver-red-9);
-
-/* 朴素按钮禁止状态 */
-.ver-btn.is-plain.is-disabled {
-  color: #a8abb2;
-  cursor: not-allowed;
-  background-image: none;
-  border-color: #e4e7ed;
-  background-color: $ver-zinc-1;
 
   .dark & {
     border: 1px solid $ver-zinc-7;
     background-color: $ver-zinc-9;
   }
 }
-
-@include VerBtnDisablePlain(
-  'primary',
-  $ver-violet-6,
-  $ver-violet-3,
-  $ver-violet-4
-);
-@include VerBtnDisablePlain(
-  'success',
-  $ver-green-6,
-  $ver-green-3,
-  $ver-green-4
-);
-@include VerBtnDisablePlain('info', $ver-zinc-6, $ver-zinc-3, $ver-zinc-4);
-@include VerBtnDisablePlain(
-  'warning',
-  $ver-orange-6,
-  $ver-orange-3,
-  $ver-orange-4
-);
-@include VerBtnDisablePlain('danger', $ver-red-6, $ver-red-3, $ver-red-4);

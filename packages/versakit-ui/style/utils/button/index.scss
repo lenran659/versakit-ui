@@ -13,41 +13,70 @@
   }
 }
 
-/* 朴素按钮 */
-@mixin VerBtnPlain($type, $color6, $color5) {
-  .ver-btn-#{$type}.is-plain {
+/* 灵魂按钮 */
+@mixin VerBtnGhost($type, $color6, $color5) {
+  .ver-btn-#{$type}.is-ghost {
     color: $color6;
-    border: 1px solid $color5;
+    border: 1.5px solid $color5;
     background-color: transparent;
   }
 }
 
-/* disable属性 */
-@mixin VerBtnDisable($type, $color8, $color9) {
-  .ver-btn-#{$type}.is-disabled {
-    color: $ver-zinc-1;
-    border-color: $color8;
-    background-color: $color9;
+/* plain属性 */
+@mixin VerBtnPlain($type, $color1, $color6) {
+  .ver-btn-#{$type}.is-plain {
+    color: $color6;
+    border: 1px solid $color6;
+    background-color: $color1;
+  }
+}
 
-    .dark & {
-      color: $ver-zinc-1;
-      border-color: $color8;
-      background-color: $color9;
+/* empty属性 */
+@mixin VerBtnEmpty($type, $color1, $color6) {
+  .ver-btn-#{$type}.is-empty {
+    color: $color6;
+    background-color: transparent;
+
+    &:hover {
+      background-color: $color1;
     }
   }
 }
 
-/* 朴素按钮 disable属性 */
-@mixin VerBtnDisablePlain($type, $color6, $color3, $color4) {
-  .ver-btn-#{$type}.is-plain.is-disabled {
+/* line属性 */
+@mixin VerBtnLine($type, $color6) {
+  .ver-btn-#{$type}.is-line {
     color: $color6;
-    border-color: $color3;
-    background-color: $color4;
+    background-color: transparent;
 
+    &:hover {
+      opacity: 60%;
+    }
+
+    &:active {
+      color: fade($color6, 15%);
+    }
+  }
+}
+
+/* disable属性 */
+@mixin VerBtnDisable($color1, $color6) {
+  .is-disabled {
+    // &:active,
+    // &:focus,
+    // &:hover{
+    //   background-color: inherit;
+    //   border-color: inherit;
+    //   color: inherit;
+    //   transform: none;
+    //   outline: none;
+    // }
+    &:active {
+      transform: scale(1);
+    }
     .dark & {
-      color: $color6;
-      border-color: $color3;
-      background-color: $color4;
+      color: $ver-zinc-1;
+      background-color: $color6;
     }
   }
 }

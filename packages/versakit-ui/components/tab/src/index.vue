@@ -1,38 +1,32 @@
 <template>
-  <div class="tab-container">
+  <div class="ver-tab">
     <div class="tab-header">
       <div
-        v-for="(tab, index) in tabList"
-        :key="tab.id"
+        v-for="(item, index) in props.tabList"
+        :key="item.id"
         :class="['tab-item', { 'active-tab': currentTabIndex === index }]"
         @click="switchTab(index)"
       >
-        <span class="text-zinc">{{ tab.label }}</span>
+        <span class="tab-label">{{ item.label }}</span>
       </div>
     </div>
     <div
       class="tab-content"
-      :key="`tab-content-${tabList[currentTabIndex].name}`"
+      :key="`tab-content-${props.tabList[currentTabIndex].name}`"
     >
-      <slot :name="tabList[currentTabIndex].name" />
+      <slot :name="props.tabList[currentTabIndex].name" />
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
 import { ref } from 'vue'
-
-// 定义tab的类型
-interface Tab {
-  id: string
-  label: string
-  name: string
-}
+import type { TabProps } from './type.ts'
 
 // 通过props接收tab列表
-defineProps<{
-  tabList: Tab[]
-}>()
+const props = withDefaults(defineProps<TabProps>(), {
+  tabList: () => [],
+})
 
 // 当前激活的tab索引
 const currentTabIndex = ref(0)
@@ -44,7 +38,9 @@ const switchTab = (index: number) => {
 </script>
 
 <style lang="scss" scoped>
-.tab-container {
+@use '../../../style/color/index.scss' as *;
+
+.ver-tab {
   width: 100%;
 }
 
@@ -53,9 +49,11 @@ const switchTab = (index: number) => {
   justify-content: space-around;
   padding: 5px;
   border-radius: 5px;
-  background-color: #f4f4f4;
+  background-color: $ver-zinc-3;
 
-  @apply dark:bg-zinc-700;
+  .dark & {
+    background-color: $ver-zinc-7;
+  }
 }
 
 .tab-item {
@@ -73,11 +71,14 @@ const switchTab = (index: number) => {
   overflow: hidden;
 }
 
+.tab-label {
+  color: $ver-zinc-5;
+}
+
 .active-tab {
   position: relative;
   border-radius: 5px;
   z-index: 1;
-  background-color: #fff;
 }
 
 .active-tab::before {
@@ -87,10 +88,12 @@ const switchTab = (index: number) => {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #fff;
+  background-color: $ver-zinc-1;
   z-index: -1;
 
-  @apply dark:bg-zinc-900;
+  .dark & {
+    background-color: $ver-zinc-9;
+  }
 }
 
 .tab-content {

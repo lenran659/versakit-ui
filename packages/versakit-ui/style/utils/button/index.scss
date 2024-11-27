@@ -7,7 +7,7 @@
     color: $ver-zinc-1;
     background-color: $color6;
 
-    &:hover {
+    &:not(.is-disabled):hover {
       background-color: color.adjust($color6, $lightness: 10%);
     }
 
@@ -19,36 +19,68 @@
 }
 
 /* 灵魂按钮 */
-@mixin VerBtnGhost($type, $color6, $color5) {
+@mixin VerBtnGhost($type, $color5, $color6) {
+  .is-ghost {
+    background-color: transparent;
+    color: $ver-zinc-6;
+    border: 1.5px solid $ver-zinc-5;
+
+    &:not(.is-disabled):hover {
+      background-color: $ver-zinc-6;
+      border-color: $ver-zinc-6;
+      color: $ver-zinc-1;
+    }
+  }
   .ver-btn-#{$type}.is-ghost {
     color: $color6;
     border: 1.5px solid $color5;
-    background-color: transparent;
 
-    &:hover {
+    &:not(.is-disabled):hover {
       background-color: $color6;
       border-color: $color6;
-      color: $ver-zinc-1;
     }
   }
 }
 
 /* plain属性 */
 @mixin VerBtnPlain($type, $color1, $color6) {
+  .is-plain {
+    color: $ver-zinc-6;
+    background-color: $ver-zinc-1;
+    border: 1px solid $ver-zinc-6;
+
+    &:not(.is-disabled):hover {
+      background-color: $ver-zinc-1;
+    }
+  }
   .ver-btn-#{$type}.is-plain {
     color: $color6;
     border: 1px solid $color6;
     background-color: $color1;
+
+    &:not(.is-disabled):hover {
+      background-color: $color1;
+    }
   }
 }
 
 /* text属性 */
 @mixin VerBtnText($type, $color1, $color6) {
+  .is-text {
+    border: none;
+    color: $ver-zinc-6;
+    background-color: transparent;
+
+    &:not(.is-disabled):hover {
+      background-color: $ver-zinc-1;
+    }
+  }
   .ver-btn-#{$type}.is-text {
+    border: none;
     color: $color6;
     background-color: transparent;
 
-    &:hover {
+    &:not(.is-disabled):hover {
       background-color: $color1;
     }
   }
@@ -56,67 +88,19 @@
 
 /* word属性 */
 @mixin VerBtnWord($type, $color6) {
-  .ver-btn-#{$type}.is-word {
-    color: $color6;
+  .is-word {
+    border: none;
+    color: $ver-zinc-6;
     background-color: transparent;
 
-    &:hover {
+    &:not(.is-disabled):hover {
+      background-color: transparent;
       opacity: 60%;
     }
-
-    &:active {
-      color: color.adjust($color6, $lightness: -15%);
-    }
   }
-}
-
-/* disable属性 */
-@mixin VerBtnDisable($attribute, $type, $color1, $color5, $color6) {
-  .ver-btn.is-disabled.ver-btn-#{$type} {
-    &:active {
-      transform: scale(1);
-    }
-
-    @if $attribute == 'is-word' {
-      &.#{$attribute} {
-        &:hover {
-          background-color: transparent;
-          color: $color6;
-          opacity: 50%;
-          border: none;
-        }
-      }
-    } @else if $attribute == 'is-text' {
-      &.#{$attribute} {
-        &:hover {
-          background-color: transparent;
-          color: $color6;
-          border: none;
-        }
-      }
-    }
-
-    @if $attribute== 'is-plain' {
-      &.#{$attribute} {
-        &:hover {
-          background-color: $color1;
-          color: $color6;
-          border-color: $color6;
-        }
-      }
-    } @else if $attribute== 'is-ghost' {
-      &.#{$attribute} {
-        &:hover {
-          background-color: transparent;
-          color: $color6;
-          border-color: $color5;
-        }
-      }
-    } @else {
-      &:hover {
-        background-color: $color6;
-        color: $ver-zinc-1;
-      }
-    }
+  .ver-btn-#{$type}.is-word {
+    border: none;
+    color: $color6;
+    background-color: transparent;
   }
 }

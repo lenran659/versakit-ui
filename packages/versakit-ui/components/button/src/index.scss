@@ -1,5 +1,6 @@
 @use '../../../style/color/index.scss' as *;
 @use '../../../style/utils/button/index.scss' as *;
+@use 'sass:list';
 
 .ver-btn {
   display: inline-block;
@@ -71,28 +72,92 @@
 @include VerBtnPlain('warning', $ver-orange-1, $ver-orange-6);
 @include VerBtnPlain('danger', $ver-red-1, $ver-red-6);
 
-/* empty属性 */
-@include VerBtnEmpty(null, $ver-zinc-1, $ver-zinc-6);
-@include VerBtnEmpty('primary', $ver-violet-1, $ver-violet-6);
-@include VerBtnEmpty('success', $ver-green-1, $ver-green-6);
-@include VerBtnEmpty('info', $ver-zinc-1, $ver-zinc-6);
-@include VerBtnEmpty('warning', $ver-orange-1, $ver-orange-6);
-@include VerBtnEmpty('danger', $ver-red-1, $ver-red-6);
+/* text属性 */
+@include VerBtnText(null, $ver-zinc-1, $ver-zinc-6); //text
+@include VerBtnText('primary', $ver-violet-1, $ver-violet-6);
+@include VerBtnText('success', $ver-green-1, $ver-green-6);
+@include VerBtnText('info', $ver-zinc-1, $ver-zinc-6);
+@include VerBtnText('warning', $ver-orange-1, $ver-orange-6);
+@include VerBtnText('danger', $ver-red-1, $ver-red-6);
 
-/* line属性 */
-@include VerBtnLine(null, $ver-zinc-6);
-@include VerBtnLine('primary', $ver-violet-6);
-@include VerBtnLine('success', $ver-green-6);
-@include VerBtnLine('info', $ver-zinc-6);
-@include VerBtnLine('warning', $ver-orange-6);
-@include VerBtnLine('danger', $ver-red-6);
+/* word属性 */
+@include VerBtnWord(null, $ver-zinc-6);
+@include VerBtnWord('primary', $ver-violet-6);
+@include VerBtnWord('success', $ver-green-6);
+@include VerBtnWord('info', $ver-zinc-6);
+@include VerBtnWord('warning', $ver-orange-6);
+@include VerBtnWord('danger', $ver-red-6);
+
+/* size属性 */
+.ver-btn.is-small {
+  font-size: 10px;
+  padding: 10px 15px;
+}
+.ver-btn.is-large {
+  font-size: 16px;
+  padding: 14px 25px;
+}
 
 /* 禁用属性 */
-@include VerBtnDisable($ver-violet-1, $ver-violet-6);
-// @include VerBtnDisable('success', $ver-green-1, $ver-green-6);
-// @include VerBtnDisable('info', $ver-zinc-1, $ver-zinc-6);
-// @include VerBtnDisable('warning', $ver-orange-1, $ver-orange-6);
-// @include VerBtnDisable('danger', $ver-red-1, $ver-red-6);
+$button-colors: (
+  'primary': (
+    $ver-violet-1,
+    $ver-violet-5,
+    $ver-violet-6,
+  ),
+  'success': (
+    $ver-green-1,
+    $ver-green-5,
+    $ver-green-6,
+  ),
+  'info': (
+    $ver-zinc-1,
+    $ver-zinc-5,
+    $ver-zinc-6,
+  ),
+  'warning': (
+    $ver-orange-1,
+    $ver-orange-5,
+    $ver-orange-6,
+  ),
+  'danger': (
+    $ver-red-1,
+    $ver-red-5,
+    $ver-red-6,
+  ),
+);
+
+// Loop over button states and colors
+@each $state, $colors in $button-colors {
+  @include VerBtnDisable(
+    'is-ghost',
+    $state,
+    list.nth($colors, 1),
+    list.nth($colors, 2),
+    list.nth($colors, 3)
+  );
+  @include VerBtnDisable(
+    'is-plain',
+    $state,
+    list.nth($colors, 1),
+    list.nth($colors, 2),
+    list.nth($colors, 3)
+  );
+  @include VerBtnDisable(
+    'is-text',
+    $state,
+    list.nth($colors, 1),
+    list.nth($colors, 2),
+    list.nth($colors, 3)
+  );
+  @include VerBtnDisable(
+    'is-word',
+    $state,
+    list.nth($colors, 1),
+    list.nth($colors, 2),
+    list.nth($colors, 3)
+  );
+}
 
 /* 禁止状态 */
 .ver-btn.is-disabled {

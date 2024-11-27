@@ -1,10 +1,15 @@
 @use '../../color/index.scss' as *;
+@use 'sass:color';
 
 /* 按钮类型 */
 @mixin VerBtnType($type, $color6) {
   .ver-btn-#{$type} {
     color: $ver-zinc-1;
     background-color: $color6;
+
+    &:hover {
+      background-color: color.adjust($color6, $lightness: 10%);
+    }
 
     .dark & {
       color: $ver-zinc-1;
@@ -19,6 +24,12 @@
     color: $color6;
     border: 1.5px solid $color5;
     background-color: transparent;
+
+    &:hover {
+      background-color: $color6;
+      border-color: $color6;
+      color: $ver-zinc-1;
+    }
   }
 }
 
@@ -31,9 +42,9 @@
   }
 }
 
-/* empty属性 */
-@mixin VerBtnEmpty($type, $color1, $color6) {
-  .ver-btn-#{$type}.is-empty {
+/* text属性 */
+@mixin VerBtnText($type, $color1, $color6) {
+  .ver-btn-#{$type}.is-text {
     color: $color6;
     background-color: transparent;
 
@@ -43,9 +54,9 @@
   }
 }
 
-/* line属性 */
-@mixin VerBtnLine($type, $color6) {
-  .ver-btn-#{$type}.is-line {
+/* word属性 */
+@mixin VerBtnWord($type, $color6) {
+  .ver-btn-#{$type}.is-word {
     color: $color6;
     background-color: transparent;
 
@@ -54,29 +65,58 @@
     }
 
     &:active {
-      color: fade($color6, 15%);
+      color: color.adjust($color6, $lightness: -15%);
     }
   }
 }
 
 /* disable属性 */
-@mixin VerBtnDisable($color1, $color6) {
-  .is-disabled {
-    // &:active,
-    // &:focus,
-    // &:hover{
-    //   background-color: inherit;
-    //   border-color: inherit;
-    //   color: inherit;
-    //   transform: none;
-    //   outline: none;
-    // }
+@mixin VerBtnDisable($attribute, $type, $color1, $color5, $color6) {
+  .ver-btn.is-disabled.ver-btn-#{$type} {
     &:active {
       transform: scale(1);
     }
-    .dark & {
-      color: $ver-zinc-1;
-      background-color: $color6;
+
+    @if $attribute == 'is-word' {
+      &.#{$attribute} {
+        &:hover {
+          background-color: transparent;
+          color: $color6;
+          opacity: 50%;
+          border: none;
+        }
+      }
+    } @else if $attribute == 'is-text' {
+      &.#{$attribute} {
+        &:hover {
+          background-color: transparent;
+          color: $color6;
+          border: none;
+        }
+      }
+    }
+
+    @if $attribute== 'is-plain' {
+      &.#{$attribute} {
+        &:hover {
+          background-color: $color1;
+          color: $color6;
+          border-color: $color6;
+        }
+      }
+    } @else if $attribute== 'is-ghost' {
+      &.#{$attribute} {
+        &:hover {
+          background-color: transparent;
+          color: $color6;
+          border-color: $color5;
+        }
+      }
+    } @else {
+      &:hover {
+        background-color: $color6;
+        color: $ver-zinc-1;
+      }
     }
   }
 }

@@ -106,18 +106,18 @@ import { VerButton, VerRow } from '@/index'
   <div>
     <h2>文本按钮</h2>
     <VerRow>
-      <VerButton empty disabled type="primary">primary</VerButton>
-      <VerButton empty type="success">success</VerButton>
-      <VerButton empty type="info">info</VerButton>
-      <VerButton empty type="warning">warning</VerButton>
-      <VerButton empty type="danger">danger</VerButton>
+      <VerButton disabled text type="primary">primary</VerButton>
+      <VerButton text type="success">success</VerButton>
+      <VerButton text type="info">info</VerButton>
+      <VerButton text type="warning">warning</VerButton>
+      <VerButton text type="danger">danger</VerButton>
     </VerRow>
     <VerRow>
-      <VerButton line disabled type="primary">primary</VerButton>
-      <VerButton line type="success">success</VerButton>
-      <VerButton line type="info">info</VerButton>
-      <VerButton line type="warning">warning</VerButton>
-      <VerButton line type="danger">danger</VerButton>
+      <VerButton disabled word type="primary">primary</VerButton>
+      <VerButton word type="success">success</VerButton>
+      <VerButton word type="info">info</VerButton>
+      <VerButton word type="warning">warning</VerButton>
+      <VerButton word type="danger">danger</VerButton>
     </VerRow>
   </div>
   <div>
@@ -125,6 +125,31 @@ import { VerButton, VerRow } from '@/index'
   </div>
   <div>
     <h2>按钮尺寸</h2>
+    <VerRow>
+      <VerButton size="small" type="primary">small</VerButton>
+      <VerButton size="medium" type="primary">medium</VerButton>
+      <VerButton size="large" type="primary">large</VerButton>
+      <VerButton round size="small" plain type="success">small</VerButton>
+      <VerButton round size="medium" plain type="success">medium</VerButton>
+      <VerButton round size="large" plain type="success">large</VerButton>
+    </VerRow>
+    <VerRow>
+      <VerButton round size="small" type="warning">small</VerButton>
+      <VerButton round size="medium" type="warning">medium</VerButton>
+      <VerButton round size="large" type="warning">large</VerButton>
+      <VerButton word size="small" type="danger">small</VerButton>
+      <VerButton word size="medium" type="danger">medium</VerButton>
+      <VerButton word size="large" type="danger">large</VerButton>
+    </VerRow>
+  </div>
+  <div>
+    <h2>图标按钮（在前在后</h2>
+  </div>
+  <div>
+    <h2>加载按钮</h2>
+  </div>
+  <div>
+    <h2>自定义颜色按钮</h2>
   </div>
 </template>
 

@@ -1,5 +1,5 @@
 <template>
-  <button :class="Verclass" :disabled="props.disabled">
+  <button :class="Verclass" :disabled="props.disabled" :size="props.size">
     <span>
       <slot></slot>
     </span>
@@ -17,9 +17,10 @@ const props = withDefaults(defineProps<ButtonProps>(), {
   ghost: false,
   round: false,
   plain: false,
-  empty: false,
-  line: false,
+  text: false,
+  word: false,
   disabled: false,
+  size: '',
 })
 
 const Verclass: any = computed(() => {
@@ -29,9 +30,10 @@ const Verclass: any = computed(() => {
     props.ghost == false ? '' : 'is-ghost',
     props.round == false ? '' : 'is-round',
     props.plain == false ? '' : 'is-plain',
-    props.empty == false ? '' : 'is-empty',
-    props.line == false ? '' : 'is-line',
+    props.text == false ? '' : 'is-text',
+    props.word == false ? '' : 'is-word',
     props.disabled == false ? '' : 'is-disabled',
+    props.size && props.size !== 'medium' ? `is-${props.size}` : '',
   ]
 })
 </script>

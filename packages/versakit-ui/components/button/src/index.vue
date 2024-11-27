@@ -18,7 +18,6 @@ const props = withDefaults(defineProps<ButtonProps>(), {
   round: false,
   plain: false,
   text: false,
-  word: false,
   disabled: false,
   size: '',
 })
@@ -31,7 +30,6 @@ const Verclass: any = computed(() => {
     props.round == false ? '' : 'is-round',
     props.plain == false ? '' : 'is-plain',
     props.text == false ? '' : 'is-text',
-    props.word == false ? '' : 'is-word',
     props.disabled == false ? '' : 'is-disabled',
     props.size && props.size !== 'medium' ? `is-${props.size}` : '',
   ]

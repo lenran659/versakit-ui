@@ -80,14 +80,6 @@
 @include VerBtnText('warning', $ver-orange-1, $ver-orange-6);
 @include VerBtnText('danger', $ver-red-1, $ver-red-6);
 
-/* word属性 */
-@include VerBtnWord(null, $ver-zinc-6);
-@include VerBtnWord('primary', $ver-violet-6);
-@include VerBtnWord('success', $ver-green-6);
-@include VerBtnWord('info', $ver-zinc-6);
-@include VerBtnWord('warning', $ver-orange-6);
-@include VerBtnWord('danger', $ver-red-6);
-
 /* size属性 */
 .ver-btn.is-small {
   font-size: 10px;

@@ -106,18 +106,18 @@ import { VerButton, VerRow } from '@/index'
   <div>
     <h2>文本按钮</h2>
     <VerRow>
-      <VerButton disabled text type="primary">primary</VerButton>
+      <VerButton text type="primary">primary</VerButton>
       <VerButton text type="success">success</VerButton>
       <VerButton text type="info">info</VerButton>
       <VerButton text type="warning">warning</VerButton>
       <VerButton text type="danger">danger</VerButton>
     </VerRow>
     <VerRow>
-      <VerButton disabled word type="primary">primary</VerButton>
-      <VerButton word type="success">success</VerButton>
-      <VerButton word type="info">info</VerButton>
-      <VerButton word type="warning">warning</VerButton>
-      <VerButton word type="danger">danger</VerButton>
+      <VerButton disabled text type="primary">primary</VerButton>
+      <VerButton disabled text type="success">success</VerButton>
+      <VerButton disabled text type="info">info</VerButton>
+      <VerButton disabled text type="warning">warning</VerButton>
+      <VerButton disabled text type="danger">danger</VerButton>
     </VerRow>
   </div>
   <div>

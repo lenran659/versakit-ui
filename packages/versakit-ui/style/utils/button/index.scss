@@ -54,22 +54,6 @@
   }
 }
 
-/* word属性 */
-@mixin VerBtnWord($type, $color6) {
-  .ver-btn-#{$type}.is-word {
-    color: $color6;
-    background-color: transparent;
-
-    &:hover {
-      opacity: 60%;
-    }
-
-    &:active {
-      color: color.adjust($color6, $lightness: -15%);
-    }
-  }
-}
-
 /* disable属性 */
 @mixin VerBtnDisable($attribute, $type, $color1, $color5, $color6) {
   .ver-btn.is-disabled.ver-btn-#{$type} {

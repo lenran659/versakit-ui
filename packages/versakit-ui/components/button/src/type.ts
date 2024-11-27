@@ -8,5 +8,5 @@ export interface ButtonProps {
   plain?: boolean
   text?: boolean
   disabled?: boolean
-  size: SizeType
+  size?: SizeType
 }

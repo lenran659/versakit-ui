@@ -6,6 +6,7 @@ import { VerButton, VerRow } from '@/index'
   <div>
     <h2>基本使用</h2>
     <VerRow>
+      <VerButton>none</VerButton>
       <VerButton type="primary">primary</VerButton>
       <VerButton type="success">success</VerButton>
       <VerButton type="info">info</VerButton>
@@ -14,6 +15,7 @@ import { VerButton, VerRow } from '@/index'
     </VerRow>
 
     <VerRow>
+      <VerButton ghost>none</VerButton>
       <VerButton ghost type="primary">primary</VerButton>
       <VerButton ghost type="success">success</VerButton>
       <VerButton ghost type="info">info</VerButton>
@@ -22,6 +24,7 @@ import { VerButton, VerRow } from '@/index'
     </VerRow>
 
     <VerRow>
+      <VerButton plain>none</VerButton>
       <VerButton plain type="primary">primary</VerButton>
       <VerButton plain type="success">success</VerButton>
       <VerButton plain type="info">info</VerButton>
@@ -56,6 +59,7 @@ import { VerButton, VerRow } from '@/index'
   <div>
     <h2>禁用按钮</h2>
     <VerRow>
+      <VerButton disabled>none</VerButton>
       <VerButton disabled type="primary">primary</VerButton>
       <VerButton disabled type="success">success</VerButton>
       <VerButton disabled type="info">info</VerButton>
@@ -64,14 +68,7 @@ import { VerButton, VerRow } from '@/index'
     </VerRow>
 
     <VerRow>
-      <VerButton disabled ghost type="primary">primary</VerButton>
-      <VerButton disabled ghost type="success">success</VerButton>
-      <VerButton disabled ghost type="info">info</VerButton>
-      <VerButton disabled ghost type="warning">warning</VerButton>
-      <VerButton disabled ghost type="danger">danger</VerButton>
-    </VerRow>
-
-    <VerRow>
+      <VerButton disabled plain>none</VerButton>
       <VerButton disabled plain type="primary">primary</VerButton>
       <VerButton disabled plain type="success">success</VerButton>
       <VerButton disabled plain type="info">info</VerButton>
@@ -80,32 +77,18 @@ import { VerButton, VerRow } from '@/index'
     </VerRow>
 
     <VerRow>
-      <VerButton disabled round type="primary">primary</VerButton>
-      <VerButton disabled round type="success">success</VerButton>
-      <VerButton disabled round type="info">info</VerButton>
-      <VerButton disabled round type="warning">warning</VerButton>
-      <VerButton disabled round type="danger">danger</VerButton>
-    </VerRow>
-
-    <VerRow>
-      <VerButton disabled round ghost type="primary">primary</VerButton>
-      <VerButton disabled round ghost type="success">success</VerButton>
-      <VerButton disabled round ghost type="info">info</VerButton>
-      <VerButton disabled round ghost type="warning">warning</VerButton>
-      <VerButton disabled round ghost type="danger">danger</VerButton>
-    </VerRow>
-
-    <VerRow>
-      <VerButton disabled plain round type="primary">primary</VerButton>
-      <VerButton disabled plain round type="success">success</VerButton>
-      <VerButton disabled plain round type="info">info</VerButton>
-      <VerButton disabled plain round type="warning">warning</VerButton>
-      <VerButton disabled plain round type="danger">danger</VerButton>
+      <VerButton disabled plain text>none</VerButton>
+      <VerButton disabled plain text type="primary">primary</VerButton>
+      <VerButton disabled plain text type="success">success</VerButton>
+      <VerButton disabled plain text type="info">info</VerButton>
+      <VerButton disabled plain text type="warning">warning</VerButton>
+      <VerButton disabled plain text type="danger">danger</VerButton>
     </VerRow>
   </div>
   <div>
     <h2>文本按钮</h2>
     <VerRow>
+      <VerButton text>none</VerButton>
       <VerButton text type="primary">primary</VerButton>
       <VerButton text type="success">success</VerButton>
       <VerButton text type="info">info</VerButton>
@@ -155,6 +138,6 @@ import { VerButton, VerRow } from '@/index'
 
 <style scoped>
 .ver-btn {
-  margin: 1rem 1rem;
+  margin: 0.75rem 0.5rem;
 }
 </style>

@@ -1,7 +1,16 @@
 <template>
-  <div></div>
+  <div>
+    <VerButton @click="openNotification">openNotification</VerButton>
+  </div>
 </template>
 
-<script setup lang="ts"></script>
+<script lang="ts" setup>
+import { VerButton, VerNotification } from '@/index.ts'
 
-<style scoped></style>
+const openNotification = () => {
+  VerNotification({
+    title: 'title',
+    content: 'content',
+  })
+}
+</script>

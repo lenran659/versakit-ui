@@ -1,7 +1,9 @@
 <template>
-  <div></div>
+  <VerRow>111</VerRow>
+  <VerRow>222</VerRow>
+  <VerRow>333</VerRow>
 </template>
 
-<script setup lang="ts"></script>
-
-<style scoped></style>
+<script lang="ts" setup>
+import { VerRow } from '@/index.ts'
+</script>

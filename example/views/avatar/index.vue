@@ -1,54 +1,72 @@
-<script setup lang="ts">
-import { VerAvatar } from '@/index.ts'
-</script>
-
 <template>
-  <div>
-    <h2>基本使用</h2>
-    <div class="exam-row">
-      <div class="exam-box">
-        <div>
-          <div class="exam-title">circle</div>
-          <div class="exam-row">
-            <VerAvatar class="exam-avatar" />
-            <VerAvatar class="exam-avatar" size="30" />
-            <VerAvatar class="exam-avatar" size="50" />
-            <VerAvatar class="exam-avatar" size="70" />
+  <ver-row>
+    <ver-col :span="12">
+      <div class="demo-basic">
+        <div class="sub-title">circle</div>
+        <div class="demo-basic--circle">
+          <div class="block">
+            <ver-avatar
+              src="https://cube.elemecdn.com/3/7c/3ea6beec64369c2642b92c6726f1epng.png"
+            />
           </div>
-        </div>
-        <div>
-          <div class="exam-title">square</div>
-          <div class="exam-row">
-            <VerAvatar class="exam-avatar" shape="square" />
-            <VerAvatar class="exam-avatar" shape="square" size="30" />
-            <VerAvatar class="exam-avatar" shape="square" size="50" />
-            <VerAvatar class="exam-avatar" shape="square" size="70" />
+          <div class="block">
+            <ver-avatar
+              :size="24"
+              src="https://cube.elemecdn.com/3/7c/3ea6beec64369c2642b92c6726f1epng.png"
+            />
           </div>
         </div>
       </div>
-    </div>
-    <h2>基本使用</h2>
-    <div class="exam-row">
-      <VerAvatar src="../../assets/example-img.jpg" />
-    </div>
-  </div>
+    </ver-col>
+    <ver-col :span="12">
+      <div class="demo-basic">
+        <div class="sub-title">square</div>
+        <div class="demo-basic--square">
+          <div class="block">
+            <ver-avatar
+              src="https://cube.elemecdn.com/3/7c/3ea6beec64369c2642b92c6726f1epng.png"
+              shape="square"
+            />
+          </div>
+          <div class="block">
+            <ver-avatar
+              :size="24"
+              src="https://cube.elemecdn.com/3/7c/3ea6beec64369c2642b92c6726f1epng.png"
+              shape="square"
+            />
+          </div>
+        </div>
+      </div>
+    </ver-col>
+  </ver-row>
 </template>
 
-<style scoped>
-.exam-box {
-  display: flex;
-}
+<script lang="ts" setup>
+import { VerAvatar, VerRow, VerCol } from '@/index.ts'
+</script>
 
-.exam-avatar {
-  margin: 0 8px;
-}
-.exam-title {
-  width: 100%;
+<style scoped>
+.demo-basic {
   text-align: center;
 }
-.exam-row {
+.demo-basic .sub-title {
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #909399;
+}
+.demo-basic .demo-basic--circle,
+.demo-basic .demo-basic--square {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  margin: 10px 30px;
+}
+.demo-basic .block:not(:last-child) {
+  border-right: 1px solid #dcdfe6;
+}
+.demo-basic .block {
+  flex: 1;
+}
+.demo-basic .el-col:not(:last-child) {
+  border-right: 1px solid #dcdfe6;
 }
 </style>

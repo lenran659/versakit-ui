@@ -23,6 +23,8 @@
 import { ref } from 'vue'
 import type { TabProps } from './type.ts'
 
+defineOptions({ name: 'VerTab' })
+
 // 通过props接收tab列表
 const props = withDefaults(defineProps<TabProps>(), {
   tabList: () => [],

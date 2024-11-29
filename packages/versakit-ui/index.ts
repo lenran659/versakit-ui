@@ -27,6 +27,7 @@ import VerForm from './components/form/index'
 import VerFormItem from './components/formItem/index'
 import VerTab from './components/tab/index'
 import VerIcon from './components/icon'
+import VerPopOver from './components/popover'
 
 // 组件注册
 const components: Component = [
@@ -55,6 +56,7 @@ const components: Component = [
   VerFormItem,
   VerTab,
   VerIcon,
+  VerPopOver,
 ]
 
 export {
@@ -83,6 +85,7 @@ export {
   VerFormItem,
   VerTab,
   VerIcon,
+  VerPopOver,
 }
 
 // 全局注册

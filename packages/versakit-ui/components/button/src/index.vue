@@ -17,7 +17,7 @@ import type { ButtonProps } from './type'
 
 defineOptions({ name: 'VerButton' })
 
-function CheckIsColor(colorValue) {
+const CheckIsColor = (colorValue: string) => {
   let type = /^#[0-9a-fA-F]{6}$/
   let re = new RegExp(type)
   if (colorValue.match(re) == null) {
@@ -42,11 +42,11 @@ const props = withDefaults(defineProps<ButtonProps>(), {
   text: false,
   shade: false,
   disabled: false,
-  size: '',
+  size: 'default',
   color: '',
 })
 
-const Verclass: any = computed(() => {
+const Verclass = computed(() => {
   const validColor = CheckIsColor(props.color)
 
   return [

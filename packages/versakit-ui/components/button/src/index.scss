@@ -154,7 +154,7 @@
 
 /* shade属性 */
 .ver-btn.is-shade {
-  box-shadow: 2px 0 10px $ver-zinc-4;
+  box-shadow: 0px 0 10px 0px $ver-zinc-4;
 
   &:not(.is-disabled):hover {
     box-shadow: 0 0 3px $ver-zinc-4;

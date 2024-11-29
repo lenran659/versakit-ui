@@ -133,18 +133,18 @@ import { VerButton, VerRow } from '@/index'
     <h2>按钮尺寸</h2>
     <VerRow>
       <VerButton size="small" type="primary">small</VerButton>
-      <VerButton size="medium" type="primary">medium</VerButton>
+      <VerButton type="primary">Default</VerButton>
       <VerButton size="large" type="primary">large</VerButton>
       <VerButton round size="small" plain type="success">small</VerButton>
-      <VerButton round size="medium" plain type="success">medium</VerButton>
+      <VerButton round plain type="success">Default</VerButton>
       <VerButton round size="large" plain type="success">large</VerButton>
     </VerRow>
     <VerRow>
       <VerButton round size="small" type="warning">small</VerButton>
-      <VerButton round size="medium" type="warning">medium</VerButton>
+      <VerButton round type="warning">Default</VerButton>
       <VerButton round size="large" type="warning">large</VerButton>
       <VerButton text size="small" type="danger">small</VerButton>
-      <VerButton text size="medium" type="danger">medium</VerButton>
+      <VerButton text type="danger">Default</VerButton>
       <VerButton text size="large" type="danger">large</VerButton>
     </VerRow>
   </div>

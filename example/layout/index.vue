@@ -5,38 +5,7 @@ import { useRouter, useRoute } from 'vue-router'
 const router = useRouter()
 const route = useRoute()
 
-const list = ref([
-  {
-    id: 1,
-    title: 'Button 按钮',
-    path: '/',
-  },
-  {
-    id: 2,
-    title: 'Input 输入框',
-    path: '/input',
-  },
-  {
-    id: 3,
-    title: 'Tag 标签',
-    path: '/tag',
-  },
-  {
-    id: 4,
-    title: 'Text 文本',
-    path: '/text',
-  },
-  {
-    id: 5,
-    title: 'Link 链接',
-    path: '/link',
-  },
-  {
-    id: 6,
-    title: 'Divider 分割线',
-    path: '/divider',
-  },
-])
+const list = ref([])
 
 const topath = (path: string) => {
   router.push(path)

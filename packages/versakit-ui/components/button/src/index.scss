@@ -4,12 +4,12 @@
 @use 'sass:color';
 
 .ver-btn {
-  display: inline-block;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   line-height: 1;
   white-space: nowrap;
   cursor: pointer;
-  color: $ver-zinc-1;
-  background: $ver-zinc-6;
   appearance: none;
   -webkit-appearance: none;
   text-align: center;
@@ -28,10 +28,6 @@
   border-radius: 4px;
   border: none;
 
-  &:not(.is-disabled):hover {
-    background-color: color.adjust($ver-zinc-6, $lightness: 10%);
-  }
-
   &:not(.is-disabled):active {
     transform: scale(0.9);
   }
@@ -39,6 +35,11 @@
   .dark & {
     color: $ver-zinc-3;
     background-color: $ver-zinc-8;
+  }
+
+  span {
+    display: inline-flex;
+    align-items: center;
   }
 }
 
@@ -154,10 +155,10 @@
 
 /* shade属性 */
 .ver-btn.is-shade {
-  box-shadow: 0px 0 10px 0px $ver-zinc-4;
+  box-shadow: 0px 0 10px 0px $ver-zinc-5;
 
   &:not(.is-disabled):hover {
-    box-shadow: 0 0 3px $ver-zinc-4;
+    box-shadow: 0px 0 10px 0px $ver-zinc-5;
   }
 }
 
@@ -203,4 +204,10 @@ $button-colors: (
   //   border: 1px solid $ver-zinc-7;
   //   background-color: $ver-zinc-9;
   // }
+}
+
+// circle
+.ver-btn.is-circle {
+  border-radius: 50%;
+  padding: 7px;
 }

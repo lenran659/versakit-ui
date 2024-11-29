@@ -12,4 +12,6 @@ export interface ButtonProps {
   disabled?: boolean
   size?: SizeType
   color?: string
+  circle?: boolean
+  icon?: string
 }

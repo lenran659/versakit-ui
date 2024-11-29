@@ -5,7 +5,10 @@
     :size="props.size"
     :color="props.color"
   >
-    <span class="ver-btn-span">
+    <!-- icon -->
+    <ver-icon v-if="icon" :name="icon"></ver-icon>
+    <!-- common -->
+    <span v-else>
       <slot></slot>
     </span>
   </button>
@@ -13,6 +16,7 @@
 
 <script setup lang="ts">
 import { computed } from 'vue'
+import VerIcon from '../../icon/index.ts'
 import type { ButtonProps } from './type'
 
 defineOptions({ name: 'VerButton' })
@@ -44,6 +48,8 @@ const props = withDefaults(defineProps<ButtonProps>(), {
   disabled: false,
   size: 'default',
   color: '',
+  circle: false,
+  icon: '',
 })
 
 const Verclass = computed(() => {
@@ -60,6 +66,7 @@ const Verclass = computed(() => {
     props.disabled == false ? '' : 'is-disabled',
     props.size && props.size !== 'medium' ? `is-${props.size}` : '',
     props.color && validColor !== '' ? `ver-btn-color-${validColor}` : '',
+    props.circle == false ? '' : 'is-circle',
   ]
 })
 </script>

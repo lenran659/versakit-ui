@@ -72,7 +72,7 @@ watch(isVisable, (val) => {
       case 'top-right':
         contentStyle.value.top = 0
         contentStyle.value.left =
-          useElementSize(referenceTarget.value).width + 'px'
+          useElementSize(referenceTarget.value).width / 15 + 'px'
         break
       // 左下
       case 'bottom-left':
@@ -86,14 +86,14 @@ watch(isVisable, (val) => {
         contentStyle.value.top =
           useElementSize(referenceTarget.value).height + 'px'
         contentStyle.value.left =
-          useElementSize(referenceTarget.value).width + 'px'
+          useElementSize(referenceTarget.value).width / 15 + 'px'
         break
       // 底部中间
       case 'bottom-center':
         contentStyle.value.top =
           useElementSize(referenceTarget.value).height + 'px'
         contentStyle.value.left =
-          useElementSize(referenceTarget.value).width / 2 -
+          useElementSize(referenceTarget.value).width / 32 -
           useElementSize(contentTarget.value).width / 2 +
           'px'
         break
@@ -103,7 +103,7 @@ watch(isVisable, (val) => {
         contentStyle.value.top =
           -useElementSize(contentTarget.value).height + 'px'
         contentStyle.value.left =
-          useElementSize(referenceTarget.value).width / 2 -
+          useElementSize(referenceTarget.value).width / 32 -
           useElementSize(contentTarget.value).width / 2 +
           'px'
         break
@@ -113,7 +113,11 @@ watch(isVisable, (val) => {
 </script>
 
 <template>
-  <div class="relative" @mouseleave="onMouseleave" @mouseenter="onMouseenter">
+  <div
+    class="ver-popover"
+    @mouseleave="onMouseleave"
+    @mouseenter="onMouseenter"
+  >
     <!-- 具名插槽 -->
     <div ref="referenceTarget">
       <!-- 具名插槽 -->
@@ -124,11 +128,11 @@ watch(isVisable, (val) => {
       <div
         v-show="isVisable"
         ref="contentTarget"
-        class="absolute select-none text-sm p3 z-20 bg-white shadow-md dark:bg-zinc-8 rounded-md dark:border-zinc-700 dark:text-white"
+        class="ver-popover-item"
         :style="contentStyle"
       >
         <!-- 匿名插槽 -->
-        <div class="w-max">
+        <div class="content">
           <slot />
         </div>
       </div>
@@ -136,4 +140,49 @@ watch(isVisable, (val) => {
   </div>
 </template>
 
-<style lang="scss" scoped src="./index.scss"></style>
+<style lang="scss" scoped>
+.ver-popover {
+  position: relative;
+
+  .ver-popover-item {
+    position: absolute;
+    user-select: none;
+    font-size: 0.875rem;
+    padding: 1rem;
+    z-index: 20;
+    background-color: white;
+    box-shadow:
+      0 4px 6px -1px rgba(0, 0, 0, 0.1),
+      0 2px 4px -1px rgba(0, 0, 0, 0.06);
+
+    &.dark {
+      background-color: #27272a;
+      border-color: #3f3f46;
+      color: white;
+    }
+
+    content {
+      width: max-content;
+    }
+  }
+}
+
+// slide 展示动画
+.slide-enter-active {
+  transition:
+    opacity 0.3s,
+    transform 0.3s;
+}
+
+.slide-leave-active {
+  transition:
+    opacity 0.3s,
+    transform 0.3s;
+}
+
+.slide-enter-from,
+.slide-leave-to {
+  transform: translateY(20px);
+  opacity: 0;
+}
+</style>

@@ -3,6 +3,7 @@ import { VerButton, VerRow } from '@/index'
 </script>
 
 <template>
+  <!-- 基本使用 -->
   <div>
     <h2>基本使用</h2>
     <VerRow>
@@ -56,6 +57,7 @@ import { VerButton, VerRow } from '@/index'
       <VerButton plain round type="danger">danger</VerButton>
     </VerRow>
   </div>
+  <!-- 禁用 -->
   <div>
     <h2>禁用按钮</h2>
     <VerRow>
@@ -85,6 +87,7 @@ import { VerButton, VerRow } from '@/index'
       <VerButton disabled plain text type="danger">danger</VerButton>
     </VerRow>
   </div>
+  <!-- 文本 -->
   <div>
     <h2>文本按钮</h2>
     <VerRow>
@@ -96,6 +99,7 @@ import { VerButton, VerRow } from '@/index'
       <VerButton text type="danger">danger</VerButton>
     </VerRow>
     <VerRow>
+      <VerButton disabled text>none</VerButton>
       <VerButton disabled text type="primary">primary</VerButton>
       <VerButton disabled text type="success">success</VerButton>
       <VerButton disabled text type="info">info</VerButton>
@@ -103,9 +107,28 @@ import { VerButton, VerRow } from '@/index'
       <VerButton disabled text type="danger">danger</VerButton>
     </VerRow>
   </div>
+  <!-- 阴影 -->
   <div>
     <h2>阴影按钮</h2>
+    <VerRow>
+      <VerButton shade>none</VerButton>
+      <VerButton shade type="primary">primary</VerButton>
+      <VerButton shade type="success">success</VerButton>
+      <VerButton shade type="info">info</VerButton>
+      <VerButton shade type="warning">warning</VerButton>
+      <VerButton shade type="danger">danger</VerButton>
+    </VerRow>
+
+    <VerRow>
+      <VerButton disabled shade>none</VerButton>
+      <VerButton disabled shade type="primary">primary</VerButton>
+      <VerButton disabled shade type="success">success</VerButton>
+      <VerButton disabled shade type="info">info</VerButton>
+      <VerButton disabled shade type="warning">warning</VerButton>
+      <VerButton disabled shade type="danger">danger</VerButton>
+    </VerRow>
   </div>
+  <!-- 尺寸 -->
   <div>
     <h2>按钮尺寸</h2>
     <VerRow>
@@ -120,19 +143,30 @@ import { VerButton, VerRow } from '@/index'
       <VerButton round size="small" type="warning">small</VerButton>
       <VerButton round size="medium" type="warning">medium</VerButton>
       <VerButton round size="large" type="warning">large</VerButton>
-      <VerButton word size="small" type="danger">small</VerButton>
-      <VerButton word size="medium" type="danger">medium</VerButton>
-      <VerButton word size="large" type="danger">large</VerButton>
+      <VerButton text size="small" type="danger">small</VerButton>
+      <VerButton text size="medium" type="danger">medium</VerButton>
+      <VerButton text size="large" type="danger">large</VerButton>
     </VerRow>
   </div>
+  <!-- 图标 -->
   <div>
-    <h2>图标按钮（在前在后</h2>
+    <h2>图标按钮（在前在后）</h2>
   </div>
+  <!-- 加载 -->
   <div>
     <h2>加载按钮</h2>
   </div>
+  <!-- 自定义颜色 -->
   <div>
     <h2>自定义颜色按钮</h2>
+    <VerRow>
+      <VerButton color="'#626aef'" text>none</VerButton>
+      <VerButton color="'#626aef'" text>primary</VerButton>
+      <VerButton color="'#626aef'" text>success</VerButton>
+      <VerButton color="'#626aef'" text>info</VerButton>
+      <VerButton color="'#626aef'" text>warning</VerButton>
+      <VerButton color="'#626aef'" text>danger</VerButton>
+    </VerRow>
   </div>
 </template>
 

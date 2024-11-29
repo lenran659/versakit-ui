@@ -37,7 +37,8 @@
   }
 
   .dark & {
-    background-color: $ver-zinc-9;
+    color: $ver-zinc-3;
+    background-color: $ver-zinc-8;
   }
 }
 
@@ -55,8 +56,25 @@
 @include VerBtnGhost('warning', $ver-orange-5, $ver-orange-6);
 @include VerBtnGhost('danger', $ver-red-5, $ver-red-6);
 
-.ver-btn.is-ghost {
+.is-ghost {
   padding: 12px 19px;
+  background-color: transparent;
+  color: $ver-zinc-6;
+  border: 1.5px solid $ver-zinc-5;
+
+  &:not(.is-disabled):hover {
+    background-color: $ver-zinc-6;
+    border-color: $ver-zinc-6;
+    color: $ver-zinc-1;
+  }
+
+  .dark & {
+    border-color: $ver-zinc-8;
+    &:not(.is-disabled):hover {
+      background-color: $ver-zinc-2;
+      color: $ver-zinc-6;
+    }
+  }
 }
 
 /* round属性 */
@@ -78,13 +96,51 @@
 @include VerBtnPlain('warning', $ver-orange-1, $ver-orange-6);
 @include VerBtnPlain('danger', $ver-red-1, $ver-red-6);
 
+.is-plain {
+  color: $ver-zinc-6;
+  background-color: $ver-zinc-1;
+  border: 1px solid $ver-zinc-6;
+
+  &:not(.is-disabled):hover {
+    background-color: $ver-zinc-1;
+    color: $ver-zinc-6;
+  }
+
+  .dark & {
+    &:not(.is-disabled):hover {
+      background-color: $ver-zinc-2;
+      color: $ver-zinc-8;
+      border-color: $ver-zinc-8;
+    }
+  }
+}
+
 /* text属性 */
-@include VerBtnText(null, $ver-zinc-1, $ver-zinc-6); //text
+@include VerBtnText(null, $ver-zinc-1, $ver-zinc-6);
 @include VerBtnText('primary', $ver-violet-1, $ver-violet-6);
 @include VerBtnText('success', $ver-green-1, $ver-green-6);
 @include VerBtnText('info', $ver-zinc-1, $ver-zinc-6);
 @include VerBtnText('warning', $ver-orange-1, $ver-orange-6);
 @include VerBtnText('danger', $ver-red-1, $ver-red-6);
+
+.is-text {
+  border: none;
+  color: $ver-zinc-6;
+  background-color: transparent;
+
+  &:not(.is-disabled):hover {
+    background-color: $ver-zinc-1;
+  }
+
+  .dark & {
+    color: $ver-zinc-6;
+    background-color: transparent;
+
+    &:not(.is-disabled):hover {
+      color: $ver-zinc-9;
+    }
+  }
+}
 
 /* size属性 */
 .ver-btn.is-small {
@@ -94,6 +150,15 @@
 .ver-btn.is-large {
   font-size: 16px;
   padding: 14px 25px;
+}
+
+/* shade属性 */
+.ver-btn.is-shade {
+  box-shadow: 2px 0 10px $ver-zinc-4;
+
+  &:not(.is-disabled):hover {
+    box-shadow: 0 0 3px $ver-zinc-4;
+  }
 }
 
 /* 禁用属性 */

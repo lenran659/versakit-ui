@@ -7,6 +7,9 @@ export interface ButtonProps {
   round?: boolean
   plain?: boolean
   text?: boolean
+  shade?: boolean
+  slide?: boolean
   disabled?: boolean
   size?: SizeType
+  color?: string
 }

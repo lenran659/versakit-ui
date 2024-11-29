@@ -20,17 +20,6 @@
 
 /* 灵魂按钮 */
 @mixin VerBtnGhost($type, $color5, $color6) {
-  .is-ghost {
-    background-color: transparent;
-    color: $ver-zinc-6;
-    border: 1.5px solid $ver-zinc-5;
-
-    &:not(.is-disabled):hover {
-      background-color: $ver-zinc-6;
-      border-color: $ver-zinc-6;
-      color: $ver-zinc-1;
-    }
-  }
   .ver-btn-#{$type}.is-ghost {
     color: $color6;
     border: 1.5px solid $color5;
@@ -39,20 +28,21 @@
       background-color: $color6;
       border-color: $color6;
     }
+
+    .dark & {
+      border-color: $color5;
+      background-color: $ver-zinc-2;
+
+      &:not(.is-disabled):hover {
+        background-color: $color6;
+        color: $ver-zinc-1;
+      }
+    }
   }
 }
 
 /* plain属性 */
 @mixin VerBtnPlain($type, $color1, $color6) {
-  .is-plain {
-    color: $ver-zinc-6;
-    background-color: $ver-zinc-1;
-    border: 1px solid $ver-zinc-6;
-
-    &:not(.is-disabled):hover {
-      background-color: $ver-zinc-1;
-    }
-  }
   .ver-btn-#{$type}.is-plain {
     color: $color6;
     border: 1px solid $color6;
@@ -60,21 +50,22 @@
 
     &:not(.is-disabled):hover {
       background-color: $color1;
+      color: $color6;
+    }
+
+    .dark & {
+      background-color: $ver-zinc-2;
+
+      &:not(.is-disabled):hover {
+        border-color: $color6;
+        color: $color6;
+      }
     }
   }
 }
 
 /* text属性 */
 @mixin VerBtnText($type, $color1, $color6) {
-  .is-text {
-    border: none;
-    color: $ver-zinc-6;
-    background-color: transparent;
-
-    &:not(.is-disabled):hover {
-      background-color: $ver-zinc-1;
-    }
-  }
   .ver-btn-#{$type}.is-text {
     border: none;
     color: $color6;
@@ -83,14 +74,14 @@
     &:not(.is-disabled):hover {
       background-color: $color1;
     }
-  }
-}
 
-/* word属性 */
-@mixin VerBtnWord($type, $color6) {
-  .ver-btn-#{$type}.is-word {
-    border: none;
-    color: $color6;
-    background-color: transparent;
+    .dark & {
+      color: $color6;
+      background-color: transparent;
+
+      &:not(.is-disabled):hover {
+        color: color.adjust($color6, $lightness: -10%);
+      }
+    }
   }
 }

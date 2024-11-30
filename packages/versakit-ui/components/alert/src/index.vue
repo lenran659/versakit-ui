@@ -2,13 +2,16 @@
   <div :class="VerClass" v-show="isShow">
     <div class="ver-alert_inner">
       <span>{{ title }}</span>
-      <span class="ver-alert_closebtn" @click="handClick">X</span>
+      <span class="ver-alert_closebtn" @click="handClick">
+        <ver-icon name="cross"></ver-icon>
+      </span>
     </div>
   </div>
 </template>
 
 <script lang="ts" setup>
 import { computed, ref } from 'vue'
+import { VerIcon } from '../../../index.ts'
 import type { AlertProps } from './type'
 
 defineOptions({ name: 'VerAlert' })

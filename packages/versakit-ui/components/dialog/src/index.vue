@@ -15,7 +15,9 @@
               {{ props.title }}
             </span>
           </slot>
-          <button class="ver-dialog_headerbtn" @click="close">X</button>
+          <button class="ver-dialog_headerbtn" @click="close">
+            <VerIcon name="cross" />
+          </button>
         </div>
         <div class="ver-dialog_body">
           <slot></slot>
@@ -30,6 +32,7 @@
 
 <script lang="ts" setup>
 import type { DiaLogProps } from './type'
+import { VerIcon } from '../../../index.ts'
 
 defineOptions({ name: 'VerDialog' })
 

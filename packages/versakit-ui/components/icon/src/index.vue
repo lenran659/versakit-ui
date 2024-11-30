@@ -1,14 +1,14 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { IconsProps } from './type.ts'
-import '../../../icons/iconfont'
+import '../../../icons/iconfont.js'
 
 defineOptions({ name: 'VerIcon' })
 
 const props = withDefaults(defineProps<IconsProps>(), {
   name: '',
   size: 14,
-  color: '',
+  color: '#000',
 })
 
 const size = props.size + 'px'
@@ -19,7 +19,7 @@ const IconName = computed(() => {
 </script>
 
 <template>
-  <svg class="ver-icon" :fill="color">
+  <svg class="ver-icon" aria-hidden="true">
     <use :xlink:href="IconName"></use>
   </svg>
 </template>
@@ -33,6 +33,7 @@ const IconName = computed(() => {
   position: relative;
   vertical-align: bottom;
   font-size: inherit;
+  fill: v-bind(color) !important;
   width: v-bind(size);
   height: v-bind(size);
   overflow: hidden;

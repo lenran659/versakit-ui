@@ -11,7 +11,7 @@
 
 <script lang="ts" setup>
 import { computed, ref } from 'vue'
-import { VerIcon } from '../../../index.ts'
+import { VerIcon } from '../../../index'
 import type { AlertProps } from './type'
 
 defineOptions({ name: 'VerAlert' })

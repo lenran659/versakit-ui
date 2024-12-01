@@ -14,7 +14,7 @@
 
 <script lang="ts" setup>
 import { ref, onMounted } from 'vue'
-import { VerIcon } from '../../../index.ts'
+import { VerIcon } from '../../../index'
 import type { NotifivationProps } from './type'
 
 defineOptions({ name: 'VerNotifivation' })

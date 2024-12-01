@@ -16,7 +16,7 @@
 
 <script setup lang="ts">
 import { computed } from 'vue'
-import VerIcon from '../../icon/index.ts'
+import VerIcon from '../../icon/index'
 import type { ButtonProps } from './type'
 
 defineOptions({ name: 'VerButton' })
@@ -64,7 +64,7 @@ const Verclass = computed(() => {
     props.text == false ? '' : 'is-text',
     props.shade == false ? '' : 'is-shade',
     props.disabled == false ? '' : 'is-disabled',
-    props.size && props.size !== 'medium' ? `is-${props.size}` : '',
+    props.size && props.size !== 'default' ? `is-${props.size}` : '',
     props.color && validColor !== '' ? `ver-btn-color-${validColor}` : '',
     props.circle == false ? '' : 'is-circle',
   ]

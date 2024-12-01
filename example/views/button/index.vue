@@ -144,7 +144,9 @@ import { VerButton, VerRow, VerIcon } from '@/index'
       <ver-row>
         <VerButton circle icon="search"></VerButton>
         <VerButton circle type="success" icon="success"></VerButton>
-        <VerButton circle type="warning" icon="edit"></VerButton>
+
+        <VerButton circle type="warning" color="white" icon="edit"></VerButton>
+
         <VerButton circle type="danger" icon="delete-o"></VerButton>
 
         <VerButton>

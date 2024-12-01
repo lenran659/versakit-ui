@@ -13,6 +13,10 @@
         color: $color6;
       }
     }
+
+    &:hover {
+      border-bottom: 1px solid $color5;
+    }
   }
 }
 

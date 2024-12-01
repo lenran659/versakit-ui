@@ -3,11 +3,15 @@
     <slot></slot>
     <span
       class="badge"
-      :class="[VerClass, { 'badge-max': props.value === props.max }]"
+      :class="[
+        VerClass,
+        { 'badge-max': props.value === props.max },
+        props.dot ? 'is-dot' : 'is-normal',
+      ]"
     >
       <slot v-if="!props.dot && props.value === 0" />
       <template v-else>
-        <span v-if="props.dot" class="badge-dot"></span>
+        <span v-if="props.dot"></span>
         <span v-else-if="props.value > props.max">{{ props.max }}+</span>
         <span v-else>{{ props.value }}</span>
       </template>
@@ -17,7 +21,7 @@
 
 <script setup lang="ts">
 import { computed } from 'vue'
-import { BadgeProps } from './type'
+import type { BadgeProps } from './type'
 
 // 使用withDefaults为props设置默认值，让组件使用更方便和容错性更好
 const props = withDefaults(defineProps<BadgeProps>(), {
@@ -33,7 +37,9 @@ const VerClass = computed(() => {
 })
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+@use '../../../style/color/index.scss' as *;
+
 .ver-badge {
   position: relative;
   display: inline-block;
@@ -46,33 +52,38 @@ const VerClass = computed(() => {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  min-width: 15px;
-  height: 15px;
   line-height: 20px;
-  font-size: 12px;
+  font-size: 10px;
   text-align: center;
   border-radius: 10px;
-  background-color: #f56c6c;
-  color: #fff;
+  background-color: $ver-red-6;
+  color: $ver-zinc-1;
+  user-select: none;
+  border-radius: 50%;
+  min-width: max-content;
 }
 
-.badge.badge-dot {
+.is-normal {
+  min-width: 15px;
+  height: 15px;
+}
+
+.badge.is-dot {
   display: inline-block;
-  width: 2px;
-  height: 2px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
-  background-color: #f56c6c;
 }
 
 .badge.badge-info {
-  background-color: #909399;
+  background-color: $ver-zinc-6;
 }
 
 .badge.badge-warning {
-  background-color: #e6a23c;
+  background-color: $ver-orange-6;
 }
 
 .badge.badge-success {
-  background-color: #67c23a;
+  background-color: $ver-green-6;
 }
 </style>

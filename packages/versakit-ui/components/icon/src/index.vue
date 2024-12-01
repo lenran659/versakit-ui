@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed } from 'vue'
-import { IconsProps } from './type.ts'
+import type { IconsProps } from './type.ts'
 import '../../../icons/iconfont.js'
 
 defineOptions({ name: 'VerIcon' })

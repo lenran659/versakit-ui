@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref, watch, nextTick } from 'vue'
 import { useElementSize } from '../../../hooks/useElementSize'
-import { PopOverProps } from './type'
+import type { PopOverProps } from './type'
 
 defineOptions({ name: 'VerPopOver' })
 

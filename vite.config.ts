@@ -23,7 +23,6 @@ export default defineConfig({
   },
   // 打包配置
   build: {
-    minify: true,
     sourcemap: true,
     rollupOptions: {
       external: ['vue'],

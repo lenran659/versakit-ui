@@ -22,7 +22,7 @@
 
 <script lang="ts" setup>
 import type { DrawerProps } from './type'
-import { VerIcon } from '../../../index.ts'
+import { VerIcon } from '../../../index'
 defineOptions({ name: 'VerDrawer' })
 
 const props = withDefaults(defineProps<DrawerProps>(), {

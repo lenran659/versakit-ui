@@ -13,6 +13,5 @@ defineOptions({ name: 'VerRow' })
   width: 100%;
   height: auto;
   box-sizing: border-box;
-  overflow: hidden;
 }
 </style>

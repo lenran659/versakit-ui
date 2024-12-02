@@ -70,6 +70,7 @@
 
   .dark & {
     border-color: $ver-zinc-8;
+
     &:not(.is-disabled):hover {
       background-color: $ver-zinc-2;
       color: $ver-zinc-6;
@@ -147,6 +148,7 @@
   font-size: 10px;
   padding: 10px 15px;
 }
+
 .ver-btn.is-large {
   font-size: 16px;
   padding: 14px 25px;
@@ -199,6 +201,7 @@ $button-colors: (
   &:active {
     transform: scale(1);
   }
+
   // .dark & {
   //   border: 1px solid $ver-zinc-7;
   //   background-color: $ver-zinc-9;

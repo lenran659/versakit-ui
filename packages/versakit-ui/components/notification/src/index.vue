@@ -5,13 +5,16 @@
       <div class="ver-notification-content">
         <span>{{ content }}</span>
       </div>
-      <div class="ver-notification-closebtn" @click="handClose">X</div>
+      <div class="ver-notification-closebtn" @click="handClose">
+        <VerIcon name="cross" />
+      </div>
     </div>
   </transition>
 </template>
 
 <script lang="ts" setup>
 import { ref, onMounted } from 'vue'
+import { VerIcon } from '../../../index'
 import type { NotifivationProps } from './type'
 
 defineOptions({ name: 'VerNotifivation' })

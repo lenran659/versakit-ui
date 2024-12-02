@@ -15,9 +15,14 @@
   font-size: 14px;
   font-weight: 500;
   color: $ver-zinc-5;
+  transition: 0.1s;
 
   .dark & {
     color: $ver-zinc-1;
+  }
+
+  &:hover {
+    border-bottom: 1px solid $ver-zinc-5;
   }
 }
 

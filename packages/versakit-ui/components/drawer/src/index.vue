@@ -8,7 +8,9 @@
       <div class="ver-drawer">
         <div class="ver-drawer_header">
           <span class="ver-drawer_title">{{ props.title }}</span>
-          <button class="ver-drawer_headerbtn" @click="handleClose">X</button>
+          <button class="ver-drawer_headerbtn" @click="handleClose">
+            <VerIcon name="cross" />
+          </button>
         </div>
         <div class="ver-drawer_body">
           <slot></slot>
@@ -20,7 +22,7 @@
 
 <script lang="ts" setup>
 import type { DrawerProps } from './type'
-
+import { VerIcon } from '../../../index'
 defineOptions({ name: 'VerDrawer' })
 
 const props = withDefaults(defineProps<DrawerProps>(), {

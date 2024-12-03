@@ -11,20 +11,26 @@
   display: flex;
   align-items: center;
   min-height: 45px;
-  padding: 5px 25px;
+  padding: 5px;
   border-radius: 4px;
   user-select: none;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow:
+    0 6px 16px 0 rgba(0, 0, 0, 0.08),
+    0 3px 6px -4px rgba(0, 0, 0, 0.12),
+    0 9px 28px 8px rgba(0, 0, 0, 0.05);
+
+  .ver-icon {
+    margin: 0px 0.25rem;
+  }
+
   .text {
     vertical-align: middle;
     font-size: 14px;
     line-height: 22px;
   }
 }
-
-@include VerMessageType('success', $ver-green-7, $ver-green-3);
-@include VerMessageType('info', $ver-zinc-7, $ver-zinc-3);
-@include VerMessageType('warning', $ver-orange-7, $ver-orange-3);
-@include VerMessageType('danger', $ver-red-7, $ver-red-3);
 
 .down-enter-active,
 .down-leave-active {

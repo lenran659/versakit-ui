@@ -36,6 +36,7 @@
     ]
   },
   "dependencies": {
+    "lodash-unified": "^1.0.3",
     "versakit-ui": "file:",
     "vue": "^3.5.12",
     "vue-router": "4"

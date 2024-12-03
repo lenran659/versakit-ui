@@ -1,94 +1,56 @@
 <template>
-  <Transition :name="animation">
-    <div
-      v-show="visible"
-      class="ver-backtop"
-      :style="backTopStyle"
-      @click="clickIt"
-    >
-      <slot>
-        <div
-          class="ver-backtop-container"
-          :class="{ secondary: theme === 'secondary' }"
-        >
-          <IconTopOutline size="20" />
-        </div>
-      </slot>
-    </div>
-  </Transition>
+  <div
+    v-if="visible"
+    :class="Verclass"
+    :style="backTopStyle"
+    @click.stop="handleClick"
+  >
+    <ver-icon v-if="icon" :name="icon"></ver-icon>
+    <span v-else>
+      <slot></slot>
+    </span>
+  </div>
 </template>
 
 <script setup lang="ts">
-import { computed, nextTick, onBeforeUnmount, onMounted, ref } from 'vue'
-import { transformPxToNumber } from '../../utils'
-import { BackTopProps } from './type.ts'
-
-defineOptions({
-  name: 'VerBackTop',
-})
+import { computed, shallowRef, ref, onMounted } from 'vue'
+import { BackTopProps } from './type'
+import VerIcon from '../../icon/index'
 
 const props = withDefaults(defineProps<BackTopProps>(), {
-  animation: 'upward',
-  right: '24px',
-  bottom: '40px',
-  visibleHeight: '200px',
+  right: '60',
+  bottom: '40',
+  target: 'smooth',
   icon: '',
-  behavior: 'smooth',
+  visibilityHeight: '200',
 })
 
-const getTarget = (target: string | HTMLElement | undefined) => {
-  if (typeof target === 'string') {
-    const targetEl = document.querySelector(target) as HTMLElement
-    if (!targetEl)
-      throw new Error(`ver-back-top target props is not exist: ${props.target}`)
-    return targetEl
-  }
-  return target
-}
-
-const visible = ref<boolean>(false)
-const el = ref<HTMLElement | undefined>()
-
-const backTopStyle = computed(() => {
-  const right = transformPxToNumber(props.right)
-  const bottom = transformPxToNumber(props.bottom)
-  return {
-    right: `${right}px`,
-    bottom: `${bottom}px`,
-  }
+export type BacktopProps = typeof props
+const Verclass = computed(() => {
+  return [
+    'ver-backTop',
+    props.visibleHeight ? `is-visibleHeight-${props.visibleHeight}` : '',
+    props.target ? `is-target-${props.target}` : '',
+  ]
 })
 
-onMounted(async () => {
-  await nextTick()
-  el.value = getTarget(props.target) as HTMLElement | undefined
-  ;(el.value || document).addEventListener('scroll', handleScroll)
+const backTopStyle = computed(() => ({
+  right: `${props.right}px`,
+  bottom: `${props.bottom}px`,
+}))
+
+const el = shallowRef<HTMLElement | null>(null)
+const container = shallowRef<Document | HTMLElement>()
+const visible = ref(true)
+
+const handleClick = () => {
+  console.log('click')
+  el.value?.scrollTo({ top: 0, behavior: 'smooth' })
+}
+
+onMounted(() => {
+  container.value = document
+  el.value = document.documentElement
 })
-
-onBeforeUnmount(() => {
-  ;(el.value || document).removeEventListener('scroll', handleScroll)
-})
-
-const handleScroll = () => {
-  const visibleHeight = transformPxToNumber(props.visibleHeight)
-  const scrollTop = (el.value || document.documentElement).scrollTop
-  if (scrollTop >= visibleHeight) {
-    visible.value = true
-  } else {
-    visible.value = false
-  }
-}
-
-const backToTop = () => {
-  ;(el.value || document.documentElement).scrollTo({
-    top: 0,
-    behavior: props.behavior,
-  })
-}
-
-const emit = defineEmits(['on-click'])
-
-const clickIt = (e: MouseEvent) => {
-  backToTop()
-  emit('on-click', e)
-}
 </script>
+<style src="./index.scss" lang="scss" scoped></style>

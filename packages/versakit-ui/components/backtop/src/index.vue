@@ -14,7 +14,7 @@
 
 <script setup lang="ts">
 import { computed, shallowRef, ref, onMounted } from 'vue'
-import { BackTopProps } from './type'
+import type { BackTopProps } from './type'
 import VerIcon from '../../icon/index'
 
 const props = withDefaults(defineProps<BackTopProps>(), {

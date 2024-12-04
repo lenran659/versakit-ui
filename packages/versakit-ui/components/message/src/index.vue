@@ -1,9 +1,22 @@
 <template>
   <transition name="down" @after-leave="destroy">
     <div :class="VerClass" v-show="isVisable">
-      <!-- 根据type的值来动态选择图标 -->
-      <VerIcon :color="getIconColor" :name="getIconName" />
-      <span class="text">{{ content }}</span>
+      <template v-if="props.type === 'info'">
+        <VerIcon color="gray" name="info" />
+        <span class="text">{{ content }}</span>
+      </template>
+      <template v-else-if="props.type === 'success'">
+        <VerIcon color="green" name="passed" />
+        <span class="text">{{ content }}</span>
+      </template>
+      <template v-else-if="props.type === 'warning'">
+        <VerIcon color="orange" name="warning" />
+        <span class="text">{{ content }}</span>
+      </template>
+      <template v-if="props.type === 'error'">
+        <VerIcon color="red" name="clear" />
+        <span class="text">{{ content }}</span>
+      </template>
     </div>
   </transition>
 </template>
@@ -14,26 +27,6 @@ import type { MessageProps } from './type'
 import { VerIcon } from '../../../index'
 
 defineOptions({ name: 'VerMessage' })
-
-// 定义图标类型与对应名称、颜色的映射关系，方便扩展和维护
-const iconMap = {
-  success: {
-    name: 'passed',
-    color: 'green',
-  },
-  danger: {
-    name: 'clear',
-    color: 'red',
-  },
-  warning: {
-    name: 'warning',
-    color: 'orange',
-  },
-  info: {
-    name: 'info',
-    color: '#c4c4c4',
-  },
-}
 
 const isVisable = ref(false)
 
@@ -46,16 +39,6 @@ const props = withDefaults(defineProps<MessageProps>(), {
 
 const VerClass = computed(() => {
   return ['ver-message']
-})
-
-// 根据传入的type获取对应的图标名称
-const getIconName = computed(() => {
-  return iconMap[props.type]?.name || 'default-icon-name' // 设置默认图标名称，防止不存在的类型情况
-})
-
-// 根据传入的type获取对应的图标颜色
-const getIconColor = computed(() => {
-  return iconMap[props.type]?.color || 'gray' // 设置默认图标颜色，防止不存在的类型情况
 })
 
 /**

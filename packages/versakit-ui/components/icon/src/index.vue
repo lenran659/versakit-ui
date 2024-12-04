@@ -19,7 +19,7 @@ const IconName = computed(() => {
 </script>
 
 <template>
-  <svg class="ver-icon" aria-hidden="true">
+  <svg class="ver-icon" aria-hidden="true" :style="{ fill: props.color }">
     <use :xlink:href="IconName"></use>
   </svg>
 </template>
@@ -33,7 +33,7 @@ const IconName = computed(() => {
   position: relative;
   vertical-align: bottom;
   font-size: inherit;
-  fill: v-bind(color) !important;
+  // fill: v-bind(color);
   width: v-bind(size);
   height: v-bind(size);
   overflow: hidden;

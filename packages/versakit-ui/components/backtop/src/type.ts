@@ -3,6 +3,7 @@ export interface BackTopProps {
   bottom?: string
   visibleHeight?: string
   icon?: string
+  iconColor?: string
   visibilityHeight?: string
 }
 export const BacktopEmits = {

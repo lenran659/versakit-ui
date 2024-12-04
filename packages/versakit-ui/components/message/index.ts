@@ -1,15 +1,8 @@
 import { h, render } from 'vue'
 import VerMessage from './src/index.vue'
+import { MessageProps } from './src/type'
 
-type typeEnum = 'success' | 'error' | 'warning' | 'info'
-
-interface Options {
-  type?: typeEnum
-  content?: string
-  duration?: number
-}
-
-export default ({ type, content, duration = 3000 }: Options) => {
+export default ({ type, plain, content, duration = 3000 }: MessageProps) => {
   const onDestroy = () => {
     // 3. message 销毁
     render(null, document.body)
@@ -20,6 +13,7 @@ export default ({ type, content, duration = 3000 }: Options) => {
     type,
     content,
     duration,
+    plain,
     destroy: onDestroy,
   })
 

@@ -32,6 +32,13 @@
   }
 }
 
+// plain
+@include messageTypePlain('success', $ver-green-3);
+@include messageTypePlain('error', $ver-red-3);
+@include messageTypePlain('warning', $ver-orange-3);
+@include messageTypePlain('info', $ver-zinc-3);
+
+// 动画
 .down-enter-active,
 .down-leave-active {
   transition: all 0.5s;

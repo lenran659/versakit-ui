@@ -1,22 +1,8 @@
 <template>
   <transition name="down" @after-leave="destroy">
     <div :class="VerClass" v-show="isVisable">
-      <template v-if="props.type === 'info'">
-        <VerIcon color="gray" name="info" />
-        <span class="text">{{ content }}</span>
-      </template>
-      <template v-else-if="props.type === 'success'">
-        <VerIcon color="green" name="passed" />
-        <span class="text">{{ content }}</span>
-      </template>
-      <template v-else-if="props.type === 'warning'">
-        <VerIcon color="orange" name="warning" />
-        <span class="text">{{ content }}</span>
-      </template>
-      <template v-if="props.type === 'error'">
-        <VerIcon color="red" name="clear" />
-        <span class="text">{{ content }}</span>
-      </template>
+      <VerIcon :color="iconColor" :name="iconName" />
+      <span class="text">{{ content }}</span>
     </div>
   </transition>
 </template>
@@ -34,11 +20,43 @@ const props = withDefaults(defineProps<MessageProps>(), {
   type: 'info',
   content: '',
   duration: 0,
+  plain: false,
   destroy: () => {},
 })
 
+// 根据传入的消息类型，计算对应的图标颜色
+const iconColor = computed(() => {
+  switch (props.type) {
+    case 'success':
+      return 'green'
+    case 'warning':
+      return 'orange'
+    case 'error':
+      return 'red'
+    default:
+      return 'gray'
+  }
+})
+
+// 根据传入的消息类型，计算对应的图标名称
+const iconName = computed(() => {
+  switch (props.type) {
+    case 'success':
+      return 'passed'
+    case 'warning':
+      return 'warning'
+    case 'error':
+      return 'clear'
+    default:
+      return 'info'
+  }
+})
+
 const VerClass = computed(() => {
-  return ['ver-message']
+  return [
+    'ver-message',
+    props.plain == false ? '' : `ver-message-${props.type}-plain`,
+  ]
 })
 
 /**

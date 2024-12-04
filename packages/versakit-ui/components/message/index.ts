@@ -1,6 +1,6 @@
 import { h, render } from 'vue'
 import VerMessage from './src/index.vue'
-import { MessageProps } from './src/type'
+import type { MessageProps } from './src/type'
 
 export default ({ type, plain, content, duration = 3000 }: MessageProps) => {
   const onDestroy = () => {

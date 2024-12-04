@@ -1,6 +1,6 @@
 import { render, h } from 'vue'
 import VerNotification from './src/index.vue'
-import { NotifivationProps } from './src/type'
+import type { NotifivationProps } from './src/type'
 
 export default ({
   type,

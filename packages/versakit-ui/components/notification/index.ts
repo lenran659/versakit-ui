@@ -1,13 +1,14 @@
 import { render, h } from 'vue'
 import VerNotification from './src/index.vue'
+import { NotifivationProps } from './src/type'
 
-interface Options {
-  title: string
-  content: string
-  duration?: number
-}
-
-export default ({ title, content, duration = 3000 }: Options) => {
+export default ({
+  type,
+  title,
+  content,
+  plain,
+  duration = 3000,
+}: NotifivationProps) => {
   /**
    * 动画结束时的回调
    */
@@ -18,7 +19,9 @@ export default ({ title, content, duration = 3000 }: Options) => {
 
   // 1. 返回 vnode
   const vnode = h(VerNotification, {
+    type,
     title,
+    plain,
     content,
     duration,
     destroy: onDestroy,

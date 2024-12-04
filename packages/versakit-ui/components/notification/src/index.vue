@@ -1,7 +1,10 @@
 <template>
   <transition name="slide-fade" @after-leave="props.destroy">
-    <div class="ver-notification" v-show="isVisable">
-      <h2 class="ver-notification-title">{{ title }}</h2>
+    <div v-show="isVisable" :class="VerClass">
+      <div class="ver-notification-top">
+        <VerIcon :size="25" :color="iconColor" :name="iconName" />
+        <h2 class="ver-notification-title">{{ title }}</h2>
+      </div>
       <div class="ver-notification-content">
         <span>{{ content }}</span>
       </div>
@@ -13,17 +16,47 @@
 </template>
 
 <script lang="ts" setup>
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, computed } from 'vue'
 import { VerIcon } from '../../../index'
 import type { NotifivationProps } from './type'
 
 defineOptions({ name: 'VerNotifivation' })
 
 const props = withDefaults(defineProps<NotifivationProps>(), {
+  type: 'info',
+  plain: false,
   title: '',
   content: '',
   duration: 3000,
   destroy: () => {},
+})
+
+// 根据传入的消息类型，计算对应的图标颜色
+const iconColor = computed(() => {
+  switch (props.type) {
+    case 'success':
+      return '#4ade80'
+    case 'warning':
+      return 'orange'
+    case 'error':
+      return 'red'
+    default:
+      return 'gray'
+  }
+})
+
+// 根据传入的消息类型，计算对应的图标名称
+const iconName = computed(() => {
+  switch (props.type) {
+    case 'success':
+      return 'passed'
+    case 'warning':
+      return 'warning'
+    case 'error':
+      return 'clear'
+    default:
+      return 'info'
+  }
 })
 
 const isVisable = ref(false)
@@ -31,6 +64,13 @@ const isVisable = ref(false)
 const handClose = () => {
   isVisable.value = false
 }
+
+const VerClass = computed(() => {
+  return [
+    'ver-notification',
+    props.plain == false ? '' : `ver-notification-${props.type}-plain`,
+  ]
+})
 
 /**
  * 保证动画展示，需要在 mounted 之后进行展示
@@ -46,69 +86,4 @@ onMounted(() => {
 })
 </script>
 
-<style lang="scss" scoped>
-@use '../../../style/color/index.scss' as *;
-
-.ver-notification {
-  position: fixed;
-  top: 16px;
-  right: 16px;
-  width: 330px;
-  padding: 14px 26px 14px 13px;
-  border-radius: 8px;
-  border: 1px solid $ver-zinc-1;
-  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.12);
-  background-color: $ver-zinc-1;
-  overflow: hidden;
-  overflow-wrap: anywhere;
-  z-index: 2010;
-  .dark & {
-    border: 1px solid $ver-zinc-7;
-    background-color: $ver-zinc-8;
-    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.12);
-  }
-
-  &-title {
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 24px;
-    color: #303133;
-    margin: 0;
-    border: none;
-    padding: 0;
-
-    .dark & {
-      color: $ver-zinc-1;
-    }
-  }
-  &-content {
-    margin-top: 6px 0 0;
-    font-size: 14px;
-    line-height: 24px;
-    color: #606266;
-    text-align: justify;
-
-    .dark & {
-      color: $ver-zinc-1;
-    }
-  }
-  &-closebtn {
-    position: absolute;
-    top: 18px;
-    right: 15px;
-    cursor: pointer;
-    color: #909399;
-    font-size: 16px;
-  }
-}
-
-.slide-fade-enter-active,
-.slide-fade-leave-active {
-  transition: all 0.5s;
-}
-
-.slide-fade-enter-from,
-.slide-fade-leave-to {
-  transform: translatex(20px);
-}
-</style>
+<style lang="scss" src="./index.scss" scoped></style>

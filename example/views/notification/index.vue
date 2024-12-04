@@ -5,11 +5,13 @@
 </template>
 
 <script lang="ts" setup>
-import { VerButton, VerNotification } from '@/index.ts'
+import { VerButton, VerNotification } from '../../../packages/versakit-ui/index'
 
 const openNotification = () => {
   VerNotification({
+    type: 'info',
     title: 'title',
+    plain: true,
     content: 'content',
   })
 }

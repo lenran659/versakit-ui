@@ -1,14 +1,7 @@
-<!--
- * @Author: 2171204141@qq.com
- * @Date: 2024-11-26 09:12:14
- * @LastEditors: Dream
- * @Description: 
--->
 <template>
   <transition name="down" @after-leave="destroy">
     <div v-show="isVisable" :class="VerClass">
-      <!-- 根据type的值来动态选择图标 -->
-      <VerIcon :color="getIconColor" :name="getIconName" />
+      <VerIcon :color="iconColor" :name="iconName" />
       <span class="text">{{ content }}</span>
     </div>
   </transition>
@@ -21,47 +14,50 @@ import { VerIcon } from '../../../index'
 
 defineOptions({ name: 'VerMessage' })
 
-// 定义图标类型与对应名称、颜色的映射关系，方便扩展和维护
-const iconMap = {
-  success: {
-    name: 'passed',
-    color: 'green',
-  },
-  danger: {
-    name: 'clear',
-    color: 'red',
-  },
-  warning: {
-    name: 'warning',
-    color: 'orange',
-  },
-  info: {
-    name: 'info',
-    color: '#c4c4c4',
-  },
-}
-
 const isVisable = ref(false)
 
 const props = withDefaults(defineProps<MessageProps>(), {
   type: 'info',
   content: '',
   duration: 0,
+  plain: false,
   destroy: () => {},
 })
 
+// 根据传入的消息类型，计算对应的图标颜色
+const iconColor = computed(() => {
+  switch (props.type) {
+    case 'success':
+      return '#4ade80'
+    case 'warning':
+      return 'orange'
+    case 'error':
+      return 'red'
+    default:
+      return 'gray'
+  }
+})
+
+// 根据传入的消息类型，计算对应的图标名称
+const iconName = computed(() => {
+  switch (props.type) {
+    case 'success':
+      return 'passed'
+    case 'warning':
+      return 'warning'
+    case 'error':
+      return 'clear'
+    default:
+      return 'info'
+  }
+})
+
 const VerClass = computed(() => {
-  return ['ver-message']
-})
-
-// 根据传入的type获取对应的图标名称
-const getIconName = computed(() => {
-  return iconMap[props.type]?.name || 'default-icon-name' // 设置默认图标名称，防止不存在的类型情况
-})
-
-// 根据传入的type获取对应的图标颜色
-const getIconColor = computed(() => {
-  return iconMap[props.type]?.color || 'gray' // 设置默认图标颜色，防止不存在的类型情况
+  return [
+    'ver-message',
+    props.type == 'info' ? '' : `ver-message-${props.type}`,
+    props.plain == false ? '' : `ver-message-${props.type}-plain`,
+  ]
 })
 
 /**

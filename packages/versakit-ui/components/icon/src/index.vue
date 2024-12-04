@@ -37,5 +37,9 @@ const IconName = computed(() => {
   width: v-bind(size);
   height: v-bind(size);
   overflow: hidden;
+
+  .dark & {
+    fill: #fff;
+  }
 }
 </style>

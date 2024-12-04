@@ -1,3 +1,9 @@
+/*
+ * @Author: 2171204141@qq.com
+ * @Date: 2024-11-26 09:12:14
+ * @LastEditors: Dream
+ * @Description:
+ */
 // @see https://eslint.bootcss.com/docs/rules/
 
 module.exports = {
@@ -56,6 +62,7 @@ module.exports = {
     'vue/attribute-hyphenation': 'off', // 对模板中的自定义组件强制执行属性命名样式
   },
   globals: {
+    defineOptions: 'readonly',
     withDefaults: 'readonly', // 声明 `withDefaults` 为全局只读变量
     defineProps: 'readonly',
   },

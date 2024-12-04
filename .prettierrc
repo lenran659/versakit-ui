@@ -2,6 +2,7 @@
   "singleQuote": true,
   "semi": false,
   "bracketSpacing": true,
+  "printWidth": 80,
   "htmlWhitespaceSensitivity": "ignore",
   "endOfLine": "auto",
   "trailingComma": "all",

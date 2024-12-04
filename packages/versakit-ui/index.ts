@@ -22,7 +22,6 @@ import VerHeader from './components/header/index'
 import VerMain from './components/main/index'
 import VerNotification from './components/notification/index'
 import VerNotificationVue from './components/notification/src/index.vue'
-import VerAlert from './components/alert/index'
 import VerForm from './components/form/index'
 import VerFormItem from './components/formItem/index'
 import VerTab from './components/tab/index'
@@ -53,7 +52,6 @@ const components: Component = [
   VerHeader,
   VerMain,
   VerNotificationVue,
-  VerAlert,
   VerForm,
   VerFormItem,
   VerTab,
@@ -84,7 +82,6 @@ export {
   VerHeader,
   VerMain,
   VerNotification,
-  VerAlert,
   VerForm,
   VerFormItem,
   VerTab,

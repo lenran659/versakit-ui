@@ -2,7 +2,6 @@ export interface BackTopProps {
   right?: string
   bottom?: string
   visibleHeight?: string
-  target?: string
   icon?: string
   visibilityHeight?: string
 }

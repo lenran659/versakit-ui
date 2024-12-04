@@ -2,10 +2,8 @@
 @use '../../../style/utils/notification/index.scss' as *;
 
 .ver-notification {
-  position: fixed;
-  top: 16px;
-  right: 16px;
   width: 330px;
+  height: auto;
   padding: 14px 26px 14px 13px;
   border-radius: 8px;
   border: 1px solid $ver-zinc-1;

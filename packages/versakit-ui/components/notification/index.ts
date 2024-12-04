@@ -7,6 +7,7 @@ export default ({
   title,
   content,
   plain,
+  position,
   duration = 3000,
 }: NotifivationProps) => {
   /**
@@ -23,6 +24,7 @@ export default ({
     title,
     plain,
     content,
+    position,
     duration,
     destroy: onDestroy,
   })

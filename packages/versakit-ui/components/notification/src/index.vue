@@ -1,6 +1,6 @@
 <template>
   <transition name="slide-fade" @after-leave="props.destroy">
-    <div v-show="isVisable" :class="VerClass">
+    <div v-show="isVisable" :class="VerClass" :style="positionStyle">
       <div class="ver-notification-top">
         <VerIcon :size="25" :color="iconColor" :name="iconName" />
         <h2 class="ver-notification-title">{{ title }}</h2>
@@ -28,6 +28,7 @@ const props = withDefaults(defineProps<NotifivationProps>(), {
   title: '',
   content: '',
   duration: 3000,
+  position: 'top-right',
   destroy: () => {},
 })
 
@@ -56,6 +57,43 @@ const iconName = computed(() => {
       return 'clear'
     default:
       return 'info'
+  }
+})
+
+// 使用对象展开语法结合类型断言返回样式对象
+const positionStyle = computed(() => {
+  const baseStyle: Record<string, string> = {}
+  switch (props.position) {
+    case 'top-right':
+      return {
+        ...baseStyle,
+        position: 'fixed',
+        top: '20px',
+        right: '20px',
+      } as unknown as Record<string, string>
+    case 'top-left':
+      return {
+        ...baseStyle,
+        position: 'fixed',
+        top: '20px',
+        left: '20px',
+      } as unknown as Record<string, string>
+    case 'bottom-right':
+      return {
+        ...baseStyle,
+        position: 'fixed',
+        bottom: '20px',
+        right: '20px',
+      } as unknown as Record<string, string>
+    case 'bottom-left':
+      return {
+        ...baseStyle,
+        position: 'fixed',
+        bottom: '20px',
+        left: '20px',
+      } as unknown as Record<string, string>
+    default:
+      return baseStyle
   }
 })
 

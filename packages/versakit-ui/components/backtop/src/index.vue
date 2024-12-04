@@ -5,7 +5,7 @@
     :style="backTopStyle"
     @click.stop="handleClick"
   >
-    <ver-icon v-if="icon" :name="icon"></ver-icon>
+    <ver-icon v-if="icon" :name="icon" size="30"></ver-icon>
     <span v-else>
       <slot></slot>
     </span>
@@ -17,10 +17,10 @@ import { computed, shallowRef, ref, onMounted } from 'vue'
 import type { BackTopProps } from './type'
 import VerIcon from '../../icon/index'
 
+// eslint-disable-next-line no-undef
 const props = withDefaults(defineProps<BackTopProps>(), {
   right: '60',
   bottom: '40',
-  target: 'smooth',
   icon: '',
   visibilityHeight: '200',
 })
@@ -30,7 +30,6 @@ const Verclass = computed(() => {
   return [
     'ver-backTop',
     props.visibleHeight ? `is-visibleHeight-${props.visibleHeight}` : '',
-    props.target ? `is-target-${props.target}` : '',
   ]
 })
 

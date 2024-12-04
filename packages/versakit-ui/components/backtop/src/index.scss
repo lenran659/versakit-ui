@@ -3,11 +3,11 @@
 @use 'sass:color';
 .ver-backTop {
   position: fixed;
-  background-color: $ver-violet-6;
+  background-color: $ver-zinc-1;
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  color: $ver-zinc-1;
+  color: $ver-violet-6;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -17,7 +17,7 @@
   z-index: 5;
 
   &:hover {
-    background-color: color.adjust($ver-violet-6, $lightness: 5%);
+    background-color: color.adjust($ver-zinc-1, $lightness: -5%);
   }
 
   &:active {

@@ -1,6 +1,6 @@
 <template>
   <transition name="down" @after-leave="destroy">
-    <div :class="VerClass" v-show="isVisable">
+    <div v-show="isVisable" :class="VerClass">
       <VerIcon :color="iconColor" :name="iconName" />
       <span class="text">{{ content }}</span>
     </div>

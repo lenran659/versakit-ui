@@ -28,7 +28,7 @@ const props = withDefaults(defineProps<MessageProps>(), {
 const iconColor = computed(() => {
   switch (props.type) {
     case 'success':
-      return 'green'
+      return '#4ade80'
     case 'warning':
       return 'orange'
     case 'error':
@@ -55,6 +55,7 @@ const iconName = computed(() => {
 const VerClass = computed(() => {
   return [
     'ver-message',
+    props.type == 'info' ? '' : `ver-message-${props.type}`,
     props.plain == false ? '' : `ver-message-${props.type}-plain`,
   ]
 })

@@ -27,13 +27,13 @@
         <VerButton type="success" @click="successPlain">success</VerButton>
       </div>
       <div class="mx-4">
-        <VerButton type="warning" @click="warning">warning</VerButton>
+        <VerButton type="warning" @click="warningPlain">warning</VerButton>
       </div>
       <div class="mx-4">
-        <VerButton type="info" @click="info">info</VerButton>
+        <VerButton type="info" @click="infoPlain">info</VerButton>
       </div>
       <div class="mx-4">
-        <VerButton type="danger" @click="error">error</VerButton>
+        <VerButton type="danger" @click="errorPlain">error</VerButton>
       </div>
     </div>
   </div>
@@ -68,7 +68,6 @@ const successPlain = () => {
     type: 'success',
     plain: true,
     content: '这是一条信息',
-    duration: 80000,
   })
 }
 
@@ -90,6 +89,30 @@ const error = () => {
   VerMessage({
     type: 'error',
     content: '这是一条消息',
+  })
+}
+
+const warningPlain = () => {
+  VerMessage({
+    type: 'warning',
+    content: '这是一条消息',
+    plain: true,
+  })
+}
+
+const infoPlain = () => {
+  VerMessage({
+    type: 'info',
+    content: '这是一条消息',
+    plain: true,
+  })
+}
+
+const errorPlain = () => {
+  VerMessage({
+    type: 'error',
+    content: '这是一条消息',
+    plain: true,
   })
 }
 </script>

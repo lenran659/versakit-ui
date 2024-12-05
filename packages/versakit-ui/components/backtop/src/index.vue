@@ -51,7 +51,6 @@ const container = shallowRef<Document | HTMLElement>()
 const visible = ref(true)
 
 const handleClick = () => {
-  console.log('click')
   el.value?.scrollTo({ top: 0, behavior: 'smooth' })
 }
 

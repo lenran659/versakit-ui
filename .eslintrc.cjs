@@ -65,5 +65,6 @@ module.exports = {
     defineOptions: 'readonly',
     withDefaults: 'readonly', // 声明 `withDefaults` 为全局只读变量
     defineProps: 'readonly',
+    defineEmits: 'readonly',
   },
 }

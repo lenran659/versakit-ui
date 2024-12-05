@@ -1,13 +1,21 @@
+<!--
+ * @Author: 2171204141@qq.com
+ * @Date: 2024-11-26 09:12:14
+ * @LastEditors: Dream
+ * @Description: drawer组件
+-->
 <template>
   <transition name="fade">
     <div
-      class="ver-drawer_wrapper"
       v-show="props.modelValue"
+      :class="['ver-drawer_wrapper', `ver-drawer-${props.direction}`]"
       @click.self="handleClose"
     >
       <div class="ver-drawer">
         <div class="ver-drawer_header">
-          <span class="ver-drawer_title">{{ props.title }}</span>
+          <span class="ver-drawer_title">
+            {{ props.title ? props.title : '标题' }}
+          </span>
           <button class="ver-drawer_headerbtn" @click="handleClose">
             <VerIcon name="cross" />
           </button>
@@ -21,12 +29,14 @@
 </template>
 
 <script lang="ts" setup>
+import { defineEmits } from 'vue'
 import type { DrawerProps } from './type'
 import { VerIcon } from '../../../index'
 defineOptions({ name: 'VerDrawer' })
 
 const props = withDefaults(defineProps<DrawerProps>(), {
   modelValue: false,
+  direction: 'left',
 })
 
 const emit = defineEmits(['update:modelValue'])

@@ -1,30 +1,32 @@
 <template>
-  <ver-row class="mb-4">
-    <ver-col :span="24"><div class="col-box"></div></ver-col>
-  </ver-row>
-  <ver-row class="mb-4">
-    <ver-col :span="12"><div class="col-box col-box-1"></div></ver-col>
-    <ver-col :span="12"><div class="col-box col-box-2"></div></ver-col>
-  </ver-row>
-  <ver-row class="mb-4">
-    <ver-col :span="8"><div class="col-box col-box-1"></div></ver-col>
-    <ver-col :span="8"><div class="col-box col-box-2"></div></ver-col>
-    <ver-col :span="8"><div class="col-box col-box-1"></div></ver-col>
-  </ver-row>
-  <ver-row class="mb-4">
-    <ver-col :span="6"><div class="col-box col-box-1"></div></ver-col>
-    <ver-col :span="6"><div class="col-box col-box-2"></div></ver-col>
-    <ver-col :span="6"><div class="col-box col-box-1"></div></ver-col>
-    <ver-col :span="6"><div class="col-box col-box-2"></div></ver-col>
-  </ver-row>
-  <ver-row class="mb-4">
-    <ver-col :span="4"><div class="col-box col-box-1"></div></ver-col>
-    <ver-col :span="4"><div class="col-box col-box-2"></div></ver-col>
-    <ver-col :span="4"><div class="col-box col-box-1"></div></ver-col>
-    <ver-col :span="4"><div class="col-box col-box-2"></div></ver-col>
-    <ver-col :span="4"><div class="col-box col-box-1"></div></ver-col>
-    <ver-col :span="4"><div class="col-box col-box-2"></div></ver-col>
-  </ver-row>
+  <div>
+    <ver-row class="mb-4">
+      <ver-col :span="24"><div class="col-box"></div></ver-col>
+    </ver-row>
+    <ver-row class="mb-4">
+      <ver-col :span="12"><div class="col-box col-box-1"></div></ver-col>
+      <ver-col :span="12"><div class="col-box col-box-2"></div></ver-col>
+    </ver-row>
+    <ver-row class="mb-4">
+      <ver-col :span="8"><div class="col-box col-box-1"></div></ver-col>
+      <ver-col :span="8"><div class="col-box col-box-2"></div></ver-col>
+      <ver-col :span="8"><div class="col-box col-box-1"></div></ver-col>
+    </ver-row>
+    <ver-row class="mb-4">
+      <ver-col :span="6"><div class="col-box col-box-1"></div></ver-col>
+      <ver-col :span="6"><div class="col-box col-box-2"></div></ver-col>
+      <ver-col :span="6"><div class="col-box col-box-1"></div></ver-col>
+      <ver-col :span="6"><div class="col-box col-box-2"></div></ver-col>
+    </ver-row>
+    <ver-row class="mb-4">
+      <ver-col :span="4"><div class="col-box col-box-1"></div></ver-col>
+      <ver-col :span="4"><div class="col-box col-box-2"></div></ver-col>
+      <ver-col :span="4"><div class="col-box col-box-1"></div></ver-col>
+      <ver-col :span="4"><div class="col-box col-box-2"></div></ver-col>
+      <ver-col :span="4"><div class="col-box col-box-1"></div></ver-col>
+      <ver-col :span="4"><div class="col-box col-box-2"></div></ver-col>
+    </ver-row>
+  </div>
 </template>
 
 <script setup lang="ts">

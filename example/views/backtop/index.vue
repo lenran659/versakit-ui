@@ -5,12 +5,14 @@
  * @Description: backtop
 -->
 <template>
-  <div class="red-box"></div>
-  <div class="yellow-box"></div>
-  <ver-row>
-    <ver-backtop right="140">UP</ver-backtop>
-    <ver-backtop icon="arrow-up" iconColor="#482FBD"></ver-backtop>
-  </ver-row>
+  <div>
+    <div class="red-box"></div>
+    <div class="yellow-box"></div>
+    <ver-row>
+      <ver-backtop right="140">UP</ver-backtop>
+      <ver-backtop icon="arrow-up" iconColor="#482FBD"></ver-backtop>
+    </ver-row>
+  </div>
 </template>
 <script lang="ts" setup>
 import { VerBacktop, VerRow } from '@/index.ts'

@@ -7,7 +7,7 @@ import { VerCard, VerRow } from '@/index.ts'
     <h2>基本使用</h2>
     <VerRow>
       <div class="gap">
-        <VerCard>
+        <VerCard shadow="never">
           <template #header>title</template>
           <p v-for="o in 4" :key="o" class="text item">
             {{ 'List item ' + o }}

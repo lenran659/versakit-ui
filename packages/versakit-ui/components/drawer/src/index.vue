@@ -1,7 +1,7 @@
 <!--
  * @Author: 2171204141@qq.com
  * @Date: 2024-11-26 09:12:14
- * @LastEditors: Dream
+ * @LastEditors: Jannik 1337741710@qq.com
  * @Description: drawer组件
 -->
 <template>

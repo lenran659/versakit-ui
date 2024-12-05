@@ -22,13 +22,14 @@
 import { computed, shallowRef, ref, onMounted } from 'vue'
 import type { BackTopProps } from './type'
 import VerIcon from '../../icon/index'
+import { useEventListener, useThrottleFn } from '@vueuse/core'
 
 const props = withDefaults(defineProps<BackTopProps>(), {
   right: '60',
   bottom: '40',
   icon: '',
   iconColor: '#FF0000',
-  visibilityHeight: '200',
+  visibilityHeight: '150',
 })
 
 const iconColor = computed(() => props.iconColor || '#8b5cf6')
@@ -53,10 +54,19 @@ const visible = ref(true)
 const handleClick = () => {
   el.value?.scrollTo({ top: 0, behavior: 'smooth' })
 }
+const handleScroll = () => {
+  if (el.value) {
+    visible.value = el.value.scrollTop >= parseInt(props.visibilityHeight)
+  }
+}
+const handleScrollThrottled = useThrottleFn(handleScroll, 300, true)
+
+useEventListener(container, 'scroll', handleScrollThrottled)
 
 onMounted(() => {
   container.value = document
   el.value = document.documentElement
+  handleScroll()
 })
 </script>
 <style src="./index.scss" lang="scss" scoped></style>

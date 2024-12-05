@@ -1,7 +1,7 @@
 <!--
  * @Author: 2171204141@qq.com
  * @Date: 2024-12-03 21:51:01
- * @LastEditors: Dream
+ * @LastEditors: Jannik 1337741710@qq.com
  * @Description: backtop
 -->
 <template>
@@ -19,12 +19,12 @@ import { VerBacktop, VerRow } from '@/index.ts'
 </script>
 <style scoped>
 .red-box {
-  height: 500px;
+  height: 800px;
   background-color: red;
 }
 
 .yellow-box {
-  height: 500px;
+  height: 800px;
   background-color: yellow;
 }
 </style>

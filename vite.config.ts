@@ -25,7 +25,7 @@ export default defineConfig({
   build: {
     sourcemap: true,
     rollupOptions: {
-      external: ['vue'],
+      external: ['vue', 'vue-router', '@vueuse/core'],
       output: {
         globals: {
           vue: 'Vue',

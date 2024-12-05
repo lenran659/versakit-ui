@@ -19,9 +19,7 @@ import { VerText, VerRow } from '@/index.ts'
     </ver-row>
 
     <ver-row>
-      <ver-text class="w-100px" truncated>
-        Self element set width 100px
-      </ver-text>
+      <ver-text class="w-100" truncated>Self element set width 100px</ver-text>
     </ver-row>
   </div>
 </template>
@@ -29,5 +27,9 @@ import { VerText, VerRow } from '@/index.ts'
 <style scoped>
 .ver-text {
   margin: 1rem;
+}
+
+.w-100 {
+  width: 100px;
 }
 </style>

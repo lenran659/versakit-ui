@@ -9,11 +9,18 @@ import { VerTag } from '@/index.ts'
     <VerTag type="success">Tag1</VerTag>
     <VerTag type="warning">Tag1</VerTag>
     <VerTag type="error">Tag1</VerTag>
+    <VerTag type="info">Tag1</VerTag>
 
     <VerTag plain type="primary">Tag1</VerTag>
     <VerTag plain type="success">Tag1</VerTag>
     <VerTag plain type="warning">Tag1</VerTag>
     <VerTag plain type="error">Tag1</VerTag>
+    <VerTag plain type="info">Tag1</VerTag>
+
+    <h2>尺寸</h2>
+    <VerTag size="large" type="primary">Tag1</VerTag>
+    <VerTag type="primary">Tag1</VerTag>
+    <VerTag size="small" type="primary">Tag1</VerTag>
   </div>
 </template>
 

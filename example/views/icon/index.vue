@@ -247,7 +247,7 @@ const list = [
 
 <template>
   <ver-row>
-    <ver-col :span="4" v-for="(item, index) in list" :key="index">
+    <ver-col v-for="(item, index) in list" :key="index" :span="4">
       <ul>
         <li>
           <ver-icon :name="item" size="30" />
@@ -277,9 +277,10 @@ ul {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    transition: all 0.5s;
 
     &:hover {
-      color: skyblue;
+      transform: scale(1.2);
     }
 
     span {

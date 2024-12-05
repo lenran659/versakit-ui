@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { VerButton, VerRow, VerIcon } from '@/index'
+import { VerButton, VerRow, VerIcon } from '../../../packages/versakit-ui/index'
 </script>
 
 <template>
@@ -58,6 +58,20 @@ import { VerButton, VerRow, VerIcon } from '@/index'
         <VerButton plain round type="error">error</VerButton>
       </VerRow>
     </div>
+
+    <div>
+      <h2>水波纹</h2>
+
+      <VerRow>
+        <VerButton v-ripple>none</VerButton>
+        <VerButton v-ripple type="primary">primary</VerButton>
+        <VerButton v-ripple type="success">success</VerButton>
+        <VerButton v-ripple type="info">info</VerButton>
+        <VerButton v-ripple type="warning">warning</VerButton>
+        <VerButton v-ripple type="error">error</VerButton>
+      </VerRow>
+    </div>
+
     <!-- 禁用 -->
     <div>
       <h2>禁用按钮</h2>

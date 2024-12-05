@@ -30,6 +30,9 @@ import VerPopOver from './components/popover'
 import VerBadge from './components/badge'
 import VerBacktop from './components/backtop'
 
+/* 指令 */
+import { vRipple } from './directives/ripple'
+
 // 组件注册
 const components: Component = [
   VerButton,
@@ -96,6 +99,7 @@ export default {
   install: (app: App) => {
     for (const c in components) {
       app.component(c, components[c])
+      app.directive('ripple', vRipple)
     }
   },
 }

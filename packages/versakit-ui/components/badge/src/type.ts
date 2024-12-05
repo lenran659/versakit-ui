@@ -1,4 +1,4 @@
-type BadegeType = 'success' | 'warning' | 'danger'
+type BadegeType = 'success' | 'warning' | 'error'
 
 // 定义props的类型
 export interface BadgeProps {

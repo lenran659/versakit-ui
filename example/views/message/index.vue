@@ -15,7 +15,7 @@
         <VerButton type="info" @click="info">info</VerButton>
       </div>
       <div class="mx-4">
-        <VerButton type="danger" @click="error">error</VerButton>
+        <VerButton type="error" @click="error">error</VerButton>
       </div>
     </div>
     <h3>Plain</h3>
@@ -33,7 +33,7 @@
         <VerButton type="info" @click="infoPlain">info</VerButton>
       </div>
       <div class="mx-4">
-        <VerButton type="danger" @click="errorPlain">error</VerButton>
+        <VerButton type="error" @click="errorPlain">error</VerButton>
       </div>
     </div>
   </div>

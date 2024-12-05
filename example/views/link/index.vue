@@ -11,7 +11,7 @@ import { VerRow, VerLink } from '@/index.ts'
     <ver-link class="mx4" type="success">success</ver-link>
     <ver-link class="mx4" type="info">info</ver-link>
     <ver-link class="mx4" type="warning">warning</ver-link>
-    <ver-link class="mx4" type="danger">danger</ver-link>
+    <ver-link class="mx4" type="error">error</ver-link>
   </ver-row>
 </template>
 

@@ -2,7 +2,7 @@ type LinkType =
   | 'primary'
   | 'success'
   | 'warning'
-  | 'danger'
+  | 'error'
   | 'info'
   | 'text'
   | ''

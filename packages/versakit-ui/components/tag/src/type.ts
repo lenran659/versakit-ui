@@ -1,4 +1,4 @@
-type TagType = 'primary' | 'success' | 'warning' | 'danger' | 'info' | ''
+type TagType = 'primary' | 'success' | 'warning' | 'error' | 'info'
 
 export interface TagProps {
   type?: TagType

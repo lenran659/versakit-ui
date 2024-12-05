@@ -47,7 +47,7 @@
 @include VerBtnType('success', $ver-green-6);
 @include VerBtnType('info', $ver-zinc-6);
 @include VerBtnType('warning', $ver-orange-6);
-@include VerBtnType('danger', $ver-red-6);
+@include VerBtnType('error', $ver-red-6);
 
 /* 灵魂按钮 */
 @include VerBtnGhost(null, $ver-zinc-5, $ver-zinc-6);
@@ -55,7 +55,7 @@
 @include VerBtnGhost('success', $ver-green-5, $ver-green-6);
 @include VerBtnGhost('info', $ver-zinc-5, $ver-zinc-6);
 @include VerBtnGhost('warning', $ver-orange-5, $ver-orange-6);
-@include VerBtnGhost('danger', $ver-red-5, $ver-red-6);
+@include VerBtnGhost('error', $ver-red-5, $ver-red-6);
 
 .is-ghost {
   padding: 12px 19px;
@@ -96,7 +96,7 @@
 @include VerBtnPlain('success', $ver-green-1, $ver-green-6);
 @include VerBtnPlain('info', $ver-zinc-1, $ver-zinc-6);
 @include VerBtnPlain('warning', $ver-orange-1, $ver-orange-6);
-@include VerBtnPlain('danger', $ver-red-1, $ver-red-6);
+@include VerBtnPlain('error', $ver-red-1, $ver-red-6);
 
 .is-plain {
   color: $ver-zinc-6;
@@ -123,7 +123,7 @@
 @include VerBtnText('success', $ver-green-1, $ver-green-6);
 @include VerBtnText('info', $ver-zinc-1, $ver-zinc-6);
 @include VerBtnText('warning', $ver-orange-1, $ver-orange-6);
-@include VerBtnText('danger', $ver-red-1, $ver-red-6);
+@include VerBtnText('error', $ver-red-1, $ver-red-6);
 
 .is-text {
   border: none;
@@ -186,7 +186,7 @@ $button-colors: (
     $ver-orange-5,
     $ver-orange-6,
   ),
-  'danger': (
+  'error': (
     $ver-red-1,
     $ver-red-5,
     $ver-red-6,

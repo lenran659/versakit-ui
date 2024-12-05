@@ -8,7 +8,7 @@ import { VerText } from '@/index.ts'
     <VerText type="primary">Text</VerText>
     <VerText type="success">Text</VerText>
     <VerText type="warning">Text</VerText>
-    <VerText type="danger">Text</VerText>
+    <VerText type="error">Text</VerText>
   </div>
 </template>
 

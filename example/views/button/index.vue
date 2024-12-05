@@ -13,7 +13,7 @@ import { VerButton, VerRow, VerIcon } from '@/index'
         <VerButton type="success">success</VerButton>
         <VerButton type="info">info</VerButton>
         <VerButton type="warning">warning</VerButton>
-        <VerButton type="danger">danger</VerButton>
+        <VerButton type="error">error</VerButton>
       </VerRow>
 
       <VerRow>
@@ -22,7 +22,7 @@ import { VerButton, VerRow, VerIcon } from '@/index'
         <VerButton ghost type="success">success</VerButton>
         <VerButton ghost type="info">info</VerButton>
         <VerButton ghost type="warning">warning</VerButton>
-        <VerButton ghost type="danger">danger</VerButton>
+        <VerButton ghost type="error">error</VerButton>
       </VerRow>
 
       <VerRow>
@@ -31,7 +31,7 @@ import { VerButton, VerRow, VerIcon } from '@/index'
         <VerButton plain type="success">success</VerButton>
         <VerButton plain type="info">info</VerButton>
         <VerButton plain type="warning">warning</VerButton>
-        <VerButton plain type="danger">danger</VerButton>
+        <VerButton plain type="error">error</VerButton>
       </VerRow>
 
       <VerRow>
@@ -39,7 +39,7 @@ import { VerButton, VerRow, VerIcon } from '@/index'
         <VerButton round type="success">success</VerButton>
         <VerButton round type="info">info</VerButton>
         <VerButton round type="warning">warning</VerButton>
-        <VerButton round type="danger">danger</VerButton>
+        <VerButton round type="error">error</VerButton>
       </VerRow>
 
       <VerRow>
@@ -47,7 +47,7 @@ import { VerButton, VerRow, VerIcon } from '@/index'
         <VerButton round ghost type="success">success</VerButton>
         <VerButton round ghost type="info">info</VerButton>
         <VerButton round ghost type="warning">warning</VerButton>
-        <VerButton round ghost type="danger">danger</VerButton>
+        <VerButton round ghost type="error">error</VerButton>
       </VerRow>
 
       <VerRow>
@@ -55,7 +55,7 @@ import { VerButton, VerRow, VerIcon } from '@/index'
         <VerButton plain round type="success">success</VerButton>
         <VerButton plain round type="info">info</VerButton>
         <VerButton plain round type="warning">warning</VerButton>
-        <VerButton plain round type="danger">danger</VerButton>
+        <VerButton plain round type="error">error</VerButton>
       </VerRow>
     </div>
     <!-- 禁用 -->
@@ -67,7 +67,7 @@ import { VerButton, VerRow, VerIcon } from '@/index'
         <VerButton disabled type="success">success</VerButton>
         <VerButton disabled type="info">info</VerButton>
         <VerButton disabled type="warning">warning</VerButton>
-        <VerButton disabled type="danger">danger</VerButton>
+        <VerButton disabled type="error">error</VerButton>
       </VerRow>
 
       <VerRow>
@@ -76,7 +76,7 @@ import { VerButton, VerRow, VerIcon } from '@/index'
         <VerButton disabled plain type="success">success</VerButton>
         <VerButton disabled plain type="info">info</VerButton>
         <VerButton disabled plain type="warning">warning</VerButton>
-        <VerButton disabled plain type="danger">danger</VerButton>
+        <VerButton disabled plain type="error">error</VerButton>
       </VerRow>
 
       <VerRow>
@@ -85,7 +85,7 @@ import { VerButton, VerRow, VerIcon } from '@/index'
         <VerButton disabled plain text type="success">success</VerButton>
         <VerButton disabled plain text type="info">info</VerButton>
         <VerButton disabled plain text type="warning">warning</VerButton>
-        <VerButton disabled plain text type="danger">danger</VerButton>
+        <VerButton disabled plain text type="error">error</VerButton>
       </VerRow>
     </div>
     <!-- 文本 -->
@@ -97,7 +97,7 @@ import { VerButton, VerRow, VerIcon } from '@/index'
         <VerButton text type="success">success</VerButton>
         <VerButton text type="info">info</VerButton>
         <VerButton text type="warning">warning</VerButton>
-        <VerButton text type="danger">danger</VerButton>
+        <VerButton text type="error">error</VerButton>
       </VerRow>
       <VerRow>
         <VerButton disabled text>none</VerButton>
@@ -105,7 +105,7 @@ import { VerButton, VerRow, VerIcon } from '@/index'
         <VerButton disabled text type="success">success</VerButton>
         <VerButton disabled text type="info">info</VerButton>
         <VerButton disabled text type="warning">warning</VerButton>
-        <VerButton disabled text type="danger">danger</VerButton>
+        <VerButton disabled text type="error">error</VerButton>
       </VerRow>
     </div>
     <!-- 阴影 -->
@@ -117,7 +117,7 @@ import { VerButton, VerRow, VerIcon } from '@/index'
         <VerButton shade type="success">success</VerButton>
         <VerButton shade type="info">info</VerButton>
         <VerButton shade type="warning">warning</VerButton>
-        <VerButton shade type="danger">danger</VerButton>
+        <VerButton shade type="error">error</VerButton>
       </VerRow>
 
       <VerRow>
@@ -126,7 +126,7 @@ import { VerButton, VerRow, VerIcon } from '@/index'
         <VerButton disabled shade type="success">success</VerButton>
         <VerButton disabled shade type="info">info</VerButton>
         <VerButton disabled shade type="warning">warning</VerButton>
-        <VerButton disabled shade type="danger">danger</VerButton>
+        <VerButton disabled shade type="error">error</VerButton>
       </VerRow>
     </div>
     <!-- 尺寸 -->
@@ -147,7 +147,7 @@ import { VerButton, VerRow, VerIcon } from '@/index'
 
         <VerButton circle type="warning" color="white" icon="edit"></VerButton>
 
-        <VerButton circle type="danger" icon="delete-o"></VerButton>
+        <VerButton circle type="error" icon="delete-o"></VerButton>
 
         <VerButton>
           <ver-icon name="delete-o" style="margin: 0px 4px"></ver-icon>
@@ -173,7 +173,7 @@ import { VerButton, VerRow, VerIcon } from '@/index'
         <VerButton color="'#626aef'" text>success</VerButton>
         <VerButton color="'#626aef'" text>info</VerButton>
         <VerButton color="'#626aef'" text>warning</VerButton>
-        <VerButton color="'#626aef'" text>danger</VerButton>
+        <VerButton color="'#626aef'" text>error</VerButton>
       </VerRow>
     </div>
   </div>

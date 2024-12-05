@@ -1,4 +1,6 @@
+type SizeType = 'small' | 'default' | 'large'
+
 export interface SwitchPrpops {
   modelValue?: boolean
-  size?: 'small' | 'medium' | 'large'
+  size?: SizeType
 }

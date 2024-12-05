@@ -25,7 +25,7 @@ import type { BadgeProps } from './type'
 
 // 使用withDefaults为props设置默认值，让组件使用更方便和容错性更好
 const props = withDefaults(defineProps<BadgeProps>(), {
-  type: 'danger',
+  type: 'error',
   max: 99,
   value: 0,
   dot: false,

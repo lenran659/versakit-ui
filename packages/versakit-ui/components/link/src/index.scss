@@ -30,7 +30,7 @@
 @include ver-link-type('success', $ver-green-5, $ver-green-6);
 @include ver-link-type('info', $ver-zinc-5, $ver-zinc-6);
 @include ver-link-type('warning', $ver-orange-5, $ver-orange-6);
-@include ver-link-type('danger', $ver-red-5, $ver-red-6);
+@include ver-link-type('error', $ver-red-5, $ver-red-6);
 
 /* 禁用状态 */
 .ver-link.is-disabled {
@@ -47,4 +47,4 @@
 @include ver-link-disabled('success', $ver-green-7);
 @include ver-link-disabled('info', $ver-zinc-7);
 @include ver-link-disabled('warning', $ver-orange-7);
-@include ver-link-disabled('danger', $ver-red-7);
+@include ver-link-disabled('error', $ver-red-7);

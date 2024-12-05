@@ -18,7 +18,7 @@
 @include text-color('success', $ver-green-6);
 @include text-color('info', $ver-zinc-6);
 @include text-color('warning', $ver-orange-6);
-@include text-color('danger', $ver-red-6);
+@include text-color('error', $ver-red-6);
 
 .ver-text-large {
   font-size: 16px;

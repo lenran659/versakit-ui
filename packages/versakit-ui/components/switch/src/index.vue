@@ -14,7 +14,7 @@ defineOptions({ name: 'VerSwitch' })
 
 const props = withDefaults(defineProps<SwitchPrpops>(), {
   modelValue: false,
-  size: 'medium',
+  size: 'default',
 })
 
 const emit = defineEmits(['input', 'update:modelValue'])

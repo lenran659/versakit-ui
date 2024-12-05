@@ -11,7 +11,7 @@ import type { TagProps } from './type'
 defineOptions({ name: 'VerTag' })
 
 const props = withDefaults(defineProps<TagProps>(), {
-  type: '',
+  type: 'primary',
   plain: false,
   round: false,
 })
@@ -19,7 +19,7 @@ const props = withDefaults(defineProps<TagProps>(), {
 const tClass = computed(() => {
   return [
     'ver-tag',
-    props.type == '' ? '' : `ver-tag-${props.type}`,
+    props.type == 'info' ? '' : `ver-tag-${props.type}`,
     props.round == false ? '' : 'is-round',
     props.plain == false ? '' : 'is-plain',
   ]

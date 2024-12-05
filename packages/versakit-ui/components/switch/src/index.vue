@@ -1,6 +1,6 @@
 <template>
   <label :class="VerClass" @click="handClick">
-    <span class="ver-switch-core" ref="core">
+    <span ref="core" class="ver-switch-core">
       <span class="ver-switch-button"></span>
     </span>
   </label>
@@ -14,12 +14,24 @@ defineOptions({ name: 'VerSwitch' })
 
 const props = withDefaults(defineProps<SwitchPrpops>(), {
   modelValue: false,
+  size: 'medium',
 })
 
 const emit = defineEmits(['input', 'update:modelValue'])
 
 const VerClass = computed(() => {
-  return ['ver-switch', props.modelValue == false ? '' : 'is-checked']
+  const baseClass = ['ver-switch']
+  if (props.modelValue === false) {
+    baseClass.push('')
+  } else {
+    baseClass.push('is-checked')
+  }
+  if (props.size === 'small') {
+    baseClass.push('ver-switch-small')
+  } else if (props.size === 'large') {
+    baseClass.push('ver-switch-large')
+  }
+  return baseClass
 })
 
 const handClick = () => {
@@ -61,8 +73,9 @@ const handClick = () => {
 
     .ver-switch-button {
       position: absolute;
-      top: 2.5px;
-      left: 1.5px;
+      top: 1px;
+      left: 0px;
+      margin: 3px;
       border-radius: 100%;
       transition: all 0.3s;
       width: 16px;
@@ -77,7 +90,37 @@ const handClick = () => {
     border-color: $ver-violet-6;
     background-color: $ver-violet-6;
     .ver-switch-button {
-      transform: translateX(20px);
+      transform: translateX(100%);
+    }
+  }
+}
+
+.ver-switch-small {
+  .ver-switch-core {
+    width: 32px;
+    height: 15px;
+    border-radius: 7.5px;
+    // 同时调整内部按钮大小和位置等
+    .ver-switch-button {
+      width: 12px;
+      height: 12px;
+      top: 2.5px;
+      left: 0.5px;
+    }
+  }
+}
+
+.ver-switch-large {
+  .ver-switch-core {
+    width: 50px;
+    height: 25px;
+    border-radius: 12.5px;
+    // 调整按钮大小和位置等
+    .ver-switch-button {
+      width: 20px;
+      height: 20px;
+      top: -0.5px;
+      left: 2px;
     }
   }
 }

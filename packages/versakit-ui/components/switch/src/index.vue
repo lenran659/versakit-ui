@@ -20,18 +20,11 @@ const props = withDefaults(defineProps<SwitchPrpops>(), {
 const emit = defineEmits(['input', 'update:modelValue'])
 
 const VerClass = computed(() => {
-  const baseClass = ['ver-switch']
-  if (props.modelValue === false) {
-    baseClass.push('')
-  } else {
-    baseClass.push('is-checked')
-  }
-  if (props.size === 'small') {
-    baseClass.push('ver-switch-small')
-  } else if (props.size === 'large') {
-    baseClass.push('ver-switch-large')
-  }
-  return baseClass
+  return [
+    'ver-switch',
+    props.modelValue === false ? '' : 'is-checked',
+    props.size && props.size !== 'default' ? `is-${props.size}` : '',
+  ]
 })
 
 const handClick = () => {
@@ -73,7 +66,7 @@ const handClick = () => {
 
     .ver-switch-button {
       position: absolute;
-      top: 1px;
+      top: 0.5px;
       left: 0px;
       margin: 3px;
       border-radius: 100%;
@@ -95,7 +88,7 @@ const handClick = () => {
   }
 }
 
-.ver-switch-small {
+.is-small {
   .ver-switch-core {
     width: 32px;
     height: 15px;
@@ -110,7 +103,7 @@ const handClick = () => {
   }
 }
 
-.ver-switch-large {
+.is-large {
   .ver-switch-core {
     width: 50px;
     height: 25px;

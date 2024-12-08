@@ -7,4 +7,13 @@ describe('button', () => {
     const wrapper = mount(VerButton)
     expect(wrapper.classes()).toContain('ver-btn')
   })
+
+  it('测试type', () => {
+    const wrapper = mount(VerButton, {
+      props: {
+        type: 'success',
+      },
+    })
+    expect(wrapper.classes()).toContain(`ver-btn-success`)
+  })
 })

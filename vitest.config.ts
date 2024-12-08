@@ -7,6 +7,7 @@ export default defineConfig({
     globals: true,
     // 启用类似 jest 的全局测试 API
     coverage: {
+      provider: 'istanbul', // or 'v8'
       reporter: ['text', 'json', 'html'],
     },
     environment: 'jsdom',

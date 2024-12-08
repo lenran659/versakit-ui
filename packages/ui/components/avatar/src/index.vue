@@ -1,5 +1,5 @@
 <template>
-  <span :class="tClass">
+  <span :class="VerClass">
     <img :src="src" />
   </span>
 </template>
@@ -18,7 +18,7 @@ const props = withDefaults(defineProps<AvatarProps>(), {
 
 const size = props.size + 'px'
 
-const tClass = computed(() => {
+const VerClass = computed(() => {
   return ['ver-avatar', props.shape == 'circle' ? 'is-circle' : 'is-square']
 })
 </script>

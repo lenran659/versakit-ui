@@ -1,11 +1,20 @@
 {
-  "files": [],
-  "references": [
-    {
-      "path": "./tsconfig.node.json"
-    },
-    {
-      "path": "./tsconfig.app.json"
-    }
-  ]
+  "compilerOptions": {
+    "outDir": "dist",
+    "allowJs": true,
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "strict": true,
+    "noImplicitAny": false,
+    "strictNullChecks": false,
+    "resolveJsonModule": true,
+    "skipDefaultLibCheck": false,
+    "skipLibCheck": false,
+    "jsx": "preserve",
+    "types": ["node", "vite/client", "vitest/globals"],
+    "lib": ["esnext", "dom"]
+  },
+  "exclude": ["**/node_modules/**", "**/demo/**", "**/example/**"]
 }

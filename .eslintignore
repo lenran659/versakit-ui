@@ -2,4 +2,4 @@
 dist
 node_modules
 
-packages/versakit-ui/icons/*
+packages/ui/icons/*

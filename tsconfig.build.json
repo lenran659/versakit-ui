@@ -1,9 +1,6 @@
 {
   "extends": "@vue/tsconfig/tsconfig.dom.json",
-  "include": [
-    "packages/versakit-ui/index.ts",
-    "packages/versakit-ui/components/**/*"
-  ],
+  "include": ["packages/ui/index.ts", "packages/ui/components/**/*"],
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {

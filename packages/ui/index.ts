@@ -31,7 +31,7 @@ import VerBadge from './components/badge/index'
 import VerBacktop from './components/backtop/index'
 
 /* 指令 */
-import { vRipple } from './directives/ripple'
+import { vRipple } from './directives/index'
 
 // 组件注册
 const components: Component = [

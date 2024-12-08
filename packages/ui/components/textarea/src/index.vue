@@ -37,7 +37,7 @@ const input = () => {
 }
 
 const tClass = computed(() => {
-  return ['ver-textarea', props.disabled == false ? '' : 'is-disable']
+  return ['ver-textarea', props.disabled == false ? '' : 'is-disabled']
 })
 </script>
 
@@ -101,7 +101,7 @@ textarea::placeholder {
   font-size: 12px;
 }
 
-.ver-textarea.is-disable {
+.ver-textarea.is-disabled {
   textarea {
     cursor: not-allowed;
     color: #c3bfbf;

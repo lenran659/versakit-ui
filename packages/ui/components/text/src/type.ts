@@ -1,7 +1,7 @@
-type TextType = 'primary' | 'success' | 'warning' | 'error' | 'info' | ''
+type TextType = 'primary' | 'success' | 'warning' | 'error' | 'info'
 
 export interface TextProps {
   type?: TextType
-  size?: string | number
+  size?: 'small' | 'large' | 'default'
   truncated?: boolean
 }

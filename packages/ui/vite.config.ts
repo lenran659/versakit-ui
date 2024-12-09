@@ -9,7 +9,7 @@ export default defineConfig({
     dts({ tsconfigPath: '../../tsconfig.build.json' }),
     vue(),
     createSvgIconsPlugin({
-      iconDirs: [path.resolve(process.cwd(), 'ul/icons')],
+      iconDirs: [path.resolve(process.cwd(), './icons')],
       symbolId: 'icon-[dir]-[name]',
     }),
   ],

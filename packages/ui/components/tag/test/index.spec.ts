@@ -9,16 +9,18 @@ describe('tag', () => {
   })
 
   const size = ['small', 'default', 'large']
-  size.forEach((item) => {
-    it(`测试type:${item}`, () => {
-      const wrapper = mount(VerTag, {
-        props: {
-          size: item as any,
-        },
+  size
+    .filter((s) => s !== 'default')
+    .forEach((item) => {
+      it(`测试type:${item}`, () => {
+        const wrapper = mount(VerTag, {
+          props: {
+            size: item as any,
+          },
+        })
+        expect(wrapper.classes()).toContain(`is-${item}`)
       })
-      expect(wrapper.classes()).toContain(`is-${item}`)
     })
-  })
 
   it('测试plain', () => {
     const wrapper = mount(VerTag, {

@@ -20,7 +20,7 @@ const VerClass = computed(() => {
   return [
     'ver-text',
     props.type == 'primary' ? 'ver-text-primary' : `ver-text-${props.type}`,
-    props.size == 'default' ? '' : `ver-text-${props.size}`,
+    props.size == 'default' ? '' : `is-${props.size}`,
     props.truncated == false ? '' : 'is-truncated',
   ]
 })

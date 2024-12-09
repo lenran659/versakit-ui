@@ -20,11 +20,11 @@
 @include text-color('warning', $ver-orange-6);
 @include text-color('error', $ver-red-6);
 
-.ver-text-large {
+.ver-text.is-large {
   font-size: 16px;
 }
 
-.ver-text-small {
+.ver-text.is-small {
   font-size: 12px;
 }
 

@@ -21,16 +21,18 @@ describe('text', () => {
   })
 
   const size = ['small', 'default', 'large']
-  size.forEach((item) => {
-    it(`测试type:${item}`, () => {
-      const wrapper = mount(VerText, {
-        props: {
-          size: item as any,
-        },
+  size
+    .filter((s) => s !== 'default')
+    .forEach((item) => {
+      it(`测试type:${item}`, () => {
+        const wrapper = mount(VerText, {
+          props: {
+            size: item as any,
+          },
+        })
+        expect(wrapper.classes()).toContain(`is-${item}`)
       })
-      expect(wrapper.classes()).toContain(`ver-text-${item}`)
     })
-  })
 
   it('测试truncated', () => {
     const wrapper = mount(VerText, {

@@ -21,7 +21,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import type { TabProps } from '../type/type.js'
+import type { TabProps } from '../type/index'
 
 defineOptions({ name: 'VerTab' })
 

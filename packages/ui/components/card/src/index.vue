@@ -12,7 +12,7 @@
 
 <script lang="ts" setup>
 import { computed } from 'vue'
-import type { CardProps } from '../type/type'
+import type { CardProps } from '../type/index'
 
 defineOptions({ name: 'VerCard' })
 

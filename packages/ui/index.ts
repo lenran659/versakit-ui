@@ -1,4 +1,5 @@
 import type { App, Component } from 'vue'
+/* 图标 */
 import 'virtual:svg-icons-register'
 /* 组件 */
 import VerButton from './components/button/index'

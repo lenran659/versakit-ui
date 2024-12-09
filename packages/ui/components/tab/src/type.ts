@@ -5,5 +5,5 @@ type tabList = {
 }
 
 export interface TabProps {
-  tabList: tabList[]
+  tabList?: tabList[]
 }

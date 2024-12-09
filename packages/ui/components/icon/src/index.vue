@@ -1,9 +1,8 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import type { IconsProps } from './type.ts'
-import { useAsyncComponent } from '@vueuse/core'
 
-defineOptions({ name: 'VerIcon' })
+defineOptions({ name: 'VerIcon', inheritAttrs: false })
 
 const props = withDefaults(defineProps<IconsProps>(), {
   name: '',
@@ -13,17 +12,15 @@ const props = withDefaults(defineProps<IconsProps>(), {
 
 const size = props.size + 'px'
 
-// 根据传入的图标名称动态构建SVG文件路径，并使用useAsyncComponent进行异步加载
-const IconComponent = computed(() => {
-  const iconPath = `../../../icons/${props.name}.svg`
-  return useAsyncComponent(() => import(iconPath))
+const IconName = computed(() => {
+  return `#icon-${props.name}`
 })
 </script>
 
 <template>
-  <div class="ver-icon">
-    <component :is="IconComponent" />
-  </div>
+  <svg class="ver-icon" aria-hidden="true">
+    <use :xlink:href="IconName" :fill="color"></use>
+  </svg>
 </template>
 
 <style lang="scss" scoped>
@@ -40,7 +37,7 @@ const IconComponent = computed(() => {
   overflow: hidden;
 
   .dark & {
-    fill: #fff;
+    fill: #fff !important;
   }
 }
 </style>

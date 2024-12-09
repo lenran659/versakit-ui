@@ -1,9 +1,18 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import dts from 'vite-plugin-dts'
+import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
+import path from 'path'
 
 export default defineConfig({
-  plugins: [dts({ tsconfigPath: '../../tsconfig.build.json' }), vue()],
+  plugins: [
+    dts({ tsconfigPath: '../../tsconfig.build.json' }),
+    vue(),
+    createSvgIconsPlugin({
+      iconDirs: [path.resolve(process.cwd(), 'ul/icons')],
+      symbolId: 'icon-[dir]-[name]',
+    }),
+  ],
   css: {
     preprocessorOptions: {
       scss: {

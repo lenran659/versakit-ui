@@ -19,8 +19,8 @@ const props = withDefaults(defineProps<TextProps>(), {
 const VerClass = computed(() => {
   return [
     'ver-text',
-    props.type == '' ? '' : `ver-text-${props.type}`,
-    props.size == '' ? '' : `ver-text-${props.size}`,
+    props.type == 'primary' ? 'ver-text-primary' : `ver-text-${props.type}`,
+    props.size == 'default' ? '' : `ver-text-${props.size}`,
     props.truncated == false ? '' : 'is-truncated',
   ]
 })

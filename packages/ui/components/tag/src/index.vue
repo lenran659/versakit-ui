@@ -23,7 +23,7 @@ const tClass = computed(() => {
     props.type == 'primary' ? 'ver-tag-primary' : `ver-tag-${props.type}`,
     props.round == false ? '' : 'is-round',
     props.plain == false ? '' : 'is-plain',
-    props.size == '' ? '' : `is-${props.size}`,
+    props.size == 'default' ? '' : `is-${props.size}`,
   ]
 })
 </script>

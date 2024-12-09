@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed } from 'vue'
-import type { IconsProps } from './type.ts'
+import type { IconsProps } from '../type/index'
 
 defineOptions({ name: 'VerIcon', inheritAttrs: false })
 
@@ -18,26 +18,16 @@ const IconName = computed(() => {
 </script>
 
 <template>
-  <svg class="ver-icon" aria-hidden="true">
+  <svg
+    class="ver-icon"
+    aria-hidden="true"
+    :style="{
+      width: size,
+      height: size,
+    }"
+  >
     <use :xlink:href="IconName" :fill="color"></use>
   </svg>
 </template>
 
-<style lang="scss" scoped>
-.ver-icon {
-  position: relative;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  vertical-align: bottom;
-  font-size: inherit;
-  width: v-bind(size);
-  height: v-bind(size);
-  overflow: hidden;
-
-  .dark & {
-    fill: #fff !important;
-  }
-}
-</style>
+<style lang="scss" scoped src="../style/index.scss"></style>

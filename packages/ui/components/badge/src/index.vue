@@ -21,7 +21,7 @@
 
 <script setup lang="ts">
 import { computed } from 'vue'
-import type { BadgeProps } from './type'
+import type { BadgeProps } from '../type/index'
 
 // 使用withDefaults为props设置默认值，让组件使用更方便和容错性更好
 const props = withDefaults(defineProps<BadgeProps>(), {
@@ -37,53 +37,4 @@ const VerClass = computed(() => {
 })
 </script>
 
-<style lang="scss" scoped>
-@use '../../../style/color/index.scss' as *;
-
-.ver-badge {
-  position: relative;
-  display: inline-block;
-}
-
-.badge {
-  position: absolute;
-  top: -6px;
-  right: -10px;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  line-height: 20px;
-  font-size: 10px;
-  text-align: center;
-  border-radius: 10px;
-  background-color: $ver-red-6;
-  color: $ver-zinc-1;
-  user-select: none;
-  border-radius: 50%;
-  min-width: max-content;
-}
-
-.is-normal {
-  min-width: 15px;
-  height: 15px;
-}
-
-.badge.is-dot {
-  display: inline-block;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-}
-
-.badge.badge-info {
-  background-color: $ver-zinc-6;
-}
-
-.badge.badge-warning {
-  background-color: $ver-orange-6;
-}
-
-.badge.badge-success {
-  background-color: $ver-green-6;
-}
-</style>
+<style lang="scss" src="../style/index.scss" scoped></style>

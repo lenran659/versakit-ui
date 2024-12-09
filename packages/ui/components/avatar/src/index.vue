@@ -1,12 +1,18 @@
 <template>
-  <span :class="VerClass">
+  <span
+    :class="VerClass"
+    :style="{
+      width: size,
+      height: size,
+    }"
+  >
     <img :src="src" />
   </span>
 </template>
 
 <script lang="ts" setup>
 import { computed } from 'vue'
-import type { AvatarProps } from './type'
+import type { AvatarProps } from '../type/index'
 
 defineOptions({ name: 'VerAvatar' })
 
@@ -23,33 +29,4 @@ const VerClass = computed(() => {
 })
 </script>
 
-<style lang="scss" scoped>
-.ver-avatar {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  box-sizing: border-box;
-  text-align: center;
-  overflow: hidden;
-  color: #fff;
-  width: v-bind(size);
-  height: v-bind(size);
-  font-size: 14px;
-  background-color: #c0c4cc;
-  & > img {
-    object-fit: cover;
-    display: block;
-    height: 100%;
-    max-width: 100%;
-    border-style: none;
-  }
-}
-
-.ver-avatar.is-circle {
-  border-radius: 50%;
-}
-
-.ver-avatar.is-square {
-  border-radius: 4px;
-}
-</style>
+<style lang="scss" src="../style/index.scss" scoped></style>

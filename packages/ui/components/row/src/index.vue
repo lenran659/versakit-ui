@@ -8,10 +8,4 @@
 defineOptions({ name: 'VerRow' })
 </script>
 
-<style scoped lang="scss">
-.ver-row {
-  width: 100%;
-  height: auto;
-  box-sizing: border-box;
-}
-</style>
+<style scoped lang="scss" src="../style/index.scss"></style>

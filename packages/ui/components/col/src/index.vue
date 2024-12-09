@@ -1,12 +1,18 @@
 <template>
-  <div class="ver-col">
+  <div
+    class="ver-col"
+    :style="{
+      width: width,
+      marginLeft: offset,
+    }"
+  >
     <slot></slot>
   </div>
 </template>
 
 <script lang="ts" setup>
 import { ref } from 'vue'
-import type { ColProps } from './type'
+import type { ColProps } from '../type/index'
 
 defineOptions({ name: 'VerCol' })
 
@@ -32,10 +38,4 @@ const offset = ref(
 )
 </script>
 
-<style scoped lang="scss">
-.ver-col {
-  width: v-bind(width);
-  float: left;
-  margin-left: v-bind(offset);
-}
-</style>
+<style scoped src="../stye/index.scss" lang="scss"></style>

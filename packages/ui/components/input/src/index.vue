@@ -12,7 +12,7 @@
 
 <script lang="ts" setup>
 import { computed } from 'vue'
-import type { InputProps } from './type'
+import type { InputProps } from '../type/index'
 
 defineOptions({ name: 'VerInput' })
 
@@ -35,4 +35,4 @@ const VerClass = computed(() => {
 })
 </script>
 
-<style src="./index.scss" lang="scss" scoped></style>
+<style src="../style/index.scss" lang="scss" scoped></style>

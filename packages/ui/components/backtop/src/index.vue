@@ -19,10 +19,10 @@
 </template>
 
 <script setup lang="ts">
-import { computed, shallowRef, ref, onMounted } from 'vue'
-import type { BackTopProps } from './type'
-import VerIcon from '../../icon/index'
 import { useEventListener, useThrottleFn } from '@vueuse/core'
+import { computed, shallowRef, ref, onMounted } from 'vue'
+import type { BackTopProps } from '../type/index'
+import VerIcon from '../../icon/index'
 
 const props = withDefaults(defineProps<BackTopProps>(), {
   right: '60',
@@ -69,4 +69,4 @@ onMounted(() => {
   handleScroll()
 })
 </script>
-<style src="./index.scss" lang="scss" scoped></style>
+<style src="../style/index.scss" lang="scss" scoped></style>

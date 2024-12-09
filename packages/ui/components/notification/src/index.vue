@@ -18,7 +18,7 @@
 <script lang="ts" setup>
 import { ref, onMounted, computed } from 'vue'
 import VerIcon from '../../icon/index'
-import type { NotifivationProps } from './type'
+import type { NotifivationProps } from '../type/index'
 
 defineOptions({ name: 'VerNotifivation' })
 
@@ -124,4 +124,4 @@ onMounted(() => {
 })
 </script>
 
-<style lang="scss" src="./index.scss" scoped></style>
+<style lang="scss" src="../style/index.scss" scoped></style>

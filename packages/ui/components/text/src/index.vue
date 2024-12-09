@@ -6,7 +6,7 @@
 
 <script setup lang="ts">
 import { computed } from 'vue'
-import type { TextProps } from './type'
+import type { TextProps } from '../type/index'
 
 defineOptions({ name: 'VerText' })
 
@@ -26,4 +26,4 @@ const VerClass = computed(() => {
 })
 </script>
 
-<style src="./index.scss" lang="scss" scoped></style>
+<style src="../style/index.scss" lang="scss" scoped></style>

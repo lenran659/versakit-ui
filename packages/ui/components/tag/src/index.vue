@@ -6,7 +6,7 @@
 
 <script setup lang="ts">
 import { computed } from 'vue'
-import type { TagProps } from './type'
+import type { TagProps } from '../type/index'
 
 defineOptions({ name: 'VerTag' })
 
@@ -28,4 +28,4 @@ const tClass = computed(() => {
 })
 </script>
 
-<style src="./index.scss" lang="scss" scoped></style>
+<style src="../style/index.scss" lang="scss" scoped></style>

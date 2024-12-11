@@ -4,7 +4,7 @@ import {
   j as a,
   a as o,
   o as s,
-} from './chunks/framework.3-QL-XRe.js'
+} from './chunks/framework.BnRE3xx0.js'
 const x = JSON.parse(
     '{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"markdown-examples.md","filePath":"markdown-examples.md"}',
   ),

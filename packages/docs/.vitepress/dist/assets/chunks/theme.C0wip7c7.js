@@ -59,7 +59,7 @@ import {
   a3 as Y,
   a4 as o1,
   a5 as i2,
-} from './framework.3-QL-XRe.js'
+} from './framework.BnRE3xx0.js'
 const s2 = v({
     __name: 'VPBadge',
     props: { text: {}, type: { default: 'tip' } },

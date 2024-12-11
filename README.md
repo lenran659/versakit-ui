@@ -6,7 +6,7 @@
   <p>A Vue3 component library that supports the desktop side.</p>
   <p>
     <a href="">Documentation</a> | 
-    <a href="./README.md">ENGLISH README</a>
+    <a href="./README.zh-CN.md">中文</a>
   </p>
   <p>
     <img src="https://img.shields.io/badge/vue-v3.2.0%2B-%23407fbc" alt="vue">

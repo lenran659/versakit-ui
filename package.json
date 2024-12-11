@@ -4,6 +4,9 @@
   "private": "true",
   "type": "module",
   "scripts": {
+    "cli:build": "pnpm --filter cli build",
+    "docs:build": "pnpm --filter docs docs:build",
+    "docs:dev": "pnpm --filter docs docs:dev",
     "ui:build": "pnpm --filter ui build",
     "test": "vitest",
     "test:ui": "vitest --ui",

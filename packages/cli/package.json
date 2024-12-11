@@ -1,0 +1,22 @@
+{
+  "name": "@versakit/cli",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "bin": {
+    "v": "bin/index.cjs"
+  },
+  "keywords": [],
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@rollup/plugin-commonjs": "^28.0.1",
+    "@rollup/plugin-node-resolve": "^15.3.0",
+    "colors": "^1.4.0",
+    "commander": "^12.1.0",
+    "fs-extra": "^11.2.0"
+  }
+}

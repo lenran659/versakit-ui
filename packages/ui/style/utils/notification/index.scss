@@ -1,8 +1,0 @@
-@use '../../color/index.scss' as *;
-
-@mixin notificationPlainType($type, $color1, $color5) {
-  .ver-notification-#{$type}-plain {
-    color: $color5;
-    background-color: $color1;
-  }
-}

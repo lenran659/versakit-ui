@@ -1,8 +1,0 @@
-@use '../../color/index.scss' as *;
-
-@mixin ver-alert-type($type, $color6, $color3) {
-  .ver-alert-#{$type} {
-    color: $color6;
-    background-color: $color3;
-  }
-}

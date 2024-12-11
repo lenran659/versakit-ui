@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center whitespace-nowrap cursor-pointer appearance-none text-center box-border outline-none m-0 transition duration-100 ease-in-out font-medium select-none px-5 py-3 text-sm rounded-md border-none active:scale-95;
+  }
+}

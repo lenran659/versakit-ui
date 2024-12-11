@@ -4,7 +4,7 @@
   "author": "Jannik",
   "private": false,
   "type": "module",
-  "main": "./dist/versakit-ui.js",
+  "main": "./dist/ui.js",
   "license": "MIT",
   "files": [
     "dist/*"

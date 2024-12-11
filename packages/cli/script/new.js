@@ -15,6 +15,10 @@ export const createNewFolder = (folderName) => {
   const typeFolderPath = path.join(targetFolderPath, 'type')
   fs.mkdirpSync(typeFolderPath)
 
+  // 创建test文件夹
+  const testFolderPath = path.join(targetFolderPath, 'test')
+  fs.mkdirpSync(testFolderPath)
+
   // 创建index.ts文件并写入内容
   const indexTsPath = path.join(targetFolderPath, 'index.ts')
   const indexTsContent = `import { withInstall } from '../../utils/withinstall';
@@ -27,9 +31,13 @@ export const createNewFolder = (folderName) => {
 
   // 在src文件夹下创建index.vue文件，并写入简单示例内容（这里可按需调整具体内容）
   const indexVuePath = path.join(srcFolderPath, 'index.vue')
-  const indexVueContent = `<template>
+  const indexVueContent = `
+    <template>
         <div>${folderName}组件内容占位</div>
-    </template>`
+    </template>
+
+    <script setup lang="ts"></script>`
+
   fs.writeFileSync(indexVuePath, indexVueContent)
 
   console.log(

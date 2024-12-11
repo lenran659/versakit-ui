@@ -4,7 +4,7 @@ import { vitepressDemoPlugin } from 'vitepress-demo-plugin'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   base: '/versakit/',
-  title: 'My Awesome Project',
+  title: '123',
   description: 'A VitePress Site',
   themeConfig: {
     nav: [{ text: 'Home', link: '/' }],

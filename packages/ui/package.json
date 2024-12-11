@@ -13,5 +13,8 @@
     "build": "run-p type-check \"build-only {@}\" --",
     "build-only": "vite build",
     "type-check": "vue-tsc --build --force"
+  },
+  "dependencies": {
+    "@versakit/ui": "file:"
   }
 }

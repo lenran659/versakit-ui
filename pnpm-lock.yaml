@@ -17,6 +17,9 @@ importers:
       eslint:
         specifier: '8'
         version: 8.57.1
+      versakit-monorepo:
+        specifier: 'file:'
+        version: file:(typescript@5.6.3)
       vue:
         specifier: ^3.5.12
         version: 3.5.13(typescript@5.6.3)
@@ -106,7 +109,11 @@ importers:
         specifier: ^2.1.10
         version: 2.1.10(typescript@5.6.3)
 
-  packages/ui: {}
+  packages/ui:
+    dependencies:
+      '@versakit/ui':
+        specifier: 'file:'
+        version: 'link:'
 
 packages:
 
@@ -3241,9 +3248,14 @@ packages:
   util-deprecate@1.0.2:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
 
+<<<<<<< HEAD
+  'versakit-monorepo@file:':
+    resolution: {directory: '', type: directory}
+=======
   vary@1.1.2:
     resolution: {integrity: sha512-BNGbWLfd0eUPabhkXUVm0j8uuvREyTh5ovRa/dyow/BqAbZJyC+5fU+IzQOzmAKzYqYRAISoRhdQr3eIZ/PXqg==}
     engines: {node: '>= 0.8'}
+>>>>>>> f466895756c7d54058e971637ddd8894681b5b01
 
   vite-node@2.1.8:
     resolution: {integrity: sha512-uPAwSr57kYjAUux+8E2j0q0Fxpn8M9VoyfGiRI8Kfktz9NcYMCenwY5RnZxnF1WTu3TGiYipirIzacLL3VVGFg==}
@@ -6822,7 +6834,19 @@ snapshots:
 
   util-deprecate@1.0.2: {}
 
+<<<<<<< HEAD
+  versakit-monorepo@file:(typescript@5.6.3):
+    dependencies:
+      '@types/vue': 2.0.0(typescript@5.6.3)
+      '@vueuse/core': 12.0.0(typescript@5.6.3)
+      eslint: 8.57.1
+      vue: 3.5.13(typescript@5.6.3)
+    transitivePeerDependencies:
+      - supports-color
+      - typescript
+=======
   vary@1.1.2: {}
+>>>>>>> f466895756c7d54058e971637ddd8894681b5b01
 
   vite-node@2.1.8(@types/node@22.10.1)(sass@1.82.0):
     dependencies:

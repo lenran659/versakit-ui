@@ -15,7 +15,9 @@ function main() {
     .command('new')
     .description('创建一个新文件夹')
     .argument('<folderName>', '要创建的文件夹名称') // 明确指定需要接收的参数以及其描述
-    .action(createNewFolder)
+    .action((folderName) => {
+      createNewFolder(folderName)
+    })
     .addHelpText('after', '\n注意：文件夹名称只能包含字母、数字和下划线。')
 
   program.parse(process.argv)

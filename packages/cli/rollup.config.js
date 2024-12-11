@@ -1,5 +1,6 @@
 import resolve from '@rollup/plugin-node-resolve'
 import commonjs from '@rollup/plugin-commonjs'
+import json from '@rollup/plugin-json'
 
 export default {
   input: 'index.js', // 这里替换为你实际的入口文件，比如上述代码保存为index.js，那这里就是'index.js'
@@ -12,5 +13,6 @@ export default {
   plugins: [
     resolve(), // 用于解析模块路径，能找到node_modules里的第三方模块
     commonjs(), // 处理导入的CommonJS模块，使其能被Rollup正确打包
+    json(),
   ],
 }

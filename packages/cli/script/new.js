@@ -3,7 +3,7 @@ import colors from 'colors'
 import fs from 'fs-extra'
 import path from 'path'
 
-// 定义创建新文件夹以及对应文件的逻辑
+/// 定义创建新文件夹以及对应文件的逻辑
 export const createNewFolder = (folderName) => {
   const targetFolderPath = path.join('packages', 'ui', 'components', folderName)
   // 创建文件夹
@@ -24,6 +24,13 @@ export const createNewFolder = (folderName) => {
 
         export default V${folderName};`
   fs.writeFileSync(indexTsPath, indexTsContent)
+
+  // 在src文件夹下创建index.vue文件，并写入简单示例内容（这里可按需调整具体内容）
+  const indexVuePath = path.join(srcFolderPath, 'index.vue')
+  const indexVueContent = `<template>
+        <div>${folderName}组件内容占位</div>
+    </template>`
+  fs.writeFileSync(indexVuePath, indexVueContent)
 
   console.log(
     colors.green(`已成功创建名为${folderName}的文件夹及相关文件内容。`),

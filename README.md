@@ -1,48 +1,82 @@
-# Versakit
+<div align="center">
+  <a href="/">
+	<img src="./logo.svg"  />
+  </a>
+  <h1>Versakit</h1>
+  <p>A Vue3 component library that supports the desktop side.</p>
+  <p>
+    <a href="">Documentation</a> | 
+    <a href="./README.md">ENGLISH README</a>
+  </p>
+  <p>
+    <img src="https://img.shields.io/badge/vue-v3.2.0%2B-%23407fbc" alt="vue">
+    <img src="https://img.shields.io/npm/l/@varlet/ui.svg" alt="license">
+  </p>
+</div>
 
-## 一、简介
+---
 
-Versakit 是一个精心设计的 Vue3 组件库，旨在为开发者提供高度可定制的组件解决方案。它允许你在不依赖特定视觉样式的情况下构建用户界面，赋予你完全掌控组件外观和行为的能力。
+## I. Introduction
 
-## 二、特点
+Versakit is a carefully designed Vue3 component library, aiming to provide developers with highly customizable component solutions. It allows you to build user interfaces without relying on specific visual styles, giving you the full ability to control the appearance and behavior of components.
 
-### 1. 高度可定制
+## II. Features
 
-每个组件都被设计为只包含核心功能和逻辑，没有预设的样式。这意味着你可以根据项目的设计系统轻松地为组件添加样式，使其完美融入你的应用程序的视觉风格。
+- 🚀 &nbsp; Provides over 20 high-quality universal components.
+- 💪 &nbsp; Developed by Chinese developers, with complete Chinese and English documentation and logistical support.
+- 🛠️ &nbsp; Supports on-demand import.
+- 🛠️ &nbsp; Supports theme customization.
+- 🌍 &nbsp; Supports internationalization.
+- 💡 &nbsp; Supports Typescript.
+- 💪 &nbsp; Ensures over 90% unit test coverage, providing stability guarantees.
+- 🛠️ &nbsp; Supports dark mode.
+- 🔧 &nbsp; Provides an official VSCode plugin.
+- ⌨️ &nbsp; Supports accessible access (under continuous improvement).
 
-### 2. 灵活的组件架构
+## III. Installation
 
-组件的设计遵循了灵活的架构原则，使得它们可以轻松地组合和扩展。无论是构建简单的用户界面还是复杂的交互应用，Versakit 都能满足你的需求。
-
-### 3. 良好的性能
-
-经过优化的代码结构确保了组件在各种场景下都能保持高效的性能，不会对应用程序的整体性能造成负担。
-
-## 三、安装
-
-你可以通过以下方式安装 Versakit：
+You can install Versakit in the following ways:
 
 ```bash
-# 使用 npm
-npm install versakit-ui
+# Using npm
+npm install @versakit/ui
 
-# 使用 yarn
-yarn add versakit-ui
+# Using yarn
+yarn add @versakit/ui
 
-# 使用 pnpm
-pnpm add versakit-ui
+# Using pnpm
+pnpm add @versakit/ui
 ```
 
-## 四、文档地址
+```
+import App from './App.vue'
+import { createApp } from 'vue'
+import Versakit from '@versakit/ui' // Import the component library
+import '@versakit/ui/dist/style.css' // Import the styles
 
-[组件库文档](https://lenran659.github.io/versakit-docs/)
+createApp(App).use(Versakit).mount('#app')
+```
+
+## IV. Documentation Address
+
+[Component Library Documentation](https://lenran659.github.io/versakit-docs/)
 
 [github](https://github.com/lenran659/versakit-ui)
 
 [gitee](https://gitee.com/dragon_water/versakit-ui#/dragon_water/versakit-ui/blob/master/%22https:/lenran659.github.io/versakit-docs/%22)
 
-## 五、许可证
+## V. License
 
-Versakit 是在 [MIT] 许可证下发布的。详细信息请查看项目根目录下的`LICENSE`文件。
+Versakit is released under the [MIT] license. For detailed information, please check the `LICENSE` file in the project root directory.
 
-请注意，你需要根据你的组件库的实际情况对上述内容进行调整和补充，包括准确的安装步骤、详细的组件文档、许可证信息等。如果你的组件库不是基于 React 的，你需要修改示例代码部分以适应相应的技术栈。
+Please note that you need to adjust and supplement the above content according to the actual situation of your component library, including accurate installation steps, detailed component documentation, license information, etc. If your component library is not based on React, you need to modify the example code section to adapt to the corresponding technology stack.
+
+### Thanks to the Contributors for Their Efforts
+
+<a href="https://github.com/lenran659/Versakit/graphs/contributors">
+ <img src="https://avatars.githubusercontent.com/u/74483049?s=400&u=102dfac48d0067d9d7a5576134e409590bbfaafe&v=4" width="64" height="64" style="border-radius:50%"  />
+  <img src="https://avatars.githubusercontent.com/u/131731035?v=4" width="64" height="64" style="border-radius:50%" />
+  <img src="https://avatars.githubusercontent.com/u/122306263?v=4" width="64" height="64" style="border-radius:50%" />
+  <img src="https://avatars.githubusercontent.com/u/180088207?v=4" width="64" height="64"  style="border-radius:50%" />
+  <img src="https://avatars.githubusercontent.com/u/120795714?v=4" width="64" height="64"  style="border-radius:50%" />
+</a>

@@ -6,7 +6,7 @@
 
 <script setup lang="ts">
 import { computed } from 'vue'
-import type { TagProps } from './type'
+import type { TagProps } from '../type/index'
 
 defineOptions({ name: 'VerTag' })
 
@@ -20,12 +20,12 @@ const props = withDefaults(defineProps<TagProps>(), {
 const tClass = computed(() => {
   return [
     'ver-tag',
-    props.type == 'primary' ? '' : `ver-tag-${props.type}`,
+    props.type == 'primary' ? 'ver-tag-primary' : `ver-tag-${props.type}`,
     props.round == false ? '' : 'is-round',
     props.plain == false ? '' : 'is-plain',
-    props.size && props.size !== 'default' ? `is-${props.size}` : '',
+    props.size == 'default' ? '' : `is-${props.size}`,
   ]
 })
 </script>
 
-<style src="./index.scss" lang="scss" scoped></style>
+<style src="../style/index.scss" lang="scss" scoped></style>

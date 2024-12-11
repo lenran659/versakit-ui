@@ -17,7 +17,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import VerIcon from '../../icon/index'
-import type { ButtonProps } from './type'
+import type { ButtonProps } from '../type/index'
 
 defineOptions({ name: 'VerButton' })
 
@@ -71,4 +71,4 @@ const Verclass = computed(() => {
 })
 </script>
 
-<style src="./index.scss" lang="scss" scoped></style>
+<style src="../style/index.scss" lang="scss" scoped></style>

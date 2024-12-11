@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref, watch, nextTick } from 'vue'
 import { getElementSize } from '../../../utils/getElementSize.js'
-import type { PopOverProps } from './type'
+import type { PopOverProps } from '../type/index'
 
 defineOptions({ name: 'VerPopOver' })
 
@@ -140,49 +140,4 @@ watch(isVisable, (val) => {
   </div>
 </template>
 
-<style lang="scss" scoped>
-.ver-popover {
-  position: relative;
-
-  .ver-popover-item {
-    position: absolute;
-    user-select: none;
-    font-size: 0.875rem;
-    padding: 1rem;
-    z-index: 20;
-    background-color: white;
-    box-shadow:
-      0 4px 6px -1px rgba(0, 0, 0, 0.1),
-      0 2px 4px -1px rgba(0, 0, 0, 0.06);
-
-    &.dark {
-      background-color: #27272a;
-      border-color: #3f3f46;
-      color: white;
-    }
-
-    content {
-      width: max-content;
-    }
-  }
-}
-
-// slide 展示动画
-.slide-enter-active {
-  transition:
-    opacity 0.3s,
-    transform 0.3s;
-}
-
-.slide-leave-active {
-  transition:
-    opacity 0.3s,
-    transform 0.3s;
-}
-
-.slide-enter-from,
-.slide-leave-to {
-  transform: translateY(20px);
-  opacity: 0;
-}
-</style>
+<style lang="scss" scoped src="../style/index.scss"></style>

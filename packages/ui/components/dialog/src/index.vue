@@ -31,7 +31,7 @@
 </template>
 
 <script lang="ts" setup>
-import type { DiaLogProps } from './type'
+import type { DiaLogProps } from '../type/index'
 import VerIcon from '../../icon/index'
 
 defineOptions({ name: 'VerDialog' })
@@ -50,4 +50,4 @@ const close = () => {
 }
 </script>
 
-<style src="./index.scss" lang="scss" scoped></style>
+<style src="../style/index.scss" lang="scss" scoped></style>

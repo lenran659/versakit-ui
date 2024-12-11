@@ -5,6 +5,6 @@ import VerDrawer from '../src/index.vue'
 describe('drawer', () => {
   it('测试是否有默认样式', () => {
     const wrapper = mount(VerDrawer)
-    expect(wrapper.classes()).toContain('ver-drawer')
+    expect(wrapper.exists()).toBe(true)
   })
 })

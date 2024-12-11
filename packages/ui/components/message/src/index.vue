@@ -9,7 +9,7 @@
 
 <script setup lang="ts">
 import { onMounted, ref, computed } from 'vue'
-import type { MessageProps } from './type'
+import type { MessageProps } from '../type/index'
 import VerIcon from '../../icon/index'
 
 defineOptions({ name: 'VerMessage' })
@@ -74,4 +74,4 @@ onMounted(() => {
 })
 </script>
 
-<style src="./index.scss" lang="scss" scoped></style>
+<style src="../style/index.scss" lang="scss" scoped></style>

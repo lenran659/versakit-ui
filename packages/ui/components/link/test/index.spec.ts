@@ -5,6 +5,6 @@ import VerText from '../src/index.vue'
 describe('link', () => {
   it('测试是否有默认样式', () => {
     const wrapper = mount(VerText)
-    expect(wrapper.classes()).toContain('ver-text')
+    expect(wrapper.classes()).toContain('ver-link')
   })
 })

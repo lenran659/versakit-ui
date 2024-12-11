@@ -6,24 +6,24 @@
 
 <script setup lang="ts">
 import { computed } from 'vue'
-import type { TextProps } from './type'
+import type { TextProps } from '../type/index'
 
 defineOptions({ name: 'VerText' })
 
 const props = withDefaults(defineProps<TextProps>(), {
-  type: '',
-  size: '',
+  type: 'primary',
+  size: 'default',
   truncated: false,
 })
 
 const VerClass = computed(() => {
   return [
     'ver-text',
-    props.type == '' ? '' : `ver-text-${props.type}`,
-    props.size == '' ? '' : `ver-text-${props.size}`,
+    props.type == 'primary' ? 'ver-text-primary' : `ver-text-${props.type}`,
+    props.size == 'default' ? '' : `is-${props.size}`,
     props.truncated == false ? '' : 'is-truncated',
   ]
 })
 </script>
 
-<style src="./index.scss" lang="scss" scoped></style>
+<style src="../style/index.scss" lang="scss" scoped></style>

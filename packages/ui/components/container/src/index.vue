@@ -8,13 +8,4 @@
 defineOptions({ name: 'VerContainer' })
 </script>
 
-<style lang="scss" scoped>
-.ver-container {
-  display: flex;
-  flex-direction: row;
-  flex: 1;
-  flex-basis: auto;
-  box-sizing: border-box;
-  min-width: 0;
-}
-</style>
+<style lang="scss" src="../style/index.scss" scoped></style>

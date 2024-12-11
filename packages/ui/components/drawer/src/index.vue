@@ -29,7 +29,7 @@
 </template>
 
 <script lang="ts" setup>
-import type { DrawerProps } from './type'
+import type { DrawerProps } from '../type/type'
 import VerIcon from '../../icon/index'
 defineOptions({ name: 'VerDrawer' })
 
@@ -45,4 +45,4 @@ const handleClose = () => {
 }
 </script>
 
-<style src="./index.scss" lang="scss" scoped></style>
+<style src="../style/index.scss" lang="scss" scoped></style>

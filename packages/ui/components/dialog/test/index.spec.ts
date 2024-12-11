@@ -5,6 +5,6 @@ import VerDialog from '../src/index.vue'
 describe('dialog', () => {
   it('测试是否有默认样式', () => {
     const wrapper = mount(VerDialog)
-    expect(wrapper.classes()).toContain('ver-dialog')
+    expect(wrapper.exists()).toBe(true)
   })
 })

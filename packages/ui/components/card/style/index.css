@@ -1,0 +1,15 @@
+.v-card {
+  @apply rounded-md p-4 border border-zinc-300 bg-zinc-100 overflow-hidden transition duration-300 dark:text-white dark:bg-zinc-900;
+}
+
+.v-card.is-shadow-always {
+  @apply shadow-md;
+}
+
+.v-card.is-shadow-never {
+  @apply shadow-none;
+}
+
+.v-card.is-shadow-hover:hover {
+  @apply shadow-md;
+}

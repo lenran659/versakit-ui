@@ -1,17 +1,17 @@
 import { describe, it, expect } from 'vitest'
 import { mount } from '@vue/test-utils'
-import VerText from '../src/index.vue'
+import VText from '../src/index.vue'
 
 describe('text', () => {
   it('测试是否有默认样式', () => {
-    const wrapper = mount(VerText)
+    const wrapper = mount(VText)
     expect(wrapper.classes()).toContain('v-text')
   })
 
   const types = ['success', 'primary', 'warning', 'error', 'info']
   types.forEach((type) => {
     it(`测试type:${type}`, () => {
-      const wrapper = mount(VerText, {
+      const wrapper = mount(VText, {
         props: {
           type: type as any,
         },
@@ -25,7 +25,7 @@ describe('text', () => {
     .filter((s) => s !== 'default')
     .forEach((item) => {
       it(`测试type:${item}`, () => {
-        const wrapper = mount(VerText, {
+        const wrapper = mount(VText, {
           props: {
             size: item as any,
           },
@@ -35,7 +35,7 @@ describe('text', () => {
     })
 
   it('测试truncated', () => {
-    const wrapper = mount(VerText, {
+    const wrapper = mount(VText, {
       props: {
         truncated: true,
       },

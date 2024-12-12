@@ -1,0 +1,12 @@
+.v-divider {
+  @apply w-full h-[1px] my-6 relative flex items-center px-20 box-border border-t border-zinc-300 dark:border-zinc-700;
+}
+
+.v-vertical {
+  @apply align-middle inline-flex w-[1px] h-[1rem] mx-2 border-t-0 border-l border-zinc-300 p-0 dark:border-zinc-600;
+}
+
+.v-divider-title {
+  @apply border-l-[20px]  border-r-[20px] border-solid border-transparent bg-transparent;
+  @apply dark:border-l-[20px]  dark:border-r-[20px] dark:border-solid dark:border-transparent;
+}

@@ -26,11 +26,10 @@
 
 <demo vue="../../example/divider/vertical.vue"></demo>
 
-
 ## Devider API
 
-| 属性       | 说明      | 类型      | 默认值    |
-| ---------- | --------- | --------- | --------- |
-| `direction`     | 分隔线的方向，可以是`vertical`、`horizontal` | `string`  | `horizontal` |
-| `position` | 分割线的位置，例如`top`、`right`   | `string` | `left`   |
-| `line` | 分隔线的虚实    | `string` | `solid`   |
+| 属性        | 说明                                         | 类型     | 默认值       |
+| ----------- | -------------------------------------------- | -------- | ------------ |
+| `direction` | 分隔线的方向，可以是`vertical`、`horizontal` | `string` | `horizontal` |
+| `position`  | 分割线的位置，例如`top`、`right`             | `string` | `left`       |
+| `line`      | 分隔线的虚实                                 | `string` | `solid`      |

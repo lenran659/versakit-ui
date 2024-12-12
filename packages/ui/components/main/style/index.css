@@ -1,3 +1,3 @@
 .v-main {
-  @apply p-5 block flex-1 overflow-auto flex-basis-auto box-border;
+  @apply p-5 block flex-1 overflow-auto basis-auto box-border;
 }

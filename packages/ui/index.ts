@@ -4,12 +4,13 @@ import VCard from './components/card'
 import VText from './components/text'
 import VLink from './components/link'
 import VDivider from './components/divider'
+import VIcon from './components/icon'
 import { vRipple } from './directives/index'
 import 'virtual:svg-icons-register'
 import './style/index.css'
 
-const components: Component[] = [VButton, VCard, VText, VLink, VDivider]
-export { VButton, VCard, VText, VLink, VDivider }
+const components: Component[] = [VButton, VCard, VText, VLink, VDivider, VIcon]
+export { VButton, VCard, VText, VLink, VDivider, VIcon }
 
 export default {
   install: (app: App) => {

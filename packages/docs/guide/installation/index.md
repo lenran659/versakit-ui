@@ -4,9 +4,9 @@
 
 ```shell
 
-npm i versakit-ui
+npm i @versakit/ui
 
-yarn add versakit-ui
+yarn add @versakit/ui
 
-pnpm add versakit-ui
+pnpm add @versakit/ui
 ```

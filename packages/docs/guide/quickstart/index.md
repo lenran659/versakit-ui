@@ -6,13 +6,13 @@
 
 ```javascript
 // main.ts
-import { createApp } from "vue";
-import VersakitUI from "versakit-ui";
-import App from "./App.vue";
-import "versakit-ui/dist/style.css";
+import { createApp } from 'vue'
+import App from './App.vue'
+import Versakit from '@versakit/ui' // 引入组件库
+import '@versakit/ui/dist/style.css' // 引入样式
 
-const app = createApp(App);
+const app = createApp(App)
 
-app.use(VersakitUI);
-app.mount("#app");
+app.use(Versakit)
+app.mount('#app')
 ```

@@ -31,16 +31,16 @@ const props = withDefaults(defineProps<ButtonProps>(), {
 const cls = computed(() => {
   return [
     'v-btn',
-    props.type == '' ? '' : `btn-${props.type}`,
-    props.ghost == false ? '' : 'is-ghost',
-    props.round == false ? '' : 'is-round',
-    props.plain == false ? '' : 'is-plain',
-    props.text == false ? '' : 'is-text',
-    props.shade == false ? '' : 'is-shade',
-    props.disabled == false ? '' : 'is-disabled',
+    props.type ? `btn-${props.type}` : '',
+    props.round ? 'is-round' : '',
+    props.ghost ? 'is-ghost' : '',
+    props.plain ? 'is-plain' : '',
+    props.text ? 'is-text' : '',
+    props.shade ? 'is-shade' : '',
+    props.disabled ? 'is-disabled' : '',
     props.size && props.size !== 'default' ? `is-${props.size}` : '',
-    props.circle == false ? '' : 'is-circle',
-  ]
+    props.circle ? 'is-circle' : '',
+  ].filter(Boolean) // 过滤掉空字符串，避免生成多余的空类名
 })
 </script>
 

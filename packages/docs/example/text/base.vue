@@ -1,20 +1,19 @@
 <script setup lang="ts">
-import { VerRow, VerText } from 'versakit-ui'
+import { VText } from '@versakit/ui'
 </script>
 
 <template>
-  <ver-row>
-    <ver-text class="mx4">Default</ver-text>
-    <ver-text class="mx4" type="primary">Primary</ver-text>
-    <ver-text class="mx4" type="success">Success</ver-text>
-    <ver-text class="mx4" type="info">Info</ver-text>
-    <ver-text class="mx4" type="warning">Warning</ver-text>
-    <ver-text class="mx4" type="danger">Drange</ver-text>
-  </ver-row>
+  <div>
+    <v-text>文本</v-text>
+    <v-text type="primary">文本</v-text>
+    <v-text type="success">文本</v-text>
+    <v-text type="warning">文本</v-text>
+    <v-text type="error">文本</v-text>
+  </div>
 </template>
 
 <style scoped>
-.mx4 {
-  margin: 0px 10px;
+.v-text {
+  margin: 0px 1rem;
 }
 </style>

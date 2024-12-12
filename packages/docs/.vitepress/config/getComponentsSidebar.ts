@@ -26,7 +26,6 @@ export const getComponentsSidebar = (): DefaultTheme.Sidebar => {
         { text: 'Switch 开关', link: '/components/switch/' },
         { text: 'Radio 单选框', link: '/components/radio/' },
         { text: 'Textarea 文本域', link: '/components/textarea/' },
-        { text: 'Form 表单', link: '/components/form/' },
       ],
     },
     {

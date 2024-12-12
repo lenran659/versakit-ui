@@ -1381,6 +1381,7 @@ ul {
 }
 
 li {
+  width: 33%;
   padding: 1rem;
   display: flex;
   justify-content: center;
@@ -1394,6 +1395,7 @@ li:hover {
 }
 
 span {
+  text-align: center;
   margin: 0.25rem 0px;
 }
 </style>

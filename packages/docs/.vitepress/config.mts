@@ -1,16 +1,23 @@
 import { defineConfig } from 'vitepress'
 import { vitepressDemoPlugin } from 'vitepress-demo-plugin'
+import { getNav } from './config/nav'
+import { getComponentsSidebar } from './config/getComponentsSidebar'
+import { getGuideSidebar } from './config/getGuideSidebar'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   base: '/versakit/',
-  title: '123',
+  title: 'Versakit',
   description: 'A VitePress Site',
   themeConfig: {
-    nav: [{ text: 'Home', link: '/' }],
-    sidebar: [],
+    nav: getNav(),
+    sidebar: {
+      '/guide/': getGuideSidebar(),
+      '/components/': getComponentsSidebar(),
+    } as any,
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' },
+      { icon: 'github', link: 'https://github.com/lenran659/Versakit' },
+      { icon: 'gitee', link: 'https://gitee.com/dragon_water/versakit' },
     ],
   },
   markdown: {

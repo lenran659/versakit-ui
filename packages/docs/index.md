@@ -3,22 +3,23 @@
 layout: home
 
 hero:
-  name: 'My Awesome Project'
-  text: 'A VitePress Site'
-  tagline: My great project tagline
+  name: 'Versakit'
+  image:
+    src: logo.svg
+    alt: Versakit
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
-    - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: 开始使用
+      link: /guide/installation/
 
 features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - icon: 💡
+    title: Vue3组件库
+    details: 基于vite打包和TypeScript开发
+  - icon: 📦
+    title: 持续开发中
+    details: 更新迭代
+  - icon: 🛠️
+    title: 按需引入
+    details: 直接支持按需引入无需配置任何插件。
 ---

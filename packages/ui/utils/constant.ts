@@ -1,1 +1,1 @@
-export const Type = ['success', 'warning', 'danger', 'primary'] as const
+export type Componenttype = 'success' | 'warning' | 'danger' | 'primary'

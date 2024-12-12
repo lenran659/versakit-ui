@@ -19,6 +19,10 @@ export const createNewFolder = (folderName) => {
   const testFolderPath = path.join(targetFolderPath, 'test')
   fs.mkdirpSync(testFolderPath)
 
+  // 创建style文件夹
+  const styleFolderPath = path.join(targetFolderPath, 'style')
+  fs.mkdirpSync(styleFolderPath)
+
   // 创建index.ts文件并写入内容
   const indexTsPath = path.join(targetFolderPath, 'index.ts')
   const indexTsContent = `import { withInstall } from '../../utils/withinstall';

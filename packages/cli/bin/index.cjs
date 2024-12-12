@@ -7477,6 +7477,10 @@ const createNewFolder = (folderName) => {
   const testFolderPath = require$$1$1.join(targetFolderPath, 'test');
   fs.mkdirpSync(testFolderPath);
 
+  // 创建style文件夹
+  const styleFolderPath = require$$1$1.join(targetFolderPath, 'style');
+  fs.mkdirpSync(styleFolderPath);
+
   // 创建index.ts文件并写入内容
   const indexTsPath = require$$1$1.join(targetFolderPath, 'index.ts');
   const indexTsContent = `import { withInstall } from '../../utils/withinstall';

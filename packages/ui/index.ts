@@ -1,11 +1,10 @@
 import type { App, Component } from 'vue'
-import Vbutton from './components/button'
 import { vRipple } from './directives/index'
 import 'virtual:svg-icons-register'
 import './style/index.css'
 
-const components: Component[] = [Vbutton]
-export { Vbutton }
+const components: Component[] = []
+export {}
 
 export default {
   install: (app: App) => {

@@ -51,10 +51,6 @@ export const getComponentsSidebar = (): DefaultTheme.Sidebar => {
       text: 'Feedback 反馈组件',
       items: [
         {
-          text: 'Alert 提示',
-          link: '/components/alert/',
-        },
-        {
           text: 'Dialog 对话框',
           link: '/components/dialog/',
         },
@@ -69,10 +65,6 @@ export const getComponentsSidebar = (): DefaultTheme.Sidebar => {
         {
           text: 'Notification 通知',
           link: '/components/notification/',
-        },
-        {
-          text: 'Loading 加载',
-          link: '/components/loading/',
         },
       ],
     },

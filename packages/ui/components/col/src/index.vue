@@ -1,6 +1,6 @@
 <template>
   <div
-    class="v-col"
+    class="ver-col"
     :style="{
       width: width,
       marginLeft: offset,
@@ -14,7 +14,7 @@
 import { ref } from 'vue'
 import type { ColProps } from '../type/index'
 
-defineOptions({ name: 'VCol' })
+defineOptions({ name: 'VerCol' })
 
 const props = withDefaults(defineProps<ColProps>(), {
   span: 24,
@@ -38,4 +38,4 @@ const offset = ref(
 )
 </script>
 
-<style scoped src="../stye/index.css"></style>
+<style scoped src="../stye/index.scss" lang="scss"></style>

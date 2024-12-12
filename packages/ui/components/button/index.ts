@@ -1,6 +1,6 @@
 import { withInstall } from '../../utils/withinstall'
 import Button from './src/index.vue'
 
-const VButton = withInstall(Button)
+const VerButton = withInstall(Button)
 
-export default VButton
+export default VerButton

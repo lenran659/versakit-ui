@@ -1,11 +1,11 @@
 <template>
-  <div class="v-header">
+  <div class="ver-header">
     <slot></slot>
   </div>
 </template>
 
 <script lang="ts" setup>
-defineOptions({ name: 'VHeader' })
+defineOptions({ name: 'VerHeader' })
 </script>
 
-<style scoped src="../style/index.css"></style>
+<style lang="scss" scoped src="../style/index.scss"></style>

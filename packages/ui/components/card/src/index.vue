@@ -1,10 +1,10 @@
 <template>
-  <div :class="cls">
-    <div class="v-card-header" v-if="$slots.header">
+  <div :class="VerClass">
+    <div class="ver-card-header" v-if="$slots.header">
       <slot name="header"></slot>
     </div>
 
-    <div class="v-card-body">
+    <div class="ver-card-body">
       <slot></slot>
     </div>
   </div>
@@ -14,22 +14,22 @@
 import { computed } from 'vue'
 import type { CardProps } from '../type/index'
 
-defineOptions({ name: 'VCard' })
+defineOptions({ name: 'VerCard' })
 
 const props = withDefaults(defineProps<CardProps>(), {
   shadow: 'always',
 })
 
-const cls = computed(() => {
-  // 根据传入的props.shadow属性值来确定要添加的阴影相关类名
-  const shadowClass =
-    props.shadow === 'always'
+const VerClass = computed(() => {
+  return [
+    'ver-card',
+    props.shadow == 'always'
       ? 'is-shadow-always'
-      : props.shadow === 'hover'
+      : props.shadow == 'hover'
         ? 'is-shadow-hover'
-        : 'is-shadow-never'
-  return ['v-card', shadowClass]
+        : 'is-shadow-never',
+  ]
 })
 </script>
 
-<style src="../style/index.css" scoped></style>
+<style lang="scss" src="../style/index.scss" scoped></style>

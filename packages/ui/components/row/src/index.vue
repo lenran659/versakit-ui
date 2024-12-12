@@ -1,11 +1,11 @@
 <template>
-  <div class="v-row">
+  <div class="ver-row">
     <slot></slot>
   </div>
 </template>
 
 <script lang="ts" setup>
-defineOptions({ name: 'VRow' })
+defineOptions({ name: 'VerRow' })
 </script>
 
-<style scoped src="../style/index.css"></style>
+<style scoped lang="scss" src="../style/index.scss"></style>

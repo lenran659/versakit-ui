@@ -1,0 +1,83 @@
+@use '../../../style/color/index.scss' as *;
+
+.ver-switch {
+  display: inline-block;
+  align-items: center;
+  position: relative;
+  font-size: 14px;
+  line-height: 20px;
+  vertical-align: middle;
+  &-core {
+    margin: 0;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+    border: 1px solid $ver-zinc-3;
+    outline: none;
+    border-radius: 10px;
+    box-sizing: border-box;
+    background-color: $ver-zinc-3;
+    cursor: pointer;
+    transition:
+      border-color 0.3s,
+      background-color 0.3s;
+    vertical-align: middle;
+
+    .dark & {
+      border-color: $ver-zinc-7;
+      background-color: $ver-zinc-7;
+    }
+
+    .ver-switch-button {
+      position: absolute;
+      top: 0.5px;
+      left: 0px;
+      margin: 3px;
+      border-radius: 100%;
+      transition: all 0.3s;
+      width: 16px;
+      height: 16px;
+      background-color: $ver-zinc-1;
+    }
+  }
+}
+
+.is-checked {
+  .ver-switch-core {
+    border-color: $ver-violet-6;
+    background-color: $ver-violet-6;
+    .ver-switch-button {
+      transform: translateX(100%);
+    }
+  }
+}
+
+.is-small {
+  .ver-switch-core {
+    width: 32px;
+    height: 15px;
+    border-radius: 7.5px;
+    // 同时调整内部按钮大小和位置等
+    .ver-switch-button {
+      width: 12px;
+      height: 12px;
+      top: 2.5px;
+      left: 0.5px;
+    }
+  }
+}
+
+.is-large {
+  .ver-switch-core {
+    width: 50px;
+    height: 25px;
+    border-radius: 12.5px;
+    // 调整按钮大小和位置等
+    .ver-switch-button {
+      width: 20px;
+      height: 20px;
+      top: -0.5px;
+      left: 2px;
+    }
+  }
+}

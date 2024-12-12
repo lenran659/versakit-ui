@@ -1,19 +1,22 @@
 <script setup lang="ts">
-import { VLink } from '@versakit/ui'
+import { VerRow, VerLink } from '@versakit/ui'
 </script>
 
 <template>
-  <div>
-    <v-link>链接</v-link>
-    <v-link type="primary">链接</v-link>
-    <v-link type="success">链接</v-link>
-    <v-link type="warning">链接</v-link>
-    <v-link type="error">链接</v-link>
-  </div>
+  <ver-row>
+    <ver-link class="mx4" href="https://www.baidu.com/index.html">
+      default
+    </ver-link>
+    <ver-link class="mx4" type="primary">primary</ver-link>
+    <ver-link class="mx4" type="success">success</ver-link>
+    <ver-link class="mx4" type="info">info</ver-link>
+    <ver-link class="mx4" type="warning">warning</ver-link>
+    <ver-link class="mx4" type="error">danger</ver-link>
+  </ver-row>
 </template>
 
 <style scoped>
-.v-link {
-  margin: 0px 1rem;
+.mx4 {
+  margin: 0px 8px;
 }
 </style>

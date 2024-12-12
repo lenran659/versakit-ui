@@ -1,6 +1,6 @@
-import { withInstall } from '../../utils/withinstall'
 import Text from './src/index.vue'
+import { withInstall } from '../../utils/withinstall'
 
-const VText = withInstall(Text)
+const VerText = withInstall(Text)
 
-export default VText
+export default VerText

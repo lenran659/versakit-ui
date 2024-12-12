@@ -1,11 +1,17 @@
-<script setup lang="ts">
-import { VDivider } from '@versakit/ui'
-</script>
-
 <template>
   <div>
-    <p>一段文字</p>
-    <v-divider line="dashed"></v-divider>
-    <p>一段文字</p>
+    <p>
+      There little thoughts are the rustle of leaves; they have their whisper of
+      joy in my mind.
+    </p>
+    <ver-divider line="dashed" />
+    <p>
+      There little thoughts are the rustle of leaves; they have their whisper of
+      joy in my mind.
+    </p>
   </div>
 </template>
+
+<script setup lang="ts">
+import { VerDivider } from '@versakit/ui'
+</script>

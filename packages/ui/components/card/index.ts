@@ -1,6 +1,6 @@
 import { withInstall } from '../../utils/withinstall'
 import Card from './src/index.vue'
 
-const VCard = withInstall(Card)
+const VerCard = withInstall(Card)
 
-export default VCard
+export default VerCard

@@ -1,20 +1,20 @@
 <template>
-  <v-row class="mb-4">
-    <v-col :span="10"><div class="col-box col-box-1">10</div></v-col>
-    <v-col :span="12" :offset="2">
+  <VerRow class="mb-4">
+    <VerCol :span="10"><div class="col-box col-box-1">10</div></VerCol>
+    <VerCol :span="12" :offset="2">
       <div class="col-box col-box-2">12</div>
-    </v-col>
-  </v-row>
-  <v-row class="mb-4">
-    <v-col :span="8"><div class="col-box col-box-1">8</div></v-col>
-    <v-col :span="8" :offset="8">
+    </VerCol>
+  </VerRow>
+  <VerRow class="mb-4">
+    <VerCol :span="8"><div class="col-box col-box-1">8</div></VerCol>
+    <VerCol :span="8" :offset="8">
       <div class="col-box col-box-2">8</div>
-    </v-col>
-  </v-row>
+    </VerCol>
+  </VerRow>
 </template>
 
 <script setup lang="ts">
-import { VRow, VCol } from '@versakit/ui'
+import { VerRow, VerCol } from '@versakit/ui'
 </script>
 
 <style scoped>

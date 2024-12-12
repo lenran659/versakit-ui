@@ -1,6 +1,6 @@
-import { withInstall } from '../../utils/withinstall'
 import Link from './src/index.vue'
+import { withInstall } from '../../utils/withinstall'
 
-const VLink = withInstall(Link)
+const VerLink = withInstall(Link)
 
-export default VLink
+export default VerLink

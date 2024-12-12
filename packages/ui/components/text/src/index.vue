@@ -1,5 +1,5 @@
 <template>
-  <span :class="cls">
+  <span :class="VerClass">
     <slot></slot>
   </span>
 </template>
@@ -8,22 +8,22 @@
 import { computed } from 'vue'
 import type { TextProps } from '../type/index'
 
-defineOptions({ name: 'VText' })
+defineOptions({ name: 'VerText' })
 
 const props = withDefaults(defineProps<TextProps>(), {
-  type: 'info',
+  type: 'primary',
   size: 'default',
   truncated: false,
 })
 
-const cls = computed(() => {
+const VerClass = computed(() => {
   return [
-    'v-text',
-    props.type == 'primary' ? 'text-primary' : `text-${props.type}`,
+    'ver-text',
+    props.type == 'primary' ? 'ver-text-primary' : `ver-text-${props.type}`,
     props.size == 'default' ? '' : `is-${props.size}`,
     props.truncated == false ? '' : 'is-truncated',
   ]
 })
 </script>
 
-<style src="../style/index.css" scoped></style>
+<style src="../style/index.scss" lang="scss" scoped></style>

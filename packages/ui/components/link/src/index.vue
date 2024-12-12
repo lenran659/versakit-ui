@@ -1,5 +1,5 @@
 <template>
-  <a :class="cls" :href="href">
+  <a :class="VerClass" :href="href">
     <span>
       <slot></slot>
     </span>
@@ -10,21 +10,21 @@
 import { computed } from 'vue'
 import type { LinkProps } from '../type/index'
 
-defineOptions({ name: 'VLink' })
+defineOptions({ name: 'VerLink' })
 
 const props = withDefaults(defineProps<LinkProps>(), {
-  type: 'info',
+  type: '',
   disabled: false,
   href: '',
 })
 
-const cls = computed(() => {
+const VerClass = computed(() => {
   return [
-    'v-link',
-    props.type ? `link-${props.type}` : '',
+    'ver-link',
+    props.type == '' ? '' : `ver-link-${props.type}`,
     props.disabled == false ? '' : 'is-disabled',
   ]
 })
 </script>
 
-<style src="../style/index.css" scoped></style>
+<style src="../style/index.scss" lang="scss" scoped></style>

@@ -1,5 +1,5 @@
 import { mount } from '@vue/test-utils'
-import VDivider from '../index'
+import VerDivider from '../index'
 import { describe, it, expect } from 'vitest'
 
 describe('VerDivider', () => {
@@ -9,7 +9,7 @@ describe('VerDivider', () => {
       position: 'left',
       direction: 'horizontal',
     }
-    const wrapper = mount(VDivider, {
+    const wrapper = mount(VerDivider, {
       props: {
         props,
       },
@@ -25,7 +25,7 @@ describe('VerDivider', () => {
         position: 'left',
         direction: 'horizontal',
       }
-      const wrapper = mount(VDivider, {
+      const wrapper = mount(VerDivider, {
         props: {
           props,
         },
@@ -42,7 +42,7 @@ describe('VerDivider', () => {
         position: position,
         direction: 'horizontal',
       }
-      const wrapper = mount(VDivider, {
+      const wrapper = mount(VerDivider, {
         props: {
           props,
         },
@@ -60,7 +60,7 @@ describe('VerDivider', () => {
         position: 'left',
         direction: direction,
       }
-      const wrapper = mount(VDivider, {
+      const wrapper = mount(VerDivider, {
         props: {
           props,
         },

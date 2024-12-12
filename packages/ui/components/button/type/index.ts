@@ -11,6 +11,7 @@ export interface ButtonProps {
   slide?: boolean
   disabled?: boolean
   size?: SizeType
+  color?: string
   circle?: boolean
   icon?: string
 }

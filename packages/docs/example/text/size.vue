@@ -1,17 +1,17 @@
 <script setup lang="ts">
-import { VText } from '@versakit/ui'
+import { VerRow, VerText } from '@versakit/ui'
 </script>
 
 <template>
-  <div>
-    <v-text size="large">文本</v-text>
-    <v-text>文本</v-text>
-    <v-text size="small">文本</v-text>
-  </div>
+  <ver-row>
+    <ver-text class="mx4" size="large">Large</ver-text>
+    <ver-text class="mx4">Default</ver-text>
+    <ver-text class="mx4" size="small">Small</ver-text>
+  </ver-row>
 </template>
 
 <style scoped>
-.v-text {
-  margin: 0px 1rem;
+.mx4 {
+  margin: 0px 10px;
 }
 </style>

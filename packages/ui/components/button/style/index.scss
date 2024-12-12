@@ -1,0 +1,216 @@
+@use '../../../style/color/index.scss' as *;
+@use '../../../style/utils/button/index.scss' as *;
+@use 'sass:list';
+@use 'sass:color';
+
+.ver-btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1;
+  white-space: nowrap;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  text-align: center;
+  box-sizing: border-box;
+  outline: none;
+  margin: 0;
+  transition: 0.1s;
+  font-weight: 500;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  padding: 12px 20px;
+  font-size: 14px;
+  border-radius: 4px;
+  border: none;
+
+  &:not(.is-disabled):active {
+    transform: scale(0.9);
+  }
+
+  .dark & {
+    color: $ver-zinc-3;
+    background-color: $ver-zinc-8;
+  }
+
+  span {
+    display: inline-flex;
+    align-items: center;
+  }
+}
+
+@include VerBtnType('primary', $ver-violet-6);
+@include VerBtnType('success', $ver-green-6);
+@include VerBtnType('info', $ver-zinc-6);
+@include VerBtnType('warning', $ver-orange-6);
+@include VerBtnType('error', $ver-red-6);
+
+/* 灵魂按钮 */
+@include VerBtnGhost(null, $ver-zinc-5, $ver-zinc-6);
+@include VerBtnGhost('primary', $ver-violet-5, $ver-violet-6);
+@include VerBtnGhost('success', $ver-green-5, $ver-green-6);
+@include VerBtnGhost('info', $ver-zinc-5, $ver-zinc-6);
+@include VerBtnGhost('warning', $ver-orange-5, $ver-orange-6);
+@include VerBtnGhost('error', $ver-red-5, $ver-red-6);
+
+.is-ghost {
+  padding: 12px 19px;
+  background-color: transparent;
+  color: $ver-zinc-6;
+  border: 1.5px solid $ver-zinc-5;
+
+  &:not(.is-disabled):hover {
+    background-color: $ver-zinc-6;
+    border-color: $ver-zinc-6;
+    color: $ver-zinc-1;
+  }
+
+  .dark & {
+    border-color: $ver-zinc-8;
+
+    &:not(.is-disabled):hover {
+      background-color: $ver-zinc-2;
+      color: $ver-zinc-6;
+    }
+  }
+}
+
+/* round属性 */
+.ver-btn.is-round {
+  border-radius: 20px;
+  padding: 12px 21px;
+}
+
+/* round属性 & ghost属性 */
+.ver-btn.is-round.is-ghost {
+  padding: 11px 20px;
+}
+
+/* plain属性 */
+@include VerBtnPlain(null, $ver-zinc-1, $ver-zinc-6);
+@include VerBtnPlain('primary', $ver-violet-1, $ver-violet-6);
+@include VerBtnPlain('success', $ver-green-1, $ver-green-6);
+@include VerBtnPlain('info', $ver-zinc-1, $ver-zinc-6);
+@include VerBtnPlain('warning', $ver-orange-1, $ver-orange-6);
+@include VerBtnPlain('error', $ver-red-1, $ver-red-6);
+
+.is-plain {
+  color: $ver-zinc-6;
+  background-color: $ver-zinc-1;
+  border: 1px solid $ver-zinc-6;
+
+  &:not(.is-disabled):hover {
+    background-color: $ver-zinc-1;
+    color: $ver-zinc-6;
+  }
+
+  .dark & {
+    &:not(.is-disabled):hover {
+      background-color: $ver-zinc-2;
+      color: $ver-zinc-8;
+      border-color: $ver-zinc-8;
+    }
+  }
+}
+
+/* text属性 */
+@include VerBtnText(null, $ver-zinc-1, $ver-zinc-6);
+@include VerBtnText('primary', $ver-violet-1, $ver-violet-6);
+@include VerBtnText('success', $ver-green-1, $ver-green-6);
+@include VerBtnText('info', $ver-zinc-1, $ver-zinc-6);
+@include VerBtnText('warning', $ver-orange-1, $ver-orange-6);
+@include VerBtnText('error', $ver-red-1, $ver-red-6);
+
+.is-text {
+  border: none;
+  color: $ver-zinc-6;
+  background-color: transparent;
+
+  &:not(.is-disabled):hover {
+    background-color: $ver-zinc-1;
+  }
+
+  .dark & {
+    color: $ver-zinc-6;
+    background-color: transparent;
+
+    &:not(.is-disabled):hover {
+      color: $ver-zinc-9;
+    }
+  }
+}
+
+/* size属性 */
+.ver-btn.is-small {
+  font-size: 10px;
+  padding: 10px 15px;
+}
+
+.ver-btn.is-large {
+  font-size: 16px;
+  padding: 14px 25px;
+}
+
+/* shade属性 */
+.ver-btn.is-shade {
+  box-shadow: 0px 0 10px 0px $ver-zinc-5;
+
+  &:not(.is-disabled):hover {
+    box-shadow: 0px 0 10px 0px $ver-zinc-5;
+  }
+}
+
+/* 禁用属性 */
+$button-colors: (
+  'primary': (
+    $ver-violet-1,
+    $ver-violet-5,
+    $ver-violet-6,
+  ),
+  'success': (
+    $ver-green-1,
+    $ver-green-5,
+    $ver-green-6,
+  ),
+  'info': (
+    $ver-zinc-1,
+    $ver-zinc-5,
+    $ver-zinc-6,
+  ),
+  'warning': (
+    $ver-orange-1,
+    $ver-orange-5,
+    $ver-orange-6,
+  ),
+  'error': (
+    $ver-red-1,
+    $ver-red-5,
+    $ver-red-6,
+  ),
+);
+
+/* 禁止状态 */
+.ver-btn.is-disabled {
+  opacity: 50%;
+  cursor: not-allowed;
+  background-image: none;
+
+  &:active {
+    transform: scale(1);
+  }
+
+  // .dark & {
+  //   border: 1px solid $ver-zinc-7;
+  //   background-color: $ver-zinc-9;
+  // }
+}
+
+// circle
+.ver-btn.is-circle {
+  border-radius: 50%;
+  padding: 7px;
+}

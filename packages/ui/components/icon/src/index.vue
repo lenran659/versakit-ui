@@ -2,7 +2,7 @@
 import { computed } from 'vue'
 import type { IconsProps } from '../type/index'
 
-defineOptions({ name: 'VIcon', inheritAttrs: false })
+defineOptions({ name: 'VerIcon', inheritAttrs: false })
 
 const props = withDefaults(defineProps<IconsProps>(), {
   name: '',
@@ -19,7 +19,7 @@ const IconName = computed(() => {
 
 <template>
   <svg
-    class="v-icon"
+    class="ver-icon"
     aria-hidden="true"
     :style="{
       width: size,
@@ -30,4 +30,4 @@ const IconName = computed(() => {
   </svg>
 </template>
 
-<style scoped src="../style/index.css"></style>
+<style lang="scss" scoped src="../style/index.scss"></style>

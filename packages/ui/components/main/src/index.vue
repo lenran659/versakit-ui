@@ -1,11 +1,11 @@
 <template>
-  <div class="v-main">
+  <div class="ver-main">
     <slot></slot>
   </div>
 </template>
 
 <script lang="ts" setup>
-defineOptions({ name: 'VMain' })
+defineOptions({ name: 'VerMain' })
 </script>
 
-<style scoped src="../style/index.css"></style>
+<style lang="scss" scoped src="../style/index.scss"></style>

@@ -1,6 +1,6 @@
 import Main from './src/index.vue'
 import { withInstall } from '../../utils/withinstall'
 
-const VMain = withInstall(Main)
+const VerMain = withInstall(Main)
 
-export default VMain
+export default VerMain

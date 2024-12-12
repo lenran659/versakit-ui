@@ -1,11 +1,29 @@
 <script setup lang="ts">
-import { VIcon } from '@versakit/ui'
+import { VerIcon, VerRow } from '@versakit/ui'
 </script>
 
 <template>
-  <div>
-    <v-icon name="accessibility-outline"></v-icon>
-    <v-icon name="accessibility-outline" size="24"></v-icon>
-    <v-icon name="accessibility-outline" color="red"></v-icon>
-  </div>
+  <ver-row>
+    <ver-col :span="4">
+      <ver-icon name="accessibility-outline" size="25" />
+    </ver-col>
+    <ver-col :span="4">
+      <ver-icon name="accessibility" size="25" />
+    </ver-col>
+    <ver-col :span="4">
+      <ver-icon name="add-sharp" size="25" color="red" />
+    </ver-col>
+  </ver-row>
 </template>
+
+<style scoped lang="scss">
+.mb-4 {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.ver-icon {
+  margin: 0px 6px;
+}
+</style>

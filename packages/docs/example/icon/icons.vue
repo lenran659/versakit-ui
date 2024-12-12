@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { VIcon } from '@versakit/ui'
+import { VerIcon } from '@versakit/ui'
 
 const icons = [
   'accessibility-outline',
@@ -1364,13 +1364,13 @@ const icons = [
 <template>
   <ul>
     <li v-for="(item, index) in icons" :key="index">
-      <v-icon :name="item" size="30" />
+      <ver-icon :name="item" size="30" />
       <span>{{ item }}</span>
     </li>
   </ul>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 ul {
   display: flex;
   justify-content: space-around;
@@ -1378,24 +1378,23 @@ ul {
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
-}
 
-li {
-  width: 33%;
-  padding: 1rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
+  li {
+    width: 33%;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 
-li:hover {
-  transform: scale(1.2);
-  transition: all 0.5s;
-}
+    &:hover {
+      transform: scale(1.2);
+      transition: all 0.5s;
+    }
 
-span {
-  text-align: center;
-  margin: 0.25rem 0px;
+    span {
+      margin: 0.25rem 0px;
+    }
+  }
 }
 </style>

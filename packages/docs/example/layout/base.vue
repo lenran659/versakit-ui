@@ -1,34 +1,34 @@
 <template>
-  <v-row class="mb-4">
-    <v-col :span="24"><div class="col-box"></div></v-col>
-  </v-row>
-  <v-row class="mb-4">
-    <v-col :span="12"><div class="col-box col-box-1"></div></v-col>
-    <v-col :span="12"><div class="col-box col-box-2"></div></v-col>
-  </v-row>
-  <v-row class="mb-4">
-    <v-col :span="8"><div class="col-box col-box-1"></div></v-col>
-    <v-col :span="8"><div class="col-box col-box-2"></div></v-col>
-    <v-col :span="8"><div class="col-box col-box-1"></div></v-col>
-  </v-row>
-  <v-row class="mb-4">
-    <v-col :span="6"><div class="col-box col-box-1"></div></v-col>
-    <v-col :span="6"><div class="col-box col-box-2"></div></v-col>
-    <v-col :span="6"><div class="col-box col-box-1"></div></v-col>
-    <v-col :span="6"><div class="col-box col-box-2"></div></v-col>
-  </v-row>
-  <v-row class="mb-4">
-    <v-col :span="4"><div class="col-box col-box-1"></div></v-col>
-    <v-col :span="4"><div class="col-box col-box-2"></div></v-col>
-    <v-col :span="4"><div class="col-box col-box-1"></div></v-col>
-    <v-col :span="4"><div class="col-box col-box-2"></div></v-col>
-    <v-col :span="4"><div class="col-box col-box-1"></div></v-col>
-    <v-col :span="4"><div class="col-box col-box-2"></div></v-col>
-  </v-row>
+  <ver-row class="mb-4">
+    <ver-col :span="24"><div class="col-box"></div></ver-col>
+  </ver-row>
+  <ver-row class="mb-4">
+    <ver-col :span="12"><div class="col-box col-box-1"></div></ver-col>
+    <ver-col :span="12"><div class="col-box col-box-2"></div></ver-col>
+  </ver-row>
+  <ver-row class="mb-4">
+    <ver-col :span="8"><div class="col-box col-box-1"></div></ver-col>
+    <ver-col :span="8"><div class="col-box col-box-2"></div></ver-col>
+    <ver-col :span="8"><div class="col-box col-box-1"></div></ver-col>
+  </ver-row>
+  <ver-row class="mb-4">
+    <ver-col :span="6"><div class="col-box col-box-1"></div></ver-col>
+    <ver-col :span="6"><div class="col-box col-box-2"></div></ver-col>
+    <ver-col :span="6"><div class="col-box col-box-1"></div></ver-col>
+    <ver-col :span="6"><div class="col-box col-box-2"></div></ver-col>
+  </ver-row>
+  <ver-row class="mb-4">
+    <ver-col :span="4"><div class="col-box col-box-1"></div></ver-col>
+    <ver-col :span="4"><div class="col-box col-box-2"></div></ver-col>
+    <ver-col :span="4"><div class="col-box col-box-1"></div></ver-col>
+    <ver-col :span="4"><div class="col-box col-box-2"></div></ver-col>
+    <ver-col :span="4"><div class="col-box col-box-1"></div></ver-col>
+    <ver-col :span="4"><div class="col-box col-box-2"></div></ver-col>
+  </ver-row>
 </template>
 
 <script setup lang="ts">
-import { VRow, VCol } from '@versakit/ui'
+import { VerRow, VerCol } from '@versakit/ui'
 </script>
 
 <style scoped>

@@ -1,6 +1,6 @@
-import { withInstall } from '../../utils/withinstall'
 import Divider from './src/index.vue'
+import { withInstall } from '../../utils/withinstall'
 
-const VDivider = withInstall(Divider)
+const VerDivider = withInstall(Divider)
 
-export default VDivider
+export default VerDivider

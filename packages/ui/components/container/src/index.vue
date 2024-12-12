@@ -1,11 +1,11 @@
 <template>
-  <div class="v-container">
+  <div class="ver-container">
     <slot></slot>
   </div>
 </template>
 
 <script setup lang="ts">
-defineOptions({ name: 'VContainer' })
+defineOptions({ name: 'VerContainer' })
 </script>
 
-<style src="../style/index.css" scoped></style>
+<style lang="scss" src="../style/index.scss" scoped></style>

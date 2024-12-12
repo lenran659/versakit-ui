@@ -1,6 +1,6 @@
 import Col from './src/index.vue'
 import { withInstall } from '../../utils/withinstall'
 
-const VCol = withInstall(Col)
+const VerCol = withInstall(Col)
 
-export default VCol
+export default VerCol

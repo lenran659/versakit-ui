@@ -1,4 +1,11 @@
-type LinkType = 'primary' | 'success' | 'warning' | 'error' | 'info'
+type LinkType =
+  | 'primary'
+  | 'success'
+  | 'warning'
+  | 'error'
+  | 'info'
+  | 'text'
+  | ''
 
 export interface LinkProps {
   type?: LinkType

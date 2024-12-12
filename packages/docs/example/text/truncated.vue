@@ -1,17 +1,16 @@
+c
 <script setup lang="ts">
-import { VText } from '@versakit/ui'
+import { VerRow, VerText } from '@versakit/ui'
 </script>
 
 <template>
-  <div style="width: 100px">
-    <v-text truncated>
-      你好啊你好啊你好啊你好啊你好啊你好啊你好啊你好啊你好啊你好啊你好啊
-    </v-text>
-  </div>
+  <ver-row>
+    <ver-text class="w-100px" truncated>Self element set width 100px</ver-text>
+  </ver-row>
 </template>
 
 <style scoped>
-.v-text {
-  margin: 0px 1rem;
+.w-100px {
+  width: 100px;
 }
 </style>

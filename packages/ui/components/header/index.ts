@@ -1,6 +1,6 @@
 import Header from './src/index.vue'
 import { withInstall } from '../../utils/withinstall'
 
-const VHeader = withInstall(Header)
+const VerHeader = withInstall(Header)
 
-export default VHeader
+export default VerHeader

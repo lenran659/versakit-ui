@@ -1,0 +1,151 @@
+@use '../../../style/color/index.scss' as *;
+@use '../../../style/utils/alert/index.scss' as *;
+
+.ver-drawer_wrapper {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin: 0;
+  z-index: 20;
+  background-color: rgba($color: #000000, $alpha: 0.5);
+  .ver-drawer {
+    position: absolute;
+    width: 30%;
+    height: 100vh;
+    background-color: $ver-zinc-1;
+
+    .dark & {
+      background-color: $ver-zinc-8;
+    }
+
+    &_header {
+      position: sticky; // 固定头部位置
+      top: 0; // 固定在抽屉顶部
+      display: flex;
+      align-items: center;
+      padding: 20px;
+      padding-bottom: 10px;
+      color: $ver-zinc-5;
+
+      .dark & {
+        color: $ver-zinc-2;
+      }
+
+      .ver-drawer_title {
+        margin: 0;
+        line-height: inherit;
+        font-size: 1rem;
+      }
+      .ver-drawer_headerbtn {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        padding: 0;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        font-size: 16px;
+      }
+    }
+    &_body {
+      flex: 1;
+      height: calc(100% - 80px);
+      margin-left: 20px;
+      margin-right: 20px;
+
+      .dark & {
+        color: $ver-zinc-3;
+      }
+    }
+  }
+  &.ver-drawer-left {
+    .ver-drawer {
+      animation: fade-left 0.3s;
+      left: 0;
+      width: 30%;
+      height: 100%;
+    }
+  }
+
+  &.ver-drawer-right {
+    .ver-drawer {
+      animation: fade-right 0.3s;
+      right: 0;
+      width: 30%;
+      height: 100%;
+    }
+  }
+
+  &.ver-drawer-top {
+    .ver-drawer {
+      animation: fade-top 0.3s;
+      top: 0;
+      width: 100%;
+      height: 30%;
+    }
+  }
+
+  &.ver-drawer-bottom {
+    .ver-drawer {
+      animation: fade-bottom 0.3s;
+      bottom: 0;
+      width: 100%;
+      height: 30%;
+    }
+  }
+}
+
+.fade-enter-active {
+  animation: fade 0.3s;
+}
+
+.fade-leave-active {
+  animation: fade 0.3s reverse;
+}
+
+@keyframes fade-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-30%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fade-right {
+  0% {
+    opacity: 0;
+    transform: translateX(30%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fade-top {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-bottom {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

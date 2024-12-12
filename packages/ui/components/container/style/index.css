@@ -1,0 +1,3 @@
+.v-container {
+  @apply flex flex-row flex-1 flex-basis-auto box-border min-w-0;
+}

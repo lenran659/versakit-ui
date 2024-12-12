@@ -7,6 +7,9 @@ import VDivider from './components/divider'
 import VIcon from './components/icon'
 import VRow from './components/row'
 import VCol from './components/col'
+import VContainer from './components/container'
+import VHeader from './components/header'
+import VMain from './components/main'
 import { vRipple } from './directives/index'
 import 'virtual:svg-icons-register'
 import './style/index.css'
@@ -20,8 +23,23 @@ const components: Component[] = [
   VIcon,
   VRow,
   VCol,
+  VContainer,
+  VHeader,
+  VMain,
 ]
-export { VButton, VCard, VText, VLink, VDivider, VIcon, VRow, VCol }
+export {
+  VButton,
+  VCard,
+  VText,
+  VLink,
+  VDivider,
+  VIcon,
+  VRow,
+  VCol,
+  VContainer,
+  VHeader,
+  VMain,
+}
 
 export default {
   install: (app: App) => {

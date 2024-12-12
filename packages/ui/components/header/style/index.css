@@ -1,0 +1,3 @@
+.v-header {
+  @apply w-full px-20 h-15 flex-shrink-0 box-border;
+}

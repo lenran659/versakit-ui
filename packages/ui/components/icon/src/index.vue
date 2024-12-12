@@ -2,7 +2,7 @@
 import { computed } from 'vue'
 import type { IconsProps } from '../type/index'
 
-defineOptions({ name: 'VerIcon', inheritAttrs: false })
+defineOptions({ name: 'VIcon', inheritAttrs: false })
 
 const props = withDefaults(defineProps<IconsProps>(), {
   name: '',

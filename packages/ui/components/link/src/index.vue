@@ -10,7 +10,7 @@
 import { computed } from 'vue'
 import type { LinkProps } from '../type/index'
 
-defineOptions({ name: 'VerLink' })
+defineOptions({ name: 'VLink' })
 
 const props = withDefaults(defineProps<LinkProps>(), {
   type: 'info',

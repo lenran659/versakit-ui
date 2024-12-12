@@ -16,7 +16,7 @@
 <script lang="ts" setup>
 import type { DividerProps } from '../type/index'
 
-defineOptions({ name: 'VerDivider' })
+defineOptions({ name: 'VDivider' })
 
 const props = withDefaults(defineProps<DividerProps>(), {
   line: 'solid',

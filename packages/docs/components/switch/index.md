@@ -8,9 +8,12 @@
 
 <demo vue="../../example/switch/base.vue"></demo>
 
+## 尺寸
+
+<demo vue="../../example/switch/size.vue"></demo>
 
 ## Switch API
 
-| 属性       | 说明     | 类型      | 默认值    |
-| ---------- | -------- | --------- | --------- |
-| `v-model`     | 绑定值 | `boolean`  | `false` |
+| 属性      | 说明   | 类型      | 默认值  |
+| --------- | ------ | --------- | ------- |
+| `v-model` | 绑定值 | `boolean` | `false` |

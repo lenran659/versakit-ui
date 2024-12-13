@@ -1,9 +1,9 @@
 <template>
   <div>
-    <VerButton @click="drawer = true">打开抽屉</VerButton>
+    <VerButton @click="drawerLeft = true">基本使用</VerButton>
 
-    <VerDrawer v-model="drawer">
-      <span>我是内容</span>
+    <VerDrawer v-model="drawerLeft">
+      <span>左边</span>
     </VerDrawer>
   </div>
 </template>
@@ -12,5 +12,5 @@
 import { ref } from 'vue'
 import { VerDrawer, VerButton } from '@versakit/ui'
 
-const drawer = ref(false)
+const drawerLeft = ref(false)
 </script>

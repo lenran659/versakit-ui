@@ -8,7 +8,7 @@
   <transition name="fade">
     <div
       v-show="props.modelValue"
-      :class="['ver-drawer_wrapper', `ver-drawer-${props.direction}`]"
+      :class="['ver-drawer-wrapper', `ver-drawer-${props.direction}`]"
       @click.self="handleClose"
     >
       <div class="ver-drawer">
@@ -17,7 +17,7 @@
             {{ props.title ? props.title : '标题' }}
           </span>
           <button class="ver-drawer_headerbtn" @click="handleClose">
-            <VerIcon name="cross" />
+            <VerIcon name="close" />
           </button>
         </div>
         <div class="ver-drawer_body">
@@ -29,7 +29,6 @@
 </template>
 
 <script lang="ts" setup>
-// TODO: 抽屉样式有bug
 import type { DrawerProps } from '../type/type'
 import VerIcon from '../../icon/index'
 defineOptions({ name: 'VerDrawer' })

@@ -1,14 +1,14 @@
 @use '../../../style/color/index.scss' as *;
 @use '../../../style/utils/alert/index.scss' as *;
 
-.ver-drawer_wrapper {
+.ver-drawer-wrapper {
   position: fixed;
   top: 0;
   right: 0;
   left: 0;
   bottom: 0;
   margin: 0;
-  z-index: 20;
+  z-index: 2001;
   background-color: rgba($color: #000000, $alpha: 0.5);
   .ver-drawer {
     position: absolute;
@@ -61,66 +61,48 @@
       }
     }
   }
-  &.ver-drawer-left {
-    .ver-drawer {
-      animation: fade-left 0.3s;
-      left: 0;
-      width: 30%;
-      height: 100%;
-    }
-  }
+}
 
-  &.ver-drawer-right {
-    .ver-drawer {
-      animation: fade-right 0.3s;
-      right: 0;
-      width: 30%;
-      height: 100%;
-    }
-  }
-
-  &.ver-drawer-top {
-    .ver-drawer {
-      animation: fade-top 0.3s;
-      top: 0;
-      width: 100%;
-      height: 30%;
-    }
-  }
-
-  &.ver-drawer-bottom {
-    .ver-drawer {
-      animation: fade-bottom 0.3s;
-      bottom: 0;
-      width: 100%;
-      height: 30%;
-    }
+.ver-drawer-left {
+  .ver-drawer {
+    animation: fade-left 0.3s;
+    left: 0;
+    width: 30%;
+    height: 100%;
   }
 }
 
-.fade-enter-active {
-  animation: fade 0.3s;
+.ver-drawer-right {
+  .ver-drawer {
+    animation: fade-right 0.3s;
+    right: 0;
+    width: 30%;
+    height: 100%;
+  }
 }
 
-.fade-leave-active {
-  animation: fade 0.3s reverse;
+.ver-drawer-top {
+  .ver-drawer {
+    animation: fade-top 0.3s;
+    top: 0;
+    width: 100%;
+    height: 30%;
+  }
+}
+
+.ver-drawer-bottom {
+  .ver-drawer {
+    animation: fade-bottom 0.3s;
+    bottom: 0;
+    width: 100%;
+    height: 30%;
+  }
 }
 
 @keyframes fade-left {
   0% {
     opacity: 0;
     transform: translateX(-30%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes fade-right {
-  0% {
-    opacity: 0;
-    transform: translateX(30%);
   }
   100% {
     opacity: 1;
@@ -136,6 +118,17 @@
   100% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes fade-right {
+  0% {
+    opacity: 0;
+    transform: translateX(30%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
 

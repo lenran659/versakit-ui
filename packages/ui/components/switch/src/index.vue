@@ -7,6 +7,7 @@
 </template>
 
 <script setup lang="ts">
+// TODO: 多了个尺寸
 import { computed } from 'vue'
 import type { SwitchPrpops } from '../type/index'
 

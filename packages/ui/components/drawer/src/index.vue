@@ -29,6 +29,7 @@
 </template>
 
 <script lang="ts" setup>
+// TODO: 抽屉样式有bug
 import type { DrawerProps } from '../type/type'
 import VerIcon from '../../icon/index'
 defineOptions({ name: 'VerDrawer' })

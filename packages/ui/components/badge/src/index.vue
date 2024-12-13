@@ -20,6 +20,7 @@
 </template>
 
 <script setup lang="ts">
+// TODO: 有bug，待重构
 import { computed } from 'vue'
 import type { BadgeProps } from '../type/index'
 

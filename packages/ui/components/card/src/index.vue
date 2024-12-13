@@ -11,6 +11,7 @@
 </template>
 
 <script lang="ts" setup>
+// TODO: 待改造
 import { computed } from 'vue'
 import type { CardProps } from '../type/index'
 

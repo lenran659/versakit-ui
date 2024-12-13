@@ -5,6 +5,7 @@
 </template>
 
 <script setup lang="ts">
+// TODO: 默认颜色改为灰色
 import { computed } from 'vue'
 import type { TextProps } from '../type/index'
 

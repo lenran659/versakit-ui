@@ -15,6 +15,7 @@
 </template>
 
 <script setup lang="ts">
+// TODO: 部分属性未实现
 import { computed } from 'vue'
 import VerIcon from '../../icon/index'
 import type { ButtonProps } from '../type/index'

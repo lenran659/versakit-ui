@@ -3,9 +3,9 @@ import dts from 'vite-plugin-dts'
 import path from 'path'
 import autoprefixer from 'autoprefixer'
 import postCssPxToRem from 'postcss-pxtorem'
+import cssnano from 'cssnano'
 import { defineConfig } from 'vite'
 import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
-import cssnano from 'cssnano'
 
 export default defineConfig({
   plugins: [
@@ -28,7 +28,7 @@ export default defineConfig({
           overrideBrowserslist: ['Chrome > 40', 'ff > 31', 'ie 11'],
         }),
         postCssPxToRem({
-          rootValue: 37.5,
+          rootValue: 16,
           propList: ['*'],
         }),
         cssnano({

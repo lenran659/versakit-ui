@@ -1,8 +1,11 @@
-import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import dts from 'vite-plugin-dts'
-import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
 import path from 'path'
+import autoprefixer from 'autoprefixer'
+import postCssPxToRem from 'postcss-pxtorem'
+import { defineConfig } from 'vite'
+import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
+import cssnano from 'cssnano'
 
 export default defineConfig({
   plugins: [
@@ -18,6 +21,20 @@ export default defineConfig({
       scss: {
         api: 'modern-compiler',
       },
+    },
+    postcss: {
+      plugins: [
+        autoprefixer({
+          overrideBrowserslist: ['Chrome > 40', 'ff > 31', 'ie 11'],
+        }),
+        postCssPxToRem({
+          rootValue: 37.5,
+          propList: ['*'],
+        }),
+        cssnano({
+          preset: 'default',
+        }),
+      ],
     },
   },
   // 打包配置

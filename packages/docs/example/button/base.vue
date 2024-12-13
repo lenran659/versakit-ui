@@ -4,38 +4,48 @@ import { VerButton, VerRow } from '@versakit/ui'
 
 <template>
   <ver-row class="mb-4">
-    <ver-button type="primary">主要按钮</ver-button>
-    <ver-button round type="primary">主要按钮</ver-button>
-    <ver-button plain type="primary">主要按钮</ver-button>
-    <ver-button plain round type="primary">主要按钮</ver-button>
+    <ver-button type="primary">按 钮</ver-button>
+    <ver-button round type="primary">按 钮</ver-button>
+    <ver-button plain type="primary">按 钮</ver-button>
+    <ver-button plain round type="primary">按 钮</ver-button>
+    <ver-button ghost type="primary">按 钮</ver-button>
+    <ver-button ghost round type="primary">按 钮</ver-button>
   </ver-row>
 
   <ver-row class="mb-4">
-    <ver-button type="success">主要按钮</ver-button>
-    <ver-button round type="success">主要按钮</ver-button>
-    <ver-button plain type="success">主要按钮</ver-button>
-    <ver-button plain round type="success">主要按钮</ver-button>
+    <ver-button type="success">按 钮</ver-button>
+    <ver-button round type="success">按 钮</ver-button>
+    <ver-button plain type="success">按 钮</ver-button>
+    <ver-button plain round type="success">按 钮</ver-button>
+    <ver-button ghost type="success">按 钮</ver-button>
+    <ver-button ghost round type="success">按 钮</ver-button>
   </ver-row>
 
   <ver-row class="mb-4">
-    <ver-button type="info">主要按钮</ver-button>
-    <ver-button round type="info">主要按钮</ver-button>
-    <ver-button plain type="info">主要按钮</ver-button>
-    <ver-button plain round type="info">主要按钮</ver-button>
+    <ver-button type="info">按 钮</ver-button>
+    <ver-button round type="info">按 钮</ver-button>
+    <ver-button plain type="info">按 钮</ver-button>
+    <ver-button plain round type="info">按 钮</ver-button>
+    <ver-button ghost type="info">按 钮</ver-button>
+    <ver-button ghost round type="info">按 钮</ver-button>
   </ver-row>
 
   <ver-row class="mb-4">
-    <ver-button type="warning">主要按钮</ver-button>
-    <ver-button round type="warning">主要按钮</ver-button>
-    <ver-button plain type="warning">主要按钮</ver-button>
-    <ver-button plain round type="warning">主要按钮</ver-button>
+    <ver-button type="warning">按 钮</ver-button>
+    <ver-button round type="warning">按 钮</ver-button>
+    <ver-button plain type="warning">按 钮</ver-button>
+    <ver-button plain round type="warning">按 钮</ver-button>
+    <ver-button ghost type="warning">按 钮</ver-button>
+    <ver-button ghost round type="warning">按 钮</ver-button>
   </ver-row>
 
   <ver-row class="mb-4">
-    <ver-button type="error">主要按钮</ver-button>
-    <ver-button round type="error">主要按钮</ver-button>
-    <ver-button plain type="error">主要按钮</ver-button>
-    <ver-button plain round type="error">主要按钮</ver-button>
+    <ver-button type="error">按 钮</ver-button>
+    <ver-button round type="error">按 钮</ver-button>
+    <ver-button plain type="error">按 钮</ver-button>
+    <ver-button plain round type="error">按 钮</ver-button>
+    <ver-button ghost type="error">按 钮</ver-button>
+    <ver-button ghost round type="error">按 钮</ver-button>
   </ver-row>
 </template>
 

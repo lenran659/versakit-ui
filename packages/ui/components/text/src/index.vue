@@ -5,14 +5,13 @@
 </template>
 
 <script setup lang="ts">
-// TODO: 默认颜色改为灰色
 import { computed } from 'vue'
 import type { TextProps } from '../type/index'
 
 defineOptions({ name: 'VerText' })
 
 const props = withDefaults(defineProps<TextProps>(), {
-  type: 'primary',
+  type: 'info',
   size: 'default',
   truncated: false,
 })
@@ -20,7 +19,7 @@ const props = withDefaults(defineProps<TextProps>(), {
 const VerClass = computed(() => {
   return [
     'ver-text',
-    props.type == 'primary' ? 'ver-text-primary' : `ver-text-${props.type}`,
+    props.type == 'info' ? 'ver-text-info' : `ver-text-${props.type}`,
     props.size == 'default' ? '' : `is-${props.size}`,
     props.truncated == false ? '' : 'is-truncated',
   ]

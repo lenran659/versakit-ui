@@ -25,4 +25,17 @@ export default defineConfig({
       md.use(vitepressDemoPlugin)
     },
   },
+  vite: {
+    css: {
+      preprocessorOptions: {
+        scss: {
+          api: 'modern-compiler',
+        },
+      },
+    },
+    server: {
+      host: '0.0.0.0',
+      open: true,
+    },
+  },
 })

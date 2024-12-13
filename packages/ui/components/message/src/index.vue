@@ -42,13 +42,13 @@ const iconColor = computed(() => {
 const iconName = computed(() => {
   switch (props.type) {
     case 'success':
-      return 'passed'
+      return 'checkmark-circle-sharp'
     case 'warning':
-      return 'warning'
+      return 'warning-sharp'
     case 'error':
-      return 'clear'
+      return 'close-circle-sharp'
     default:
-      return 'info'
+      return 'information-circle-sharp'
   }
 })
 

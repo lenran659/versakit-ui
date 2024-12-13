@@ -13,12 +13,14 @@ import { VerButton, VerMessage } from '@versakit/ui'
 const success = () => {
   VerMessage({
     type: 'success',
+    plain: true,
     content: '这是一条消息',
   })
 }
 const warning = () => {
   VerMessage({
     type: 'warning',
+    plain: true,
     content: '这是一条消息',
   })
 }
@@ -26,6 +28,7 @@ const warning = () => {
 const info = () => {
   VerMessage({
     type: 'info',
+    plain: true,
     content: '这是一条消息',
   })
 }
@@ -33,6 +36,7 @@ const info = () => {
 const error = () => {
   VerMessage({
     type: 'error',
+    plain: true,
     content: '这是一条消息',
   })
 }

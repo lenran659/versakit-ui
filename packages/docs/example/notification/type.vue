@@ -1,39 +1,44 @@
 <template>
   <div>
+    <VerButton type="info" @click="info">info</VerButton>
     <VerButton type="success" @click="success">success</VerButton>
     <VerButton type="warning" @click="warning">warning</VerButton>
-    <VerButton type="info" @click="info">info</VerButton>
     <VerButton type="error" @click="error">error</VerButton>
   </div>
 </template>
 
-<script setup lang="ts">
-import { VerButton, VerMessage } from '@versakit/ui'
-
-const success = () => {
-  VerMessage({
-    type: 'success',
-    content: '这是一条消息',
-  })
-}
-const warning = () => {
-  VerMessage({
-    type: 'warning',
-    content: '这是一条消息',
-  })
-}
+<script lang="ts" setup>
+import { VerButton, VerNotification } from '@versakit/ui'
 
 const info = () => {
-  VerMessage({
+  VerNotification({
+    title: 'title',
     type: 'info',
-    content: '这是一条消息',
+    content: 'content',
+  })
+}
+
+const success = () => {
+  VerNotification({
+    title: 'title',
+    type: 'success',
+    content: 'content',
+  })
+}
+
+const warning = () => {
+  VerNotification({
+    title: 'title',
+    type: 'warning',
+    content: 'content',
   })
 }
 
 const error = () => {
-  VerMessage({
+  VerNotification({
+    title: 'title',
     type: 'error',
-    content: '这是一条消息',
+    content: 'content',
   })
 }
 </script>

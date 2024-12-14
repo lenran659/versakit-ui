@@ -29,7 +29,7 @@ const props = withDefaults(defineProps<BackTopProps>(), {
   right: '60',
   bottom: '40',
   icon: '',
-  iconColor: '#FF0000',
+  iconColor: '',
   visibilityHeight: '150',
 })
 

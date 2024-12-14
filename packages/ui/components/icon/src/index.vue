@@ -25,10 +25,9 @@ const IconName = computed(() => {
     :style="{
       width: size,
       height: size,
-      fill: color,
     }"
   >
-    <use :xlink:href="IconName"></use>
+    <use :xlink:href="IconName" :fill="props.color"></use>
   </svg>
 </template>
 

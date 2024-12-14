@@ -8,10 +8,10 @@ import { VerIcon, VerRow } from '@versakit/ui'
       <ver-icon name="accessibility-outline" size="25" />
     </ver-col>
     <ver-col :span="4">
-      <ver-icon name="accessibility" size="25" />
+      <ver-icon name="accessibility" size="25" color="red" />
     </ver-col>
     <ver-col :span="4">
-      <ver-icon name="add-sharp" size="25" color="red" />
+      <ver-icon name="add-sharp" size="25" />
     </ver-col>
   </ver-row>
 </template>

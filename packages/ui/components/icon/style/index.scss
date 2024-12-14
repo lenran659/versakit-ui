@@ -5,10 +5,11 @@
   align-items: center;
   position: relative;
   vertical-align: bottom;
+  fill: currentColor;
   font-size: inherit;
   overflow: hidden;
 
   .dark & {
-    fill: #fff !important;
+    fill: #fff;
   }
 }

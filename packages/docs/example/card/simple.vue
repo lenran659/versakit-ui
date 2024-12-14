@@ -9,7 +9,7 @@
 </template>
 
 <script lang="ts" setup>
-import { VerCard } from '@versakit/ui'
+import { VerCard } from 'versakit-ui'
 </script>
 
 <style scoped>

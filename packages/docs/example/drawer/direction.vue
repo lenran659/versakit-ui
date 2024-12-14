@@ -25,7 +25,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import { VerDrawer, VerButton } from '@versakit/ui'
+import { VerDrawer, VerButton } from 'versakit-ui'
 
 const drawerLeft = ref(false)
 const drawerTop = ref(false)

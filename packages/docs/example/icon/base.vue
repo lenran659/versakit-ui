@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { VerIcon, VerRow } from '@versakit/ui'
+import { VerIcon, VerRow } from 'versakit-ui'
 </script>
 
 <template>

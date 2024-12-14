@@ -3,7 +3,7 @@
 </template>
 
 <script lang="ts" setup>
-import { VerTextarea } from '@versakit/ui'
+import { VerTextarea } from 'versakit-ui'
 </script>
 
 <style scoped>

@@ -15,7 +15,7 @@
 </template>
 
 <script lang="ts" setup>
-import { VerButton, VerDialog } from '@versakit/ui'
+import { VerButton, VerDialog } from 'versakit-ui'
 
 import { ref } from 'vue'
 

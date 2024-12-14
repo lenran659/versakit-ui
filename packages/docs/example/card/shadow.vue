@@ -13,5 +13,5 @@
 </template>
 
 <script lang="ts" setup>
-import { VerCard, VerCol, VerRow } from '@versakit/ui'
+import { VerCard, VerCol, VerRow } from 'versakit-ui'
 </script>

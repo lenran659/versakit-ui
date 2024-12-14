@@ -8,7 +8,7 @@
 </template>
 
 <script lang="ts" setup>
-import { VerButton, VerNotification } from '@versakit/ui'
+import { VerButton, VerNotification } from 'versakit-ui'
 
 const info = () => {
   VerNotification({

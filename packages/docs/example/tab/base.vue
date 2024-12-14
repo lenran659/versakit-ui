@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { VerTab } from '@versakit/ui'
+import { VerTab } from 'versakit-ui'
 
 const customTabList: any = [
   { id: 'tab1', label: 'Tab1', name: 'tab1-content' },

@@ -1,11 +1,15 @@
 {
-  "name": "@versakit/ui",
-  "version": "0.1.10",
+  "name": "versakit-ui",
+  "version": "0.2.1",
   "author": "Jannik",
-  "private": false,
   "type": "module",
   "main": "./dist/ui.js",
   "homepage": "",
+  "keywords": [
+    "Vue3",
+    "UI",
+    "Components"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/lenran659/Versakit.git"
@@ -13,11 +17,6 @@
   "bugs": {
     "url": "https://github.com/lenran659/Versakit/issues"
   },
-  "keywords": [
-    "Vue3",
-    "UI",
-    "Components"
-  ],
   "license": "MIT",
   "files": [
     "dist/*"

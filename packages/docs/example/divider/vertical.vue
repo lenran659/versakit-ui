@@ -9,5 +9,5 @@
 </template>
 
 <script lang="ts" setup>
-import { VerDivider } from '@versakit/ui'
+import { VerDivider } from 'versakit-ui'
 </script>

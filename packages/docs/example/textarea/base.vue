@@ -4,7 +4,7 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue'
-import { VerTextarea } from '@versakit/ui'
+import { VerTextarea } from 'versakit-ui'
 const textareaVal = ref('')
 </script>
 

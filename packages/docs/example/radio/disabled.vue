@@ -7,7 +7,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import { VerRadio } from '@versakit/ui'
+import { VerRadio } from 'versakit-ui'
 
 const gender = ref(1)
 </script>

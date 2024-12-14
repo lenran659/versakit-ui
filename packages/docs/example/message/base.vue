@@ -5,7 +5,7 @@
 </template>
 
 <script setup lang="ts">
-import { VerButton, VerMessage } from '@versakit/ui'
+import { VerButton, VerMessage } from 'versakit-ui'
 
 const openMessage = () => {
   VerMessage({

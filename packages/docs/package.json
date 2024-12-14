@@ -17,6 +17,6 @@
     "vitepress-demo-plugin": "^1.1.3"
   },
   "dependencies": {
-    "@versakit/ui": "workspace:*"
+    "versakit-ui": "^0.2.1"
   }
 }

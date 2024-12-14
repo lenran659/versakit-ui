@@ -42,7 +42,7 @@
 </template>
 
 <script lang="ts" setup>
-import { VerAvatar, VerRow, VerCol } from '@versakit/ui'
+import { VerAvatar, VerRow, VerCol } from 'versakit-ui'
 </script>
 
 <style scoped>

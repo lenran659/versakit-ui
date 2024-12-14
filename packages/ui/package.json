@@ -5,6 +5,19 @@
   "private": false,
   "type": "module",
   "main": "./dist/ui.js",
+  "homepage": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lenran659/Versakit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/lenran659/Versakit/issues"
+  },
+  "keywords": [
+    "Vue3",
+    "UI",
+    "Components"
+  ],
   "license": "MIT",
   "files": [
     "dist/*"

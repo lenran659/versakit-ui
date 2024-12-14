@@ -5,10 +5,10 @@ import { VerIcon, VerRow } from 'versakit-ui'
 <template>
   <ver-row>
     <ver-col :span="4">
-      <ver-icon name="accessibility-outline" color="yellow" size="25" />
+      <ver-icon name="columns" size="25" />
     </ver-col>
     <ver-col :span="4">
-      <ver-icon name="accessibility" size="25" color="red" />
+      <ver-icon name="folder-fill" size="25" color="red" />
     </ver-col>
     <ver-col :span="4">
       <ver-icon name="add-sharp" size="25" />

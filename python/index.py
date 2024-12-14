@@ -11,7 +11,7 @@ def list_all_files_in_folder(folder_path):
 def extract_filename(file_path):
     return os.path.splitext(os.path.basename(file_path))[0]
 
-icon_folder_path = "./packages/ui/icons"
+icon_folder_path = "../packages/ui/icons"
 all_files = list_all_files_in_folder(icon_folder_path)
 filename_list = []
 

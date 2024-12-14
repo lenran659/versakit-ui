@@ -15,7 +15,7 @@
 </template>
 
 <script lang="ts" setup>
-import { VerCard, VerButton } from 'versakit-ui'
+import { VerCard, VerButton } from '@versakit/ui'
 </script>
 
 <style scoped>

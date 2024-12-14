@@ -7,5 +7,5 @@
 </template>
 
 <script setup lang="ts">
-import { VerDivider } from 'versakit-ui'
+import { VerDivider } from '@versakit/ui'
 </script>

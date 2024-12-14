@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { VerIcon } from 'versakit-ui'
+import { VerIcon } from '@versakit/ui'
 
 const icons = [
   'columns',

@@ -8,7 +8,7 @@
 </template>
 
 <script setup lang="ts">
-import { VerContainer, VerHeader, VerMain } from 'versakit-ui'
+import { VerContainer, VerHeader, VerMain } from '@versakit/ui'
 </script>
 
 <style scoped>

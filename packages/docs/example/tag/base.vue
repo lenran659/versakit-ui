@@ -25,7 +25,7 @@
 </template>
 
 <script lang="ts" setup>
-import { VerTag } from 'versakit-ui'
+import { VerTag } from '@versakit/ui'
 </script>
 
 <style scoped>

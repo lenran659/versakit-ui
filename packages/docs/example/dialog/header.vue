@@ -13,7 +13,7 @@
 </template>
 
 <script lang="ts" setup>
-import { VerRow, VerButton, VerDialog } from 'versakit-ui'
+import { VerRow, VerButton, VerDialog } from '@versakit/ui'
 
 import { ref } from 'vue'
 

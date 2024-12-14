@@ -6,7 +6,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import { VerInput, VerRow } from 'versakit-ui'
+import { VerInput, VerRow } from '@versakit/ui'
 
 const value = ref('')
 </script>

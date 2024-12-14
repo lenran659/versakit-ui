@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { VerRow, VerText } from 'versakit-ui'
+import { VerRow, VerText } from '@versakit/ui'
 </script>
 
 <template>

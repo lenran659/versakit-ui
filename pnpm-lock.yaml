@@ -147,10 +147,6 @@ importers:
         version: 6.1.0(rollup@4.28.1)
 
   packages/docs:
-    dependencies:
-      versakit-ui:
-        specifier: ^0.2.1
-        version: 0.2.1
     devDependencies:
       vitepress:
         specifier: ^1.5.0
@@ -1773,9 +1769,6 @@ packages:
 
   devlop@1.1.0:
     resolution: {integrity: sha512-RWmIqhcFf1lRYBvNmr7qTNuyCt/7/ns2jbpp1+PalgE/rDQcBT0fioSMUpJ93irlUhC5hrg4cYqe6U+0ImW0rA==}
-
-  docs@file:packages/docs:
-    resolution: {directory: packages/docs, type: directory}
 
   doctrine@2.1.0:
     resolution: {integrity: sha512-35mSku4ZXK0vfCuHEDAwt55dg2jNajHZ1odvF+8SSr82EsZY4QmXfuWso8oEd8zRhVObSN18aM0CjSdoBX7zIw==}
@@ -3958,9 +3951,6 @@ packages:
   'versakit-monorepo@file:':
     resolution: {directory: '', type: directory}
 
-  versakit-ui@0.2.1:
-    resolution: {integrity: sha512-RbGIHwAd3mq6zud02jUKx4tl44jVgtVPxsLjSEuDXRTwsQaMXBO1BbjPU75FveDddpZGM5xaMVPAqlLImGozXQ==}
-
   vfile-message@4.0.2:
     resolution: {integrity: sha512-jRDZ1IMLttGj41KcZvlrYAaI3CfqpLpfpf+Mfig13viT6NKvRzWZ+lXz0Y5D60w6uJIBAOGq9mSHf0gktF0duw==}
 
@@ -5965,10 +5955,6 @@ snapshots:
   devlop@1.1.0:
     dependencies:
       dequal: 2.0.3
-
-  docs@file:packages/docs:
-    dependencies:
-      versakit-ui: 0.2.1
 
   doctrine@2.1.0:
     dependencies:
@@ -8337,10 +8323,6 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
       - typescript
-
-  versakit-ui@0.2.1:
-    dependencies:
-      '@versakit/ui': docs@file:packages/docs
 
   vfile-message@4.0.2:
     dependencies:

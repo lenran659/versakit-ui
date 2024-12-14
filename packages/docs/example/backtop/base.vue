@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { VerBacktop } from 'versakit-ui'
+import { VerBacktop } from '@versakit/ui'
 </script>
 
 <template>

@@ -14,7 +14,7 @@
 
 <script setup lang="ts">
 import { reactive } from 'vue'
-import { VerForm, VerFormItem, VerInput, VerButton } from 'versakit-ui'
+import { VerForm, VerFormItem, VerInput, VerButton } from '@versakit/ui'
 
 const form = reactive({
   ID: '',

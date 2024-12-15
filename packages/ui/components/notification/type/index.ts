@@ -1,8 +1,8 @@
-type NotifivationType = 'success' | 'warning' | 'info' | 'error'
+import type { ComType } from '../../../utils/constant'
 type positionType = 'top-right' | 'top-left' | 'bottom-left' | 'bottom-right'
 
 export interface NotifivationProps {
-  type?: NotifivationType
+  type?: ComType
   title?: string
   plain?: boolean
   content?: string

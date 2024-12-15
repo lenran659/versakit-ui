@@ -44,13 +44,19 @@
 @include ver-tag-type-plain('error', $ver-red-5);
 
 /* size属性 */
-.ver-tag.is-small {
+.ver-tag.is-xs {
+  font-size: 6px;
+  height: 10px;
+  padding: 0px 7px;
+}
+
+.ver-tag.is-sm {
   font-size: 10px;
   height: 20px;
   padding: 0px 7px;
 }
 
-.ver-tag.is-large {
+.ver-tag.is-lg {
   font-size: 16px;
   height: 32px;
   padding: 0px 11px;

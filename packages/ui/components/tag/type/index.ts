@@ -1,9 +1,8 @@
-type TagType = 'primary' | 'success' | 'warning' | 'error' | 'info'
-type sizeType = 'large' | 'default' | 'small'
+import type { ComType, SizeType } from '../../../utils/constant'
 
 export interface TagProps {
-  type?: TagType
+  type?: ComType
   plain?: boolean
-  size?: sizeType
+  size?: SizeType
   round?: boolean
 }

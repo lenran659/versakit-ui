@@ -21,13 +21,9 @@ import VerHeader from './components/header/index'
 import VerMain from './components/main/index'
 import VerNotification from './components/notification/index'
 import VerNotificationVue from './components/notification/src/index.vue'
-import VerForm from './components/form/index'
-import VerFormItem from './components/formItem/index'
 import VerTab from './components/tab/index'
 import VerIcon from './components/icon/index'
-import VerPopOver from './components/popover/index'
 import VerBacktop from './components/backtop/index'
-import VerBadge from './components/badge/index'
 import { vRipple } from './directives/index'
 import 'virtual:svg-icons-register'
 
@@ -52,16 +48,11 @@ const components: Component[] = [
   VerHeader,
   VerMain,
   VerNotificationVue,
-  VerForm,
-  VerFormItem,
   VerTab,
   VerIcon,
-  VerPopOver,
   VerBacktop,
-  VerBadge,
 ]
 export {
-  VerBadge,
   VerButton,
   VerRow,
   VerText,
@@ -82,11 +73,8 @@ export {
   VerHeader,
   VerMain,
   VerNotification,
-  VerForm,
-  VerFormItem,
   VerTab,
   VerIcon,
-  VerPopOver,
   VerBacktop,
 }
 

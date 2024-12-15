@@ -1,7 +1,7 @@
-type MessgeType = 'success' | 'error' | 'warning' | 'info'
+import type { ComType } from '../../../utils/constant'
 
 export interface MessageProps {
-  type?: MessgeType
+  type?: ComType
   content?: string
   duration?: number
   plain?: boolean

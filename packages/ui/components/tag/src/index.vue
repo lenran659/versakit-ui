@@ -13,7 +13,7 @@ defineOptions({ name: 'VerTag' })
 const props = withDefaults(defineProps<TagProps>(), {
   type: 'primary',
   plain: false,
-  size: 'default',
+  size: 'md',
   round: false,
 })
 
@@ -23,7 +23,7 @@ const tClass = computed(() => {
     props.type == 'primary' ? 'ver-tag-primary' : `ver-tag-${props.type}`,
     props.round == false ? '' : 'is-round',
     props.plain == false ? '' : 'is-plain',
-    props.size == 'default' ? '' : `is-${props.size}`,
+    props.size == 'md' ? '' : `is-${props.size}`,
   ]
 })
 </script>

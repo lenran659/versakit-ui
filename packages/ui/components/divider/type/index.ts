@@ -1,4 +1,5 @@
-type directionType = 'horizontal' | 'vertical'
+import type { DirectionType } from '../../../utils/constant'
+
 type lineType =
   | 'solid'
   | 'dashed'
@@ -12,5 +13,5 @@ type lineType =
 export interface DividerProps {
   line?: lineType
   position?: string
-  direction?: directionType
+  direction?: DirectionType
 }

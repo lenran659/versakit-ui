@@ -28,9 +28,9 @@ export const createNewFolder = (folderName) => {
   const indexTsContent = `import { withInstall } from '../../utils/withinstall';
         import ${folderName} from './src/index.vue';
 
-        const V${folderName} = withInstall(${folderName});
+        const Ver${folderName.charAt(0).toUpperCase()} = withInstall(${folderName});
 
-        export default V${folderName};`
+        export default Ver${folderName.charAt(0).toUpperCase()};`
   fs.writeFileSync(indexTsPath, indexTsContent)
 
   // 在src文件夹下创建index.vue文件，并写入简单示例内容（这里可按需调整具体内容）

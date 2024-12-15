@@ -1,7 +1,9 @@
 <template>
-  <VerSwitch size="large" v-model="value" />
-  <VerSwitch v-model="value" />
-  <VerSwitch size="small" v-model="value" />
+  <div>
+    <VerSwitch size="lg" v-model="value" />
+    <VerSwitch v-model="value" />
+    <VerSwitch size="sm" v-model="value" />
+  </div>
 </template>
 
 <script lang="ts" setup>

@@ -12,14 +12,14 @@
   cursor: pointer;
   appearance: none;
   text-align: center;
+  font-size: 14px;
+  padding: 12px 20px;
   box-sizing: border-box;
   outline: none;
   margin: 0;
   transition: 0.1s;
   font-weight: 500;
   user-select: none;
-  padding: 12px 20px;
-  font-size: 14px;
   border-radius: 4px;
   border: none;
 
@@ -140,12 +140,17 @@
 }
 
 /* size属性 */
-.ver-btn.is-small {
+.ver-btn.is-xs {
+  font-size: 8px;
+  padding: 8px 10px;
+}
+
+.ver-btn.is-sm {
   font-size: 10px;
   padding: 10px 15px;
 }
 
-.ver-btn.is-large {
+.ver-btn.is-lg {
   font-size: 16px;
   padding: 14px 25px;
 }

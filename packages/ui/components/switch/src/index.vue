@@ -14,7 +14,7 @@ defineOptions({ name: 'VerSwitch' })
 
 const props = withDefaults(defineProps<SwitchPrpops>(), {
   modelValue: false,
-  size: 'default',
+  size: 'md',
 })
 
 const emit = defineEmits(['input', 'update:modelValue'])
@@ -23,7 +23,7 @@ const VerClass = computed(() => {
   return [
     'ver-switch',
     props.modelValue === false ? '' : 'is-checked',
-    props.size && props.size !== 'default' ? `is-${props.size}` : '',
+    props.size && props.size !== 'md' ? `is-${props.size}` : '',
   ]
 })
 

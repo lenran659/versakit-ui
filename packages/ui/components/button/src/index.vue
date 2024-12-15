@@ -21,23 +21,6 @@ import type { ButtonProps } from '../type/index'
 
 defineOptions({ name: 'VerButton' })
 
-const CheckIsColor = (colorValue: string) => {
-  let type = /^#[0-9a-fA-F]{6}$/
-  let re = new RegExp(type)
-  if (colorValue.match(re) == null) {
-    type =
-      /^[rR][gG][Bb][\(]((2[0-4][0-9]|25[0-5]|[01]?[0-9][0-9]?),){2}(2[0-4]\\d|25[0-5]|[01]?\\d\\d?)[\)]{1}$/
-    re = new RegExp(type)
-    if (colorValue.match(re) == null) {
-      return ''
-    } else {
-      return colorValue
-    }
-  } else {
-    return colorValue
-  }
-}
-
 const props = withDefaults(defineProps<ButtonProps>(), {
   type: '',
   ghost: false,
@@ -46,15 +29,12 @@ const props = withDefaults(defineProps<ButtonProps>(), {
   text: false,
   shade: false,
   disabled: false,
-  size: 'default',
-  color: '',
+  size: 'md',
   circle: false,
   icon: '',
 })
 
 const Verclass = computed(() => {
-  const validColor = CheckIsColor(props.color)
-
   return [
     'ver-btn',
     props.type == '' ? '' : `ver-btn-${props.type}`,
@@ -64,8 +44,7 @@ const Verclass = computed(() => {
     props.text == false ? '' : 'is-text',
     props.shade == false ? '' : 'is-shade',
     props.disabled == false ? '' : 'is-disabled',
-    props.size && props.size !== 'default' ? `is-${props.size}` : '',
-    props.color && validColor !== '' ? `ver-btn-color-${validColor}` : '',
+    props.size == 'md' ? '' : `is-${props.size}`,
     props.circle == false ? '' : 'is-circle',
   ]
 })

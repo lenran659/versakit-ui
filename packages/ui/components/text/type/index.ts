@@ -1,7 +1,7 @@
-type TextType = 'primary' | 'success' | 'warning' | 'error' | 'info'
+import type { ComType, SizeType } from '../../../utils/constant'
 
 export interface TextProps {
-  type?: TextType
-  size?: 'small' | 'large' | 'default'
+  type?: ComType
+  size?: SizeType
   truncated?: boolean
 }

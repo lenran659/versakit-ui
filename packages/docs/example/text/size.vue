@@ -4,9 +4,10 @@ import { VerRow, VerText } from '@versakit/ui'
 
 <template>
   <ver-row>
-    <ver-text class="mx4" size="large">Large</ver-text>
-    <ver-text class="mx4">Default</ver-text>
-    <ver-text class="mx4" size="small">Small</ver-text>
+    <ver-text class="mx4" size="lg">lg</ver-text>
+    <ver-text class="mx4">md</ver-text>
+    <ver-text class="mx4" size="sm">sm</ver-text>
+    <ver-text class="mx4" size="xs">xs</ver-text>
   </ver-row>
 </template>
 

@@ -1,11 +1,17 @@
 @use '../../../style/color/index.scss' as *;
 @use '../../../style/utils/text/index.scss' as *;
 
+$font-sizes: (
+  lg: 16px,
+  md: 14px,
+  sm: 12px,
+  xs: 10px,
+);
+
 .ver-text {
   align-self: center;
   margin: 0;
   padding: 0;
-  font-size: 14px;
   color: #606266;
   word-break: break-all;
 
@@ -20,12 +26,10 @@
 @include text-color('warning', $ver-orange-6);
 @include text-color('error', $ver-red-6);
 
-.ver-text.is-large {
-  font-size: 16px;
-}
-
-.ver-text.is-small {
-  font-size: 12px;
+@each $size, $font-size in $font-sizes {
+  .ver-text.is-#{$size} {
+    font-size: $font-size;
+  }
 }
 
 .ver-text.is-truncated {

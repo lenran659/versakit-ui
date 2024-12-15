@@ -12,7 +12,7 @@ defineOptions({ name: 'VerText' })
 
 const props = withDefaults(defineProps<TextProps>(), {
   type: 'info',
-  size: 'default',
+  size: 'md',
   truncated: false,
 })
 
@@ -20,7 +20,7 @@ const VerClass = computed(() => {
   return [
     'ver-text',
     props.type == 'info' ? 'ver-text-info' : `ver-text-${props.type}`,
-    props.size == 'default' ? '' : `is-${props.size}`,
+    props.size == 'md' ? '' : `is-${props.size}`,
     props.truncated == false ? '' : 'is-truncated',
   ]
 })

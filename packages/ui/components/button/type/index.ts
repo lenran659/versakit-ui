@@ -1,8 +1,7 @@
-type ButtonType = 'primary' | 'success' | 'warning' | 'error' | 'info' | ''
-type SizeType = 'large' | 'small' | 'default'
+import type { ComType, SizeType } from '../../../utils/constant'
 
 export interface ButtonProps {
-  type?: ButtonType
+  type?: ComType
   ghost?: boolean
   round?: boolean
   plain?: boolean

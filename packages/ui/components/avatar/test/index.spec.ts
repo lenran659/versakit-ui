@@ -1,7 +1,7 @@
 /*
  * @Author: 2171204141@qq.com
  * @Date: 2024-12-08 23:10:39
- * @LastEditors: Dream
+ * @LastEditors: Jannik 1337741710@qq.com
  * @Description: avatar 单元测试
  */
 import { describe, it, expect } from 'vitest'

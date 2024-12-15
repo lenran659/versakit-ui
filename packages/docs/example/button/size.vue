@@ -3,15 +3,24 @@ import { VerButton } from '@versakit/ui'
 </script>
 
 <template>
-  <span class="mx-2">
-    <ver-button class="mx-2" type="primary" size="large">主要按钮</ver-button>
-  </span>
-  <span class="mx-2">
-    <ver-button class="mx-2" type="primary">主要按钮</ver-button>
-  </span>
-  <span class="mx-2">
-    <ver-button class="mx-2" type="primary" size="small">主要按钮</ver-button>
-  </span>
+  <div>
+    <span class="mx-2">
+      <ver-button class="mx-2" type="primary" size="lg">主要按钮</ver-button>
+    </span>
+    <span class="mx-2">
+      <ver-button class="mx-2" type="primary">主要按钮</ver-button>
+    </span>
+    <span class="mx-2">
+      <ver-button class="mx-2" type="primary" size="sm">主要按钮</ver-button>
+    </span>
+    <span class="mx-2">
+      <ver-button class="mx-2" type="primary" size="sm">主要按钮</ver-button>
+    </span>
+
+    <span class="mx-2">
+      <ver-button class="mx-2" type="primary" size="xs">主要按钮</ver-button>
+    </span>
+  </div>
 </template>
 
 <style>

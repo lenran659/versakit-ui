@@ -4,19 +4,8 @@ import { VerButton, VerRow } from '@versakit/ui'
 
 <template>
   <ver-row>
-    <VerButton style="margin: 0.5rem" circle icon="search"></VerButton>
-    <VerButton
-      style="margin: 0.5rem"
-      circle
-      type="success"
-      icon="checkmark-outline"
-    ></VerButton>
-
-    <VerButton
-      style="margin: 0.5rem"
-      circle
-      type="error"
-      icon="trash-outline"
-    ></VerButton>
+    <VerButton style="margin: 0.5rem" circle icon="search" />
+    <VerButton style="margin: 0.5rem" circle type="success" icon="check" />
+    <VerButton style="margin: 0.5rem" circle type="error" icon="trash" />
   </ver-row>
 </template>

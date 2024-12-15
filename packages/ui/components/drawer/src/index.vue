@@ -1,9 +1,3 @@
-<!--
- * @Author: 2171204141@qq.com
- * @Date: 2024-11-26 09:12:14
- * @LastEditors: Jannik 1337741710@qq.com
- * @Description: drawer组件
--->
 <template>
   <transition name="fade">
     <div
@@ -17,7 +11,7 @@
             {{ props.title ? props.title : '标题' }}
           </span>
           <button class="ver-drawer_headerbtn" @click="handleClose">
-            <VerIcon name="close" />
+            <VerIcon name="x-lg" />
           </button>
         </div>
         <div class="ver-drawer_body">

@@ -11,7 +11,7 @@ import { VerBacktop } from '@versakit/ui'
       <span>占位图</span>
     </div>
 
-    <ver-backtop icon="arrow-up-circle-sharp"></ver-backtop>
+    <ver-backtop />
   </div>
 </template>
 

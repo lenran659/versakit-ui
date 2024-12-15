@@ -50,13 +50,13 @@ const iconColor = computed(() => {
 const iconName = computed(() => {
   switch (props.type) {
     case 'success':
-      return 'checkmark-circle-sharp'
+      return 'check-circle-fill'
     case 'warning':
-      return 'warning-sharp'
+      return 'exclamation-triangle-fill'
     case 'error':
-      return 'close-circle-sharp'
+      return 'x-circle-fill'
     default:
-      return 'information-circle-sharp'
+      return 'info-circle-fill'
   }
 })
 

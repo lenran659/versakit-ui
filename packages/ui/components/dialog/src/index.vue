@@ -16,7 +16,7 @@
             </span>
           </slot>
           <button class="ver-dialog_headerbtn" @click="close">
-            <VerIcon name="cross" />
+            <VerIcon name="x-lg" />
           </button>
         </div>
         <div class="ver-dialog_body">

@@ -28,8 +28,8 @@ import VerIcon from '../../icon/index'
 const props = withDefaults(defineProps<BackTopProps>(), {
   right: '60',
   bottom: '40',
-  icon: '',
-  iconColor: '',
+  icon: 'caret-up-fill',
+  iconColor: '#8b5cf6',
   visibilityHeight: '150',
 })
 

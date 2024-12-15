@@ -8,4 +8,8 @@
   fill: currentColor;
   font-size: inherit;
   overflow: hidden;
+
+  .dark & {
+    color: #fff;
+  }
 }

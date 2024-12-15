@@ -8,7 +8,7 @@ defineOptions({ name: 'VerIcon', inheritAttrs: false })
 const props = withDefaults(defineProps<IconsProps>(), {
   name: '',
   size: 14,
-  color: '#000',
+  color: '',
 })
 
 const size = props.size + 'px'

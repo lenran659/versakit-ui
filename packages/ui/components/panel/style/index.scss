@@ -1,6 +1,5 @@
 @use '../../../style/color/index.scss' as *;
 
-
 .ver-panel {
   margin-bottom: 15px;
   border-radius: 4px;
@@ -17,19 +16,20 @@
 .ver-panel.is-shadow-hover {
   &:hover {
     box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.12);
+    transition: all 0.5s;
     .dark & {
       box-shadow: 0px 0px 12px rgba(255, 255, 255, 0.639);
     }
   }
 }
 
-.ver-panel.is-shadow-always{
+.ver-panel.is-shadow-always {
   box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.12);
   .dark & {
     box-shadow: 0px 0px 12px rgba(255, 255, 255, 0.639);
   }
 }
 
-.ver-panel.is-shadow-never{ 
+.ver-panel.is-shadow-never {
   box-shadow: none;
 }

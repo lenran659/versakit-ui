@@ -27,6 +27,7 @@ import VerTab from './components/tab/index'
 import VerIcon from './components/icon/index'
 import VerPopOver from './components/popover/index'
 import VerBacktop from './components/backtop/index'
+import VerPanel from './components/panel'
 import { vRipple } from './directives/index'
 import 'virtual:svg-icons-register'
 
@@ -40,6 +41,7 @@ const components: Component[] = [
   VerDialog,
   VerAvatar,
   VerCard,
+  VerPanel,
   VerTag,
   VerDivider,
   VerDrawer,
@@ -68,6 +70,7 @@ export {
   VerDialog,
   VerAvatar,
   VerCard,
+  VerPanel,
   VerTag,
   VerDivider,
   VerDrawer,

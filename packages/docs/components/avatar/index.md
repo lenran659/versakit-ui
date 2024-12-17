@@ -10,6 +10,12 @@
 
 <demo vue="../../example/avatar/base.vue"></demo>
 
+## 头像大小
+
+<p>图片的size也支持使用string类型来设置尺寸大小，例如：xs,sm,md,lg</p>
+
+<demo vue="../../example/avatar/size.vue"></demo>
+
 ## 展示类型
 
 <p>
@@ -18,7 +24,7 @@
 
 <demo vue="../../example/avatar/src.vue"></demo>
 
-<p>图片加载失败时，会用一张图片代替</p>
+<p>图片加载失败时，可以使用error属性触发函数，默认触发图片填充效果。</p>
 
 <demo vue="../../example/avatar/error.vue"></demo>
 
@@ -33,6 +39,7 @@
 | 属性       | 说明     | 类型      | 默认值    |
 | ---------- | -------- | --------- | --------- |
 | `src`     | 图片资源的路径 | `string`  | `空` |
-| `size`     | 尺寸大小 | `number`  | `50` |
+| `size`     | 尺寸大小 | `number`  `string`  | `50` |
 | `shape`     | 头像的形状，例如`square`、`circle` | `string`  | `circle` |
-| `fit`     | 头像的形状，例如`fill`、`contain` | `cover`  | `none` |
+| `fit`     | 头像的填充效果，例如`fill`、`contain`、`cover` | `string`  | `cover` |
+| `error`     | 图片展示失败时触发的函数 | `function`  | `imageErrorHandler()` |

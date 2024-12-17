@@ -3,8 +3,9 @@ type ShapType = 'circle' | 'square'
 export interface AvatarProps {
   shape?: ShapType
   src?: string
-  size?: number
-  fit?: Fit
+  size?: number | string
+  fit?: Fit | string
+  callback?: string
 }
 
 export enum Fit {

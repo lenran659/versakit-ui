@@ -45,7 +45,6 @@ const VerClass = computed(() => {
   return ['ver-avatar', props.shape == 'circle' ? 'is-circle' : 'is-square']
 })
 const imgClass = computed(() => {
-  console.log(`fit-${props.fit}`)
   return [`fit-${props.fit}`]
 })
 </script>

@@ -34,6 +34,7 @@ export const getComponentsSidebar = (): DefaultTheme.Sidebar => {
         { text: 'Avatar 头像', link: '/components/avatar/' },
         { text: 'Card 卡片', link: '/components/card/' },
         { text: 'Tag 标签', link: '/components/tag/' },
+        { text: 'Badge 徽标', link: '/components/badge/' },
         { text: 'Panel 面板', link: '/components/panel/' },
       ],
     },

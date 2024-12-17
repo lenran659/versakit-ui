@@ -24,6 +24,7 @@ import VerNotificationVue from './components/notification/src/index.vue'
 import VerTab from './components/tab/index'
 import VerIcon from './components/icon/index'
 import VerBacktop from './components/backtop/index'
+import VerResult from './components/result/index'
 import VerPanel from './components/panel'
 import { vRipple } from './directives/index'
 import 'virtual:svg-icons-register'
@@ -53,6 +54,7 @@ const components: Component[] = [
   VerTab,
   VerIcon,
   VerBacktop,
+  VerResult,
 ]
 export {
   VerButton,
@@ -79,6 +81,7 @@ export {
   VerTab,
   VerIcon,
   VerBacktop,
+  VerResult,
 }
 
 export default {

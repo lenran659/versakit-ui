@@ -6,7 +6,10 @@
       height: size,
     }"
   >
-    <img :src="src" />
+    <img v-if="props.src" :src="src" @error="imageErrorHandler" />
+    <span v-else>
+      <slot></slot>
+    </span>
   </span>
 </template>
 
@@ -21,6 +24,12 @@ const props = withDefaults(defineProps<AvatarProps>(), {
   size: 50,
   shape: 'circle',
 })
+
+const imageErrorHandler = (event: Event) => {
+  const imgTarget = event.target as HTMLImageElement
+  imgTarget.src =
+    'https://cube.elemecdn.com/e/fd/0fc7d20532fdaf769a25683617711png.png'
+}
 
 const size = props.size + 'px'
 

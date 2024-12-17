@@ -10,6 +10,18 @@
 
 <demo vue="../../example/avatar/base.vue"></demo>
 
+## 展示类型
+
+<p>
+支持使用图片或者文字作为 Avatar。
+</p>
+
+<demo vue="../../example/avatar/src.vue"></demo>
+
+<p>图片加载失败时，会用一张图片代替</p>
+
+<demo vue="../../example/avatar/error.vue"></demo>
+
 ## Avatar API
 
 ### Avatar 属性

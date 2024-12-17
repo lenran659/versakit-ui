@@ -22,6 +22,10 @@
 
 <demo vue="../../example/avatar/error.vue"></demo>
 
+<p>当使用图片作为用户头像时，使用object-fit属性设置该图片如何在容器中展示。</p>
+
+<demo vue="../../example/avatar/fit.vue"></demo>
+
 ## Avatar API
 
 ### Avatar 属性
@@ -31,7 +35,4 @@
 | `src`     | 图片资源的路径 | `string`  | `空` |
 | `size`     | 尺寸大小 | `number`  | `50` |
 | `shape`     | 头像的形状，例如`square`、`circle` | `string`  | `circle` |
-
-  src: '',
-  size: 50,
-  shape: 'circle',
+| `fit`     | 头像的形状，例如`fill`、`contain` | `cover`  | `none` |

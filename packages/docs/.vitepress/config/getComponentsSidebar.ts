@@ -70,6 +70,14 @@ export const getComponentsSidebar = (): DefaultTheme.Sidebar => {
           text: 'Notification 通知',
           link: '/components/notification/',
         },
+        {
+          text: 'Result 结果页',
+          link: '/components/result/',
+        },
+        {
+          text: 'Empty 无内容',
+          link: '/components/empty/',
+        },
       ],
     },
   ]

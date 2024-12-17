@@ -3,9 +3,11 @@
     <div class="ver-card-header" v-if="$slots.header">
       <slot name="header"></slot>
     </div>
-
     <div class="ver-card-body">
       <slot></slot>
+    </div>
+    <div class="ver-card-footer" v-if="$slots.footer">
+      <slot name="footer"></slot>
     </div>
   </div>
 </template>

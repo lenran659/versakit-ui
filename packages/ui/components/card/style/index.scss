@@ -1,10 +1,8 @@
 @use '../../../style/color/index.scss' as *;
 
 .ver-card {
-  border-radius: 4px;
-  padding: 20px;
-  border: 1px solid $ver-zinc-3;
-  background-color: $ver-zinc-1;
+  border-radius: 5px;
+  background-color: #fff;
   overflow: hidden;
   transition: 0.3s;
 
@@ -14,6 +12,36 @@
     border-color: $ver-zinc-6;
   }
 }
+
+.ver-card-header {
+  height: 42px;
+  line-height: 42px;
+  padding: 0 15px;
+  border-bottom: 1px solid $ver-zinc-3;
+  font-size: 14px;
+
+  .dark & {
+    border-color: $ver-zinc-7;
+  }
+}
+
+.ver-card-body {
+  padding: 10px 15px;
+  line-height: 24px;
+}
+
+.ver-card-footer {
+  height: 42px;
+  line-height: 42px;
+  padding: 0 15px;
+  border-top: 1px solid $ver-zinc-3;
+  font-size: 14px;
+  .dark & {
+    border-color: $ver-zinc-7;
+  }
+}
+
+// shadow
 
 .ver-card.is-shadow-always {
   box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.12);
@@ -27,17 +55,4 @@
   &:hover {
     box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.12);
   }
-}
-
-.ver-card-header {
-  padding: calc(20px - 2px) 20px;
-  border-bottom: 1px solid $ver-zinc-3;
-
-  .dark & {
-    border-color: $ver-zinc-7;
-  }
-}
-
-.ver-card-body {
-  padding: 20px;
 }

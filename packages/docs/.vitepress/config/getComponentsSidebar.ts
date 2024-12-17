@@ -10,6 +10,10 @@ export const getComponentsSidebar = (): DefaultTheme.Sidebar => {
       ],
     },
     {
+      text: 'Directives 指令',
+      items: [{ text: 'Ripple 水波纹', link: '/components/ripple/' }],
+    },
+    {
       text: 'Basic 基础组件',
       items: [
         { text: 'Button 按钮', link: '/components/button/' },

@@ -1,0 +1,23 @@
+@use '../../../style/color/index.scss' as *;
+
+
+.ver-badge {
+  position: relative;
+  display: inline-block;
+  .ver-badge-dot,
+  .ver-badge-num {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 13px;
+    width: 13px;
+    border-radius: 9px;
+    box-shadow: 0 0 0 2px #fff;
+    background: #b62f2f;
+  }
+  .ver-badge-dot {
+    width: 8px;
+    height: 8px;
+    padding: 0;
+  }
+}

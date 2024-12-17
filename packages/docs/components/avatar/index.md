@@ -42,4 +42,4 @@
 | `size`     | 尺寸大小 | `number`  `string`  | `50` |
 | `shape`     | 头像的形状，例如`square`、`circle` | `string`  | `circle` |
 | `fit`     | 头像的填充效果，例如`fill`、`contain`、`cover` | `string`  | `cover` |
-| `error`     | 图片展示失败时触发的函数 | `function`  | `imageErrorHandler()` |
+| `callback`     | 图片展示失败时展示的图片 | `string`  | `imageErrorHandler()` |

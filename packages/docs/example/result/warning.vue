@@ -1,9 +1,7 @@
 <template>
   <ver-result status="warning">
     <template #content>
-      <div class="result-content">
-        <span>警告</span>
-      </div>
+      <span>警告</span>
     </template>
   </ver-result>
 </template>

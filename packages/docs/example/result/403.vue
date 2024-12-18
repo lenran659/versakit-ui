@@ -1,9 +1,7 @@
 <template>
   <ver-result status="403">
     <template #content>
-      <div class="result-content">
-        <span>403 禁止访问</span>
-      </div>
+      <span>403 禁止访问</span>
     </template>
   </ver-result>
 </template>

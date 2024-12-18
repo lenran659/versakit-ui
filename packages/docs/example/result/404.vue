@@ -1,9 +1,7 @@
 <template>
   <ver-result status="403">
     <template #content>
-      <div class="result-content">
-        <span>404 资源不存在</span>
-      </div>
+      <span>404 资源不存在</span>
     </template>
   </ver-result>
 </template>

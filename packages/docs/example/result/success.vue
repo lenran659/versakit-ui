@@ -1,9 +1,7 @@
 <template>
   <ver-result status="success">
     <template #content>
-      <div class="result-content">
-        <span>成功</span>
-      </div>
+      <span>成功</span>
     </template>
   </ver-result>
 </template>

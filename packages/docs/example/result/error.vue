@@ -1,9 +1,7 @@
 <template>
   <ver-result status="error">
     <template #content>
-      <div class="result-content">
-        <span>错误</span>
-      </div>
+      <span>错误</span>
     </template>
   </ver-result>
 </template>

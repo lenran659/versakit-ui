@@ -1,9 +1,7 @@
 <template>
   <ver-result status="info">
     <template #content>
-      <div class="result-content">
-        <span>信息</span>
-      </div>
+      <span>信息</span>
     </template>
   </ver-result>
 </template>

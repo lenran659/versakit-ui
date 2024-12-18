@@ -4,19 +4,20 @@
 
 ## 基础用法
 
-<!-- <demo vue="../../example/result/success.vue"></demo> -->
+<demo vue="../../example/empty/base.vue"></demo>
 
 ## 自定义图标
 
-<!-- <demo vue="../../example/result/success.vue"></demo> -->
+<demo vue="../../example/empty/extend.vue"></demo>
 
 ## Empty API
 
 ### Empty 属性
 
-| 属性               | 说明             | 类型      | 默认值 |
-| ------------------ | ---------------- | --------- | ------ |
-| `show-description` | 是否展示描述信息 | `boolean` | `true` |
+| 属性              | 说明             | 类型      | 默认值 |
+| ----------------- | ---------------- | --------- | ------ |
+| `showDescription` | 是否展示描述信息 | `boolean` | `true` |
+| `showButton`      | 是否展示按钮     | `boolean` | `true` |
 
 ### Empty 插槽
 

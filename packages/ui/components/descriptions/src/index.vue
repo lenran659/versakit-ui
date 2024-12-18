@@ -15,21 +15,34 @@
 
     <!-- 主要内容 -->
     <div class="ver-descriptions-body">
-      <table :class="['ver-descriptions-table', { 'is-bordered': border }]">
+      <table
+        :class="[
+          'ver-descriptions-table',
+          { 'is-descriptions-bordered': border },
+        ]"
+      >
         <tbody>
           <template v-for="(row, rowIndex) in getRows()" :key="rowIndex">
-            <tr>
-              <template v-for="(item, itemIndex) in row" :key="itemIndex">
+            <span v-for="(item, itemIndex) in row" :key="itemIndex">
+              <tr>
                 <td
                   :colspan="item.span || 1"
                   :rowspan="item.rowSpan || 1"
                   class="ver-descriptions-item"
                 >
-                  <div class="label">{{ item.label }}</div>
-                  <div class="value">{{ item.value }}</div>
+                  <div class="is-descriptions-label">{{ item.label }}</div>
                 </td>
-              </template>
-            </tr>
+              </tr>
+              <tr>
+                <td
+                  :colspan="item.span || 1"
+                  :rowspan="item.rowSpan || 1"
+                  class="ver-descriptions-item"
+                >
+                  <div class="is-descriptions-value">{{ item.value }}</div>
+                </td>
+              </tr>
+            </span>
           </template>
         </tbody>
       </table>
@@ -46,7 +59,7 @@ defineOptions({ name: 'VerDescriptions' })
 const slots = useSlots()
 
 const props = withDefaults(defineProps<DescriptionsProps>(), {
-  border: true,
+  border: false,
   column: 6,
   title: '',
   extra: '',
@@ -110,6 +123,8 @@ const getRows = () => {
 </script>
 
 <style scoped lang="scss">
+@use '../../../style/color/index.scss' as *;
+
 .ver-descriptions {
   .ver-descriptions-header {
     display: flex;
@@ -122,7 +137,7 @@ const getRows = () => {
     }
 
     .ver-descriptions-extra {
-      color: #999;
+      color: $ver-zinc-5;
     }
   }
 
@@ -134,6 +149,27 @@ const getRows = () => {
       margin: 0;
       width: 100%;
       border-collapse: collapse;
+
+      .is-descriptions-label {
+      }
+
+      tr:nth-child(2n) {
+        background-color: white;
+      }
+
+      .is-descriptions-bordered {
+        border: none;
+      }
+
+      :not(.is-descriptions-bordered) {
+        td {
+          border: none;
+        }
+
+        tr {
+          border: none;
+        }
+      }
     }
   }
 }

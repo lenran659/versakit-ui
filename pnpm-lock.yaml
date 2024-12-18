@@ -132,6 +132,9 @@ importers:
       '@rollup/plugin-node-resolve':
         specifier: ^15.3.0
         version: 15.3.0(rollup@4.28.1)
+      '@versakit/cli':
+        specifier: 'file:'
+        version: 'link:'
       colors:
         specifier: ^1.4.0
         version: 1.4.0

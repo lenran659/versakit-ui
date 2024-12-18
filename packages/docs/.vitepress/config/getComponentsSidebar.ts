@@ -1,3 +1,9 @@
+/*
+ * @Author: 2171204141@qq.com
+ * @Date: 2024-12-17 19:14:39
+ * @LastEditors: Dream
+ * @Description:
+ */
 import { DefaultTheme } from 'vitepress'
 
 export const getComponentsSidebar = (): DefaultTheme.Sidebar => {
@@ -39,6 +45,7 @@ export const getComponentsSidebar = (): DefaultTheme.Sidebar => {
         { text: 'Card 卡片', link: '/components/card/' },
         { text: 'Tag 标签', link: '/components/tag/' },
         { text: 'Panel 面板', link: '/components/panel/' },
+        { text: 'Descriptions 描述列表', link: '/components/Descriptions/' },
       ],
     },
     {

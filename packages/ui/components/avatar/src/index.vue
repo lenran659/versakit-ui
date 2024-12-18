@@ -32,6 +32,7 @@ const props = withDefaults(defineProps<AvatarProps>(), {
   shape: 'circle',
   fit: 'cover' as Fit.cover,
   callback: '',
+  error: '',
 })
 
 const imageErrorHandler = (event: Event) => {

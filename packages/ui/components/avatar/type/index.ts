@@ -6,6 +6,7 @@ export interface AvatarProps {
   size?: number | string
   fit?: Fit | string
   callback?: string
+  error?: string
 }
 
 export enum Fit {

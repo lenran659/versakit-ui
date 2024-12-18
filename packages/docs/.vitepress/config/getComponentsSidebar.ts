@@ -44,6 +44,7 @@ export const getComponentsSidebar = (): DefaultTheme.Sidebar => {
         { text: 'Avatar 头像', link: '/components/avatar/' },
         { text: 'Card 卡片', link: '/components/card/' },
         { text: 'Tag 标签', link: '/components/tag/' },
+        { text: 'Badge 徽标', link: '/components/badge/' },
         { text: 'Panel 面板', link: '/components/panel/' },
         { text: 'Descriptions 描述列表', link: '/components/Descriptions/' },
       ],
@@ -76,6 +77,14 @@ export const getComponentsSidebar = (): DefaultTheme.Sidebar => {
         {
           text: 'Notification 通知',
           link: '/components/notification/',
+        },
+        {
+          text: 'Result 结果页',
+          link: '/components/result/',
+        },
+        {
+          text: 'Empty 无内容',
+          link: '/components/empty/',
         },
       ],
     },

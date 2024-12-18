@@ -8,6 +8,7 @@ import VerInput from './components/input/index'
 import VerDialog from './components/dialog/index'
 import VerDivider from './components/divider/index'
 import VerAvatar from './components/avatar/index'
+import VerBadge from './components/badge/index'
 import VerCard from './components/card/index'
 import VerTag from './components/tag/index'
 import VerDrawer from './components/drawer/index'
@@ -25,6 +26,8 @@ import VerTab from './components/tab/index'
 import VerIcon from './components/icon/index'
 import VerBacktop from './components/backtop/index'
 import VerDescriptions from './components/descriptions'
+import VerResult from './components/result/index'
+import VerEmpty from './components/empty/index'
 import VerPanel from './components/panel'
 import { vRipple } from './directives/index'
 import 'virtual:svg-icons-register'
@@ -38,6 +41,7 @@ const components: Component[] = [
   VerInput,
   VerDialog,
   VerAvatar,
+  VerBadge,
   VerCard,
   VerPanel,
   VerTag,
@@ -55,6 +59,8 @@ const components: Component[] = [
   VerIcon,
   VerBacktop,
   VerDescriptions,
+  VerResult,
+  VerEmpty,
 ]
 export {
   VerButton,
@@ -65,6 +71,7 @@ export {
   VerInput,
   VerDialog,
   VerAvatar,
+  VerBadge,
   VerCard,
   VerPanel,
   VerTag,
@@ -82,6 +89,8 @@ export {
   VerIcon,
   VerBacktop,
   VerDescriptions,
+  VerResult,
+  VerEmpty,
 }
 
 export default {

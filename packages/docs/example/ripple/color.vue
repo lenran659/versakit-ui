@@ -4,20 +4,12 @@ import { VerPanel } from '@versakit/ui'
 
 <template>
   <div>
-    <VerPanel v-ripple="{ duration: 800, backgroundColor: '#c4b5fd' }">
-      Primary
-    </VerPanel>
+    <VerPanel v-ripple="{ duration: 800, color: '#c4b5fd' }">Primary</VerPanel>
 
-    <VerPanel v-ripple="{ duration: 800, backgroundColor: '#86efac' }">
-      success
-    </VerPanel>
+    <VerPanel v-ripple="{ duration: 800, color: '#86efac' }">success</VerPanel>
 
-    <VerPanel v-ripple="{ duration: 800, backgroundColor: '#fdba74' }">
-      warn
-    </VerPanel>
+    <VerPanel v-ripple="{ duration: 800, color: '#fdba74' }">warn</VerPanel>
 
-    <VerPanel v-ripple="{ duration: 800, backgroundColor: '#fca5a5' }">
-      error
-    </VerPanel>
+    <VerPanel v-ripple="{ duration: 800, color: '#fca5a5' }">error</VerPanel>
   </div>
 </template>

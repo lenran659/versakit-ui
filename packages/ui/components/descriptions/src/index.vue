@@ -70,6 +70,7 @@ const getRows = () => {
 
   const rows: DescriptionItem[][] = []
   let temp: DescriptionItem[] = []
+  let totalSpan = 0
   console.log(children)
   children.forEach((node) => {
     console.log(node, node.props, node.props?.span)
@@ -80,6 +81,7 @@ const getRows = () => {
         span: node.props.span || 1,
         rowSpan: node.props.rowSpan || 1,
       }
+      totalSpan += item.span ? item.span : 1
       temp.push(item)
     }
     console.log(temp)
@@ -87,11 +89,20 @@ const getRows = () => {
     if (temp.length === props.column) {
       rows.push(temp)
       temp = []
+      totalSpan = 0
     }
     console.log(rows)
   })
 
-  if (temp.length) rows.push(temp)
+  if (temp.length) {
+    const remainingColumns = props.column - totalSpan
+    console.log(props.column, totalSpan, remainingColumns)
+    if (remainingColumns > 0) {
+      const lastItem = temp[temp.length - 1]
+      lastItem.span = remainingColumns + 1
+    }
+    rows.push(temp)
+  }
 
   console.log('rows:', rows)
   return rows

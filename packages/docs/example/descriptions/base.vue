@@ -5,7 +5,7 @@
  * @Description:
 -->
 <template>
-  <ver-descriptions title="User Info" extra="123">
+  <ver-descriptions title="User Info">
     <ver-descriptions-item label="Username" value="123"></ver-descriptions-item>
     <ver-descriptions-item label="Telephone" value="15"></ver-descriptions-item>
     <ver-descriptions-item label="Place" value="Suzhou"></ver-descriptions-item>
@@ -14,11 +14,8 @@
     <ver-descriptions-item label="Telephone" value="15"></ver-descriptions-item>
     <ver-descriptions-item label="Place" value="Suzhou"></ver-descriptions-item>
     <ver-descriptions-item label="Remarks" value="12"></ver-descriptions-item>
-    <ver-descriptions-item label="Address" value="1"></ver-descriptions-item>
     <ver-descriptions-item label="Telephone" value="15"></ver-descriptions-item>
     <ver-descriptions-item label="Place" value="Suzhou"></ver-descriptions-item>
-    <ver-descriptions-item label="Remarks" value="12"></ver-descriptions-item>
-    <ver-descriptions-item label="Address" value="1"></ver-descriptions-item>
   </ver-descriptions>
 </template>
 

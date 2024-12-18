@@ -23,26 +23,28 @@
       >
         <tbody>
           <template v-for="(row, rowIndex) in getRows()" :key="rowIndex">
-            <span v-for="(item, itemIndex) in row" :key="itemIndex">
-              <tr>
-                <td
-                  :colspan="item.span || 1"
-                  :rowspan="item.rowSpan || 1"
-                  class="ver-descriptions-item"
-                >
-                  <div class="is-descriptions-label">{{ item.label }}</div>
-                </td>
-              </tr>
-              <tr>
-                <td
-                  :colspan="item.span || 1"
-                  :rowspan="item.rowSpan || 1"
-                  class="ver-descriptions-item"
-                >
-                  <div class="is-descriptions-value">{{ item.value }}</div>
-                </td>
-              </tr>
-            </span>
+            <tr>
+              <td
+                v-for="(item, itemIndex) in row"
+                :key="itemIndex"
+                :colspan="item.span || 1"
+                :rowspan="item.rowSpan || 1"
+                class="ver-descriptions-item"
+              >
+                <div class="is-descriptions-label">{{ item.label }}</div>
+              </td>
+            </tr>
+            <tr>
+              <td
+                v-for="(item, itemIndex) in row"
+                :key="itemIndex"
+                :colspan="item.span || 1"
+                :rowspan="item.rowSpan || 1"
+                class="ver-descriptions-item"
+              >
+                <div class="is-descriptions-value">{{ item.value }}</div>
+              </td>
+            </tr>
           </template>
         </tbody>
       </table>
@@ -150,18 +152,26 @@ const getRows = () => {
       width: 100%;
       border-collapse: collapse;
 
-      .is-descriptions-label {
+      .is-descriptions-label,
+      .is-descriptions-value {
+        word-break: break-all;
       }
 
       tr:nth-child(2n) {
         background-color: white;
       }
 
-      .is-descriptions-bordered {
-        border: none;
+      &.is-descriptions-bordered {
+        td {
+          border: 1px solid $ver-zinc-3;
+        }
+
+        tr {
+          border: 1px solid $ver-zinc-3;
+        }
       }
 
-      :not(.is-descriptions-bordered) {
+      &:not(.is-descriptions-bordered) {
         td {
           border: none;
         }

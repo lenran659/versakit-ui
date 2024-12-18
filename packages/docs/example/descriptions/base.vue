@@ -5,7 +5,7 @@
  * @Description:
 -->
 <template>
-  <ver-descriptions title="User Info" extra="21">
+  <ver-descriptions title="User Info" extra="21" border>
     <ver-descriptions-item label="Username" value="123"></ver-descriptions-item>
     <ver-descriptions-item label="Telephone" value="15"></ver-descriptions-item>
     <ver-descriptions-item label="Place" value="Suzhou"></ver-descriptions-item>
@@ -17,7 +17,7 @@
     <ver-descriptions-item label="Telephone" value="15"></ver-descriptions-item>
     <ver-descriptions-item
       label="Place"
-      value="SuzhouSuzhouSuzhouSuzhouSuzhouSuzhou"
+      value="SuSuzhouSuzhouSuzhouSuzhouSuzhouSuzhouSuzhouSuzhou"
     ></ver-descriptions-item>
   </ver-descriptions>
 </template>

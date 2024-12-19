@@ -1,0 +1,15 @@
+.vp-doc table {
+  width: 100%;
+  display: table;
+
+  td,
+  th {
+    border: none;
+  }
+
+  tbody {
+    tr:nth-child(2n) {
+      background-color: white;
+    }
+  }
+}

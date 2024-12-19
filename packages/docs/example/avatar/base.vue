@@ -1,3 +1,9 @@
+<!--
+ * @Author: 2171204141@qq.com
+ * @Date: 2024-12-17 19:14:39
+ * @LastEditors: Dream
+ * @Description: 
+-->
 <template>
   <ver-row>
     <ver-col :span="12">
@@ -62,23 +68,29 @@ import { VerAvatar, VerRow, VerCol } from '@versakit/ui'
 .demo-basic {
   text-align: center;
 }
+
 .demo-basic .sub-title {
   margin-bottom: 10px;
   font-size: 14px;
   color: #909399;
 }
+
 .demo-basic .demo-basic--circle,
 .demo-basic .demo-basic--square {
+  margin-top: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 .demo-basic .block:not(:last-child) {
   border-right: 1px solid #dcdfe6;
 }
+
 .demo-basic .block {
   flex: 1;
 }
+
 .demo-basic .el-col:not(:last-child) {
   border-right: 1px solid #dcdfe6;
 }

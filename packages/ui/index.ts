@@ -8,6 +8,7 @@ import VerInput from './components/input/index'
 import VerDialog from './components/dialog/index'
 import VerDivider from './components/divider/index'
 import VerAvatar from './components/avatar/index'
+import VerBadge from './components/badge/index'
 import VerCard from './components/card/index'
 import VerTag from './components/tag/index'
 import VerDrawer from './components/drawer/index'
@@ -39,6 +40,7 @@ const components: Component[] = [
   VerInput,
   VerDialog,
   VerAvatar,
+  VerBadge,
   VerCard,
   VerPanel,
   VerTag,
@@ -67,6 +69,7 @@ export {
   VerInput,
   VerDialog,
   VerAvatar,
+  VerBadge,
   VerCard,
   VerPanel,
   VerTag,

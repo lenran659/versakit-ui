@@ -9,7 +9,6 @@
   font-size: 14px;
   background-color: #c0c4cc;
   & > img {
-    object-fit: cover;
     display: block;
     height: 100%;
     max-width: 100%;
@@ -23,4 +22,20 @@
 
 .ver-avatar.is-square {
   border-radius: 4px;
+}
+
+.fit-full {
+  object-fit: fill;
+}
+.fit-contain {
+  object-fit: contain;
+}
+.fit-cover {
+  object-fit: cover;
+}
+.fit-none {
+  object-fit: none;
+}
+.fit-scale-down {
+  object-fit: scale-down;
 }

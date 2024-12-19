@@ -4,7 +4,7 @@ export const vRipple: Directive<
   HTMLElement,
   {
     duration?: number
-    backgroundColor?: string
+    color?: string
   }
 > = {
   mounted(el, binding) {
@@ -20,8 +20,7 @@ export const vRipple: Directive<
       const span = document.createElement('span')
       const size = Math.max(el.offsetWidth, el.offsetHeight) * 2
       const duration = (binding.value?.duration ?? 500) / 1000
-      const backgroundColor =
-        binding.value?.backgroundColor ?? 'rgba(0, 0, 0, .15)'
+      const backgroundColor = binding.value?.color ?? 'rgba(0, 0, 0, .15)'
       const { x, y } = el.getBoundingClientRect()
       const { clientX, clientY } = ev
 

@@ -1,21 +1,31 @@
 @use '../../../style/color/index.scss' as *;
 
-
 .ver-badge {
   position: relative;
   display: inline-block;
-  .ver-badge-dot,
-  .ver-badge-num {
+
+  &-dot, &-num, &-text {
     position: absolute;
     right: 0;
     top: 0;
-    height: 13px;
-    width: 13px;
+    height: 16px;
+    line-height: 16px;
+    text-align: center;
     border-radius: 9px;
+    padding: 0 4px;
+    font-size: 12px;
+    color: #fff;
+    background: $ver-red-6;
     box-shadow: 0 0 0 2px #fff;
-    background: #b62f2f;
   }
+  .ver-badge-num, .ver-badge-text {
+    min-width: 16px;
+    right: -8px;
+    top: -8px;
+  }  
   .ver-badge-dot {
+    right: 0;
+    top: 0;
     width: 8px;
     height: 8px;
     padding: 0;

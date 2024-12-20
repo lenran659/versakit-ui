@@ -1,7 +1,7 @@
-type BadgeType = 'dot' | 'rim'
-type BadgePosition = 'topLeft' | 'topRight' | 'bottomLeft' | 'bottomRight'
+type BadgeType = 'dot' | 'number' | 'text'
+type BadgeValue = string | number
 
 export interface BadgeProps {
   type?: BadgeType
-  position?: BadgePosition
+  value?: BadgeValue
 }

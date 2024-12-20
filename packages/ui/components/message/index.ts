@@ -16,10 +16,16 @@ const renderMessages = () => {
   container.className = 'ver-message-container'
   document.body.appendChild(container)
 
+  // FIXME: 需修改推入逻辑，解决消息推出时候对齐问题和动画问题
   render(
     h(
       'div',
-      messages.value.map((message) => h(VerMessage, message)),
+      messages.value.map((message, index) =>
+        h(VerMessage, {
+          ...message,
+          style: { top: `${25 + index * 50}px` },
+        }),
+      ),
     ),
     container,
   )

@@ -1,6 +1,6 @@
 <template>
-  <VerBadge type="dot">
-    <VerButton>点我没啥</VerButton>
+  <VerBadge type="text" value="new">
+    <VerButton>点我没事</VerButton>
   </VerBadge>
 </template>
 

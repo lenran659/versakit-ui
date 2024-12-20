@@ -1,6 +1,6 @@
 <template>
   <transition name="down" @after-leave="destroy">
-    <div v-show="isVisable" :class="VerClass" :style="{ top: topValue }">
+    <div v-show="isVisable" :class="VerClass" :style="cssStyle">
       <VerIcon :color="iconColor" :name="iconName" />
       <span class="text">{{ content }}</span>
     </div>
@@ -10,6 +10,7 @@
 <script setup lang="ts">
 import { onMounted, ref, computed } from 'vue'
 import type { MessageProps } from '../type/index'
+import getLastBottomOffset from '../index'
 import VerIcon from '../../icon/index'
 
 defineOptions({ name: 'VerMessage' })
@@ -17,15 +18,17 @@ defineOptions({ name: 'VerMessage' })
 const isVisable = ref(false)
 
 const props = withDefaults(defineProps<MessageProps>(), {
+  id: undefined,
   type: 'info',
   content: '',
   duration: 0,
   plain: false,
   destroy: () => {},
-  id: '',
 })
 
-const topValue = ref('25px')
+const cssStyle = computed(() => ({
+  top: `25` + (props.id ? getLastBottomOffset(props.id) : null) + `px`,
+}))
 
 // 根据传入的消息类型，计算对应的图标颜色
 const iconColor = computed(() => {

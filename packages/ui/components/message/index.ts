@@ -2,40 +2,36 @@ import { h, render, ref } from 'vue'
 import VerMessage from './src/index.vue'
 import type { MessageProps } from './type/index'
 
-const messages = ref<MessageProps[]>([])
+const messages = ref<any>([])
 
-const removeMessage = (id: string) => {
-  messages.value = messages.value.filter((message) => message.id !== id)
-  renderMessages()
-}
-
-const renderMessages = () => {
-  const container =
-    document.querySelector('.ver-message-container') ||
-    document.createElement('div')
-  container.className = 'ver-message-container'
-  document.body.appendChild(container)
-
-  // FIXME: 需修改推入逻辑，解决消息推出时候对齐问题和动画问题
-  render(
-    h(
-      'div',
-      messages.value.map((message, index) =>
-        h(VerMessage, {
-          ...message,
-          style: { top: `${25 + index * 50}px` },
-        }),
-      ),
-    ),
-    container,
-  )
-}
-
+// 对外暴露的函数，用于创建并展示新的消息
 export default ({ type, plain, content, duration = 3000 }: MessageProps) => {
+  const container = document.createElement('div')
   const id = Math.random().toString(36).substr(2, 9)
+
   const onDestroy = () => {
-    removeMessage(id)
+    const idx = messages.value.findIndex((item: any) => item.id === id)
+    if (idx === -1) return
+    messages.value.splice(idx, 1)
+
+    render(null, container)
   }
+
+  // 1. 返回 vnode
+  const vnode = h(VerMessage, {
+    type,
+    content,
+    duration,
+    plain,
+    destroy: onDestroy,
+  })
+
+  // 2. render
+  render(vnode, container)
+
+  document.body.appendChild(container.firstElementChild!)
+
+  const vm = vnode.component!
 
   messages.value.push({
     type,
@@ -44,11 +40,25 @@ export default ({ type, plain, content, duration = 3000 }: MessageProps) => {
     duration,
     destroy: onDestroy,
     id,
+    vm,
   })
 
+  // 当消息数量超过5条时，移除最早的那条消息
   if (messages.value.length > 5) {
     messages.value.shift()?.destroy?.()
   }
 
-  renderMessages()
+  return messages.value
+}
+
+export const getLastBottomOffset = (id: string) => {
+  const idx = messages.value.findIndex((item: any) => item.id === id)
+  if (idx <= 0) {
+    return 0
+  } else {
+    const prev = messages.value[idx - 1]
+    console.log(prev.vm.exposed!.bottomOffset.value)
+
+    return prev.vm.exposed!.bottomOffset.value
+  }
 }

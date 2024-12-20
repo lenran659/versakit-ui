@@ -22,6 +22,7 @@ const props = withDefaults(defineProps<MessageProps>(), {
   duration: 0,
   plain: false,
   destroy: () => {},
+  id: '',
 })
 
 // 根据传入的消息类型，计算对应的图标颜色

@@ -8,7 +8,12 @@
             <ver-avatar src="../../assets/example.jpg" />
           </div>
           <div class="block">
-            <ver-avatar :size="36">user</ver-avatar>
+            <ver-avatar>user</ver-avatar>
+          </div>
+          <div class="block">
+            <ver-avatar>
+              <VerIcon name="card-image" />
+            </ver-avatar>
           </div>
         </div>
       </div>
@@ -21,7 +26,12 @@
             <ver-avatar src="../../assets/example.jpg" shape="square" />
           </div>
           <div class="block">
-            <ver-avatar :size="36" shape="square">user</ver-avatar>
+            <ver-avatar shape="square">user</ver-avatar>
+          </div>
+          <div class="block">
+            <ver-avatar shape="square">
+              <VerIcon name="card-image" />
+            </ver-avatar>
           </div>
         </div>
       </div>
@@ -30,7 +40,7 @@
 </template>
 
 <script setup lang="ts">
-import { VerAvatar, VerRow, VerCol } from '@versakit/ui'
+import { VerAvatar, VerIcon, VerRow, VerCol } from '@versakit/ui'
 </script>
 
 <style scoped>

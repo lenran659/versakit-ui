@@ -6,11 +6,6 @@
         <div class="demo-basic--circle">
           <div class="block">
             <ver-avatar
-              src="https://cube.elemecdn.com/3/7c/3ea6beec64369c2642b92c6726f1epng.png"
-            />
-          </div>
-          <div class="block">
-            <ver-avatar
               :size="24"
               src="https://cube.elemecdn.com/3/7c/3ea6beec64369c2642b92c6726f1epng.png"
             />
@@ -18,6 +13,11 @@
           <div class="block">
             <ver-avatar
               :size="36"
+              src="https://cube.elemecdn.com/3/7c/3ea6beec64369c2642b92c6726f1epng.png"
+            />
+          </div>
+          <div class="block">
+            <ver-avatar
               src="https://cube.elemecdn.com/3/7c/3ea6beec64369c2642b92c6726f1epng.png"
             />
           </div>
@@ -30,12 +30,6 @@
         <div class="demo-basic--square">
           <div class="block">
             <ver-avatar
-              src="https://cube.elemecdn.com/3/7c/3ea6beec64369c2642b92c6726f1epng.png"
-              shape="square"
-            />
-          </div>
-          <div class="block">
-            <ver-avatar
               :size="24"
               src="https://cube.elemecdn.com/3/7c/3ea6beec64369c2642b92c6726f1epng.png"
               shape="square"
@@ -44,6 +38,12 @@
           <div class="block">
             <ver-avatar
               :size="36"
+              src="https://cube.elemecdn.com/3/7c/3ea6beec64369c2642b92c6726f1epng.png"
+              shape="square"
+            />
+          </div>
+          <div class="block">
+            <ver-avatar
               src="https://cube.elemecdn.com/3/7c/3ea6beec64369c2642b92c6726f1epng.png"
               shape="square"
             />

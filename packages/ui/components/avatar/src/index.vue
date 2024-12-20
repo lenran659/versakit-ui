@@ -8,18 +8,25 @@
   >
     <img
       :class="imgClass"
-      v-if="props.src"
+      v-if="imgURL"
       :src="src"
       alt=""
-      @error="props.error || imageErrorHandler"
+      @error="handleImgError"
     />
-    <span v-else>
+    <span class="ver-avatar-inline" v-else>
       <slot></slot>
     </span>
+    <!-- 错误处理 -->
+    <slot class="ver-avatar-inline" name="error"></slot>
   </span>
 </template>
 
 <script lang="ts" setup>
+/**
+ * 1. 头像组件 支持 icon url text
+ * 2. fallback 支持错误图片 同时支持自定义 fallback 是一个属性同时也是一个插槽
+ */
+
 import { computed } from 'vue'
 import { Fit } from '../type/index'
 import type { AvatarProps } from '../type/index'
@@ -31,15 +38,13 @@ const props = withDefaults(defineProps<AvatarProps>(), {
   size: 50,
   shape: 'circle',
   fit: 'cover' as Fit.cover,
-  callback: '',
-  error: '',
+  fallback: '',
 })
 
-const imageErrorHandler = (event: Event) => {
+let imgURL = props.src
+const handleImgError = (event: Event) => {
   const imgTarget = event.target as HTMLImageElement
-  return (imgTarget.src =
-    props.callback ||
-    'https://cube.elemecdn.com/e/fd/0fc7d20532fdaf769a25683617711png.png')
+  return (imgTarget.src = props.fallback)
 }
 
 const size = computed(() => {

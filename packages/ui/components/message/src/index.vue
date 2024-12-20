@@ -1,6 +1,6 @@
 <template>
   <transition name="down" @after-leave="destroy">
-    <div v-show="isVisable" :class="VerClass">
+    <div v-show="isVisable" :class="VerClass" :style="{ top: topValue }">
       <VerIcon :color="iconColor" :name="iconName" />
       <span class="text">{{ content }}</span>
     </div>
@@ -22,7 +22,10 @@ const props = withDefaults(defineProps<MessageProps>(), {
   duration: 0,
   plain: false,
   destroy: () => {},
+  id: '',
 })
+
+const topValue = ref('25px')
 
 // 根据传入的消息类型，计算对应的图标颜色
 const iconColor = computed(() => {

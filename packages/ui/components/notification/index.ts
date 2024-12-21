@@ -1,34 +1,6 @@
-import { render, h } from 'vue'
-import VerNotification from './src/index.vue'
-import type { NotifivationProps } from './type'
+import { Notification } from './src/index'
+import { withInstall } from '../../utils/withinstall'
 
-export default ({
-  type,
-  title,
-  content,
-  plain,
-  position,
-  duration = 3000,
-}: NotifivationProps) => {
-  /**
-   * 动画结束时的回调
-   */
-  // 3. VerNotification 销毁
-  const onDestroy = () => {
-    render(null, document.body)
-  }
+const VerNotification = withInstall(Notification)
 
-  // 1. 返回 vnode
-  const vnode = h(VerNotification, {
-    type,
-    title,
-    plain,
-    content,
-    position,
-    duration,
-    destroy: onDestroy,
-  })
-
-  // 2. render
-  render(vnode, document.body)
-}
+export default VerNotification

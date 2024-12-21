@@ -17,6 +17,7 @@
 
 <script lang="ts" setup>
 import { ref, onMounted, computed } from 'vue'
+import { getLastBottomOffset } from './index'
 import VerIcon from '../../icon/index'
 import type { NotifivationProps } from '../type/index'
 
@@ -28,9 +29,19 @@ const props = withDefaults(defineProps<NotifivationProps>(), {
   title: '',
   content: '',
   duration: 3000,
+  offset: 25,
   position: 'top-right',
   destroy: () => {},
 })
+
+const height = ref(0)
+// 上一个实例的最下面的坐标数字，第一个是 0
+const lastOffset = computed(() => getLastBottomOffset(props.id))
+// 这个元素应该使用的 top
+const topOffset = computed(() => props.offset + lastOffset.value)
+
+// 这个元素为下一个元素预留的 offset，也就是它最低端 bottom 的 值
+const bottomOffset = computed(() => height.value + topOffset.value)
 
 // 根据传入的消息类型，计算对应的图标颜色
 const iconColor = computed(() => {
@@ -68,28 +79,28 @@ const positionStyle = computed(() => {
       return {
         ...baseStyle,
         position: 'fixed',
-        top: '20px',
+        top: topOffset.value + 'px',
         right: '20px',
       } as unknown as Record<string, string>
     case 'top-left':
       return {
         ...baseStyle,
         position: 'fixed',
-        top: '20px',
+        top: topOffset.value + 'px',
         left: '20px',
       } as unknown as Record<string, string>
     case 'bottom-right':
       return {
         ...baseStyle,
         position: 'fixed',
-        bottom: '20px',
+        bottom: bottomOffset.value + 'px',
         right: '20px',
       } as unknown as Record<string, string>
     case 'bottom-left':
       return {
         ...baseStyle,
         position: 'fixed',
-        bottom: '20px',
+        bottom: bottomOffset.value + 'px',
         left: '20px',
       } as unknown as Record<string, string>
     default:
@@ -121,6 +132,10 @@ onMounted(() => {
   setTimeout(() => {
     isVisable.value = false
   }, props.duration)
+})
+
+defineExpose({
+  bottomOffset,
 })
 </script>
 

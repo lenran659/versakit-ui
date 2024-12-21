@@ -43,15 +43,18 @@
 
 ### Avatar 属性
 
-| 属性  | 说明                                            | 类型                | 默认值 |
-| ----- | ----------------------------------------------- | ------------------- | ------ |
-| src   | 图片资源的路径                                  | `string`            | -      |
-| size  | 尺寸大小                                        | `number` / `string` | 50     |
-| shape | 头像的形状，例如 `square`、`circle`             | `enum`              | circle |
-| fit   | 头像的填充效果，例如 `fill`、`contain`、`cover` | `enum`              | cover  |
+| 属性  | 说明                                            | 类型                                              | 默认值 |
+| ----- | ----------------------------------------------- | ------------------------------------------------- | ------ |
+| src   | 图片资源的路径                                  | `string`                                          | -      |
+| size  | 尺寸大小                                        | `number` / `enum`                                 | 50     |
+| shape | 头像的形状，例如 `square`、`circle`             | `enum`                                            | circle |
+| fit   | 头像的填充效果，例如 `fill`、`contain`、`cover` | `enum`<Tool :value="'fill,contain,cover'"></Tool> | cover  |
 
 ### Avatar 事件
 
 | 名称  | 说明               | 类型       | 默认值                |
 | ----- | ------------------ | ---------- | --------------------- |
 | error | 图片加载失败时触发 | `Function` | `imageErrorHandler()` |
+
+<script>
+</script>

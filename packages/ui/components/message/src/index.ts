@@ -1,31 +1,37 @@
-import { h, render, ref } from 'vue'
+import { h, render, shallowReactive } from 'vue'
 import VerMessage from './index.vue'
 import type { MessageProps } from '../type/index'
 
-const messages = ref<any>([])
-const id = Math.random().toString(36).substr(2, 9)
+const instances: any = shallowReactive([])
+let seed = 1
+
 export const Message = ({
   type,
-  plain,
   content,
+  plain,
   duration = 3000,
 }: MessageProps) => {
+  const id = `message_${seed++}`
   const container = document.createElement('div')
 
+  // 删除数组中的实例 | 销毁
   const onDestroy = () => {
-    const index = messages.value.findIndex((item: any) => item.id === id)
-    if (index === -1) return
-    messages.value.splice(index, 1)
+    const idx = instances.findIndex((instance: any) => instance.id === id)
+    if (idx === -1) return
+    instances.splice(idx, 1)
     render(null, container)
   }
 
-  const vnode = h(VerMessage, {
+  const newProps = {
     type,
     content,
-    duration,
     plain,
+    duration,
+    id,
     destroy: onDestroy,
-  })
+  }
+
+  const vnode = h(VerMessage, newProps)
 
   render(vnode, container)
 
@@ -33,23 +39,23 @@ export const Message = ({
 
   const vm = vnode.component!
 
-  messages.value.push({
+  const instance = {
     id,
-    type,
-    plain,
-    content,
-    duration,
-    destroy: onDestroy,
+    vnode,
     vm,
-  })
+    props: newProps,
+  }
+  instances.push(instance)
+
+  return instance
 }
 
 export const getLastBottomOffset = (id: string) => {
-  const index = messages.value.findIndex((item: any) => item.id === id)
-  if (index <= 0) {
+  const idx = instances.findIndex((instance: any) => instance.id === id)
+  if (idx <= 0) {
     return 0
   } else {
-    const prev = messages.value[index - 1]
-    return prev.vm.exposed!.bottomOffset.value
+    const prev = instances[idx - 1]
+    return prev.vm.exposed!.bottomOffset.value + 50
   }
 }

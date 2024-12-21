@@ -5,10 +5,10 @@ import { VerBacktop } from '@versakit/ui'
 <template>
   <div>
     <div class="box">
-      <span>占位图</span>
+      <span>这是占位图，往下拉，注意右下角</span>
     </div>
     <div class="box">
-      <span>占位图</span>
+      <span>这是占位图，往下拉，注意右下角</span>
     </div>
 
     <ver-backtop />

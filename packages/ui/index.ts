@@ -15,7 +15,6 @@ import VerDrawer from './components/drawer/index'
 import VerSwitch from './components/switch/index'
 import VerRadio from './components/radio/index'
 import VerMessage from './components/message/index'
-import VerMessageVue from './components/message/src/index.vue'
 import VerTextarea from './components/textarea/index'
 import VerContainer from './components/container/index'
 import VerHeader from './components/header/index'
@@ -48,7 +47,6 @@ const components: Component[] = [
   VerDrawer,
   VerSwitch,
   VerRadio,
-  VerMessageVue,
   VerTextarea,
   VerContainer,
   VerHeader,

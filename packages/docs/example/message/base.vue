@@ -11,6 +11,7 @@ const openMessage = () => {
   VerMessage({
     type: 'info',
     content: '这是一条消息',
+    duration: 2000,
   })
 }
 </script>

@@ -6,5 +6,6 @@ export interface MessageProps {
   content?: string
   duration?: number
   plain?: boolean
+  offset?: number
   destroy?: () => void
 }

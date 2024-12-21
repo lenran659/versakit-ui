@@ -1,12 +1,13 @@
 {
   "name": "versakit-monorepo",
-  "version": "1.0.0",
+  "version": "0.2.2",
   "private": "true",
   "type": "module",
   "scripts": {
     "cli:build": "pnpm --filter cli build",
     "docs:build": "pnpm --filter docs docs:build",
     "docs:dev": "pnpm --filter docs docs:dev",
+    "docs:preview": "pnpm --filter docs docs:preview",
     "ui:build": "pnpm --filter ui build",
     "test": "vitest",
     "test:ui": "vitest --ui",
@@ -17,7 +18,10 @@
     "lint:eslint": "eslint packages/**/*.{ts,vue} --cache --fix",
     "prepare": "husky install",
     "lint-staged": "lint-staged",
-    "commitlint": "commitlint --config commitlint.config.cjs -e -V"
+    "commitlint": "commitlint --config commitlint.config.cjs -e -V",
+    "changeset": "changeset",
+    "packages-version": "changeset version",
+    "publish": "changeset publish --access=public --registry=https://versakit.npmjs.com/"
   },
   "lint-staged": {
     "**/*.{js,jsx,ts,tsx,vue}": [
@@ -39,6 +43,7 @@
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.25.9",
+    "@changesets/cli": "^2.27.11",
     "@commitlint/cli": "^19.6.0",
     "@commitlint/config-conventional": "^19.6.0",
     "@tsconfig/node22": "^22.0.0",

@@ -1,0 +1,1211 @@
+<!doctype html>
+<html lang="en-US" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Radio 单选框 | Versakit</title>
+    <meta name="description" content="A VitePress Site" />
+    <meta name="generator" content="VitePress v1.5.0" />
+    <link
+      rel="preload stylesheet"
+      href="/versakit/assets/style.NKfdUbng.css"
+      as="style"
+    />
+    <link rel="preload stylesheet" href="/versakit/vp-icons.css" as="style" />
+
+    <script type="module" src="/versakit/assets/app.C9-7L_tx.js"></script>
+    <link
+      rel="preload"
+      href="/versakit/assets/inter-roman-latin.Di8DUHzh.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin=""
+    />
+    <link
+      rel="modulepreload"
+      href="/versakit/assets/chunks/theme.5pdBifDA.js"
+    />
+    <link
+      rel="modulepreload"
+      href="/versakit/assets/chunks/framework.H-tIyKyh.js"
+    />
+    <link
+      rel="modulepreload"
+      href="/versakit/assets/chunks/index.NLsv7-Uf.js"
+    />
+    <link
+      rel="modulepreload"
+      href="/versakit/assets/components_radio_index.md.CEj-B-sT.lean.js"
+    />
+    <script id="check-dark-mode">
+      ;(() => {
+        const e = localStorage.getItem('vitepress-theme-appearance') || 'auto',
+          a = window.matchMedia('(prefers-color-scheme: dark)').matches
+        ;(!e || e === 'auto' ? a : e === 'dark') &&
+          document.documentElement.classList.add('dark')
+      })()
+    </script>
+    <script id="check-mac-os">
+      document.documentElement.classList.toggle(
+        'mac',
+        /Mac|iPhone|iPod|iPad/i.test(navigator.platform),
+      )
+    </script>
+  </head>
+  <body>
+    <div id="app">
+      <div class="Layout" data-v-73056ea6>
+        <!--[-->
+        <!--]-->
+        <!--[-->
+        <span tabindex="-1" data-v-dab30db6></span>
+        <a href="#VPContent" class="VPSkipLink visually-hidden" data-v-dab30db6>
+          Skip to content
+        </a>
+        <!--]-->
+        <!---->
+        <header class="VPNav" data-v-73056ea6 data-v-38a54cc5>
+          <div class="VPNavBar" data-v-38a54cc5 data-v-f9d2f94e>
+            <div class="wrapper" data-v-f9d2f94e>
+              <div class="container" data-v-f9d2f94e>
+                <div class="title" data-v-f9d2f94e>
+                  <div
+                    class="VPNavBarTitle has-sidebar"
+                    data-v-f9d2f94e
+                    data-v-8ca0c626
+                  >
+                    <a class="title" href="/versakit/" data-v-8ca0c626>
+                      <!--[-->
+                      <!--]-->
+                      <!---->
+                      <span data-v-8ca0c626>Versakit</span>
+                      <!--[-->
+                      <!--]-->
+                    </a>
+                  </div>
+                </div>
+                <div class="content" data-v-f9d2f94e>
+                  <div class="content-body" data-v-f9d2f94e>
+                    <!--[-->
+                    <!--]-->
+                    <div class="VPNavBarSearch search" data-v-f9d2f94e>
+                      <!---->
+                    </div>
+                    <nav
+                      aria-labelledby="main-nav-aria-label"
+                      class="VPNavBarMenu menu"
+                      data-v-f9d2f94e
+                      data-v-9c9c04b5
+                    >
+                      <span
+                        id="main-nav-aria-label"
+                        class="visually-hidden"
+                        data-v-9c9c04b5
+                      >
+                        Main Navigation
+                      </span>
+                      <!--[-->
+                      <!--[-->
+                      <a
+                        class="VPLink link VPNavBarMenuLink"
+                        href="/versakit/guide/dark/"
+                        tabindex="0"
+                        data-v-9c9c04b5
+                        data-v-5bd038d9
+                      >
+                        <!--[-->
+                        <span data-v-5bd038d9>指南</span>
+                        <!--]-->
+                      </a>
+                      <!--]-->
+                      <!--[-->
+                      <a
+                        class="VPLink link VPNavBarMenuLink"
+                        href="/versakit/components/layout/"
+                        tabindex="0"
+                        data-v-9c9c04b5
+                        data-v-5bd038d9
+                      >
+                        <!--[-->
+                        <span data-v-5bd038d9>组件</span>
+                        <!--]-->
+                      </a>
+                      <!--]-->
+                      <!--]-->
+                    </nav>
+                    <!---->
+                    <div
+                      class="VPNavBarAppearance appearance"
+                      data-v-f9d2f94e
+                      data-v-6261bf04
+                    >
+                      <button
+                        class="VPSwitch VPSwitchAppearance"
+                        type="button"
+                        role="switch"
+                        title
+                        aria-checked="false"
+                        data-v-6261bf04
+                        data-v-9fb689da
+                        data-v-ff12b4d8
+                      >
+                        <span class="check" data-v-ff12b4d8>
+                          <span class="icon" data-v-ff12b4d8>
+                            <!--[-->
+                            <span class="vpi-sun sun" data-v-9fb689da></span>
+                            <span class="vpi-moon moon" data-v-9fb689da></span>
+                            <!--]-->
+                          </span>
+                        </span>
+                      </button>
+                    </div>
+                    <div
+                      class="VPSocialLinks VPNavBarSocialLinks social-links"
+                      data-v-f9d2f94e
+                      data-v-6b14c465
+                      data-v-975a148e
+                    >
+                      <!--[-->
+                      <a
+                        class="VPSocialLink no-icon"
+                        href="https://github.com/lenran659/Versakit"
+                        aria-label="github"
+                        target="_blank"
+                        rel="noopener"
+                        data-v-975a148e
+                        data-v-0e77b584
+                      >
+                        <span class="vpi-social-github"></span>
+                      </a>
+                      <a
+                        class="VPSocialLink no-icon"
+                        href="https://gitee.com/dragon_water/versakit"
+                        aria-label="gitee"
+                        target="_blank"
+                        rel="noopener"
+                        data-v-975a148e
+                        data-v-0e77b584
+                      >
+                        <span class="vpi-social-gitee"></span>
+                      </a>
+                      <!--]-->
+                    </div>
+                    <div
+                      class="VPFlyout VPNavBarExtra extra"
+                      data-v-f9d2f94e
+                      data-v-622ac43c
+                      data-v-c646b95b
+                    >
+                      <button
+                        type="button"
+                        class="button"
+                        aria-haspopup="true"
+                        aria-expanded="false"
+                        aria-label="extra navigation"
+                        data-v-c646b95b
+                      >
+                        <span
+                          class="vpi-more-horizontal icon"
+                          data-v-c646b95b
+                        ></span>
+                      </button>
+                      <div class="menu" data-v-c646b95b>
+                        <div class="VPMenu" data-v-c646b95b data-v-898163cf>
+                          <!---->
+                          <!--[-->
+                          <!--[-->
+                          <!---->
+                          <div class="group" data-v-622ac43c>
+                            <div class="item appearance" data-v-622ac43c>
+                              <p class="label" data-v-622ac43c>Appearance</p>
+                              <div class="appearance-action" data-v-622ac43c>
+                                <button
+                                  class="VPSwitch VPSwitchAppearance"
+                                  type="button"
+                                  role="switch"
+                                  title
+                                  aria-checked="false"
+                                  data-v-622ac43c
+                                  data-v-9fb689da
+                                  data-v-ff12b4d8
+                                >
+                                  <span class="check" data-v-ff12b4d8>
+                                    <span class="icon" data-v-ff12b4d8>
+                                      <!--[-->
+                                      <span
+                                        class="vpi-sun sun"
+                                        data-v-9fb689da
+                                      ></span>
+                                      <span
+                                        class="vpi-moon moon"
+                                        data-v-9fb689da
+                                      ></span>
+                                      <!--]-->
+                                    </span>
+                                  </span>
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="group" data-v-622ac43c>
+                            <div class="item social-links" data-v-622ac43c>
+                              <div
+                                class="VPSocialLinks social-links-list"
+                                data-v-622ac43c
+                                data-v-975a148e
+                              >
+                                <!--[-->
+                                <a
+                                  class="VPSocialLink no-icon"
+                                  href="https://github.com/lenran659/Versakit"
+                                  aria-label="github"
+                                  target="_blank"
+                                  rel="noopener"
+                                  data-v-975a148e
+                                  data-v-0e77b584
+                                >
+                                  <span class="vpi-social-github"></span>
+                                </a>
+                                <a
+                                  class="VPSocialLink no-icon"
+                                  href="https://gitee.com/dragon_water/versakit"
+                                  aria-label="gitee"
+                                  target="_blank"
+                                  rel="noopener"
+                                  data-v-975a148e
+                                  data-v-0e77b584
+                                >
+                                  <span class="vpi-social-gitee"></span>
+                                </a>
+                                <!--]-->
+                              </div>
+                            </div>
+                          </div>
+                          <!--]-->
+                          <!--]-->
+                        </div>
+                      </div>
+                    </div>
+                    <!--[-->
+                    <!--]-->
+                    <button
+                      type="button"
+                      class="VPNavBarHamburger hamburger"
+                      aria-label="mobile navigation"
+                      aria-expanded="false"
+                      aria-controls="VPNavScreen"
+                      data-v-f9d2f94e
+                      data-v-fcdaa27e
+                    >
+                      <span class="container" data-v-fcdaa27e>
+                        <span class="top" data-v-fcdaa27e></span>
+                        <span class="middle" data-v-fcdaa27e></span>
+                        <span class="bottom" data-v-fcdaa27e></span>
+                      </span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="divider" data-v-f9d2f94e>
+              <div class="divider-line" data-v-f9d2f94e></div>
+            </div>
+          </div>
+          <!---->
+        </header>
+        <div
+          class="VPLocalNav has-sidebar empty"
+          data-v-73056ea6
+          data-v-31495a73
+        >
+          <div class="container" data-v-31495a73>
+            <button
+              class="menu"
+              aria-expanded="false"
+              aria-controls="VPSidebarNav"
+              data-v-31495a73
+            >
+              <span class="vpi-align-left menu-icon" data-v-31495a73></span>
+              <span class="menu-text" data-v-31495a73>Menu</span>
+            </button>
+            <div
+              class="VPLocalNavOutlineDropdown"
+              style="--vp-vh: 0px"
+              data-v-31495a73
+              data-v-e9d369fb
+            >
+              <button data-v-e9d369fb>Return to top</button>
+              <!---->
+            </div>
+          </div>
+        </div>
+        <aside class="VPSidebar" data-v-73056ea6 data-v-148fc3ae>
+          <div class="curtain" data-v-148fc3ae></div>
+          <nav
+            class="nav"
+            id="VPSidebarNav"
+            aria-labelledby="sidebar-aria-label"
+            tabindex="-1"
+            data-v-148fc3ae
+          >
+            <span
+              class="visually-hidden"
+              id="sidebar-aria-label"
+              data-v-148fc3ae
+            >
+              Sidebar Navigation
+            </span>
+            <!--[-->
+            <!--]-->
+            <!--[-->
+            <div class="no-transition group" data-v-404a94b2>
+              <section
+                class="VPSidebarItem level-0"
+                data-v-404a94b2
+                data-v-3b49f268
+              >
+                <div class="item" role="button" tabindex="0" data-v-3b49f268>
+                  <div class="indicator" data-v-3b49f268></div>
+                  <h2 class="text" data-v-3b49f268>Layout 布局组件</h2>
+                  <!---->
+                </div>
+                <div class="items" data-v-3b49f268>
+                  <!--[-->
+                  <div
+                    class="VPSidebarItem level-1 is-link"
+                    data-v-3b49f268
+                    data-v-3b49f268
+                  >
+                    <div class="item" data-v-3b49f268>
+                      <div class="indicator" data-v-3b49f268></div>
+                      <a
+                        class="VPLink link link"
+                        href="/versakit/components/layout/"
+                        data-v-3b49f268
+                      >
+                        <!--[-->
+                        <p class="text" data-v-3b49f268>Layout 布局</p>
+                        <!--]-->
+                      </a>
+                      <!---->
+                    </div>
+                    <!---->
+                  </div>
+                  <div
+                    class="VPSidebarItem level-1 is-link"
+                    data-v-3b49f268
+                    data-v-3b49f268
+                  >
+                    <div class="item" data-v-3b49f268>
+                      <div class="indicator" data-v-3b49f268></div>
+                      <a
+                        class="VPLink link link"
+                        href="/versakit/components/container/"
+                        data-v-3b49f268
+                      >
+                        <!--[-->
+                        <p class="text" data-v-3b49f268>Container 布局容器</p>
+                        <!--]-->
+                      </a>
+                      <!---->
+                    </div>
+                    <!---->
+                  </div>
+                  <!--]-->
+                </div>
+              </section>
+            </div>
+            <div class="no-transition group" data-v-404a94b2>
+              <section
+                class="VPSidebarItem level-0"
+                data-v-404a94b2
+                data-v-3b49f268
+              >
+                <div class="item" role="button" tabindex="0" data-v-3b49f268>
+                  <div class="indicator" data-v-3b49f268></div>
+                  <h2 class="text" data-v-3b49f268>Directives 指令</h2>
+                  <!---->
+                </div>
+                <div class="items" data-v-3b49f268>
+                  <!--[-->
+                  <div
+                    class="VPSidebarItem level-1 is-link"
+                    data-v-3b49f268
+                    data-v-3b49f268
+                  >
+                    <div class="item" data-v-3b49f268>
+                      <div class="indicator" data-v-3b49f268></div>
+                      <a
+                        class="VPLink link link"
+                        href="/versakit/components/ripple/"
+                        data-v-3b49f268
+                      >
+                        <!--[-->
+                        <p class="text" data-v-3b49f268>Ripple 水波纹</p>
+                        <!--]-->
+                      </a>
+                      <!---->
+                    </div>
+                    <!---->
+                  </div>
+                  <!--]-->
+                </div>
+              </section>
+            </div>
+            <div class="no-transition group" data-v-404a94b2>
+              <section
+                class="VPSidebarItem level-0"
+                data-v-404a94b2
+                data-v-3b49f268
+              >
+                <div class="item" role="button" tabindex="0" data-v-3b49f268>
+                  <div class="indicator" data-v-3b49f268></div>
+                  <h2 class="text" data-v-3b49f268>Basic 基础组件</h2>
+                  <!---->
+                </div>
+                <div class="items" data-v-3b49f268>
+                  <!--[-->
+                  <div
+                    class="VPSidebarItem level-1 is-link"
+                    data-v-3b49f268
+                    data-v-3b49f268
+                  >
+                    <div class="item" data-v-3b49f268>
+                      <div class="indicator" data-v-3b49f268></div>
+                      <a
+                        class="VPLink link link"
+                        href="/versakit/components/button/"
+                        data-v-3b49f268
+                      >
+                        <!--[-->
+                        <p class="text" data-v-3b49f268>Button 按钮</p>
+                        <!--]-->
+                      </a>
+                      <!---->
+                    </div>
+                    <!---->
+                  </div>
+                  <div
+                    class="VPSidebarItem level-1 is-link"
+                    data-v-3b49f268
+                    data-v-3b49f268
+                  >
+                    <div class="item" data-v-3b49f268>
+                      <div class="indicator" data-v-3b49f268></div>
+                      <a
+                        class="VPLink link link"
+                        href="/versakit/components/text/"
+                        data-v-3b49f268
+                      >
+                        <!--[-->
+                        <p class="text" data-v-3b49f268>Text 文本</p>
+                        <!--]-->
+                      </a>
+                      <!---->
+                    </div>
+                    <!---->
+                  </div>
+                  <div
+                    class="VPSidebarItem level-1 is-link"
+                    data-v-3b49f268
+                    data-v-3b49f268
+                  >
+                    <div class="item" data-v-3b49f268>
+                      <div class="indicator" data-v-3b49f268></div>
+                      <a
+                        class="VPLink link link"
+                        href="/versakit/components/link/"
+                        data-v-3b49f268
+                      >
+                        <!--[-->
+                        <p class="text" data-v-3b49f268>Link 链接</p>
+                        <!--]-->
+                      </a>
+                      <!---->
+                    </div>
+                    <!---->
+                  </div>
+                  <div
+                    class="VPSidebarItem level-1 is-link"
+                    data-v-3b49f268
+                    data-v-3b49f268
+                  >
+                    <div class="item" data-v-3b49f268>
+                      <div class="indicator" data-v-3b49f268></div>
+                      <a
+                        class="VPLink link link"
+                        href="/versakit/components/divider/"
+                        data-v-3b49f268
+                      >
+                        <!--[-->
+                        <p class="text" data-v-3b49f268>Divider 分割线</p>
+                        <!--]-->
+                      </a>
+                      <!---->
+                    </div>
+                    <!---->
+                  </div>
+                  <div
+                    class="VPSidebarItem level-1 is-link"
+                    data-v-3b49f268
+                    data-v-3b49f268
+                  >
+                    <div class="item" data-v-3b49f268>
+                      <div class="indicator" data-v-3b49f268></div>
+                      <a
+                        class="VPLink link link"
+                        href="/versakit/components/icons/"
+                        data-v-3b49f268
+                      >
+                        <!--[-->
+                        <p class="text" data-v-3b49f268>Icon 图标</p>
+                        <!--]-->
+                      </a>
+                      <!---->
+                    </div>
+                    <!---->
+                  </div>
+                  <!--]-->
+                </div>
+              </section>
+            </div>
+            <div class="no-transition group" data-v-404a94b2>
+              <section
+                class="VPSidebarItem level-0 has-active"
+                data-v-404a94b2
+                data-v-3b49f268
+              >
+                <div class="item" role="button" tabindex="0" data-v-3b49f268>
+                  <div class="indicator" data-v-3b49f268></div>
+                  <h2 class="text" data-v-3b49f268>Form 表单组件</h2>
+                  <!---->
+                </div>
+                <div class="items" data-v-3b49f268>
+                  <!--[-->
+                  <div
+                    class="VPSidebarItem level-1 is-link"
+                    data-v-3b49f268
+                    data-v-3b49f268
+                  >
+                    <div class="item" data-v-3b49f268>
+                      <div class="indicator" data-v-3b49f268></div>
+                      <a
+                        class="VPLink link link"
+                        href="/versakit/components/input/"
+                        data-v-3b49f268
+                      >
+                        <!--[-->
+                        <p class="text" data-v-3b49f268>Input 输入框</p>
+                        <!--]-->
+                      </a>
+                      <!---->
+                    </div>
+                    <!---->
+                  </div>
+                  <div
+                    class="VPSidebarItem level-1 is-link"
+                    data-v-3b49f268
+                    data-v-3b49f268
+                  >
+                    <div class="item" data-v-3b49f268>
+                      <div class="indicator" data-v-3b49f268></div>
+                      <a
+                        class="VPLink link link"
+                        href="/versakit/components/switch/"
+                        data-v-3b49f268
+                      >
+                        <!--[-->
+                        <p class="text" data-v-3b49f268>Switch 开关</p>
+                        <!--]-->
+                      </a>
+                      <!---->
+                    </div>
+                    <!---->
+                  </div>
+                  <div
+                    class="VPSidebarItem level-1 is-link"
+                    data-v-3b49f268
+                    data-v-3b49f268
+                  >
+                    <div class="item" data-v-3b49f268>
+                      <div class="indicator" data-v-3b49f268></div>
+                      <a
+                        class="VPLink link link"
+                        href="/versakit/components/radio/"
+                        data-v-3b49f268
+                      >
+                        <!--[-->
+                        <p class="text" data-v-3b49f268>Radio 单选框</p>
+                        <!--]-->
+                      </a>
+                      <!---->
+                    </div>
+                    <!---->
+                  </div>
+                  <div
+                    class="VPSidebarItem level-1 is-link"
+                    data-v-3b49f268
+                    data-v-3b49f268
+                  >
+                    <div class="item" data-v-3b49f268>
+                      <div class="indicator" data-v-3b49f268></div>
+                      <a
+                        class="VPLink link link"
+                        href="/versakit/components/textarea/"
+                        data-v-3b49f268
+                      >
+                        <!--[-->
+                        <p class="text" data-v-3b49f268>Textarea 文本域</p>
+                        <!--]-->
+                      </a>
+                      <!---->
+                    </div>
+                    <!---->
+                  </div>
+                  <!--]-->
+                </div>
+              </section>
+            </div>
+            <div class="no-transition group" data-v-404a94b2>
+              <section
+                class="VPSidebarItem level-0"
+                data-v-404a94b2
+                data-v-3b49f268
+              >
+                <div class="item" role="button" tabindex="0" data-v-3b49f268>
+                  <div class="indicator" data-v-3b49f268></div>
+                  <h2 class="text" data-v-3b49f268>Data 数据展示组件</h2>
+                  <!---->
+                </div>
+                <div class="items" data-v-3b49f268>
+                  <!--[-->
+                  <div
+                    class="VPSidebarItem level-1 is-link"
+                    data-v-3b49f268
+                    data-v-3b49f268
+                  >
+                    <div class="item" data-v-3b49f268>
+                      <div class="indicator" data-v-3b49f268></div>
+                      <a
+                        class="VPLink link link"
+                        href="/versakit/components/avatar/"
+                        data-v-3b49f268
+                      >
+                        <!--[-->
+                        <p class="text" data-v-3b49f268>Avatar 头像</p>
+                        <!--]-->
+                      </a>
+                      <!---->
+                    </div>
+                    <!---->
+                  </div>
+                  <div
+                    class="VPSidebarItem level-1 is-link"
+                    data-v-3b49f268
+                    data-v-3b49f268
+                  >
+                    <div class="item" data-v-3b49f268>
+                      <div class="indicator" data-v-3b49f268></div>
+                      <a
+                        class="VPLink link link"
+                        href="/versakit/components/card/"
+                        data-v-3b49f268
+                      >
+                        <!--[-->
+                        <p class="text" data-v-3b49f268>Card 卡片</p>
+                        <!--]-->
+                      </a>
+                      <!---->
+                    </div>
+                    <!---->
+                  </div>
+                  <div
+                    class="VPSidebarItem level-1 is-link"
+                    data-v-3b49f268
+                    data-v-3b49f268
+                  >
+                    <div class="item" data-v-3b49f268>
+                      <div class="indicator" data-v-3b49f268></div>
+                      <a
+                        class="VPLink link link"
+                        href="/versakit/components/tag/"
+                        data-v-3b49f268
+                      >
+                        <!--[-->
+                        <p class="text" data-v-3b49f268>Tag 标签</p>
+                        <!--]-->
+                      </a>
+                      <!---->
+                    </div>
+                    <!---->
+                  </div>
+                  <div
+                    class="VPSidebarItem level-1 is-link"
+                    data-v-3b49f268
+                    data-v-3b49f268
+                  >
+                    <div class="item" data-v-3b49f268>
+                      <div class="indicator" data-v-3b49f268></div>
+                      <a
+                        class="VPLink link link"
+                        href="/versakit/components/badge/"
+                        data-v-3b49f268
+                      >
+                        <!--[-->
+                        <p class="text" data-v-3b49f268>Badge 徽标</p>
+                        <!--]-->
+                      </a>
+                      <!---->
+                    </div>
+                    <!---->
+                  </div>
+                  <div
+                    class="VPSidebarItem level-1 is-link"
+                    data-v-3b49f268
+                    data-v-3b49f268
+                  >
+                    <div class="item" data-v-3b49f268>
+                      <div class="indicator" data-v-3b49f268></div>
+                      <a
+                        class="VPLink link link"
+                        href="/versakit/components/panel/"
+                        data-v-3b49f268
+                      >
+                        <!--[-->
+                        <p class="text" data-v-3b49f268>Panel 面板</p>
+                        <!--]-->
+                      </a>
+                      <!---->
+                    </div>
+                    <!---->
+                  </div>
+                  <!--]-->
+                </div>
+              </section>
+            </div>
+            <div class="no-transition group" data-v-404a94b2>
+              <section
+                class="VPSidebarItem level-0"
+                data-v-404a94b2
+                data-v-3b49f268
+              >
+                <div class="item" role="button" tabindex="0" data-v-3b49f268>
+                  <div class="indicator" data-v-3b49f268></div>
+                  <h2 class="text" data-v-3b49f268>Navigation 导航</h2>
+                  <!---->
+                </div>
+                <div class="items" data-v-3b49f268>
+                  <!--[-->
+                  <div
+                    class="VPSidebarItem level-1 is-link"
+                    data-v-3b49f268
+                    data-v-3b49f268
+                  >
+                    <div class="item" data-v-3b49f268>
+                      <div class="indicator" data-v-3b49f268></div>
+                      <a
+                        class="VPLink link link"
+                        href="/versakit/components/backtop/"
+                        data-v-3b49f268
+                      >
+                        <!--[-->
+                        <p class="text" data-v-3b49f268>Backtop 回到顶部</p>
+                        <!--]-->
+                      </a>
+                      <!---->
+                    </div>
+                    <!---->
+                  </div>
+                  <div
+                    class="VPSidebarItem level-1 is-link"
+                    data-v-3b49f268
+                    data-v-3b49f268
+                  >
+                    <div class="item" data-v-3b49f268>
+                      <div class="indicator" data-v-3b49f268></div>
+                      <a
+                        class="VPLink link link"
+                        href="/versakit/components/tab/"
+                        data-v-3b49f268
+                      >
+                        <!--[-->
+                        <p class="text" data-v-3b49f268>Tab 标签页</p>
+                        <!--]-->
+                      </a>
+                      <!---->
+                    </div>
+                    <!---->
+                  </div>
+                  <!--]-->
+                </div>
+              </section>
+            </div>
+            <div class="no-transition group" data-v-404a94b2>
+              <section
+                class="VPSidebarItem level-0"
+                data-v-404a94b2
+                data-v-3b49f268
+              >
+                <div class="item" role="button" tabindex="0" data-v-3b49f268>
+                  <div class="indicator" data-v-3b49f268></div>
+                  <h2 class="text" data-v-3b49f268>Feedback 反馈组件</h2>
+                  <!---->
+                </div>
+                <div class="items" data-v-3b49f268>
+                  <!--[-->
+                  <div
+                    class="VPSidebarItem level-1 is-link"
+                    data-v-3b49f268
+                    data-v-3b49f268
+                  >
+                    <div class="item" data-v-3b49f268>
+                      <div class="indicator" data-v-3b49f268></div>
+                      <a
+                        class="VPLink link link"
+                        href="/versakit/components/dialog/"
+                        data-v-3b49f268
+                      >
+                        <!--[-->
+                        <p class="text" data-v-3b49f268>Dialog 对话框</p>
+                        <!--]-->
+                      </a>
+                      <!---->
+                    </div>
+                    <!---->
+                  </div>
+                  <div
+                    class="VPSidebarItem level-1 is-link"
+                    data-v-3b49f268
+                    data-v-3b49f268
+                  >
+                    <div class="item" data-v-3b49f268>
+                      <div class="indicator" data-v-3b49f268></div>
+                      <a
+                        class="VPLink link link"
+                        href="/versakit/components/drawer/"
+                        data-v-3b49f268
+                      >
+                        <!--[-->
+                        <p class="text" data-v-3b49f268>Drawer 抽屉</p>
+                        <!--]-->
+                      </a>
+                      <!---->
+                    </div>
+                    <!---->
+                  </div>
+                  <div
+                    class="VPSidebarItem level-1 is-link"
+                    data-v-3b49f268
+                    data-v-3b49f268
+                  >
+                    <div class="item" data-v-3b49f268>
+                      <div class="indicator" data-v-3b49f268></div>
+                      <a
+                        class="VPLink link link"
+                        href="/versakit/components/message/"
+                        data-v-3b49f268
+                      >
+                        <!--[-->
+                        <p class="text" data-v-3b49f268>Message 消息提示</p>
+                        <!--]-->
+                      </a>
+                      <!---->
+                    </div>
+                    <!---->
+                  </div>
+                  <div
+                    class="VPSidebarItem level-1 is-link"
+                    data-v-3b49f268
+                    data-v-3b49f268
+                  >
+                    <div class="item" data-v-3b49f268>
+                      <div class="indicator" data-v-3b49f268></div>
+                      <a
+                        class="VPLink link link"
+                        href="/versakit/components/notification/"
+                        data-v-3b49f268
+                      >
+                        <!--[-->
+                        <p class="text" data-v-3b49f268>Notification 通知</p>
+                        <!--]-->
+                      </a>
+                      <!---->
+                    </div>
+                    <!---->
+                  </div>
+                  <div
+                    class="VPSidebarItem level-1 is-link"
+                    data-v-3b49f268
+                    data-v-3b49f268
+                  >
+                    <div class="item" data-v-3b49f268>
+                      <div class="indicator" data-v-3b49f268></div>
+                      <a
+                        class="VPLink link link"
+                        href="/versakit/components/result/"
+                        data-v-3b49f268
+                      >
+                        <!--[-->
+                        <p class="text" data-v-3b49f268>Result 结果页</p>
+                        <!--]-->
+                      </a>
+                      <!---->
+                    </div>
+                    <!---->
+                  </div>
+                  <div
+                    class="VPSidebarItem level-1 is-link"
+                    data-v-3b49f268
+                    data-v-3b49f268
+                  >
+                    <div class="item" data-v-3b49f268>
+                      <div class="indicator" data-v-3b49f268></div>
+                      <a
+                        class="VPLink link link"
+                        href="/versakit/components/empty/"
+                        data-v-3b49f268
+                      >
+                        <!--[-->
+                        <p class="text" data-v-3b49f268>Empty 无内容</p>
+                        <!--]-->
+                      </a>
+                      <!---->
+                    </div>
+                    <!---->
+                  </div>
+                  <!--]-->
+                </div>
+              </section>
+            </div>
+            <!--]-->
+            <!--[-->
+            <!--]-->
+          </nav>
+        </aside>
+        <div
+          class="VPContent has-sidebar"
+          id="VPContent"
+          data-v-73056ea6
+          data-v-86d75bcf
+        >
+          <div
+            class="VPDoc has-sidebar has-aside"
+            data-v-86d75bcf
+            data-v-90e7acd6
+          >
+            <!--[-->
+            <!--]-->
+            <div class="container" data-v-90e7acd6>
+              <div class="aside" data-v-90e7acd6>
+                <div class="aside-curtain" data-v-90e7acd6></div>
+                <div class="aside-container" data-v-90e7acd6>
+                  <div class="aside-content" data-v-90e7acd6>
+                    <div class="VPDocAside" data-v-90e7acd6 data-v-43680472>
+                      <!--[-->
+                      <!--]-->
+                      <!--[-->
+                      <!--]-->
+                      <nav
+                        aria-labelledby="doc-outline-aria-label"
+                        class="VPDocAsideOutline"
+                        data-v-43680472
+                        data-v-11b268fb
+                      >
+                        <div class="content" data-v-11b268fb>
+                          <div class="outline-marker" data-v-11b268fb></div>
+                          <div
+                            aria-level="2"
+                            class="outline-title"
+                            id="doc-outline-aria-label"
+                            role="heading"
+                            data-v-11b268fb
+                          >
+                            On this page
+                          </div>
+                          <ul
+                            class="VPDocOutlineItem root"
+                            data-v-11b268fb
+                            data-v-3a541de0
+                          >
+                            <!--[-->
+                            <!--]-->
+                          </ul>
+                        </div>
+                      </nav>
+                      <!--[-->
+                      <!--]-->
+                      <div class="spacer" data-v-43680472></div>
+                      <!--[-->
+                      <!--]-->
+                      <!---->
+                      <!--[-->
+                      <!--]-->
+                      <!--[-->
+                      <!--]-->
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="content" data-v-90e7acd6>
+                <div class="content-container" data-v-90e7acd6>
+                  <!--[-->
+                  <!--]-->
+                  <main class="main" data-v-90e7acd6>
+                    <div
+                      style="position: relative"
+                      class="vp-doc _versakit_components_radio_"
+                      data-v-90e7acd6
+                    >
+                      <div>
+                        <h1 id="radio-单选框" tabindex="-1">
+                          Radio 单选框
+                          <a
+                            class="header-anchor"
+                            href="#radio-单选框"
+                            aria-label='Permalink to "Radio 单选框"'
+                          >
+                            ​
+                          </a>
+                        </h1>
+                        <p>在一组备选项中进行单选</p>
+                        <h2 id="基础使用" tabindex="-1">
+                          基础使用
+                          <a
+                            class="header-anchor"
+                            href="#基础使用"
+                            aria-label='Permalink to "基础使用"'
+                          >
+                            ​
+                          </a>
+                        </h2>
+                        <p>
+                          单选框不应该有太多的可选项，
+                          如果你有很多的可选项你应该使用选择框而不是单选框。
+                        </p>
+                        <!---->
+                        <h2 id="禁用状态" tabindex="-1">
+                          禁用状态
+                          <a
+                            class="header-anchor"
+                            href="#禁用状态"
+                            aria-label='Permalink to "禁用状态"'
+                          >
+                            ​
+                          </a>
+                        </h2>
+                        <p>
+                          <code>disabled</code>
+                          属性可以用来控制单选框的禁用状态.
+                        </p>
+                        <!---->
+                        <h2 id="radio-api" tabindex="-1">
+                          Radio API
+                          <a
+                            class="header-anchor"
+                            href="#radio-api"
+                            aria-label='Permalink to "Radio API"'
+                          >
+                            ​
+                          </a>
+                        </h2>
+                        <h3 id="radio-属性" tabindex="-1">
+                          Radio 属性
+                          <a
+                            class="header-anchor"
+                            href="#radio-属性"
+                            aria-label='Permalink to "Radio 属性"'
+                          >
+                            ​
+                          </a>
+                        </h3>
+                        <table tabindex="0">
+                          <thead>
+                            <tr>
+                              <th>属性</th>
+                              <th>说明</th>
+                              <th>类型</th>
+                              <th>默认值</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td><code>modelValue</code></td>
+                              <td>绑定值</td>
+                              <td><code>string</code></td>
+                              <td><code>空</code></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </main>
+                  <footer class="VPDocFooter" data-v-90e7acd6 data-v-d6bf9531>
+                    <!--[-->
+                    <!--]-->
+                    <!---->
+                    <nav
+                      class="prev-next"
+                      aria-labelledby="doc-footer-aria-label"
+                      data-v-d6bf9531
+                    >
+                      <span
+                        class="visually-hidden"
+                        id="doc-footer-aria-label"
+                        data-v-d6bf9531
+                      >
+                        Pager
+                      </span>
+                      <div class="pager" data-v-d6bf9531>
+                        <a
+                          class="VPLink link pager-link prev"
+                          href="/versakit/components/switch/"
+                          data-v-d6bf9531
+                        >
+                          <!--[-->
+                          <span class="desc" data-v-d6bf9531>
+                            Previous page
+                          </span>
+                          <span class="title" data-v-d6bf9531>Switch 开关</span>
+                          <!--]-->
+                        </a>
+                      </div>
+                      <div class="pager" data-v-d6bf9531>
+                        <a
+                          class="VPLink link pager-link next"
+                          href="/versakit/components/textarea/"
+                          data-v-d6bf9531
+                        >
+                          <!--[-->
+                          <span class="desc" data-v-d6bf9531>Next page</span>
+                          <span class="title" data-v-d6bf9531>
+                            Textarea 文本域
+                          </span>
+                          <!--]-->
+                        </a>
+                      </div>
+                    </nav>
+                  </footer>
+                  <!--[-->
+                  <!--]-->
+                </div>
+              </div>
+            </div>
+            <!--[-->
+            <!--]-->
+          </div>
+        </div>
+        <!---->
+        <!--[-->
+        <!--]-->
+      </div>
+    </div>
+    <script>
+      window.__VP_HASH_MAP__ = JSON.parse(
+        '{"changelog.md":"DT0yg64G","components_avatar_index.md":"TaVfHtck","components_backtop_index.md":"BOg7Hd9l","components_badge_index.md":"DCFVCJQ3","components_button_index.md":"tqYTp2G_","components_card_index.md":"C8bArwEH","components_container_index.md":"BcgP3jJ8","components_dialog_index.md":"9HVbQmud","components_divider_index.md":"XW19Wzwg","components_drawer_index.md":"BRTvpI8j","components_empty_index.md":"TV8egR_N","components_icons_index.md":"CLRme-2N","components_input_index.md":"qybdY-2u","components_layout_index.md":"WdP3oICP","components_link_index.md":"1O6iq1l2","components_loading_index.md":"Rqbjs0fq","components_message_index.md":"Dp0tuZM4","components_notification_index.md":"zTN8k3bI","components_panel_index.md":"CJsr4yyU","components_radio_index.md":"CEj-B-sT","components_result_index.md":"t51dVNsB","components_ripple_index.md":"Dey0UhHG","components_switch_index.md":"NeITkaFR","components_tab_index.md":"BklV7gsH","components_tag_index.md":"D4JAqID1","components_text_index.md":"cGDzxxtb","components_textarea_index.md":"BYY1Xo_b","guide_dark_index.md":"1pfv7iT2","guide_installation_index.md":"DWZYuVKH","guide_log_index.md":"DjtkBAGQ","guide_quickstart_index.md":"I5KW3bWk","index.md":"DKuhOVgP"}',
+      )
+      window.__VP_SITE_DATA__ = JSON.parse(
+        '{"lang":"en-US","dir":"ltr","title":"Versakit","description":"A VitePress Site","base":"/versakit/","head":[],"router":{"prefetchLinks":true},"appearance":true,"themeConfig":{"nav":[{"text":"指南","link":"/guide/dark/"},{"text":"组件","link":"/components/layout/"}],"sidebar":{"/guide/":[{"text":"指南","items":[{"text":"更新日志","link":"/guide/log/"},{"text":"安装","link":"/guide/installation/"},{"text":"快速开始","link":"/guide/quickstart/"},{"text":"暗黑模式","link":"/guide/dark/"}]}],"/components/":[{"text":"Layout 布局组件","items":[{"text":"Layout 布局","link":"/components/layout/"},{"text":"Container 布局容器","link":"/components/container/"}]},{"text":"Directives 指令","items":[{"text":"Ripple 水波纹","link":"/components/ripple/"}]},{"text":"Basic 基础组件","items":[{"text":"Button 按钮","link":"/components/button/"},{"text":"Text 文本","link":"/components/text/"},{"text":"Link 链接","link":"/components/link/"},{"text":"Divider 分割线","link":"/components/divider/"},{"text":"Icon 图标","link":"/components/icons/"}]},{"text":"Form 表单组件","items":[{"text":"Input 输入框","link":"/components/input/"},{"text":"Switch 开关","link":"/components/switch/"},{"text":"Radio 单选框","link":"/components/radio/"},{"text":"Textarea 文本域","link":"/components/textarea/"}]},{"text":"Data 数据展示组件","items":[{"text":"Avatar 头像","link":"/components/avatar/"},{"text":"Card 卡片","link":"/components/card/"},{"text":"Tag 标签","link":"/components/tag/"},{"text":"Badge 徽标","link":"/components/badge/"},{"text":"Panel 面板","link":"/components/panel/"}]},{"text":"Navigation 导航","items":[{"text":"Backtop 回到顶部","link":"/components/backtop/"},{"text":"Tab 标签页","link":"/components/tab/"}]},{"text":"Feedback 反馈组件","items":[{"text":"Dialog 对话框","link":"/components/dialog/"},{"text":"Drawer 抽屉","link":"/components/drawer/"},{"text":"Message 消息提示","link":"/components/message/"},{"text":"Notification 通知","link":"/components/notification/"},{"text":"Result 结果页","link":"/components/result/"},{"text":"Empty 无内容","link":"/components/empty/"}]}]},"socialLinks":[{"icon":"github","link":"https://github.com/lenran659/Versakit"},{"icon":"gitee","link":"https://gitee.com/dragon_water/versakit"}]},"locales":{},"scrollOffset":134,"cleanUrls":false}',
+      )
+    </script>
+  </body>
+</html>
